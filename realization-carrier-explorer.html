@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Realizations & carriers · Unfold</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 26L28 26L16 5Z' fill='%238978cf' fill-opacity='.3' stroke='%235653a4' stroke-width='2'/%3E%3Ccircle cx='16' cy='18' r='3' fill='%23396ce0'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#fff,#181818);--fg:light-dark(#25282d,#efeff2);--muted:light-dark(#626873,#a8adb6);--border:light-dark(#dfe2e7,#393d45);--soft:light-dark(#f3f4f7,#272a32);--gray:light-dark(#cbd0d9,#606773);--accent:light-dark(#386acf,#96b5ff);--purple:light-dark(#7961ba,#b7a0f0);--zone:light-dark(#a890df33,#a88bea30);--bad:light-dark(#b23329,#ff9e92);--good:light-dark(#2a745d,#8fceae);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--fg);background:var(--bg)}
+*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0}main{max-width:1100px;margin:auto;padding:21px 24px}h1{font-size:21px;letter-spacing:-.35px;margin:0 0 14px;font-weight:650}h2{font-size:15px;font-weight:550;margin:0 0 8px}p{margin:8px 0}button,select,input{font:inherit}button,select{background:var(--bg);color:var(--fg);border:1px solid var(--border);border-radius:6px;min-height:36px}button{padding:5px 11px;cursor:pointer}select{padding:6px 30px 6px 10px;min-width:0;max-width:100%}button:hover{background:var(--soft)}button[aria-pressed=true],button[aria-selected=true]{border-color:var(--accent);color:var(--accent);background:light-dark(#f3f6fd,#242f45)}button:focus-visible,select:focus-visible,input:focus-visible,svg:focus-visible{outline:3px solid var(--accent);outline-offset:3px}.tabs{display:flex;gap:8px;margin-bottom:17px}.tabs button{flex:1;max-width:250px}.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:12px;font-size:14px}.toolbar select{flex:1}.lede{font-size:14px;color:var(--muted);max-width:870px;margin:10px 0 16px}.math{font-family:Cambria,Georgia,serif;font-size:17px;color:var(--fg)}.real-grid{display:grid;grid-template-columns:minmax(165px,.7fr) minmax(0,1.3fr);gap:26px;align-items:start}.panel{border:1px solid var(--border);border-radius:8px;padding:12px;min-width:0}.drawing{width:100%;height:290px;display:block;touch-action:none;cursor:crosshair}.drawing text{font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--muted)}.drawing .point-label{fill:var(--fg);font-weight:600}.group-label{font-size:12px;color:var(--muted);margin:9px 0 5px}.face-row{display:flex;flex-wrap:wrap;gap:6px}.face-button{font:14px Cambria,Georgia,serif;min-height:31px;padding:3px 9px}.face-button.missing{border-style:dashed;color:var(--bad)}.face-button.active{border-color:var(--purple);background:var(--zone);color:var(--fg)}.small{font-size:12px;color:var(--muted)}.point-data{margin-top:13px;padding:10px 12px;background:var(--soft);border-radius:7px;font-size:14px}.point-data .math{font-size:17px}.weight-row{display:flex;gap:16px;flex-wrap:wrap;margin:10px 0 0}.weight-control{display:flex;align-items:center;gap:7px;min-width:115px;flex:1;font-size:13px}.weight-control input{min-width:40px;width:100%;accent-color:var(--accent)}.weight-control output{font-variant-numeric:tabular-nums;min-width:31px}.status{font-size:14px;margin-top:9px}.good{color:var(--good)}.bad{color:var(--bad)}.status-line{min-height:22px}.subtle{color:var(--muted)}details{font-size:14px;color:var(--muted);margin-top:13px;max-width:860px}summary{cursor:pointer}details p{margin:9px 0}details a{color:var(--accent)}.face-picker{margin:12px 0}.face-picker .face-row{align-items:center}.face-picker .face-row>span{margin-right:5px;font-size:14px}.controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:13px;margin:13px 0}.time-control{display:flex;align-items:center;gap:8px;flex:1;min-width:240px}.time-control input{width:100%;min-width:40px;accent-color:var(--accent);margin:0}.time-control output{font-variant-numeric:tabular-nums;min-width:32px}.check{display:flex;align-items:center;gap:5px;white-space:nowrap}.check input{accent-color:var(--purple)}.map-stage{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(18px,5vw,70px)}.source-column,.target-column{min-width:0;display:grid;grid-template-rows:48px minmax(0,1fr)}.space-heading{text-align:center;font-size:14px;color:var(--muted);line-height:22px;margin:0}.space-heading strong{font-weight:550;color:var(--fg)}.map-frame{margin:0;border:1px solid var(--border);border-radius:8px;min-width:0;overflow:hidden}.source-column>.map-frame{align-self:center;width:100%;border-color:transparent}.map-frame h3{font-size:13px;font-weight:550;margin:8px 4px 0;text-align:center}.map-frame.current{border-color:var(--purple)}.target-grid{display:grid;grid-template-rows:1fr;gap:9px}.map-stage.compare .target-grid{grid-template-rows:repeat(3,1fr)}.map-stage.compare .drawing{height:150px}.map-stage.compare .source-column .drawing{height:250px}.map-stage .drawing{height:280px}.connector{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;overflow:visible;z-index:2}.legend{font-size:13px;color:var(--muted);margin:12px 0 8px}.legend span{display:inline-block;margin-right:12px}.swatch{display:inline-block;width:12px;height:12px;vertical-align:-1px;margin-right:4px;border:1px solid var(--purple);background:var(--zone)}.formula-line{font:17px Cambria,Georgia,serif;margin:8px 0}.carrier-status{display:flex;gap:5px 18px;flex-wrap:wrap;font-size:13px}.caption{font-size:13px;color:var(--muted);min-height:22px}.mapping-hint{font-size:13px;color:var(--muted);margin-top:6px}.source-link{font-size:12px}.target-column .small{white-space:normal}.real-grid .panel:first-child{padding:12px}.play{min-width:79px}.check-button{font-size:13px}.real-caption{min-height:44px;font-size:13px;color:var(--muted);margin-bottom:0}
+@media(max-width:600px){.controls .time-control{flex-basis:100%}main{padding:16px 12px}h1{font-size:20px}.tabs{margin-bottom:14px}.real-grid{grid-template-columns:minmax(120px,.7fr) minmax(0,1.3fr);gap:12px}.panel{padding:9px}.real-grid .panel:first-child{padding:9px}.real-grid .drawing{height:245px}.face-button{padding:3px 7px}.map-stage{gap:15px}.map-stage .drawing{height:235px}.map-stage.compare .drawing{height:137px}.map-stage.compare .source-column .drawing{height:210px}.space-heading{font-size:13px}.weight-row{gap:9px}.weight-control{min-width:100px}.controls{gap:8px}.lede{font-size:13px;margin-bottom:12px}.math{font-size:16px}.toolbar{gap:7px}.toolbar button{font-size:13px}.point-data{padding:9px}.carrier-status{font-size:12px}}
+.extension-steps{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}.extension-steps button{font-size:13px;flex:1;min-width:95px}.extension-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:28px}.extension-grid .drawing{height:310px}.extension-grid h2{text-align:center;margin-bottom:0}.extension-grid .panel{padding:8px}.extension-copy{min-height:45px;margin:10px 0;font-size:14px}.extension-proof{border-left:3px solid var(--purple);padding:8px 12px;background:var(--soft);font-size:14px}.extension-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px}.extension-actions button{font-size:13px}.extension-progress{min-width:160px;flex:1;display:flex;align-items:center;gap:8px}.extension-progress input{width:100%;accent-color:var(--purple)}.extension-progress output{min-width:40px;font-variant-numeric:tabular-nums}.extension-bad{color:var(--bad)}button:disabled{opacity:.45;cursor:default}@media(max-width:600px){.extension-grid{gap:8px}.extension-grid .drawing{height:225px}.extension-grid .panel{padding:4px}.extension-progress{flex-basis:100%}.extension-steps button{min-width:80px}.extension-grid h2{font-size:13px}.tabs button{padding:5px 6px;font-size:14px}}
+.solid-toolbar{display:flex;gap:9px;align-items:center;flex-wrap:wrap;font-size:14px;margin:12px 0}.solid-toolbar select{max-width:250px}.solid-options{display:flex;gap:6px;flex-wrap:wrap}.solid-options button{font-size:14px}.solid-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:20px;margin:12px 0}.solid-grid .drawing{height:350px;cursor:grab}.solid-grid .drawing:active{cursor:grabbing}.solid-grid h2{text-align:center;font-size:15px}.solid-grid .panel{padding:10px}.solid-info{font-size:14px;min-height:43px}.solid-equation{font-family:Cambria,Georgia,serif;font-size:17px;margin:12px 0;overflow-wrap:anywhere}.solid-slider{display:flex;align-items:center;gap:10px;flex:1;min-width:220px}.solid-slider input{width:100%;accent-color:var(--purple)}.solid-slider output{min-width:40px;font-variant-numeric:tabular-nums}.solid-hint{font-size:13px;color:var(--muted);margin:5px 0}.solid-key{display:flex;gap:15px;flex-wrap:wrap;font-size:14px}.solid-key span:before{content:'';display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--key);margin-right:6px}.tabs{flex-wrap:wrap}.tabs button{min-width:120px}@media(max-width:600px){.solid-grid{grid-template-columns:1fr;gap:10px}.solid-grid .drawing{height:280px}.solid-slider{flex-basis:100%}.solid-grid .panel{padding:8px}.tabs button{min-width:110px}.solid-info{min-height:0}}
+</style><style id="unfold-navigation-style">.unfold-navigation{max-width:1100px;margin:0 auto;padding:14px 24px 0;font:13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.unfold-navigation a{color:light-dark(#626873,#a8adb6);text-decoration:none;display:inline-flex;align-items:center;gap:7px;padding:3px 0}.unfold-navigation a:hover{color:light-dark(#386acf,#96b5ff)}.unfold-navigation a:focus-visible{outline:2px solid light-dark(#386acf,#96b5ff);outline-offset:4px;border-radius:2px}@media(max-width:600px){.unfold-navigation{padding:12px 12px 0}}</style></head><body><nav class="unfold-navigation" aria-label="Back to all explorers"><a href="index.html"><span aria-hidden="true">←</span> Unfold</a></nav><main>
+<h1>Realizations & carriers</h1>
+<div class="tabs" role="tablist" aria-label="Topic"><button id="tab-realization" role="tab" aria-selected="true" aria-controls="realization-panel">Realization</button><button id="tab-carriers" role="tab" aria-selected="false" aria-controls="carrier-panel">Carriers</button><button id="tab-extensions" role="tab" aria-selected="false" aria-controls="extension-panel">Build a map</button><button id="tab-solids" role="tab" aria-selected="false" aria-controls="solid-panel">Prisms & cones</button></div>
+<section id="realization-panel" role="tabpanel" aria-labelledby="tab-realization">
+<div class="toolbar"><label for="complex">Complex</label><select id="complex"><option value="triangle">Filled triangle</option><option value="edge">One edge</option><option value="vertices">Three isolated vertices</option><option value="boundary">Triangle boundary — no filling</option><option value="glued">Two triangles sharing an edge</option><option value="tail">Filled triangle with a tail</option></select><button id="placement" type="button">Change drawing</button></div>
+<p class="lede">Δ lists the faces. <strong>|Δ| contains every point of the corresponding filled simplices.</strong></p>
+<div class="real-grid"><section class="panel"><h2>Abstract complex Δ</h2><div id="real-faces"></div><p class="small">Select a face σ.</p></section><section class="panel"><h2>A drawing of |Δ|</h2><svg id="real-picture" class="drawing" role="img" tabindex="0" aria-label="Geometric realization. Drag the circled point inside the selected simplex."></svg><p id="real-caption" class="real-caption"></p></section></div>
+<div class="point-data"><div id="real-coordinate" class="math"></div><div id="real-weights" class="weight-row"></div><div id="real-support" class="status"></div></div>
+<details><summary>What exactly is being realized?</summary><p>A face σ is a finite set of vertex names. Its geometric simplex ⟨σ⟩ contains all convex combinations of those vertices: λᵢ ≥ 0 and ∑λᵢ = 1. The realization |Δ| is the union of these simplices.</p><p>In the standard realization, each vertex is a basis vector eᵥ. Thus a point is the coordinate vector (λₐ, λᵦ, …). Only mixtures whose positive-coordinate support is a face of Δ belong to |Δ|. The planar drawing uses other vertex positions and the same weights.</p><p>Moving vertices in a valid drawing preserves the abstract complex. Adding a filled triangle changes the complex. The empty face contributes no points.</p></details>
+</section>
+<section id="carrier-panel" role="tabpanel" aria-labelledby="tab-carriers" hidden>
+<div class="toolbar"><label for="carrier-example">Example</label><select id="carrier-example"></select></div>
+<p id="carrier-note" class="lede"></p>
+<div class="face-picker"><div id="carrier-faces" class="face-row"></div></div>
+<div class="controls"><div id="map-control" class="time-control"><button id="play" class="play" type="button">▶ Play</button><label id="time-label" for="time">Map</label><input id="time" type="range" min="0" max="1" step="0.001" value="0.5" aria-label="Map deformation"><output id="time-value" for="time">0.50</output></div><label id="variant-control" class="check" hidden>Map <select id="map-variant"><option value="wrap">Wrap once</option><option value="constant">Constant</option></select></label><label class="check"><input id="nesting" type="checkbox">Show nesting</label><button type="button" id="connect" class="check-button" aria-pressed="false">Connect points</button></div>
+<div class="map-stage" id="map-stage"><svg id="connections" class="connector" aria-hidden="true" hidden></svg>
+<section class="source-column"><p class="space-heading"><strong>|Δ|</strong> · domain<br><span id="source-face"></span></p><figure class="map-frame"><h3>Point x</h3><svg id="carrier-source" class="drawing" role="img" tabindex="0" aria-label="Input realization. Drag the point within the selected face."></svg></figure></section>
+<section class="target-column"><p class="space-heading"><strong>Y</strong> · <span id="target-name"></span><br><span id="target-region"></span></p><div class="target-grid"><figure class="map-frame" id="start-frame" hidden><h3>Start f₀</h3><svg id="carrier-start" class="drawing" role="img" tabindex="0" aria-label="Starting carried map"></svg></figure><figure class="map-frame current"><h3 id="current-title">Image under f</h3><svg id="carrier-now" class="drawing" role="img" tabindex="0" aria-label="Current image and its allowed carrier region"></svg></figure><figure class="map-frame" id="end-frame" hidden><h3>End f₁</h3><svg id="carrier-end" class="drawing" role="img" tabindex="0" aria-label="Final carried map"></svg></figure></div></section>
+</div>
+<p class="legend"><span><i class="swatch"></i>Allowed region C(σ)</span><span>Matching colors = matching inputs</span></p>
+<div id="selected-condition" class="formula-line"></div><div id="carrier-status" class="carrier-status"></div><p id="point-condition" class="caption"></p><p id="nesting-condition" class="caption" hidden></p>
+<p class="mapping-hint">Select a face, then drag x. The condition must hold for <strong>every face and every point</strong>.</p>
+<details id="carrier-why"><summary>Why? / The definition</summary><p><strong>A carrier assigns regions, not individual output points.</strong> For each nonempty face σ, C(σ) is a subspace of Y. Smaller faces must receive smaller allowed regions: τ ⊆ σ ⇒ C(τ) ⊆ C(σ).</p><p>A continuous map f: |Δ| → Y is carried when f(⟨σ⟩) ⊆ C(σ) for every nonempty face σ. Neither the carrier regions nor the images have to equal Y.</p><p id="case-explanation"></p><p class="source-link"><a href="https://webhomes.maths.ed.ac.uk/~v1ranick/papers/bjorner1.pdf#page=2" target="_blank" rel="noopener">Source: Björner, Nerves, fibers and homotopy groups, p. 89 (Carrier Lemma).</a></p></details>
+</section>
+<section id="extension-panel" role="tabpanel" aria-labelledby="tab-extensions" hidden>
+<p class="lede"><strong>Extend without changing earlier values.</strong> The two triangles must use the same map on their shared edge.</p>
+<div id="extension-steps" class="extension-steps" aria-label="Construction steps"></div>
+<p id="extension-copy" class="extension-copy"></p>
+<div class="extension-actions"><button id="extension-prev" type="button" aria-label="Previous construction step">← Back</button><button id="extension-play" type="button">▶ Build</button><button id="extension-next" type="button" aria-label="Next construction step">Next →</button><label class="extension-progress">Reveal<input id="extension-progress" type="range" min="0" max="1" step=".001" value="1" aria-label="Reveal the extension without moving previous images"><output id="extension-value">100%</output></label></div>
+<div id="extension-grid" class="extension-grid"><svg id="extension-lines" class="connector" aria-hidden="true" hidden></svg><section class="panel"><h2>X · two triangles sharing bc</h2><svg id="extension-source" class="drawing" role="img" tabindex="0" aria-label="Construction domain. Colored points have been assigned an output. Drag a point, or use arrow keys along the shared edge."></svg></section><section class="panel"><h2>Y · allowed regions and outputs</h2><svg id="extension-target" class="drawing" role="img" aria-label="Images of the constructed pieces inside their carrier regions"></svg></section></div>
+<p class="legend"><span><i class="swatch"></i>Allowed regions</span><span>Matching colors = matching inputs</span><span>Uncolored interior = not yet assigned</span></p>
+<div class="extension-actions"><button id="extension-track" type="button">Track shared edge bc</button><button id="extension-connect" type="button" aria-pressed="false">Connect points</button><button id="extension-alternate" type="button" disabled>Different filling, same boundary</button><label class="check extension-bad"><input id="extension-break" type="checkbox" disabled>Break agreement</label></div>
+<p id="extension-point" class="caption"></p><p id="extension-status" class="extension-proof"></p>
+<details><summary>How is the interior filled?</summary><p>The purple triangle assigned to each source triangle is convex, hence contractible. Each edge is assigned its corresponding target segment, and each vertex its marked target point. These regions are nested.</p><p>First choose the vertex images and extend along every edge. On an edge with parameter s, this example uses the continuous parameter s² / (s² + (1−s)²), so the endpoints stay fixed.</p><p>For a triangle, choose an interior target point r. Every source point lies on a ray from its barycenter c to a boundary point u. Define F((1−ρ)c + ρu) = (1−ρ)r + ρf(u). At ρ = 1 this is exactly the previously defined boundary map; at ρ = 0 all rays meet at r. The slider reveals this fixed map from the boundary inward.</p><p><strong>Each extension preserves the earlier map.</strong> The second triangle reuses the entire map on bc. The two continuous pieces therefore agree on their intersection and glue to one continuous map. “Break agreement” deliberately changes bc in the second piece: it then has two competing outputs, so these pieces do not define a function on X.</p><p>“Different filling” changes the interior choices while fixing every boundary value. Both valid choices are carried by the same contractible carrier.</p></details>
+<details><summary>What comes next? Two choices give homotopic maps.</summary><p>For two continuous carried maps f₀ and f₁, build their homotopy using the same extension principle on σ × [0,1]. Its boundary already contains the starting map, the ending map, and the homotopies chosen on smaller faces. Extend over the remaining interior while preserving all those values. Neighboring pieces agree throughout the motion.</p><button id="extension-homotopy" type="button">See two carried maps deform</button><p class="source-link"><a href="https://webhomes.maths.ed.ac.uk/~v1ranick/papers/bjorner1.pdf#page=2" target="_blank" rel="noopener">Björner · Carrier Lemma, p. 89</a></p></details>
+</section>
+<section id="solid-panel" role="tabpanel" aria-labelledby="tab-solids" hidden>
+<div class="solid-toolbar"><label for="solid-scene">Explore</label><select id="solid-scene"><option value="prism">1 · The homotopy prism</option><option value="cone">2 · Cylinder → cone</option><option value="fill">3 · Extend from the boundary</option></select><label for="solid-base" id="solid-base-label">A</label><select id="solid-base"><option value="triangle">Filled triangle</option><option value="edge">Edge</option></select><button id="solid-reset" type="button">Reset view</button></div>
+<p id="solid-intro" class="solid-info"></p>
+<div id="solid-facets" class="solid-options" aria-label="Highlight part of the prism"><button type="button" data-part="all" aria-pressed="true">Whole boundary</button><button type="button" data-part="bottom" aria-pressed="false">Bottom · f₀</button><button type="button" data-part="top" aria-pressed="false">Top · f₁</button><button type="button" data-part="sides" aria-pressed="false">Sides · earlier H</button></div>
+<div class="solid-grid"><section class="panel"><h2 id="solid-left-title">A × [0,1] · the domain</h2><svg id="solid-left" class="drawing" role="img" tabindex="0" aria-label="Rotatable three dimensional prism. Drag or use arrow keys to rotate. Click the time slice to choose an input point."></svg></section><section class="panel"><h2 id="solid-right-title">C(A) ⊆ Y · the allowed outputs</h2><svg id="solid-right" class="drawing" role="img" tabindex="0" aria-label="Corresponding outputs, or a rotatable cone in the cylinder-to-cone example."></svg></section></div>
+<div class="solid-toolbar"><button id="solid-play" type="button">▶ Play</button><label class="solid-slider"><span id="solid-slider-label">Time t</span><input id="solid-progress" type="range" min="0" max="1" step=".001" value=".4" aria-label="Time in the prism"><output id="solid-value">0.40</output></label><label id="solid-cutaway-control" class="check" hidden><input id="solid-cutaway" type="checkbox" checked>See inside</label></div>
+<p id="solid-hint" class="solid-hint">Drag the prism to rotate · click its slice to choose x · arrow keys also rotate.</p>
+<div id="solid-key" class="solid-key"><span style="--key:#3979df">Bottom</span><span style="--key:#e48a32">Top</span><span style="--key:#239b86">Sides</span></div>
+<p id="solid-equation" class="solid-equation"></p><p id="solid-status" class="extension-proof"></p>
+<details><summary>What am I looking at?</summary><div id="solid-why"></div><p class="source-link"><a href="https://people.maths.ox.ac.uk/~nanda/cat/Lecture%2002%20Homotopy.pdf#page=5" target="_blank" rel="noopener">Carrier proof · pp. 21–22</a> · <a href="https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=17" target="_blank" rel="noopener">Cones · Hatcher, Chapter 0</a></p></details>
+</section>
+</main><script>
+(()=>{'use strict';
+const LABELS=['a','b','c','d'],PALETTE=[[58,112,225],[230,107,67],[52,171,130],[158,95,214]],EPS=1e-8;
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+const key=f=>[...f].sort().join('');
+const faceName=f=>'{'+f.map(i=>LABELS[i]).join(',')+'}';
+function closure(maxima){const out=new Map();for(const f of maxima)for(let bits=1;bits<(1<<f.length);bits++){const q=f.filter((_,i)=>bits&(1<<i));out.set(key(q),q);}return [...out.values()].sort((a,b)=>a.length-b.length||key(a).localeCompare(key(b)));}
+const COMPLEXES={
+ edge:{label:'One edge',vertices:[[-.9,0],[.9,0]],max:[[0,1]]},
+ vertices:{label:'Three isolated vertices',vertices:[[-.85,-.65],[.85,-.65],[0,.85]],max:[[0],[1],[2]],missing:[0,1]},
+ boundary:{label:'Triangle boundary — no filling',vertices:[[-.85,-.65],[.85,-.65],[0,.85]],max:[[0,1],[1,2],[0,2]],missing:[0,1,2]},
+ triangle:{label:'Filled triangle',vertices:[[-.85,-.65],[.85,-.65],[0,.85]],max:[[0,1,2]]},
+ glued:{label:'Two triangles sharing an edge',vertices:[[-1,0],[0,.8],[0,-.8],[1,0]],max:[[0,1,2],[1,2,3]]},
+ tail:{label:'Filled triangle with a tail',vertices:[[-.9,-.65],[-.9,.65],[.2,0],[1,0]],max:[[0,1,2],[2,3]]},
+ chain:{label:'Two edges sharing a vertex',vertices:[[-.9,.45],[0,-.5],[.9,.45]],max:[[0,1],[1,2]]}
+};
+for(const c of Object.values(COMPLEXES))c.faces=closure(c.max);
+const CASES={
+ strip:{label:'An edge: stay inside the strip',complex:'edge',kind:'strip',validCarrier:true,carried:true,contractible:true,animate:true,note:'C assigns allowed regions to faces. f sends points into those regions.',why:'The two vertex regions are little disks. Both lie inside the strip assigned to the whole edge, so the regions are nested. Every point on the colored curve stays in the strip, and its endpoints lie in their smaller vertex regions.'},
+ escape:{label:'Endpoints pass; the middle escapes',complex:'edge',kind:'strip',validCarrier:true,carried:false,contractible:true,note:'The endpoint images are allowed. The map still fails: the middle of the edge leaves its strip.',why:'Checking vertices alone does not check a continuous map. Here f(a) and f(b) are in their assigned disks, but f(⟨{a,b}⟩) is not contained in C({a,b}). The map stays in Y; it is the smaller carrier region that it leaves.'},
+ triangle:{label:'A triangle: every face has a region',complex:'triangle',kind:'triangle',validCarrier:true,carried:true,contractible:true,animate:true,note:'Select a vertex, an edge, or the triangle. Each has its own allowed region.',why:'Here C(σ) is the target simplex spanned by the corresponding vertices. The map changes barycentric weights using λᵢ ↦ λᵢᵖ / ∑λⱼᵖ, with p > 0. Zero weights stay zero, so every face maps to the corresponding face. These carried maps need not be affine or equal, even though their vertex images agree.'},
+ interior:{label:'Boundary passes; triangle interior escapes',complex:'triangle',kind:'triangle',validCarrier:true,carried:false,contractible:true,note:'All vertices and edges pass. Some interior points still leave C({a,b,c}).',why:'The map is the ordinary affine map plus a vertical bump 1.05·27λₐλᵦλ𝚌. That bump vanishes on the entire boundary, but pushes the barycenter above the allowed triangle. All outputs remain in Y. The full two-dimensional face must be checked too.'},
+ shared:{label:'Two edges share a vertex',complex:'chain',kind:'shared',validCarrier:true,carried:true,contractible:true,animate:true,defaultFace:[1],note:'At the shared vertex b, its allowed disk lies inside both edge regions.',why:'C({b}) is contained in C({a,b}) and C({b,c}). A single value f(b) must work for both edges. Turn on “Show nesting” to see those larger regions. The two larger regions may overlap more than C({b}); exact intersections are not required for a carrier.'},
+ curved:{label:'A curved carrier inside a ring',complex:'edge',kind:'curved',validCarrier:true,carried:true,contractible:true,animate:true,note:'An allowed region can be curved. It need not be a simplex or a subcomplex.',why:'Y is an annulus. The edge is assigned the quarter-annular sector 0.6 ≤ r ≤ 0.9, 0 ≤ θ ≤ π/2; the endpoint carriers are its two marked points at radius 0.75. This sector is contractible, even though Y has a hole. The displayed curve stays inside the sector.'},
+ nesting:{label:'Broken nesting — not a carrier',complex:'edge',kind:'strip',validCarrier:false,carried:false,contractible:true,defaultFace:[0],note:'This assignment is not a carrier: the region for a is outside the region for the edge.',why:'Since {a} ⊆ {a,b}, a carrier must satisfy C({a}) ⊆ C({a,b}). Here these two regions are disjoint. No map can satisfy both constraints at a: f(a) would have to lie in both. Having nonempty, contractible regions is not sufficient without nesting.'},
+ homotopy:{label:'Two carried maps, one homotopy',complex:'edge',kind:'strip',validCarrier:true,carried:true,contractible:true,animate:true,note:'The same carrier contains f₀, f₁, and every intermediate map Hₜ.',why:'Every assigned region here is nonempty and contractible. The carrier lemma guarantees a carried map and says any two carried maps can be joined while every simplex stays in its assigned region. This example uses the explicit homotopy H(s,t) = (−0.8+1.6s, 0.32(2t−1)sin πs). The lemma does not assert that |Δ| and Y have the same homotopy type.'},
+ circle:{label:'A carrier without contractible regions',complex:'boundary',kind:'circle',validCarrier:true,carried:true,contractible:false,note:'Both maps are carried by C(σ) = Y. Contractibility is the missing hypothesis.',why:'Every face is assigned the whole circle, so nesting holds and both the once-around map and the constant map are carried. They are not homotopic as maps into the circle: their windings are 1 and 0. Being carried by an arbitrary carrier does not guarantee a homotopy.'}
+};
+const T=[[ -.8,-.6],[.8,-.6],[0,.65]],CHAIN=[[-.8,.45],[0,-.3],[.8,.45]];
+function centroid(face,n){const w=Array(n).fill(0);face.forEach(i=>w[i]=1/face.length);return w;}
+function combine(w,vertices){return w.reduce((p,v,i)=>[p[0]+v*vertices[i][0],p[1]+v*vertices[i][1]],[0,0]);}
+function support(w){return w.flatMap((v,i)=>v>0?[i]:[]);}
+function validPoint(complex,w){return complex.faces.some(f=>key(f)===key(support(w)));}
+function color(w){const c=w.reduce((p,v,i)=>p.map((x,j)=>x+v*PALETTE[i][j]),[0,0,0]);return `rgb(${c.map(Math.round).join(' ')})`;}
+function samples(face,n,res=18){
+ if(face.length===1)return[centroid(face,n)];
+ if(face.length===2)return Array.from({length:res+1},(_,i)=>{const w=Array(n).fill(0);w[face[0]]=1-i/res;w[face[1]]=i/res;return w;});
+ const out=[];for(let i=0;i<=res;i++)for(let j=0;j<=res-i;j++){const w=Array(n).fill(0);w[face[0]]=i/res;w[face[1]]=j/res;w[face[2]]=1-(i+j)/res;out.push(w);}return out;
+}
+function barycentric(p,v){const [a,b,c]=v,den=(b[1]-c[1])*(a[0]-c[0])+(c[0]-b[0])*(a[1]-c[1]);const u=((b[1]-c[1])*(p[0]-c[0])+(c[0]-b[0])*(p[1]-c[1]))/den,vv=((c[1]-a[1])*(p[0]-c[0])+(a[0]-c[0])*(p[1]-c[1]))/den;return[u,vv,1-u-vv];}
+function segmentProjection(p,a,b){const d=[b[0]-a[0],b[1]-a[1]],t=clamp(((p[0]-a[0])*d[0]+(p[1]-a[1])*d[1])/(d[0]*d[0]+d[1]*d[1]));return{t,p:[a[0]+t*d[0],a[1]+t*d[1]]};}
+function projectFace(p,face,vertices){
+ const w=Array(vertices.length).fill(0);if(face.length===1){w[face[0]]=1;return w;}
+ if(face.length===2){const q=segmentProjection(p,vertices[face[0]],vertices[face[1]]);w[face[0]]=1-q.t;w[face[1]]=q.t;return w;}
+ const local=barycentric(p,face.map(i=>vertices[i]));if(local.every(v=>v>=0)){face.forEach((v,i)=>w[v]=local[i]);return w;}
+ let best=null,dist=Infinity;for(const pair of [[face[0],face[1]],[face[1],face[2]],[face[0],face[2]]]){const q=projectFace(p,pair,vertices),v=combine(q,vertices),d=Math.hypot(p[0]-v[0],p[1]-v[1]);if(d<dist){dist=d;best=q;}}return best;
+}
+function region(id,face){
+ const c=CASES[id],k=c.kind;
+ if(k==='circle')return{type:'circle',r:1};
+ if(k==='triangle')return face.length===1?{type:'point',p:T[face[0]]}:{type:'poly',vertices:face.map(i=>T[i])};
+ if(k==='shared')return face.length===1?{type:'disk',p:CHAIN[face[0]],r:face[0]===1?.13:.09}:{type:'capsule',a:CHAIN[face[0]],b:CHAIN[face[1]],r:.2};
+ if(k==='curved')return face.length===1?{type:'point',p:face[0]===0?[.75,0]:[0,.75]}:{type:'sector',inner:.6,outer:.9};
+ if(face.length===2)return{type:'rect',x0:-1,x1:1,y0:-.42,y1:.42};
+ return{type:'disk',p:face[0]===0?[-.8,id==='nesting'?.68:0]:[.8,0],r:.16};
+}
+function contains(r,p){switch(r.type){
+ case 'point':return Math.hypot(p[0]-r.p[0],p[1]-r.p[1])<EPS;
+ case 'disk':return Math.hypot(p[0]-r.p[0],p[1]-r.p[1])<=r.r+EPS;
+ case 'rect':return p[0]>=r.x0-EPS&&p[0]<=r.x1+EPS&&p[1]>=r.y0-EPS&&p[1]<=r.y1+EPS;
+ case 'circle':return Math.abs(Math.hypot(...p)-r.r)<EPS;
+ case 'sector':{const d=Math.hypot(...p);return d>=r.inner-EPS&&d<=r.outer+EPS&&p[0]>=-EPS&&p[1]>=-EPS;}
+ case 'capsule':{const q=segmentProjection(p,r.a,r.b).p;return Math.hypot(p[0]-q[0],p[1]-q[1])<=r.r+EPS;}
+ case 'poly':if(r.vertices.length===2){const q=segmentProjection(p,...r.vertices).p;return Math.hypot(p[0]-q[0],p[1]-q[1])<EPS;}return barycentric(p,r.vertices).every(v=>v>=-EPS);
+ }}
+function mapped(id,w,t=.5,variant='wrap'){
+ const c=CASES[id],k=c.kind;
+ if(k==='triangle'){
+  if(id==='interior'){const p=combine(w,T);return[p[0],p[1]+1.05*27*w[0]*w[1]*w[2]];}
+  const exponent=.45+2.55*t,q=w.map(v=>Math.pow(v,exponent)),sum=q.reduce((a,b)=>a+b,0);return combine(q.map(v=>v/sum),T);
+ }
+ if(k==='circle'){
+  if(variant==='constant')return[1,0];
+  const s=w[2]===0?w[1]/3:w[0]===0?(1+w[2])/3:(2+w[0])/3;return[Math.cos(2*Math.PI*s),Math.sin(2*Math.PI*s)];
+ }
+ if(k==='shared'){
+  const left=w[2]===0,face=left?[0,1]:[1,2],s=w[face[1]],a=CHAIN[face[0]],b=CHAIN[face[1]],dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy),bend=.12*(2*t-1)*Math.sin(Math.PI*s);
+  return[(1-s)*a[0]+s*b[0]-dy/length*bend,(1-s)*a[1]+s*b[1]+dx/length*bend];
+ }
+ const s=w[1];
+ if(k==='curved'){const a=Math.PI*s/2,r=.75+.1*(2*t-1)*Math.sin(Math.PI*s);return[r*Math.cos(a),r*Math.sin(a)];}
+ if(id==='nesting')return[-.8+1.6*s,.68*(1-s)];
+ return[-.8+1.6*s,(id==='escape'?.9:.32*(2*t-1))*Math.sin(Math.PI*s)];
+}
+function inTarget(id,p){const k=CASES[id].kind,r=Math.hypot(...p);return k==='circle'?Math.abs(r-1)<EPS:k==='curved'?r>=.45-EPS&&r<=1+EPS:Math.abs(p[0])<=1.2+EPS&&Math.abs(p[1])<=1.2+EPS;}
+// Extension model: a fixed map is revealed, never recomputed on old pieces.
+const EXT_TARGET=[[-1,-.12],[-.12,.85],[.12,-.85],[1,.12]],EXT_FACES=[[0,1,2],[1,2,3]];
+const EXT_EDGES=COMPLEXES.glued.faces.filter(f=>f.length===2);
+function extensionAnchor(side,variant=0){const weights=side===0?(variant?[.2,.52,.28]:[.5,.23,.27]):(variant?[.48,.27,.25]:[.2,.3,.5]);return combine(weights,EXT_FACES[side].map(i=>EXT_TARGET[i]));}
+function extensionEdge(w,side=0,broken=false){
+ const ids=w.flatMap((v,i)=>v>1e-10?[i]:[]);if(ids.length===1)return [...EXT_TARGET[ids[0]]];
+ const [i,j]=ids,s=w[j]/(w[i]+w[j]),u=s*s/(s*s+(1-s)*(1-s));let p=EXT_TARGET[i].map((v,k)=>(1-u)*v+u*EXT_TARGET[j][k]);
+ if(broken&&side===1&&i===1&&j===2){const bend=.25*4*u*(1-u);p=p.map((v,k)=>(1-bend)*v+bend*EXT_TARGET[3][k]);}return p;
+}
+function extensionMap(w,side,variant=0,broken=false){
+ const face=EXT_FACES[side],m=Math.min(...face.map(i=>w[i])),rho=1-3*m,r=extensionAnchor(side,variant);
+ if(rho<1e-10)return r;const boundary=Array(4).fill(0);face.forEach(i=>boundary[i]=Math.max(0,(w[i]-m)/rho));
+ const q=extensionEdge(boundary,side,broken);return r.map((v,k)=>(1-rho)*v+rho*q[k]);
+}
+function extensionDefined(w,side,stage,progress){
+ const sup=w.flatMap((v,i)=>v>1e-9?[i]:[]);if(sup.length===1)return true;
+ if(sup.length===2){if(stage===0)return false;if(stage>1)return true;return w[sup[1]]<=progress+1e-9;}
+ const step=side+2;if(stage<step)return false;if(stage>step)return true;return 3*Math.min(...EXT_FACES[side].map(i=>w[i]))<=progress+1e-9;
+}
+function extensionRay(face,edge,s,rho){const w=centroid(face,4);face.forEach(i=>w[i]*=1-rho);w[edge[0]]+=rho*(1-s);w[edge[1]]+=rho*s;return w;}
+// Three-dimensional constructions. The height coordinate records time.
+const SOLID_TRI=[[-Math.sqrt(3)/2,-.5],[Math.sqrt(3)/2,-.5],[0,1]],SOLID_HEIGHT=.85,SOLID_CENTER=[.02,-.08];
+function solidLift(p,t,collapse=0){return[(1-collapse*t)*p[0],(1-collapse*t)*p[1],SOLID_HEIGHT*(2*t-1)];}
+function solidEnd(p,end){return end?[.48*(-p[1])+.22,.48*p[0]+.08]:[.58*p[0]-.18,.58*p[1]];}
+function solidH(p,t){const a=solidEnd(p,0),b=solidEnd(p,1);return a.map((v,i)=>(1-t)*v+t*b[i]);}
+function solidFill(u,rho){const q=solidH(u.slice(0,2),(u[2]/SOLID_HEIGHT+1)/2);return q.map((v,i)=>rho*v+(1-rho)*SOLID_CENTER[i]);}
+function solidBoundaryPoints(base='triangle'){
+ if(base==='edge')return [[-1,0,-SOLID_HEIGHT],[0,0,-SOLID_HEIGHT],[1,0,-SOLID_HEIGHT],[1,0,0],[1,0,SOLID_HEIGHT],[0,0,SOLID_HEIGHT],[-1,0,SOLID_HEIGHT],[-1,0,0]];
+ const out=[];for(const t of [0,1])for(const p of [[0,0],...SOLID_TRI])out.push(solidLift(p,t));
+ for(let i=0;i<3;i++)for(const t of [.25,.5,.75]){const a=SOLID_TRI[i],b=SOLID_TRI[(i+1)%3];out.push(solidLift(a.map((v,j)=>(v+b[j])/2),t));}return out;
+}
+// UI and drawing: the mathematical model above is also checked independently.
+const $=id=>document.getElementById(id),SVG='http://www.w3.org/2000/svg';
+const real={complex:'triangle',face:[0,1,2],w:[.2,.3,.5],placement:0};
+const car={example:'strip',face:[0,1],w:[.5,.5],t:.5,variant:'wrap',nesting:false,connections:false,playing:false,raf:0,last:0,drag:null};
+const geometries=new Map();let activeTab='realization',realDrag=false;
+const circle=(p,r,attrs='')=>`<circle cx="${p[0]}" cy="${p[1]}" r="${r}" ${attrs}/>`;
+const path=(pts,attrs='',close=false)=>`<path d="M${pts.map(p=>p.join(',')).join('L')}${close?'Z':''}" ${attrs}/>`;
+const textAt=(p,value,attrs='')=>`<text x="${p[0]}" y="${p[1]}" ${attrs}>${value}</text>`;
+function geometry(id){const el=$(id),w=Math.max(60,el.clientWidth),h=Math.max(90,el.clientHeight),g={w,h,cx:w/2,cy:h/2,r:Math.max(12,Math.min((w-36)/2.4,(h-42)/2.4))};el.setAttribute('viewBox',`0 0 ${w} ${h}`);geometries.set(id,g);return g;}
+const screen=(p,g)=>[g.cx+g.r*p[0],g.cy-g.r*p[1]];
+const local=(e,id)=>{const box=$(id).getBoundingClientRect(),g=geometries.get(id);return[(e.clientX-box.left-g.cx)/g.r,(g.cy-(e.clientY-box.top))/g.r];};
+function placed(vertices){return vertices.map(([x,y])=>real.placement?[.77*x+.22*y+.03,.84*y-.16*x]:[x,y]);}
+function coloredFace(face,n,point,fillOpacity=1){
+ if(face.length===1){const w=centroid(face,n);return circle(point(w),4,`fill="${color(w)}"`);}
+ let out='';
+ if(face.length===2){const ss=samples(face,n,110);for(let i=0;i<ss.length-1;i++){const avg=ss[i].map((v,j)=>(v+ss[i+1][j])/2);out+=path([point(ss[i]),point(ss[i+1])],`fill="none" stroke="${color(avg)}" stroke-width="5" stroke-linecap="round"`);}return out;}
+ const steps=18,at=(i,j)=>{const w=Array(n).fill(0);w[face[0]]=i/steps;w[face[1]]=j/steps;w[face[2]]=1-(i+j)/steps;return w;};
+ function cell(ws){const c=ws[0].map((_,j)=>(ws[0][j]+ws[1][j]+ws[2][j])/3);out+=path(ws.map(point),`fill="${color(c)}" stroke="${color(c)}" stroke-width=".5" opacity="${fillOpacity}"`,true);}
+ for(let i=0;i<steps;i++)for(let j=0;j<steps-i;j++){cell([at(i,j),at(i+1,j),at(i,j+1)]);if(i+j<steps-1)cell([at(i+1,j),at(i+1,j+1),at(i,j+1)]);}return out;
+}
+function pointRing(p,w,label='x',invalid=false,g=null){const left=g&&p[0]>g.w*.68;return circle(p,7,'fill="var(--bg)"')+circle(p,4,`fill="${color(w)}"`)+circle(p,8,`fill="none" stroke="${invalid?'var(--bad)':'var(--fg)'}" stroke-width="1.6"`)+(label?textAt([p[0]+(left?-11:11),p[1]-11],label,`class="point-label" text-anchor="${left?'end':'start'}" ${invalid?'style="fill:var(--bad)"':''}`):'');}
+function drawComplex(c,g,vertices,face,w,valid=true){
+ let s='';for(const f of c.max)if(f.length===3)s+=path(f.map(i=>screen(vertices[i],g)),'fill="var(--soft)" stroke="none"',true);
+ for(const f of c.faces)if(f.length===2)s+=path(f.map(i=>screen(vertices[i],g)),'fill="none" stroke="var(--gray)" stroke-width="2"');
+ if(valid)s+=coloredFace(face,vertices.length,q=>screen(combine(q,vertices),g));
+ else s+=path(face.map(i=>screen(vertices[i],g)),'fill="none" stroke="var(--bad)" stroke-width="1.7" stroke-dasharray="4 4"',face.length===3);
+ vertices.forEach((v,i)=>{const p=screen(v,g),wi=centroid([i],vertices.length);s+=circle(p,4,`fill="${color(wi)}" stroke="var(--bg)" stroke-width="1.5"`);const xp=screen(combine(w,vertices),g);if(Math.hypot(p[0]-xp[0],p[1]-xp[1])<19)return;const offset=[v[0]<-.05?-14:10,v[1]<-.05?17:-11];s+=textAt([p[0]+offset[0],p[1]+offset[1]],LABELS[i],'text-anchor="middle"');});
+ const sup=support(w),label=sup.length===1?'x = '+LABELS[sup[0]]:'x';s+=pointRing(screen(combine(w,vertices),g),w,label,!validPoint(c,w),g);return s;
+}
+function drawRegion(r,g,outline=false,nested=false){
+ const stroke=nested?'var(--gray)':'var(--purple)',fill=outline?'none':nested?'none':'var(--zone)',common=`fill="${fill}" stroke="${stroke}" stroke-width="${nested?1.3:1.8}" ${nested?'stroke-dasharray="4 3"':''}`;
+ const at=p=>screen(p,g);
+ if(r.type==='point')return circle(at(r.p),6,`fill="${outline?'none':stroke}" fill-opacity=".2" stroke="${stroke}" stroke-width="2"`);
+ if(r.type==='disk')return circle(at(r.p),g.r*r.r,common);
+ if(r.type==='circle')return circle([g.cx,g.cy],g.r*r.r,`fill="none" stroke="${stroke}" stroke-width="${outline?2:10}" opacity="${outline?1:.22}"`);
+ if(r.type==='rect')return path([[r.x0,r.y0],[r.x1,r.y0],[r.x1,r.y1],[r.x0,r.y1]].map(at),common,true);
+ if(r.type==='poly')return path(r.vertices.map(at),r.vertices.length===2?`fill="none" stroke="${stroke}" stroke-width="${outline?2:9}" opacity="${outline?1:.28}"`:common,r.vertices.length===3);
+ if(r.type==='sector'){const pts=[];for(let i=0;i<=50;i++)pts.push([r.outer*Math.cos(Math.PI*i/100),r.outer*Math.sin(Math.PI*i/100)]);for(let i=50;i>=0;i--)pts.push([r.inner*Math.cos(Math.PI*i/100),r.inner*Math.sin(Math.PI*i/100)]);return path(pts.map(at),common,true);}
+ if(r.type==='capsule'){
+  const a=at(r.a),b=at(r.b),dx=b[0]-a[0],dy=b[1]-a[1],len=Math.hypot(dx,dy),rr=g.r*r.r,n=[-dy/len*rr,dx/len*rr],p=[a[0]+n[0],a[1]+n[1]],q=[b[0]+n[0],b[1]+n[1]],v=[b[0]-n[0],b[1]-n[1]],u=[a[0]-n[0],a[1]-n[1]];
+  return `<path d="M${p}L${q}A${rr},${rr} 0 0 0 ${v}L${u}A${rr},${rr} 0 0 0 ${p}Z" ${common}/>`;
+ }
+ return '';
+}
+function targetBackground(id,g){
+ const kind=CASES[car.example].kind;
+ if(kind==='circle')return circle([g.cx,g.cy],g.r,'fill="none" stroke="var(--gray)" stroke-width="2"');
+ if(kind==='curved'){const r=g.r,inner=.45*r;return circle([g.cx,g.cy],r,'fill="var(--soft)" stroke="var(--gray)" stroke-width="1.5"')+circle([g.cx,g.cy],inner,'fill="var(--bg)" stroke="var(--gray)" stroke-width="1.3"');}
+ return path([[-1.2,-1.2],[1.2,-1.2],[1.2,1.2],[-1.2,1.2]].map(p=>screen(p,g)),'fill="var(--soft)" stroke="var(--gray)" stroke-width="1.2"',true);
+}
+function faceButton(face,active,missing=false){return `<button type="button" class="face-button ${active?'active ':''}${missing?'missing':''}" data-face="${face.join(',')}" aria-pressed="${active}">${faceName(face)}</button>`;}
+function realFaceList(){
+ const c=COMPLEXES[real.complex];$('real-faces').innerHTML=[1,2,3].map(size=>{const fs=c.faces.filter(f=>f.length===size);return fs.length?`<p class="group-label">${size===1?'Vertices':size===2?'Edges':'Filled triangles'}</p><div class="face-row">${fs.map(f=>faceButton(f,key(f)===key(real.face))).join('')}</div>`:'';}).join('')+(c.missing?`<p class="group-label">Not a face · try it</p><div class="face-row">${faceButton(c.missing,key(c.missing)===key(real.face),true)}</div>`:'');
+ $('real-faces').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{real.face=b.dataset.face.split(',').map(Number);real.w=centroid(real.face,c.vertices.length);realFaceList();realWeightControls();drawReal();}));
+}
+function realWeightControls(){
+ $('real-weights').innerHTML=real.face.map(i=>`<label class="weight-control" style="color:rgb(${PALETTE[i].join(' ')})">λ<sub>${LABELS[i]}</sub><input type="range" min="0" max="1" step="0.001" value="${real.w[i]}" data-weight="${i}" aria-label="Weight of vertex ${LABELS[i]}" ${real.face.length===1?'disabled':''}><output>${real.w[i].toFixed(2)}</output></label>`).join('');
+ $('real-weights').querySelectorAll('input').forEach(input=>input.addEventListener('input',()=>{const i=Number(input.dataset.weight),v=Number(input.value),others=real.face.filter(j=>j!==i),old=others.reduce((sum,j)=>sum+real.w[j],0);others.forEach(j=>real.w[j]=old>EPS?real.w[j]*(1-v)/old:(1-v)/others.length);real.w[i]=v;drawReal();}));
+}
+function drawReal(){
+ if(activeTab!=='realization')return;const c=COMPLEXES[real.complex],g=geometry('real-picture'),isFace=c.faces.some(f=>key(f)===key(real.face));
+ $('real-picture').innerHTML=drawComplex(c,g,placed(c.vertices),real.face,real.w,isFace);
+ const sup=support(real.w),allowed=validPoint(c,real.w),term=real.w.map((v,i)=>v>EPS?`${v.toFixed(2)}e<sub>${LABELS[i]}</sub>`:null).filter(Boolean).join(' + ');
+ $('real-coordinate').innerHTML=`x ≈ ${term}`;
+ $('real-support').className='status '+(allowed?'good':'bad');$('real-support').textContent=allowed?`Support ${faceName(sup)} ∈ Δ, so x ∈ |Δ|.`:`Support ${faceName(sup)} ∉ Δ. This mixture is not a point of |Δ|.`;
+ $('real-caption').textContent=isFace?`σ = ${faceName(real.face)}. ${real.face.length===1?'Its realization is one point.':real.face.length===2?'Its realization contains the whole segment, not just its endpoints.':'Its realization contains the entire filled triangle.'}`:`${faceName(real.face)} is missing. Its interior is not included.`;
+ $('real-weights').querySelectorAll('input').forEach(input=>{input.value=real.w[Number(input.dataset.weight)];input.nextElementSibling.value=Number(input.value).toFixed(2);});
+}
+function chooseComplex(){real.complex=$('complex').value;const c=COMPLEXES[real.complex];real.face=[...c.max[0]];real.w=centroid(real.face,c.vertices.length);realFaceList();realWeightControls();drawReal();}
+function realPick(e){real.w=projectFace(local(e,'real-picture'),real.face,placed(COMPLEXES[real.complex].vertices));drawReal();}
+$('real-picture').addEventListener('pointerdown',e=>{if(e.button!==0)return;realDrag=true;$('real-picture').setPointerCapture(e.pointerId);realPick(e);e.preventDefault();});
+$('real-picture').addEventListener('pointermove',e=>{if(realDrag)realPick(e);});for(const name of ['pointerup','pointercancel','lostpointercapture'])$('real-picture').addEventListener(name,()=>realDrag=false);
+$('complex').addEventListener('change',chooseComplex);$('placement').addEventListener('click',()=>{real.placement=1-real.placement;drawReal();});
+function carComplex(){return COMPLEXES[CASES[car.example].complex];}
+function carFaceList(){const c=carComplex();$('carrier-faces').innerHTML='<span>Face σ</span>'+c.faces.map(f=>faceButton(f,key(f)===key(car.face))).join('');$('carrier-faces').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{car.face=b.dataset.face.split(',').map(Number);car.w=centroid(car.face,c.vertices.length);carFaceList();drawCarrier();}));}
+function selectedFits(){return car.example==='escape'||car.example==='nesting'?car.face.length===1:car.example==='interior'?car.face.length<3:true;}
+function timeFor(view){return view==='start'?0:view==='end'?1:car.t;}
+function carTargets(){return car.example==='homotopy'?['start','now','end']:['now'];}
+function nestingFaces(){return carComplex().faces.filter(f=>key(f)!==key(car.face)&&(f.every(i=>car.face.includes(i))||car.face.every(i=>f.includes(i))));}
+function drawCarTarget(view){
+ const id='carrier-'+view,g=geometry(id),c=carComplex(),r=region(car.example,car.face),t=timeFor(view);let s=targetBackground(id,g);
+ if(car.nesting)for(const f of nestingFaces())s+=drawRegion(region(car.example,f),g,false,true);
+ s+=drawRegion(r,g);
+ const constant=car.example==='circle'&&car.variant==='constant';
+ if(constant){s+=circle(screen([1,0],g),5,'fill="var(--fg)"');}
+ else s+=coloredFace(car.face,c.vertices.length,w=>screen(mapped(car.example,w,t,car.variant),g));
+ s+=drawRegion(r,g,true);
+ const p=mapped(car.example,car.w,t,car.variant),pointInside=contains(r,p);s+=pointRing(screen(p,g),car.w,view==='now'?(car.example==='homotopy'?'Hₜ(x)':'f(x)'):view==='start'?'f₀(x)':'f₁(x)',!pointInside,g);
+ $(id).innerHTML=s;
+}
+function carrierText(){
+ const mapName=car.example==='homotopy'?'Hₜ':'f';
+ const c=CASES[car.example],sigma=faceName(car.face),sup=support(car.w),point=mapped(car.example,car.w,car.t,car.variant),small=contains(region(car.example,sup),point);
+ $('source-face').textContent='Selected ⟨'+sigma+'⟩';$('target-name').textContent=c.kind==='circle'?'circle':c.kind==='curved'?'annulus':'filled square';$('target-region').textContent='C('+sigma+')';
+ $('selected-condition').textContent=`${mapName}(⟨${sigma}⟩) ${selectedFits()?'⊆':'⊄'} C(${sigma})`;$('selected-condition').className='formula-line '+(selectedFits()?'good':'bad');
+ $('carrier-status').innerHTML=`<span class="${c.validCarrier?'good':'bad'}">${c.validCarrier?'✓ C is a carrier':'✕ C fails nesting'}</span><span class="${c.carried?'good':'bad'}">${c.carried?`✓ ${mapName} is carried`:c.validCarrier?'✕ f is not carried':'No carried map possible'}</span><span class="subtle">${c.contractible?'Regions are contractible':'Regions are not contractible'}</span>`;
+ $('point-condition').textContent=`x has support ${faceName(sup)}. ${small?'Its image is inside':'Its image is outside'} C(${faceName(sup)}).`;
+ $('point-condition').className='caption '+(small?'subtle':'bad');
+ $('nesting-condition').hidden=!car.nesting;
+ const larger=nestingFaces().filter(f=>f.length>car.face.length);
+ $('nesting-condition').textContent=car.example==='nesting'?'C({a}) is disjoint from C({a,b}): the required containment fails.':larger.length?`C(${sigma}) ⊆ ${larger.map(f=>'C('+faceName(f)+')').join(' ∩ ')}.`:`Every smaller face’s region lies inside C(${sigma}).`;
+ $('time').value=car.t;$('time-value').value=car.t.toFixed(2);
+}
+function drawConnections(){
+ const el=$('connections');el.toggleAttribute('hidden',!car.connections);if(!car.connections){el.innerHTML='';return;}
+ const stage=$('map-stage').getBoundingClientRect();el.setAttribute('viewBox',`0 0 ${stage.width} ${stage.height}`);
+ const at=(w,id)=>{const box=$(id).getBoundingClientRect(),g=geometries.get(id),view=id.replace('carrier-',''),p=view==='source'?combine(w,carComplex().vertices):mapped(car.example,w,timeFor(view),car.variant),q=screen(p,g);return[box.left-stage.left+q[0],box.top-stage.top+q[1]];};
+ let s='';function line(w,view,selected=false){const a=at(w,'carrier-source'),b=at(w,'carrier-'+view),dx=b[0]-a[0];return `<path data-link="${view}" d="M${a}C${a[0]+.45*dx},${a[1]} ${b[0]-.45*dx},${b[1]} ${b}" fill="none" stroke="${color(w)}" stroke-width="${selected?2:1}" opacity="${selected?.85:.17}"/>`;}
+ for(const w of samples(car.face,carComplex().vertices.length,car.face.length===3?3:7))for(const view of carTargets())s+=line(w,view);
+ for(const view of carTargets())s+=line(car.w,view,true);
+ for(const id of ['carrier-source',...carTargets().map(v=>'carrier-'+v)])s+=pointRing(at(car.w,id),car.w,'');el.innerHTML=s;
+}
+function drawCarrier(){if(activeTab!=='carriers')return;const c=carComplex(),g=geometry('carrier-source');$('carrier-source').innerHTML=drawComplex(c,g,c.vertices,car.face,car.w);carTargets().forEach(drawCarTarget);carrierText();drawConnections();}
+function stop(){car.playing=false;cancelAnimationFrame(car.raf);$('play').textContent=car.t>=1?'↻ Replay':'▶ Play';}
+function tick(now){if(!car.playing)return;car.t=Math.min(1,car.t+Math.min((now-car.last)/1000,.1)/6);car.last=now;drawCarTarget('now');carrierText();drawConnections();if(car.t>=1)stop();else car.raf=requestAnimationFrame(tick);}
+function chooseCarrier(){
+ stop();car.drag=null;car.example=$('carrier-example').value;const c=CASES[car.example],complex=carComplex();car.face=[...(c.defaultFace??complex.max[0])];car.w=centroid(car.face,complex.vertices.length);car.t=.5;car.variant='wrap';$('map-variant').value='wrap';car.nesting=['shared','nesting'].includes(car.example);$('nesting').checked=car.nesting;
+ $('carrier-note').textContent=c.note;$('map-control').hidden=!c.animate;$('variant-control').hidden=c.kind!=='circle';$('time-label').textContent=car.example==='homotopy'?'t':'Map';
+ const compare=car.example==='homotopy';$('map-stage').classList.toggle('compare',compare);$('start-frame').hidden=!compare;$('end-frame').hidden=!compare;$('current-title').textContent=compare?'Now Hₜ':'Image under f';
+ $('carrier-why').open=false;$('case-explanation').textContent=c.why;carFaceList();drawCarrier();stop();
+}
+function carPick(e,id){
+ const p=local(e,id),c=carComplex();if(id==='carrier-source')car.w=projectFace(p,car.face,c.vertices);
+ else{const view=id.replace('carrier-','');if(car.example==='circle'&&car.variant==='constant')return;let best=null,dist=Infinity;for(const w of samples(car.face,c.vertices.length,65)){const q=mapped(car.example,w,timeFor(view),car.variant),d=Math.hypot(q[0]-p[0],q[1]-p[1]);if(d<dist){dist=d;best=w;}}car.w=best;}
+ drawCarrier();
+}
+for(const id of ['carrier-source','carrier-start','carrier-now','carrier-end']){
+ $(id).addEventListener('pointerdown',e=>{if(e.button!==0)return;car.drag={id,pointer:e.pointerId};$(id).setPointerCapture(e.pointerId);carPick(e,id);e.preventDefault();});$(id).addEventListener('pointermove',e=>{if(car.drag?.id===id&&car.drag.pointer===e.pointerId)carPick(e,id);});for(const name of ['pointerup','pointercancel','lostpointercapture'])$(id).addEventListener(name,()=>car.drag=null);
+}
+function keyboardPoint(e,which){if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();const state=which==='real'?real:car;if(state.face.length<2)return;const first=state.face[0],others=state.face.slice(1),amount=['ArrowRight','ArrowUp'].includes(e.key)?.025:-.025,v=clamp(state.w[first]+amount),old=1-state.w[first];for(const i of others)state.w[i]=old>EPS?state.w[i]*(1-v)/old:(1-v)/others.length;state.w[first]=v;if(which==='real')drawReal();else drawCarrier();}
+$('real-picture').addEventListener('keydown',e=>keyboardPoint(e,'real'));$('carrier-source').addEventListener('keydown',e=>keyboardPoint(e,'carrier'));
+$('carrier-example').innerHTML=Object.entries(CASES).map(([id,c])=>`<option value="${id}">${c.label}</option>`).join('');$('carrier-example').addEventListener('change',chooseCarrier);
+$('time').addEventListener('input',e=>{car.t=Number(e.target.value);stop();drawCarTarget('now');carrierText();drawConnections();});
+$('play').addEventListener('click',()=>{if(car.playing){stop();return;}if(car.t>=1)car.t=0;car.playing=true;car.last=performance.now();$('play').textContent='Ⅱ Pause';car.raf=requestAnimationFrame(tick);});
+$('map-variant').addEventListener('change',()=>{car.variant=$('map-variant').value;drawCarrier();});$('nesting').addEventListener('change',()=>{car.nesting=$('nesting').checked;drawCarrier();});$('connect').addEventListener('click',()=>{car.connections=!car.connections;$('connect').setAttribute('aria-pressed',String(car.connections));drawConnections();});
+const ext={stage:0,progress:1,variant:0,broken:false,connections:false,w:[1,0,0,0],side:0,playing:false,raf:0,last:0,drag:false};
+const EXT_STEPS=['1 · Vertices','2 · Edges','3 · Fill abc','4 · Fill bcd','5 · Complete'];
+function extensionStop(){ext.playing=false;cancelAnimationFrame(ext.raf);$('extension-play').textContent=ext.stage===4?'↻ Replay':'▶ Build';}
+function extensionChoose(stage){
+ extensionStop();ext.stage=clamp(stage,0,4);ext.progress=stage===0||stage===4?1:0;
+ if(stage<3){ext.broken=false;$('extension-break').checked=false;}ext.w=stage===0?[1,0,0,0]:[0,.5,.5,0];ext.side=0;drawExtension();
+}
+function extensionFill(side,progress,g,target){
+ if(progress<=0)return '';const face=EXT_FACES[side],rings=Math.max(1,Math.ceil(progress*18)),parts=18;let s='';
+ const point=w=>screen(target?extensionMap(w,side,ext.variant,ext.broken&&ext.stage>=3):combine(w,COMPLEXES.glued.vertices),g);
+ function cell(ws){const avg=ws[0].map((_,k)=>(ws[0][k]+ws[1][k]+ws[2][k])/3);s+=path(ws.map(point),`fill="${color(avg)}" stroke="${color(avg)}" stroke-width=".45" opacity=".83"`,true);}
+ for(let ring=0;ring<rings;ring++){
+  const outer=1-progress*ring/rings,inner=1-progress*(ring+1)/rings;
+  for(let e=0;e<3;e++){const edge=[face[e],face[(e+1)%3]];for(let j=0;j<parts;j++){
+   const a=extensionRay(face,edge,j/parts,outer),b=extensionRay(face,edge,(j+1)/parts,outer),c=extensionRay(face,edge,(j+1)/parts,inner),d=extensionRay(face,edge,j/parts,inner);cell([a,b,c]);cell([a,c,d]);
+  }}
+ }
+ if(progress<1){const rho=1-progress,ws=face.map(i=>{const w=centroid(face,4);face.forEach(j=>w[j]*=1-rho);w[i]+=rho;return w;});s+=path(ws.map(point),'fill="none" stroke="var(--muted)" stroke-width="1" stroke-dasharray="3 4"',true);}
+ return s;
+}
+function extensionEdgeDrawing(edge,g,target,broken=false){
+ if(ext.stage===0)return '';const count=80,limit=ext.stage===1?ext.progress:1;let s='';
+ const wAt=t=>{const w=Array(4).fill(0);w[edge[0]]=1-t;w[edge[1]]=t;return w;};
+ for(let j=0;j<count;j++){const a=j/count,b=Math.min(limit,(j+1)/count);if(a>=limit)break;const wa=wAt(a),wb=wAt(b),mid=wAt((a+b)/2),points=[wa,wb].map(w=>screen(target?extensionEdge(w,broken?1:0,broken):combine(w,COMPLEXES.glued.vertices),g));s+=path(points,`fill="none" stroke="${broken?'var(--bad)':color(mid)}" stroke-width="${edge[0]===1&&edge[1]===2?4.5:3.5}" stroke-linecap="round"`);}return s;
+}
+function extensionPicture(target){
+ const id=target?'extension-target':'extension-source',g=geometry(id),vertices=target?EXT_TARGET:COMPLEXES.glued.vertices;let s='';
+ if(target)s+=path([[-1.18,-1.15],[1.18,-1.15],[1.18,1.15],[-1.18,1.15]].map(p=>screen(p,g)),'fill="var(--soft)" stroke="var(--border)"',true);
+ for(const face of EXT_FACES)s+=path(face.map(i=>screen(vertices[i],g)),`fill="${target?'var(--zone)':'var(--soft)'}" stroke="${target?'var(--purple)':'var(--gray)'}" stroke-width="1.5"`,true);
+ for(let side=0;side<2;side++){const step=side+2,progress=ext.stage<step?0:ext.stage===step?ext.progress:1;s+=extensionFill(side,progress,g,target);}
+ for(const edge of EXT_EDGES)s+=extensionEdgeDrawing(edge,g,target);
+ if(target&&ext.broken&&ext.stage>=3)s+=extensionEdgeDrawing([1,2],g,true,true);
+ vertices.forEach((p,i)=>{const at=screen(p,g),w=centroid([i],4);s+=circle(at,4,`fill="${color(w)}" stroke="var(--bg)" stroke-width="1.5"`);s+=textAt([at[0]+(i===0?-10:i===3?10:0),at[1]+(i===1?-13:i===2?18:20)],target?'f('+LABELS[i]+')':LABELS[i],`text-anchor="${i===0?'end':i===3?'start':'middle'}"`);});
+ const assigned=extensionDefined(ext.w,ext.side,ext.stage,ext.progress),shared=ext.w[0]<EPS&&ext.w[3]<EPS;
+ if(!target)s+=pointRing(screen(combine(ext.w,vertices),g),ext.w,'x',false,g);
+ else if(assigned){
+  if(shared&&ext.broken&&ext.stage>=3&&ext.w[1]>EPS&&ext.w[2]>EPS){
+   const left=screen(extensionMap(ext.w,0,ext.variant),g),right=screen(extensionMap(ext.w,1,ext.variant,true),g);
+   s+=path([left,right],'fill="none" stroke="var(--bad)" stroke-width="1.5" stroke-dasharray="3 3"');s+=pointRing(left,ext.w,'',false,g)+pointRing(right,ext.w,'',true,g);
+   s+=textAt([left[0]-10,left[1]-13],'left','text-anchor="end"')+textAt([right[0]+10,right[1]-13],'right','text-anchor="start" style="fill:var(--bad)"');
+  }else s+=pointRing(screen(extensionMap(ext.w,ext.side,ext.variant,ext.broken&&ext.stage>=3),g),ext.w,'f(x)',false,g);
+ }
+ $(id).innerHTML=s;
+}
+function extensionConnections(){
+ const el=$('extension-lines');el.toggleAttribute('hidden',!ext.connections);if(!ext.connections){el.innerHTML='';return;}
+ const frame=$('extension-grid').getBoundingClientRect();el.setAttribute('viewBox',`0 0 ${frame.width} ${frame.height}`);let s='';
+ function point(w,side,target){const id=target?'extension-target':'extension-source',box=$(id).getBoundingClientRect(),g=geometries.get(id),p=screen(target?extensionMap(w,side,ext.variant,ext.broken&&ext.stage>=3):combine(w,COMPLEXES.glued.vertices),g);return[p[0]+box.left-frame.left,p[1]+box.top-frame.top];}
+ function line(w,side,selected=false){if(!extensionDefined(w,side,ext.stage,ext.progress))return;const a=point(w,side,false),b=point(w,side,true),dx=b[0]-a[0];s+=`<path d="M${a}C${a[0]+dx*.4},${a[1]} ${b[0]-dx*.4},${b[1]} ${b}" fill="none" stroke="${color(w)}" opacity="${selected?.85:.14}" stroke-width="${selected?2:1}"/>`;}
+ for(let side=0;side<2;side++)for(const w of samples(EXT_FACES[side],4,3))line(w,side);line(ext.w,ext.side,true);
+ if(ext.broken&&ext.stage>=3&&ext.w[0]<EPS&&ext.w[3]<EPS)line(ext.w,1,true);el.innerHTML=s;
+}
+function drawExtension(){
+ if(activeTab!=='extensions')return;
+ $('extension-steps').innerHTML=EXT_STEPS.map((label,i)=>`<button type="button" data-step="${i}" aria-pressed="${ext.stage===i}">${label}</button>`).join('');
+ $('extension-steps').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>extensionChoose(Number(b.dataset.step))));
+ const copies=['Choose each vertex image in its assigned region. The rest of X has no output yet.','Connect the chosen vertex images. The endpoints keep exactly the same values.','Fill abc from its boundary inward. Every edge value remains fixed.','Fill bcd using the boundary map already chosen—including the entire shared edge bc.','Both triangles are filled. Their maps agree on bc, so they fit together into one continuous map.'];
+ $('extension-copy').textContent=ext.broken&&ext.stage>=3?'An attempted second filling changes bc. Watch one shared input acquire two outputs.':copies[ext.stage];
+ $('extension-progress').value=ext.progress;$('extension-progress').disabled=ext.stage===0||ext.stage===4;$('extension-value').value=Math.round(ext.progress*100)+'%';
+ $('extension-prev').disabled=ext.stage===0;$('extension-next').disabled=ext.stage===4;$('extension-alternate').disabled=ext.stage!==4||ext.broken;$('extension-break').disabled=ext.stage<3;
+ if(!ext.playing)$('extension-play').textContent=ext.stage===4?'↻ Replay':'▶ Build';
+ const assigned=extensionDefined(ext.w,ext.side,ext.stage,ext.progress),shared=ext.w[0]<EPS&&ext.w[3]<EPS;
+ $('extension-point').textContent=!assigned?'The selected x has not been assigned an output yet.':shared&&ext.broken&&ext.stage>=3?'Same input x on bc, two different outputs. The attempted filling changed an earlier value.':shared&&ext.stage>=2?'x lies on bc. Both triangles use exactly the same f(x).':'The circled input and output have the same color.';
+ const texts=['Only vertex values are chosen so far.','Each edge extends its two endpoint values.','Extension means preserving the whole boundary map, point by point.','The shared edge is reused, not defined a second time.','A continuous carried map now exists on all of X. Different interior choices still preserve the boundary.'];
+ $('extension-status').textContent=ext.broken&&ext.stage>=3?'Not an extension: the two pieces disagree on bc and do not define a function on X.':texts[ext.stage];$('extension-status').className='extension-proof '+(ext.broken&&ext.stage>=3?'bad':'');
+ extensionPicture(false);extensionPicture(true);extensionConnections();
+}
+function extensionTick(now){
+ if(!ext.playing)return;ext.progress=Math.min(1,ext.progress+Math.min(.1,(now-ext.last)/1000)/3);ext.last=now;
+ if(ext.progress>=1){if(ext.stage<3){ext.stage++;ext.progress=0;}else{ext.stage=4;ext.progress=1;extensionStop();}}
+ drawExtension();if(ext.playing)ext.raf=requestAnimationFrame(extensionTick);
+}
+$('extension-play').addEventListener('click',()=>{if(ext.playing){extensionStop();return;}if(ext.stage===0||ext.stage===4)extensionChoose(1);ext.broken=false;$('extension-break').checked=false;ext.playing=true;ext.last=performance.now();$('extension-play').textContent='Ⅱ Pause';ext.raf=requestAnimationFrame(extensionTick);});
+$('extension-prev').addEventListener('click',()=>extensionChoose(ext.stage-1));$('extension-next').addEventListener('click',()=>extensionChoose(ext.stage+1));
+$('extension-progress').addEventListener('input',()=>{extensionStop();ext.progress=Number($('extension-progress').value);drawExtension();});
+$('extension-connect').addEventListener('click',()=>{ext.connections=!ext.connections;$('extension-connect').setAttribute('aria-pressed',String(ext.connections));extensionConnections();});
+$('extension-track').addEventListener('click',()=>{ext.w=[0,.5,.5,0];ext.side=0;drawExtension();});
+$('extension-alternate').addEventListener('click',()=>{ext.variant=1-ext.variant;drawExtension();});
+$('extension-break').addEventListener('change',()=>{extensionStop();ext.broken=$('extension-break').checked;ext.w=[0,.5,.5,0];ext.side=0;drawExtension();});
+function extensionPick(e){const p=local(e,'extension-source');ext.side=p[0]<=0?0:1;ext.w=projectFace(p,EXT_FACES[ext.side],COMPLEXES.glued.vertices);if(Math.abs(p[0])<.055){const s=clamp((.8-p[1])/1.6);ext.w=[0,1-s,s,0];ext.side=0;}drawExtension();}
+$('extension-source').addEventListener('pointerdown',e=>{if(e.button!==0)return;ext.drag=true;$('extension-source').setPointerCapture(e.pointerId);extensionPick(e);e.preventDefault();});$('extension-source').addEventListener('pointermove',e=>{if(ext.drag)extensionPick(e);});for(const name of ['pointerup','pointercancel','lostpointercapture'])$('extension-source').addEventListener(name,()=>ext.drag=false);
+$('extension-source').addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();const s=clamp(ext.w[2]+(['ArrowDown','ArrowRight'].includes(e.key)?.04:-.04));ext.w=[0,1-s,s,0];ext.side=0;drawExtension();});
+$('extension-homotopy').addEventListener('click',()=>{selectTab('carriers');$('carrier-example').value='homotopy';chooseCarrier();});
+const solid={scene:'prism',base:'triangle',bases:{prism:'triangle',cone:'circle',fill:'triangle'},progress:.4,part:'all',yaw:-.5,pitch:.55,input:[-.35,-.15],playing:false,raf:0,last:0,drag:null};
+const SOLID_COLORS={bottom:'#3979df',top:'#e48a32',sides:'#239b86',current:'#9b57bd'};
+function solidStop(){solid.playing=false;cancelAnimationFrame(solid.raf);$('solid-play').textContent=solid.progress>=1?'↻ Replay':'▶ Play';}
+function solidProjection(p,g){const a=Math.cos(solid.yaw)*p[0]-Math.sin(solid.yaw)*p[1],b=Math.sin(solid.yaw)*p[0]+Math.cos(solid.yaw)*p[1];return{xy:[g.cx+g.r*a,g.cy-g.r*(p[2]*Math.cos(solid.pitch)-b*Math.sin(solid.pitch))],depth:b*Math.cos(solid.pitch)+p[2]*Math.sin(solid.pitch)};}
+function solidPrimitive(type,points,paint,alpha=1,width=1.3,dash=''){return{type,points,paint,alpha,width,dash};}
+function solidRender(id,items,labels=[]){
+ const g=geometry(id);g.r*=.81;const projected=items.map(item=>({...item,projections:item.points.map(p=>solidProjection(p,g))}));projected.sort((a,b)=>a.projections.reduce((s,p)=>s+p.depth,0)/a.points.length-b.projections.reduce((s,p)=>s+p.depth,0)/b.points.length);
+ let out='';for(const item of projected){const pts=item.projections.map(p=>p.xy);if(item.type==='dot'){out+=circle(pts[0],item.width,`fill="${item.paint}" stroke="var(--bg)" stroke-width="1.7" opacity="${item.alpha}"`);continue;}
+  const attrs=item.type==='face'?`fill="${item.paint}" fill-opacity="${item.alpha}" stroke="${item.paint}" stroke-opacity="${Math.max(.18,item.alpha)}" stroke-width="${item.width}"`:`fill="none" stroke="${item.paint}" stroke-opacity="${item.alpha}" stroke-width="${item.width}"`;
+  out+=path(pts,attrs+(item.dash?` stroke-dasharray="${item.dash}"`:''),item.type==='face'||item.type==='loop');
+ }
+ for(const l of labels){const p=solidProjection(l.p,g).xy;out+=textAt([p[0]+(l.dx??9),p[1]+(l.dy??-10)],l.text,`text-anchor="${l.anchor??'start'}" ${l.color?`style="fill:${l.color}"`:''} ${l.bold?'class="point-label"':''}`);}
+ $(id).innerHTML=out;
+}
+function solidFloor(items){for(const a of [-1.2,-.6,0,.6,1.2]){items.push(solidPrimitive('line',[[a,-1.2,-1.03],[a,1.2,-1.03]],'var(--gray)',.2,.7));items.push(solidPrimitive('line',[[-1.2,a,-1.03],[1.2,a,-1.03]],'var(--gray)',.2,.7));}}
+function solidPrism(items,scale=1,wire=false){
+ const pts=solid.base==='edge'?[[-1,0],[1,0]]:SOLID_TRI,lift=(p,t)=>solidLift(p,t).map(v=>v*scale),selected=part=>solid.part==='all'||solid.part===part;
+ if(solid.base==='edge'){
+  if(!wire)items.push(solidPrimitive('face',[lift(pts[0],0),lift(pts[1],0),lift(pts[1],1),lift(pts[0],1)],'var(--purple)',.055));
+  for(const [part,ps] of [['bottom',[lift(pts[0],0),lift(pts[1],0)]],['top',[lift(pts[0],1),lift(pts[1],1)]],['sides',[lift(pts[0],0),lift(pts[0],1)]],['sides',[lift(pts[1],0),lift(pts[1],1)]]])items.push(solidPrimitive('line',ps,wire?'var(--muted)':SOLID_COLORS[part],wire?.6:selected(part)?1:.16,wire?1:3,wire?'4 4':''));
+ }else{
+  for(const [part,t] of [['bottom',0],['top',1]])items.push(solidPrimitive(wire?'loop':'face',pts.map(p=>lift(p,t)),wire?'var(--muted)':SOLID_COLORS[part],wire?.7:selected(part)?(solid.scene==='fill'&&$('solid-cutaway').checked?.055:.2):.025,wire?1:1.5,wire?'4 4':''));
+  for(let i=0;i<3;i++){const a=pts[i],b=pts[(i+1)%3];items.push(solidPrimitive(wire?'loop':'face',[lift(a,0),lift(b,0),lift(b,1),lift(a,1)],wire?'var(--muted)':SOLID_COLORS.sides,wire?.65:selected('sides')?(solid.scene==='fill'&&$('solid-cutaway').checked?.025:.14):.025,wire?1:1.2,wire?'4 4':''));}
+ }
+}
+function solidBoundaryColor(u){return Math.abs(u[2]+SOLID_HEIGHT)<EPS?SOLID_COLORS.bottom:Math.abs(u[2]-SOLID_HEIGHT)<EPS?SOLID_COLORS.top:SOLID_COLORS.sides;}
+function solidChosenBoundary(){return solid.part==='bottom'?[.22,solid.base==='edge'?0:.08,-SOLID_HEIGHT]:solid.part==='sides'?(solid.base==='edge'?[1,0,.2]:[0,-.5,.2]):[.22,solid.base==='edge'?0:.08,SOLID_HEIGHT];}
+function solidDrawPrism(){
+ const items=[],labels=[];solidFloor(items);solidPrism(items);const base=solid.base==='edge'?[[-1,0],[1,0]]:SOLID_TRI;
+ if(solid.scene==='prism'){
+  items.push(solidPrimitive(solid.base==='edge'?'line':'face',base.map(p=>solidLift(p,solid.progress)),SOLID_COLORS.current,solid.base==='edge'?1:.32,2));
+  const p=solid.base==='edge'?[solid.input[0],0]:solid.input,a=solidLift(p,0),b=solidLift(p,1),now=solidLift(p,solid.progress);
+  items.push(solidPrimitive('line',[a,b],'var(--fg)',.7,1.5,'4 4'));items.push(solidPrimitive('dot',[a],SOLID_COLORS.bottom,1,4),solidPrimitive('dot',[b],SOLID_COLORS.top,1,4),solidPrimitive('dot',[now],SOLID_COLORS.current,1,6));
+  labels.push({p:now,text:'(x, t)',bold:true,dx:10,dy:-12},{p:a,text:'(x, 0)',dx:9,dy:18},{p:b,text:'(x, 1)',dx:9,dy:-14});
+ }else{
+  const rho=1-solid.progress;if(rho>1e-6&&rho<1-1e-6)solidPrism(items,rho,true);
+  for(const u of solidBoundaryPoints(solid.base)){const inner=u.map(v=>rho*v),col=solidBoundaryColor(u);items.push(solidPrimitive('line',[u,inner],col,.58,1.6));items.push(solidPrimitive('dot',[u],col,1,3));}
+  const u=solidChosenBoundary(),now=u.map(v=>rho*v);items.push(solidPrimitive('line',[u,[0,0,0]],'var(--fg)',.6,1.3,'4 4'),solidPrimitive('dot',[u],solidBoundaryColor(u),1,5),solidPrimitive('dot',[now],SOLID_COLORS.current,1,6));
+  labels.push({p:u,text:solid.progress<.03?'u = x':'u · fixed',dx:9,dy:-14},{p:[0,0,0],text:'center',dx:8,dy:20});if(solid.progress>.08&&solid.progress<.97)labels.push({p:now,text:'x',bold:true,dx:10,dy:-10});
+ }
+ solidRender('solid-left',items,labels);
+}
+function solidDrawOutputs(){
+ const g=geometry('solid-right');g.r*=.91;const at=p=>screen(p,g),base=solid.base==='edge'?[[-1,0],[1,0]]:SOLID_TRI;let s=circle([g.cx,g.cy],g.r,'fill="var(--zone)" stroke="var(--purple)" stroke-width="1.6"');
+ s+=textAt([g.cx,g.cy-g.r-12],'C(A)','text-anchor="middle"');
+ for(const t of [0,1])s+=path(base.map(p=>at(solidEnd(p,t))),`fill="${solid.base==='edge'?'none':SOLID_COLORS[t?'top':'bottom']}" fill-opacity=".07" stroke="${SOLID_COLORS[t?'top':'bottom']}" stroke-width="2"`,solid.base!=='edge');
+ for(const p of base)s+=path([at(solidEnd(p,0)),at(solidEnd(p,1))],`fill="none" stroke="${SOLID_COLORS.sides}" stroke-opacity=".45" stroke-width="1.1" stroke-dasharray="3 3"`);
+ const mark=(p,col,r=4)=>circle(at(p),r,`fill="${col}" stroke="var(--bg)" stroke-width="1.7"`);
+ if(solid.scene==='prism'){
+  const p=solid.base==='edge'?[solid.input[0],0]:solid.input,a=solidEnd(p,0),b=solidEnd(p,1),now=solidH(p,solid.progress);
+  s+=path(base.map(v=>at(solidH(v,solid.progress))),`fill="${solid.base==='edge'?'none':SOLID_COLORS.current}" fill-opacity=".17" stroke="${SOLID_COLORS.current}" stroke-width="2"`,solid.base!=='edge');
+  s+=path([at(a),at(b)],'fill="none" stroke="var(--fg)" stroke-width="1.4" stroke-dasharray="4 3"')+mark(a,SOLID_COLORS.bottom)+mark(b,SOLID_COLORS.top)+mark(now,SOLID_COLORS.current,6);
+  const pa=at(a),pb=at(b),pn=at(now);s+=textAt([pa[0]-8,pa[1]+19],'f₀(x)','text-anchor="end"')+textAt([pb[0]+8,pb[1]+19],'f₁(x)')+textAt([pn[0],pn[1]-15],'H(x,t)','text-anchor="middle" class="point-label"');
+ }else{
+  const rho=1-solid.progress;for(const u of solidBoundaryPoints(solid.base)){const q=solidFill(u,1),p=solidFill(u,rho),col=solidBoundaryColor(u);s+=path([at(q),at(p)],`fill="none" stroke="${col}" stroke-opacity=".5" stroke-width="1.4"`)+mark(q,col,2.8);}
+  const u=solidChosenBoundary(),q=solidFill(u,1),p=solidFill(u,rho),pq=at(q),pr=at(SOLID_CENTER),pn=at(p);
+  s+=path([pq,pr],'fill="none" stroke="var(--fg)" stroke-width="1.4" stroke-dasharray="3 4"')+mark(q,solidBoundaryColor(u),5)+mark(SOLID_CENTER,'var(--fg)',4)+mark(p,SOLID_COLORS.current,6);
+  s+=textAt([pq[0]+10,pq[1]-15],solid.progress<.03?'B(u) = F(x)':'B(u) · fixed')+textAt([pr[0]+9,pr[1]+20],solid.progress>.97?'r = F(center)':'r');if(solid.progress>.1&&solid.progress<.92)s+=textAt([pn[0]-10,pn[1]-11],'F(x)','text-anchor="end" class="point-label"');
+ }
+ $('solid-right').innerHTML=s;
+}
+function solidDrawCone(id,collapse){
+ const items=[],labels=[];solidFloor(items);const edge=solid.base==='edge',disk=solid.base==='disk',n=edge?2:48,base=edge?[[-1,0],[1,0]]:Array.from({length:n},(_,i)=>[Math.cos(2*Math.PI*i/n),Math.sin(2*Math.PI*i/n)]),lift=(p,t)=>solidLift(p,t,collapse);
+ if(edge){items.push(solidPrimitive('face',[lift(base[0],0),lift(base[1],0),lift(base[1],1),lift(base[0],1)],'var(--purple)',.18,1.6));}
+ else{
+  for(let i=0;i<n;i++)items.push(solidPrimitive('face',[lift(base[i],0),lift(base[(i+1)%n],0),lift(base[(i+1)%n],1),lift(base[i],1)],'var(--purple)',.1,.15));
+  if(disk){for(const t of [0,.25,.5,.75,1])items.push(solidPrimitive('face',base.map(p=>lift(p,t)),t===0?SOLID_COLORS.bottom:t===1?SOLID_COLORS.top:'var(--purple)',t===0||t===1?.2:.055,.4));}
+ }
+ for(const t of [0,1])items.push(solidPrimitive(edge?'line':'loop',base.map(p=>lift(p,t)),t?SOLID_COLORS.top:SOLID_COLORS.bottom,1,2));
+ const marked=edge?base:Array.from({length:8},(_,i)=>base[i*6]);marked.forEach((p,i)=>{const col=`hsl(${Math.round(i*300/marked.length+200)%360} 60% 52%)`;items.push(solidPrimitive('line',[lift(p,0),lift(p,1)],col,.55,1.2));items.push(solidPrimitive('dot',[lift(p,0)],col,1,3));if(collapse<1)items.push(solidPrimitive('dot',[lift(p,1)],col,1,3));});
+ if(collapse===1){items.push(solidPrimitive('dot',[[0,0,SOLID_HEIGHT]],'var(--fg)',1,6));labels.push({p:[0,0,SOLID_HEIGHT],text:'one apex',bold:true,dy:-15});}
+ else labels.push({p:lift(edge?[0,0]:[0,1],1),text:'top copy of Z',dx:0,dy:-17,anchor:'middle'});
+ labels.push({p:lift(edge?[0,0]:[0,-1],0),text:edge?'Z · edge':disk?'Z · filled disk':'Z · circle',dx:0,dy:23,anchor:'middle'});solidRender(id,items,labels);
+}
+function drawSolid(){
+ if(activeTab!=='solids')return;
+ $('solid-progress').value=solid.progress;$('solid-value').value=solid.progress.toFixed(2);if(!solid.playing)$('solid-play').textContent=solid.progress>=1?'↻ Replay':'▶ Play';
+ $('solid-facets').querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.part===solid.part)));
+ if(solid.scene==='cone'){
+  solidDrawCone('solid-left',0);solidDrawCone('solid-right',solid.progress);$('solid-right-title').textContent=solid.progress===1?'Cone(Z) · the top is one point':'Collapse the top copy of Z';
+  $('solid-equation').textContent='Cone(Z) = (Z × [0,1]) / (Z × {1})';
+  const what=solid.base==='circle'?'The cone on a circle is a surface homeomorphic to a filled disk.':solid.base==='disk'?'The cone on a filled disk is a solid cone, homeomorphic to a 3-ball.':'The cone on an edge is a filled triangle.';
+  $('solid-status').textContent=(solid.progress===1?'All points of the top copy now represent the same apex. ':`The top is ${Math.round(100*(1-solid.progress))}% of its original width. The identification happens at 1. `)+what;
+ }else{
+  solidDrawPrism();solidDrawOutputs();$('solid-equation').textContent=solid.scene==='prism'?'∂(A × [0,1]) = (A × {0,1}) ∪ (∂A × [0,1])':'x = ρu   →   F(x) = ρ B(u) + (1−ρ)r,     ρ = 1 − fill';
+  $('solid-status').textContent=solid.scene==='prism'?(solid.part==='bottom'?'Bottom: H(x,0) = f₀(x), already prescribed.':solid.part==='top'?'Top: H(x,1) = f₁(x), already prescribed.':solid.part==='sides'?'Sides: motions on smaller faces were chosen earlier and must stay unchanged.':'Bottom, top, and sides agree where they meet. Together they prescribe a map on the entire boundary.'):(solid.progress===1?'All rays meet at one center, whose output is r. Every original boundary value is unchanged.':'The dashed inner prism is not filled yet. Extend each boundary value inward along a ray; keep its original endpoint fixed.');
+ }
+}
+function chooseSolid(){
+ solidStop();solid.bases[solid.scene]=solid.base;solid.scene=$('solid-scene').value;solid.base=solid.bases[solid.scene];solid.progress=solid.scene==='prism'?.4:solid.scene==='cone'?1:.45;solid.part='all';
+ const cone=solid.scene==='cone',fill=solid.scene==='fill';$('solid-base').innerHTML=(cone?[['circle','Circle (surface cone)'],['disk','Filled disk (solid cone)'],['edge','Edge']]:[['triangle','Filled triangle'],['edge','Edge']]).map(([v,label])=>`<option value="${v}">${label}</option>`).join('');$('solid-base').value=solid.base;$('solid-base-label').textContent=cone?'Z':'A';
+ $('solid-intro').textContent=cone?'Keep the bottom copy of Z. Collapse the whole top copy to one point.':'Height records time. '+(fill?'Regard the prism as the cone on its boundary, with the apex at its center.':'The bottom is f₀, the top is f₁, and the sides are the boundary motions already chosen.');
+ $('solid-facets').hidden=cone;$('solid-key').hidden=cone;$('solid-cutaway-control').hidden=!fill;$('solid-slider-label').textContent=cone?'Collapse λ':fill?'Fill inward':'Time t';$('solid-progress').setAttribute('aria-label',cone?'Collapse the top into one apex':fill?'Extend inward while preserving boundary values':'Time in the prism');
+ $('solid-left-title').textContent=cone?'Z × [0,1] · cylinder':fill?'P = A × [0,1] · fill the domain':'A × [0,1] · the domain';$('solid-right-title').textContent='C(A) ⊆ Y · the allowed outputs';
+ $('solid-hint').textContent=cone?'Drag either shape to rotate both · arrow keys also rotate.':fill?'Drag the prism to rotate · colored rays are samples of the extension on every ray.':'Drag the prism to rotate · click its slice to choose x · arrow keys also rotate.';
+ $('solid-why').innerHTML=cone?'<p>A cylinder keeps a separate copy of Z at every height. The cone identifies every point at height 1 to the same apex. This is a quotient construction.</p><p>For a circle base, there are no filled caps: the cylinder and cone here are surfaces. Choosing a filled disk includes every interior point and produces a solid cylinder or solid cone.</p><p>The intermediate pictures show how the top approaches the identification. Here Cone(Z) names a space; C(A) in the other views names an assigned carrier region.</p>':fill?'<p>Here P is a rectangle or a solid triangular prism, hence a ball. Every point other than its center lies on a unique ray from the center to a boundary point u. Thus P is homeomorphic to Cone(∂P), with the original boundary as the base.</p><p>B is the map already prescribed on ∂P. The target disk is our contractible allowed region. Its straight-line contraction to r gives F(ρu) = ρB(u) + (1−ρ)r. At ρ = 1 we recover B(u) exactly; at ρ = 0 every ray gives r. That is agreement and extension.</p><p>The slider reveals a fixed extension. It never changes an earlier boundary value. The same idea works for any contractible allowed region, using its contraction in place of straight lines.</p>':'<p>A homotopy H maps the whole cylinder X × [0,1] into Y. For one source piece A, its cylinder A × [0,1] is a prism: an edge gives a rectangle, and a filled triangle gives a solid triangular prism.</p><p>We first prescribe f₀ on the bottom and f₁ on the top. The sides carry the homotopies already constructed on smaller faces. Nesting puts all these outputs in C(A). Contractibility lets us extend the boundary map across the prism while keeping every prescribed value.</p><p>The right-hand picture is one explicit convex example: every face is assigned the same target disk, and H(x,t) = (1−t)f₀(x) + tf₁(x). The height in the left picture is a domain coordinate, not a coordinate in Y.</p>';
+ $('solid-right').style.cursor=cone?'grab':'default';drawSolid();
+}
+function solidTick(now){if(!solid.playing)return;solid.progress=Math.min(1,solid.progress+Math.min(.1,(now-solid.last)/1000)/5);solid.last=now;drawSolid();if(solid.progress>=1)solidStop();else solid.raf=requestAnimationFrame(solidTick);}
+$('solid-scene').addEventListener('change',chooseSolid);$('solid-base').addEventListener('change',()=>{solidStop();solid.base=$('solid-base').value;solid.bases[solid.scene]=solid.base;drawSolid();});
+$('solid-progress').addEventListener('input',()=>{solidStop();solid.progress=Number($('solid-progress').value);drawSolid();});$('solid-reset').addEventListener('click',()=>{solid.yaw=-.5;solid.pitch=.55;drawSolid();});$('solid-cutaway').addEventListener('change',drawSolid);
+$('solid-facets').querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{solid.part=b.dataset.part;drawSolid();}));
+$('solid-play').addEventListener('click',()=>{if(solid.playing){solidStop();return;}if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){solid.progress=1;drawSolid();return;}if(solid.progress>=1)solid.progress=0;solid.playing=true;solid.last=performance.now();$('solid-play').textContent='Ⅱ Pause';solid.raf=requestAnimationFrame(solidTick);});
+function solidPick(e){const g=geometries.get('solid-left'),box=$('solid-left').getBoundingClientRect(),a=(e.clientX-box.left-g.cx)/g.r,v=-(e.clientY-box.top-g.cy)/g.r,z=SOLID_HEIGHT*(2*solid.progress-1),b=(z*Math.cos(solid.pitch)-v)/Math.sin(solid.pitch),p=[a*Math.cos(solid.yaw)+b*Math.sin(solid.yaw),-a*Math.sin(solid.yaw)+b*Math.cos(solid.yaw)];
+ if(solid.base==='edge'){const a3=solidProjection(solidLift([-1,0],solid.progress),g).xy,b3=solidProjection(solidLift([1,0],solid.progress),g).xy,q=segmentProjection([e.clientX-box.left,e.clientY-box.top],a3,b3);solid.input=[-1+2*q.t,0];}else solid.input=combine(projectFace(p,[0,1,2],SOLID_TRI),SOLID_TRI);drawSolid();}
+for(const id of ['solid-left','solid-right']){
+ $(id).addEventListener('pointerdown',e=>{if(e.button!==0||id==='solid-right'&&solid.scene!=='cone')return;solid.drag={id,x:e.clientX,y:e.clientY,moved:0,pointer:e.pointerId};$(id).setPointerCapture(e.pointerId);e.preventDefault();});
+ $(id).addEventListener('pointermove',e=>{const d=solid.drag;if(!d||d.id!==id||d.pointer!==e.pointerId)return;const dx=e.clientX-d.x,dy=e.clientY-d.y;d.moved+=Math.abs(dx)+Math.abs(dy);solid.yaw+=dx*.009;solid.pitch=clamp(solid.pitch+dy*.007,.18,1.2);d.x=e.clientX;d.y=e.clientY;drawSolid();});
+ $(id).addEventListener('pointerup',e=>{const d=solid.drag;solid.drag=null;if(d&&d.moved<5&&id==='solid-left'&&solid.scene==='prism')solidPick(e);});for(const event of ['pointercancel','lostpointercapture'])$(id).addEventListener(event,()=>solid.drag=null);
+ $(id).addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();solid.yaw+=(e.key==='ArrowLeft'?-.12:e.key==='ArrowRight'?.12:0);solid.pitch=clamp(solid.pitch+(e.key==='ArrowUp'?-.08:e.key==='ArrowDown'?.08:0),.18,1.2);drawSolid();});
+}
+function selectTab(tab){stop();extensionStop();solidStop();activeTab=tab;for(const [name,panel] of [['realization','realization-panel'],['carriers','carrier-panel'],['extensions','extension-panel'],['solids','solid-panel']]){$(panel).hidden=tab!==name;$('tab-'+name).setAttribute('aria-selected',String(tab===name));}if(tab==='realization')drawReal();else if(tab==='carriers')drawCarrier();else if(tab==='extensions')drawExtension();else drawSolid();}
+$('tab-realization').addEventListener('click',()=>selectTab('realization'));$('tab-carriers').addEventListener('click',()=>selectTab('carriers'));$('tab-extensions').addEventListener('click',()=>selectTab('extensions'));$('tab-solids').addEventListener('click',()=>selectTab('solids'));
+const observer=new ResizeObserver(()=>{if(activeTab==='realization')drawReal();else if(activeTab==='carriers')drawCarrier();else if(activeTab==='extensions')drawExtension();else drawSolid();});['real-picture','carrier-source','carrier-start','carrier-now','carrier-end','map-stage','extension-source','extension-target','extension-grid','solid-left','solid-right'].forEach(id=>observer.observe($(id)));
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{drawReal();drawCarrier();drawExtension();drawSolid();});document.addEventListener('visibilitychange',()=>{if(document.hidden){stop();extensionStop();solidStop();}});
+realFaceList();realWeightControls();chooseCarrier();drawReal();chooseSolid();if(location.hash==='#extensions')selectTab('extensions');if(location.hash==='#solids')selectTab('solids');
+})();
+</script></body></html>

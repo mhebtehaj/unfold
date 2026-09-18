@@ -1,0 +1,2010 @@
+<!doctype html>
+<html lang="en" data-visualize-standalone>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline' 'unsafe-eval' 'wasm-unsafe-eval' blob: data:; style-src 'unsafe-inline' blob: data:; img-src blob: data:; font-src blob: data:; media-src blob: data:; worker-src blob:; connect-src blob: data:; frame-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<title>Ambiguity explorer — graphs and higher dimensions · Unfold</title>
+<style>:root{color-scheme:light dark;background:light-dark(rgb(255 255 255), rgb(24 24 24))}html,body{margin:0}body{box-sizing:border-box;padding:1rem;background:inherit}iframe{display:block;width:100%;height:calc(100vh - 2rem);margin:0 auto;border:0}</style>
+<style id="unfold-navigation-style">.unfold-navigation{max-width:1100px;margin:0 auto;padding:14px 24px 0;font:13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.unfold-navigation a{color:light-dark(#626873,#a8adb6);text-decoration:none;display:inline-flex;align-items:center;gap:7px;padding:3px 0}.unfold-navigation a:hover{color:light-dark(#386acf,#96b5ff)}.unfold-navigation a:focus-visible{outline:2px solid light-dark(#386acf,#96b5ff);outline-offset:4px;border-radius:2px}@media(max-width:600px){.unfold-navigation{padding:12px 12px 0}}</style><style>.unfold-navigation{max-width:none;padding:0 0 12px}iframe{height:calc(100svh - 5rem);min-height:500px}</style></head>
+<body><nav class="unfold-navigation" aria-label="Back to all explorers"><a href="index.html"><span aria-hidden="true">←</span> Unfold</a></nav>
+<iframe sandbox="allow-scripts" referrerpolicy="no-referrer" title="Ambiguity explorer — graphs and higher dimensions" srcdoc="&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot; data-visualize-standalone&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+&lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;default-src &#x27;none&#x27;; script-src &#x27;unsafe-inline&#x27; &#x27;unsafe-eval&#x27; &#x27;wasm-unsafe-eval&#x27; blob: data:; style-src &#x27;unsafe-inline&#x27; blob: data:; img-src blob: data:; font-src blob: data:; media-src blob: data:; worker-src blob:; connect-src blob: data:; frame-src &#x27;none&#x27;; object-src &#x27;none&#x27;; base-uri &#x27;none&#x27;; form-action &#x27;none&#x27;&quot;&gt;
+&lt;title&gt;Ambiguity explorer — graphs and higher dimensions&lt;/title&gt;
+&lt;style&gt;:root {
+  color-scheme: light dark;
+  background-color: var(
+    --background,
+    var(--color-background-primary, light-dark(rgb(255 255 255), rgb(24 24 24)))
+  ) !important;
+
+  /* Agent-facing contract; keep in sync with SKILL.md. */
+  --background: var(
+    --color-background-primary,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --card: color-mix(in oklab, var(--foreground) 5%, var(--background));
+  --card-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --popover: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255), rgb(45 45 45))
+  );
+  --popover-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --primary: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --primary-foreground: var(
+    --color-text-inverse,
+    light-dark(rgb(255 255 255), rgb(13 13 13))
+  );
+  --secondary: var(
+    --color-background-secondary,
+    light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))
+  );
+  --secondary-foreground: var(
+    --color-text-primary,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --muted: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --muted-foreground: var(
+    --color-text-secondary,
+    light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))
+  );
+  --accent: var(
+    --color-background-info,
+    light-dark(rgb(229 242 255), rgb(13 39 63))
+  );
+  --accent-foreground: var(
+    --color-text-info,
+    light-dark(rgb(51 156 255), rgb(131 195 255))
+  );
+  --destructive: var(
+    --color-text-warning,
+    light-dark(rgb(226 85 7), rgb(255 133 73))
+  );
+  --border: var(
+    --color-border-secondary,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+  --input: var(
+    --color-border-primary,
+    light-dark(
+      rgb(26 28 31 / 11.8%),
+      color-mix(in oklab, rgb(0 0 0) 10%, transparent)
+    )
+  );
+  --ring: var(
+    --color-ring-primary,
+    light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))
+  );
+  --font-size-base: var(--font-text-md-size, 14px);
+  --blue: light-dark(rgb(51 156 255), rgb(51 156 255));
+  --orange: light-dark(rgb(226 85 7), rgb(251 106 34));
+  --green: light-dark(rgb(0 162 64), rgb(64 201 119));
+  --red: light-dark(rgb(224 46 42), rgb(255 103 100));
+  --purple: light-dark(rgb(146 79 247), rgb(173 123 249));
+  --yellow: light-dark(rgb(255 195 0), rgb(255 210 64));
+  --viz-series-1: var(--primary);
+  --viz-series-2: light-dark(rgb(243 136 59), rgb(245 154 86));
+  --viz-series-3: light-dark(rgb(93 201 119), rgb(116 213 139));
+  --viz-series-4: light-dark(rgb(235 119 177), rgb(240 143 192));
+  --viz-series-5: light-dark(rgb(155 121 236), rgb(170 145 239));
+  --viz-series-6: light-dark(rgb(58 185 177), rgb(90 203 194));
+
+  /* Internal implementation variables; not part of the agent contract. */
+  --font-sans: -apple-system, system-ui, &quot;Segoe UI&quot;, sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, &quot;SF Mono&quot;, Menlo, Consolas, &quot;Liberation Mono&quot;,
+    monospace;
+  --font-size-normal: max(11px, var(--font-size-base));
+  --font-size-tooltip: calc(var(--font-size-base) - 1px);
+  --font-size-small: max(11px, calc(var(--font-size-base) - 2px));
+  --font-size-h1: calc(var(--font-size-normal) * 1.7142857143);
+  --font-size-h2: calc(var(--font-size-normal) * 1.4285714286);
+  --font-size-h3: calc(var(--font-size-normal) * 1.2857142857);
+  --font-weight-normal: 430;
+  --font-weight-medium: 500;
+  --icon-size: 16px;
+  --line-height-normal: calc(var(--font-size-normal) * 1.5);
+  --line-height-tooltip: calc(var(--font-size-tooltip) * 1.4285714286);
+  --line-height-small: calc(var(--font-size-small) + 4px);
+  --corner-shape: round;
+  --radius: var(--border-radius-lg, 10px);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-2xl: calc(var(--radius) * 1.6);
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 2px -1px rgb(0 0 0 / 8%);
+  --checkmark-image: url(&quot;data:image/svg+xml,%3Csvg xmlns=&#x27;http://www.w3.org/2000/svg&#x27; viewBox=&#x27;0 0 17 17&#x27;%3E%3Cpath d=&#x27;M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z&#x27;/%3E%3C/svg%3E&quot;);
+
+  /* Legacy aliases; not part of the current agent contract. */
+  --viz-bg: transparent;
+  --viz-panel: var(--card);
+  --viz-border: var(--border);
+  --viz-text: var(--foreground);
+  --viz-muted: var(--muted-foreground);
+  --viz-accent: var(--primary);
+  --viz-accent-text: var(--primary-foreground);
+  --viz-accent-bg: var(--accent);
+  --viz-font-size: var(--font-size-base);
+  --viz-warning: var(--destructive);
+}
+
+:root[data-theme=&quot;light&quot;] {
+  color-scheme: light;
+}
+
+:root[data-theme=&quot;dark&quot;] {
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html &gt; body {
+  /* Preserve MCP aliases for older inline renderers without creating :root cycles. */
+  --color-background-primary: var(
+    --background,
+    light-dark(rgb(255 255 255), rgb(24 24 24))
+  );
+  --color-text-primary: var(
+    --foreground,
+    light-dark(rgb(26 28 31), rgb(255 255 255))
+  );
+  --color-border-secondary: var(
+    --border,
+    light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))
+  );
+
+  margin: 0;
+  padding: var(--visualize-paint-gutter, 0px);
+  color: var(--foreground);
+  background: transparent !important;
+  font-family: var(--font-sans) !important;
+  font-size: var(--font-size-normal);
+  font-weight: var(--font-weight-normal);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: color-mix(in srgb, var(--viz-accent) 80%, var(--viz-text) 20%);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium, 500);
+  text-decoration: none;
+  text-underline-offset: 2px;
+}
+
+a:is(:hover, :focus-visible) {
+  text-decoration-line: underline;
+  text-decoration-style: dashed;
+  text-decoration-thickness: 0.5px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-block: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+b,
+strong,
+th {
+  font-weight: var(--font-weight-medium);
+}
+
+code:not(pre code) {
+  display: inline;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  word-break: break-word;
+}
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--foreground);
+  font: inherit;
+  text-align: start;
+}
+
+.table :is(th, td) {
+  padding-block: 10px;
+  padding-inline: 0 24px;
+  overflow-wrap: anywhere;
+  border-bottom: 1px solid var(--border);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table-responsive &gt; .table :is(th, td) {
+  overflow-wrap: break-word;
+}
+
+.table :is(th, td):last-child {
+  padding-inline-end: 0;
+}
+
+.table :is(caption, thead th) {
+  font-weight: 600;
+}
+
+.table thead th {
+  padding-block: 8px;
+  border-bottom-color: color-mix(in srgb, var(--foreground) 16%, transparent);
+}
+
+.table tbody tr:last-child :is(th, td) {
+  border-bottom: 0;
+}
+
+.table.table-sm :is(th, td) {
+  padding-block: 6px;
+}
+
+.table.table-sm :is(th, td):not(:last-child) {
+  padding-inline-end: 16px;
+}
+
+.table :is(.text-end, [align=&quot;right&quot;]) {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+
+.table :is(.text-center, [align=&quot;center&quot;]) {
+  text-align: center;
+}
+
+.table .text-nowrap {
+  white-space: nowrap;
+}
+
+#widget {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 0;
+  background: transparent !important;
+}
+
+.card {
+  min-width: 0;
+  padding: 12px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  border-radius: var(--radius-2xl);
+  corner-shape: var(--corner-shape);
+  color: var(--card-foreground);
+  background: var(--card);
+}
+
+#widget &gt; :not(.card, .progress) {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.tooltip {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: max-content;
+  max-width: min(
+    20rem,
+    var(--tooltip-available-width, calc(100vw - 10px)),
+    calc(100vw - 10px)
+  );
+  max-height: min(
+    var(--tooltip-available-height, calc(100vh - 10px)),
+    calc(100vh - 10px)
+  );
+  padding: 4px 8px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--popover-foreground);
+  background: var(--popover);
+  box-shadow: none;
+  font-size: var(--font-size-tooltip);
+  line-height: var(--line-height-tooltip);
+  overflow-wrap: break-word;
+  white-space: normal;
+  pointer-events: none;
+  user-select: none;
+}
+
+.viz-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(max(180px, 24%), 1fr));
+  gap: 10px;
+}
+
+.viz-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.viz-stat-value {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.25;
+}
+
+.viz-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  margin-block: 6px;
+  border: 0;
+  background: var(--border);
+}
+
+.nav {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 4px;
+}
+
+.progress {
+  display: flex;
+  height: 8px;
+  margin-block: calc((var(--line-height-normal, 1.5em) - 8px) / 2);
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+}
+
+.progress-bar:only-child {
+  border-radius: var(--radius-full);
+}
+
+.progress-bar {
+  height: 100%;
+  flex-shrink: 0;
+  border: 0;
+  background: var(--viz-series-1);
+}
+
+.viz-badge {
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  color: var(--accent-foreground);
+  background: var(--accent);
+  font-weight: var(--font-weight-medium);
+}
+
+small,
+.text-small,
+.viz-badge {
+  font-size: var(--font-size-small);
+  line-height: var(--line-height-small);
+}
+
+.text-muted {
+  color: var(--muted-foreground);
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.viz-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.viz-controls &gt; .form-label {
+  display: grid;
+  min-width: min(100%, 260px);
+  flex: 1 1 280px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 2px 12px;
+  margin-bottom: 0;
+}
+
+.viz-controls &gt; .form-label &gt; :is(.form-control, .form-range, .form-select) {
+  grid-column: 1 / -1;
+}
+
+.btn,
+.nav-link,
+.form-check-input,
+.form-control,
+.form-range,
+.form-select {
+  font: inherit;
+}
+
+.btn,
+.nav-link {
+  appearance: button;
+  display: inline-flex;
+  inline-size: fit-content;
+  max-inline-size: 100%;
+  min-height: 28px;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin: 0;
+  padding: 0 8px;
+  -webkit-app-region: no-drag;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: var(--cursor-interaction, pointer);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+.btn:is(.btn-block, .viz-tile) {
+  inline-size: 100%;
+}
+
+.btn.viz-tile {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+a.btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:not(:disabled):hover,
+.nav-link:not(:disabled):not([aria-disabled=&quot;true&quot;]):hover {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.btn-primary {
+  border-color: transparent;
+  color: var(--primary-foreground);
+  background: var(--foreground);
+  background-clip: padding-box;
+}
+
+.btn-primary .text-muted {
+  color: color-mix(in srgb, var(--primary-foreground) 50%, transparent);
+}
+
+.btn-primary:not(:disabled):hover {
+  background: color-mix(in srgb, var(--foreground) 80%, transparent);
+  background-clip: padding-box;
+}
+
+.btn-ghost {
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.btn-ghost:not(:disabled):hover {
+  color: var(--foreground);
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.nav-pills .nav-link {
+  min-width: 0;
+  border-color: transparent;
+  color: var(--muted-foreground);
+  background: transparent;
+}
+
+.nav-justified .nav-link {
+  flex: 1 1 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+.nav-pills .nav-link.active {
+  color: var(--foreground);
+  background: var(--muted);
+}
+
+.btn:disabled,
+.nav-link:disabled,
+.nav-link[aria-disabled=&quot;true&quot;] {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+[data-lucide] {
+  stroke-width: 1.6;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--foreground);
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  padding: 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background: var(--secondary);
+}
+
+.form-control::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-control[type=&quot;file&quot;] {
+  padding: 0;
+  overflow: hidden;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control[type=&quot;file&quot;]::file-selector-button {
+  min-height: 26px;
+  margin-right: 8px;
+  padding: 0 8px;
+  border: 0;
+  border-right: 1px solid var(--input);
+  color: var(--secondary-foreground);
+  background: var(--secondary);
+  cursor: inherit;
+  font: inherit;
+}
+
+.form-control[type=&quot;file&quot;]:not(:disabled):hover::file-selector-button {
+  background: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-control-color[type=&quot;color&quot;] {
+  width: 40px;
+  height: 28px;
+  padding: 3px;
+  cursor: var(--cursor-interaction, pointer);
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.form-control-color[type=&quot;color&quot;]::-webkit-color-swatch {
+  border: 0;
+  border-radius: calc(var(--radius-lg) - 4px);
+  corner-shape: var(--corner-shape);
+}
+
+textarea.form-control {
+  height: auto;
+  min-height: 72px;
+  padding: 8px 10px;
+  resize: vertical;
+}
+
+.form-control:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-control:disabled,
+.form-select:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.form-select {
+  appearance: none;
+  display: block;
+  width: 100%;
+  min-height: 28px;
+  margin: 0;
+  padding: 0 32px 0 8px;
+  outline: none;
+  border: 1px solid var(--input);
+  border-radius: var(--radius-lg);
+  corner-shape: var(--corner-shape);
+  color: var(--foreground);
+  background-color: var(--secondary);
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--muted-foreground) 50%),
+    linear-gradient(135deg, var(--muted-foreground) 50%, transparent 50%);
+  background-position:
+    calc(100% - 14px) 50%,
+    calc(100% - 10px) 50%;
+  background-repeat: no-repeat;
+  background-size: 4px 4px;
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-select:not(:disabled):hover {
+  background-color: color-mix(in srgb, var(--foreground) 6%, var(--secondary));
+}
+
+.form-select:focus-visible {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-check {
+  display: flex;
+  min-height: 20px;
+  align-items: center;
+  gap: 6px;
+}
+
+.form-check-input {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 1px solid var(--input);
+  color: var(--primary-foreground);
+  background-color: transparent;
+  cursor: var(--cursor-interaction, default);
+  transition:
+    background-color 150ms,
+    border-color 150ms,
+    box-shadow 150ms;
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;] {
+  border-color: var(--input);
+  border-radius: var(--radius-sm);
+  corner-shape: var(--corner-shape);
+  background-color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input:not(:disabled):not(:checked):hover {
+  background-color: var(--card);
+}
+
+.form-check:not(.form-switch) .form-check-input[type=&quot;checkbox&quot;]:checked {
+  border-color: var(--primary);
+  background-color: var(--primary);
+}
+
+.form-check:not(.form-switch)
+  .form-check-input[type=&quot;checkbox&quot;]:checked::before {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-foreground);
+  content: &quot;&quot;;
+  mask: var(--checkmark-image) center / 12px 12px no-repeat;
+}
+
+.form-check-input[type=&quot;radio&quot;] {
+  width: 14px;
+  height: 14px;
+  border-radius: var(--radius-full);
+}
+
+.form-check-input[type=&quot;radio&quot;]:checked {
+  border: 2px solid var(--primary);
+  background:
+    radial-gradient(circle, var(--primary-foreground) 0 2.5px, transparent 3px),
+    var(--primary);
+}
+
+.form-check:not(.form-switch) .form-check-input:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.form-check:not(.form-switch) .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+}
+
+.form-switch .form-check-input:disabled,
+.form-switch .form-check-input:disabled + .form-check-label {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.form-check-label {
+  color: var(--foreground);
+  cursor: var(--cursor-interaction, default);
+}
+
+.form-switch .form-check-input {
+  position: relative;
+  width: 32px;
+  height: 20px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--muted);
+  box-shadow: none;
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+  border: 1px solid light-dark(var(--primary-foreground), var(--foreground));
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+  box-shadow: var(--shadow-sm);
+  content: &quot;&quot;;
+  transform: translate(2px, -50%);
+  transition: transform 200ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.form-switch .form-check-input:checked {
+  background: var(--primary);
+}
+
+.form-switch .form-check-input:checked::before {
+  transform: translate(14px, -50%);
+}
+
+.form-switch .form-check-input:focus-visible {
+  box-shadow: 0 0 0 2px var(--ring);
+}
+
+.form-range {
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 28px;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: 0;
+  accent-color: var(--primary);
+  background: linear-gradient(
+      color-mix(in srgb, var(--foreground) 7%, transparent),
+      color-mix(in srgb, var(--foreground) 7%, transparent)
+    )
+    center / 100% 2px no-repeat;
+}
+
+.form-range::-webkit-slider-runnable-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin-top: 4px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-webkit-slider-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range::-moz-range-track {
+  height: 28px;
+  background: transparent;
+}
+
+.form-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  background: light-dark(var(--primary-foreground), var(--foreground));
+}
+
+.form-range:focus-visible::-moz-range-thumb {
+  border-color: var(--ring);
+  box-shadow: inset 0 0 0 1px var(--ring);
+}
+
+.form-range:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.btn:not(.btn-primary, .viz-tile):is(
+  [aria-pressed=&quot;true&quot;],
+  [aria-selected=&quot;true&quot;],
+  .is-selected
+) {
+  border-color: var(--primary);
+  color: var(--primary-foreground);
+  background: var(--primary);
+}
+
+.btn.viz-tile:is([aria-pressed=&quot;true&quot;], [aria-selected=&quot;true&quot;], .is-selected) {
+  border-color: var(--primary);
+  box-shadow: inset 0 0 0 1px var(--primary);
+}
+
+.btn:focus-visible,
+.nav-link:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+@media (pointer: coarse) {
+  .btn,
+  .nav-link,
+  .form-control,
+  .form-select {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Keep small-screen WebKit from zooming when a text field receives focus. */
+  .form-control,
+  .form-select {
+    font-size: max(16px, var(--font-size-normal));
+  }
+
+  .form-control[type=&quot;file&quot;]::file-selector-button {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  .form-control-color[type=&quot;color&quot;] {
+    width: 44px;
+    height: 44px;
+  }
+
+  .form-control:is(
+    [type=&quot;date&quot;],
+    [type=&quot;datetime-local&quot;],
+    [type=&quot;month&quot;],
+    [type=&quot;time&quot;],
+    [type=&quot;week&quot;]
+  ) {
+    min-width: 0;
+    max-width: 100%;
+    padding-block: 8px;
+  }
+
+  .form-check {
+    min-height: 44px;
+    padding-inline: 15px;
+  }
+
+  .form-check-input {
+    position: relative;
+  }
+
+  .form-check-input::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 44px;
+    height: 44px;
+    content: &quot;&quot;;
+    transform: translate(-50%, -50%);
+  }
+
+  .form-check-label {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+  }
+
+  .form-range {
+    height: 44px;
+    touch-action: pan-y;
+  }
+
+  .form-range::-webkit-slider-runnable-track {
+    height: 44px;
+  }
+
+  .form-range::-moz-range-track {
+    height: 44px;
+  }
+
+  .form-range::-webkit-slider-thumb {
+    margin-top: 12px;
+  }
+}
+
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+#widget &gt; svg {
+  width: 100%;
+}
+
+/* Model-authored chart rules can otherwise stretch icons after these styles load. */
+svg.lucide {
+  display: block;
+  width: var(--icon-size) !important;
+  height: var(--icon-size) !important;
+  flex: none;
+  margin: 0 !important;
+  stroke-width: 1.6;
+}
+
+.text-warning,
+.text-destructive {
+  color: var(--destructive);
+}
+
+html&gt;body{padding:0}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div id=&quot;ev-ambiguity-explorer&quot;&gt;
+  &lt;h3&gt;Ambiguity complexes and their geometry&lt;/h3&gt;
+  &lt;label class=&quot;form-label&quot;&gt;Geometry
+    &lt;select class=&quot;form-select&quot; data-control=&quot;space&quot;&gt;
+      &lt;option value=&quot;three&quot;&gt;Three edge variables · octahedron&lt;/option&gt;
+      &lt;option value=&quot;tetra&quot;&gt;Tetrahedron · shape only&lt;/option&gt;
+      &lt;option value=&quot;four&quot;&gt;Four Boolean variables · 4D projection&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/label&gt;
+  &lt;div class=&quot;viz-controls&quot;&gt;
+    &lt;label class=&quot;form-label&quot; data-part=&quot;function&quot;&gt;Function
+      &lt;select class=&quot;form-select&quot; data-control=&quot;example&quot;&gt;
+        &lt;option value=&quot;majority&quot;&gt;At least two edges (majority)&lt;/option&gt;
+        &lt;option value=&quot;exactlytwo&quot;&gt;Exactly two edges · nonmonotone&lt;/option&gt;
+        &lt;option value=&quot;only110&quot;&gt;Only 110 · prescribed graph&lt;/option&gt;
+        &lt;option value=&quot;selector&quot; selected&gt;Selector · x₁ chooses x₃ or x₂&lt;/option&gt;
+        &lt;option value=&quot;dictator&quot;&gt;Edge 12 present (dictator: x₁)&lt;/option&gt;
+        &lt;option value=&quot;or&quot;&gt;At least one edge (OR)&lt;/option&gt;
+        &lt;option value=&quot;parity&quot;&gt;Odd number of edges (parity)&lt;/option&gt;
+        &lt;option value=&quot;zero&quot;&gt;Constant 0 · whole octahedron&lt;/option&gt;
+        &lt;option value=&quot;one&quot;&gt;Constant 1 · whole octahedron&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; data-part=&quot;three&quot;&gt;Show
+      &lt;select class=&quot;form-select&quot; data-control=&quot;view&quot;&gt;
+        &lt;option value=&quot;all&quot;&gt;Both colored regions&lt;/option&gt;
+        &lt;option value=&quot;zero&quot;&gt;Only the 0-region&lt;/option&gt;
+        &lt;option value=&quot;one&quot;&gt;Only the 1-region&lt;/option&gt;
+        &lt;option value=&quot;seam&quot;&gt;Only the ambiguity complex&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; data-part=&quot;four&quot; hidden&gt;Show
+      &lt;select class=&quot;form-select&quot; data-control=&quot;view4&quot;&gt;
+        &lt;option value=&quot;all&quot;&gt;Ambiguity surface + ambient edges&lt;/option&gt;
+        &lt;option value=&quot;seam&quot;&gt;Only the ambiguity surface&lt;/option&gt;
+        &lt;option value=&quot;ambient&quot;&gt;Only the 4D polytope&#x27;s edges&lt;/option&gt;
+        &lt;option value=&quot;cell&quot;&gt;One full assignment (tetrahedron)&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;viz-controls&quot; data-part=&quot;three&quot;&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Separate by
+      &lt;select class=&quot;form-select&quot; data-control=&quot;split&quot;&gt;
+        &lt;option value=&quot;output&quot;&gt;Function output (colors)&lt;/option&gt;
+        &lt;option value=&quot;query0&quot;&gt;Query x₁ · edge 12&lt;/option&gt;
+        &lt;option value=&quot;query1&quot;&gt;Query x₂ · edge 13&lt;/option&gt;
+        &lt;option value=&quot;query2&quot;&gt;Query x₃ · edge 23&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; data-part=&quot;query&quot; hidden&gt;Query picture
+      &lt;select class=&quot;form-select&quot; data-control=&quot;queryView&quot;&gt;
+        &lt;option value=&quot;disks&quot;&gt;Answer disks · keep the triangles&lt;/option&gt;
+        &lt;option value=&quot;stars&quot;&gt;Ambiguous patches · closed stars&lt;/option&gt;
+        &lt;option value=&quot;links&quot;&gt;After recording the answer · links&lt;/option&gt;
+      &lt;/select&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;viz-controls&quot; data-part=&quot;four&quot; hidden&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Rotate x₁–x₄ &lt;output data-value=&quot;angle14&quot;&gt;35°&lt;/output&gt;
+      &lt;input class=&quot;form-range&quot; data-control=&quot;angle14&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;360&quot; value=&quot;35&quot;&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Rotate x₂–x₄ &lt;output data-value=&quot;angle24&quot;&gt;25°&lt;/output&gt;
+      &lt;input class=&quot;form-range&quot; data-control=&quot;angle24&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;360&quot; value=&quot;25&quot;&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;label class=&quot;form-label&quot; data-part=&quot;cell&quot; hidden&gt;Full assignment
+    &lt;select class=&quot;form-select&quot; data-control=&quot;cell&quot;&gt;&lt;/select&gt;
+  &lt;/label&gt;
+  &lt;div class=&quot;viz-controls&quot;&gt;
+    &lt;label class=&quot;form-label&quot;&gt;Surface opacity &lt;output data-value=&quot;opacity&quot;&gt;28%&lt;/output&gt;
+      &lt;input class=&quot;form-range&quot; data-control=&quot;opacity&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;28&quot;&gt;
+    &lt;/label&gt;
+    &lt;label class=&quot;form-label&quot; data-part=&quot;three&quot;&gt;&lt;span data-control=&quot;separation-label&quot;&gt;Separate colors&lt;/span&gt; &lt;output data-value=&quot;separation&quot;&gt;0%&lt;/output&gt;
+      &lt;input class=&quot;form-range&quot; data-control=&quot;separation&quot; type=&quot;range&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot;&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;viz-row&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-turn=&quot;left&quot; aria-label=&quot;Rotate left&quot;&gt;Left&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-turn=&quot;right&quot; aria-label=&quot;Rotate right&quot;&gt;Right&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-turn=&quot;up&quot; aria-label=&quot;Rotate upward&quot;&gt;Up&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-turn=&quot;down&quot; aria-label=&quot;Rotate downward&quot;&gt;Down&lt;/button&gt;
+    &lt;button type=&quot;button&quot; class=&quot;btn&quot; data-turn=&quot;back&quot;&gt;Turn over&lt;/button&gt;
+    &lt;label class=&quot;form-check&quot; data-part=&quot;three&quot;&gt;&lt;input class=&quot;form-check-input&quot; data-control=&quot;labels&quot; type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;form-check-label&quot;&gt;Assignment labels&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;viz-row ev-selection-controls&quot; data-part=&quot;three&quot;&gt;
+    &lt;label class=&quot;form-check&quot;&gt;&lt;input class=&quot;form-check-input&quot; data-control=&quot;showGraph&quot; type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;form-check-label&quot;&gt;Show graph selector&lt;/span&gt;&lt;/label&gt;
+    &lt;label class=&quot;form-check&quot;&gt;&lt;input class=&quot;form-check-input&quot; data-control=&quot;highlight&quot; type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;form-check-label&quot;&gt;Highlight selected facet&lt;/span&gt;&lt;/label&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;ev-layout&quot;&gt;
+  &lt;svg class=&quot;ev-scene&quot; role=&quot;img&quot; aria-label=&quot;Rotatable octahedron. Drag to rotate. Dashed edges lie behind faces. The ambiguity complex is highlighted.&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;title&gt;Three-variable ambiguity complex&lt;/title&gt;
+    &lt;desc&gt;Six signed vertices represent individual bit values. Eight triangles represent complete inputs. Drag the object, use the rotation buttons, adjust opacity, or separate the two colored regions.&lt;/desc&gt;
+  &lt;/svg&gt;
+  &lt;aside data-part=&quot;graph&quot; class=&quot;ev-graph-panel&quot; aria-label=&quot;Selected graph on three vertices&quot;&gt;
+    &lt;span&gt;Graph on three vertices&lt;/span&gt;
+    &lt;svg class=&quot;ev-input-graph&quot; role=&quot;img&quot; aria-label=&quot;Selected graph. Use the edge checkboxes to change its input.&quot;&gt;&lt;/svg&gt;
+    &lt;div class=&quot;ev-edge-controls&quot;&gt;
+      &lt;label class=&quot;form-check&quot;&gt;&lt;input class=&quot;form-check-input&quot; data-bit=&quot;0&quot; type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;form-check-label&quot;&gt;Edge 12 · x₁&lt;/span&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-check&quot;&gt;&lt;input class=&quot;form-check-input&quot; data-bit=&quot;1&quot; type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;form-check-label&quot;&gt;Edge 13 · x₂&lt;/span&gt;&lt;/label&gt;
+      &lt;label class=&quot;form-check&quot;&gt;&lt;input class=&quot;form-check-input&quot; data-bit=&quot;2&quot; type=&quot;checkbox&quot;&gt;&lt;span class=&quot;form-check-label&quot;&gt;Edge 23 · x₃&lt;/span&gt;&lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;text-small&quot; data-control=&quot;graph-detail&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+    &lt;label class=&quot;form-check ev-graph-label-control&quot;&gt;&lt;input class=&quot;form-check-input&quot; data-control=&quot;graphLabels&quot; type=&quot;checkbox&quot; checked&gt;&lt;span class=&quot;form-check-label&quot;&gt;Vertex labels&lt;/span&gt;&lt;/label&gt;
+  &lt;/aside&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;viz-row ev-legend text-small&quot;&gt;
+    &lt;span data-part=&quot;three&quot;&gt;&lt;i class=&quot;ev-swatch ev-zero&quot;&gt;&lt;/i&gt;0-region&lt;/span&gt;
+    &lt;span data-part=&quot;three&quot;&gt;&lt;i class=&quot;ev-swatch ev-one&quot;&gt;&lt;/i&gt;1-region&lt;/span&gt;
+    &lt;span data-part=&quot;complex&quot;&gt;&lt;i class=&quot;ev-swatch ev-boundary&quot;&gt;&lt;/i&gt;Ambiguity complex&lt;/span&gt;
+    &lt;span data-part=&quot;selection&quot;&gt;&lt;i class=&quot;ev-swatch ev-selected&quot;&gt;&lt;/i&gt;Selected input (pink)&lt;/span&gt;
+    &lt;span&gt;&lt;i class=&quot;ev-dash&quot;&gt;&lt;/i&gt;Hidden edge&lt;/span&gt;
+    &lt;span&gt;Drag to rotate&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;text-small&quot; data-control=&quot;detail&quot; aria-live=&quot;polite&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+#ev-ambiguity-explorer {
+  --ev-zero:var(--orange);
+  --ev-one:var(--blue);
+  --ev-ambiguity:var(--green);
+  --ev-selected:light-dark(#d52b91,#ff8bd1);
+}
+#ev-ambiguity-explorer .ev-scene { width:100%; display:block; touch-action:none; cursor:grab; }
+#ev-ambiguity-explorer [hidden] { display:none !important; }
+#ev-ambiguity-explorer .ev-layout { display:grid; grid-template-columns:minmax(0,1fr) 185px; align-items:center; gap:20px; }
+#ev-ambiguity-explorer .ev-layout.ev-shape-only { grid-template-columns:minmax(0,1fr); }
+#ev-ambiguity-explorer .ev-graph-panel { min-width:0; }
+#ev-ambiguity-explorer .ev-input-graph { width:100%; display:block; }
+#ev-ambiguity-explorer .ev-input-graph text { fill:var(--foreground); font-size:12px; }
+#ev-ambiguity-explorer .ev-edge-controls { display:flex; flex-direction:column; gap:7px; margin-bottom:12px; }
+#ev-ambiguity-explorer .ev-selection-controls { margin-top:10px; }
+#ev-ambiguity-explorer .ev-graph-label-control { margin-top:10px; }
+@media(max-width:570px) {
+  #ev-ambiguity-explorer .ev-layout { grid-template-columns:minmax(0,1fr); gap:8px; }
+  #ev-ambiguity-explorer .ev-graph-panel { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; align-items:center; }
+  #ev-ambiguity-explorer .ev-graph-panel&gt;span, #ev-ambiguity-explorer [data-control=&quot;graph-detail&quot;], #ev-ambiguity-explorer .ev-graph-label-control { grid-column:1/-1; }
+}
+#ev-ambiguity-explorer .ev-scene:active { cursor:grabbing; }
+#ev-ambiguity-explorer .ev-scene text { fill:var(--foreground); font-size:12px; font-weight:400; }
+#ev-ambiguity-explorer .ev-scene .ev-label { paint-order:stroke; stroke:var(--background); stroke-width:4px; stroke-linejoin:round; }
+#ev-ambiguity-explorer .ev-legend { gap:14px; margin-top:4px; margin-bottom:10px; }
+#ev-ambiguity-explorer .ev-legend span { display:inline-flex; align-items:center; gap:5px; }
+#ev-ambiguity-explorer .ev-swatch { display:inline-block; width:16px; height:10px; }
+#ev-ambiguity-explorer .ev-zero { background:var(--ev-zero); }
+#ev-ambiguity-explorer .ev-one { background:var(--ev-one); }
+#ev-ambiguity-explorer .ev-boundary { background:var(--ev-ambiguity); height:4px; }
+#ev-ambiguity-explorer .ev-selected { background:var(--ev-selected); }
+#ev-ambiguity-explorer .ev-dash { width:19px; border-top:2px dashed var(--foreground); }
+#ev-ambiguity-explorer [data-control=&quot;detail&quot;] { min-height:1.5em; }
+&lt;/style&gt;
+&lt;script&gt;
+(() =&gt; {
+  const root = document.getElementById(&#x27;ev-ambiguity-explorer&#x27;);
+  const svg = root.querySelector(&#x27;.ev-scene&#x27;);
+  const select = key =&gt; root.querySelector(&#x27;[data-control=&quot;&#x27;+key+&#x27;&quot;]&#x27;);
+  const ns = &#x27;http://www.w3.org/2000/svg&#x27;;
+  const state = {yaw:.72,pitch:.43,space:&#x27;three&#x27;,example:&#x27;selector&#x27;,view:&#x27;all&#x27;,view4:&#x27;all&#x27;,split:&#x27;output&#x27;,queryView:&#x27;disks&#x27;,opacity:.28,separation:0,labels:true,showGraph:true,highlight:true,graphLabels:true,bits:[1,1,0],angle14:35,angle24:25,cell:0};
+  const queryIndex=()=&gt;state.split===&#x27;output&#x27;?-1:Number(state.split.slice(-1));
+  const outputColor=output=&gt;output?&#x27;var(--ev-one)&#x27;:&#x27;var(--ev-zero)&#x27;;
+  const vertices = Array.from({length:6},(_,v) =&gt; [0,1,2].map(i =&gt; i===Math.floor(v/2) ? (v%2?1:-1) : 0));
+  const faces = Array.from({length:8},(_,mask) =&gt; {
+    const bits=[(mask&gt;&gt;2)&amp;1,(mask&gt;&gt;1)&amp;1,mask&amp;1];
+    return {bits,verts:bits.map((b,i)=&gt;2*i+b),name:bits.join(&#x27;&#x27;),normal:bits.map(b=&gt;2*b-1)};
+  });
+  const ambientEdges=[];
+  for(let i=0;i&lt;6;i++) for(let j=i+1;j&lt;6;j++) if((i&gt;&gt;1)!==(j&gt;&gt;1)) ambientEdges.push([i,j]);
+  const h = bits =&gt; {
+    const count=bits.reduce((a,b)=&gt;a+b,0);
+    switch(state.example){
+      case &#x27;majority&#x27;:return +(count&gt;=2);
+      case &#x27;exactlytwo&#x27;:return +(count===2);
+      case &#x27;only110&#x27;:return +bits.every((bit,i)=&gt;bit===(i&lt;2?1:0));
+      // The four-variable extension ignores x4; x1 remains the selector.
+      case &#x27;selector&#x27;:return bits[0]===0?bits[2]:bits[1];
+      case &#x27;dictator&#x27;:return bits[0];
+      case &#x27;or&#x27;:return +(count&gt;0);
+      case &#x27;parity&#x27;:return count%2;
+      case &#x27;zero&#x27;:return 0;
+      case &#x27;one&#x27;:return 1;
+      default:throw Error(&#x27;Unknown function&#x27;);
+    }
+  };
+  const rotate = p =&gt; {
+    const [x,y,z]=p, cp=Math.cos(state.pitch),sp=Math.sin(state.pitch),cy=Math.cos(state.yaw),sy=Math.sin(state.yaw);
+    const y1=cp*y-sp*z,z1=sp*y+cp*z;
+    return [cy*x+sy*z1,y1,-sy*x+cy*z1];
+  };
+  const add=(a,b)=&gt;a.map((x,i)=&gt;x+b[i]);
+  const mul=(a,k)=&gt;a.map(x=&gt;x*k);
+  const midpoint=(a,b)=&gt;a.map((x,i)=&gt;(x+b[i])/2);
+  const normalise=v=&gt;mul(v,1/Math.hypot(...v));
+  const signed=v=&gt;String((v&gt;&gt;1)+1)+(v%2?&#x27;⁺&#x27;:&#x27;⁻&#x27;);
+  function make(tag,attrs,text){
+    const e=document.createElementNS(ns,tag);
+    for(const [k,v] of Object.entries(attrs)) e.setAttribute(k,String(v));
+    if(text!==undefined)e.textContent=text;
+    return e;
+  }
+  function edgeIsAmbiguous(edge){
+    const values=new Set(faces.filter(f=&gt;edge.every(v=&gt;f.verts.includes(v))).map(f=&gt;h(f.bits)));
+    return values.size===2;
+  }
+  function pointBehindTriangle(p,t){
+    const [a,b,c]=t.points;
+    const det=(b[1]-c[1])*(a[0]-c[0])+(c[0]-b[0])*(a[1]-c[1]);
+    if(Math.abs(det)&lt;1e-7)return false;
+    const u=((b[1]-c[1])*(p[0]-c[0])+(c[0]-b[0])*(p[1]-c[1]))/det;
+    const v=((c[1]-a[1])*(p[0]-c[0])+(a[0]-c[0])*(p[1]-c[1]))/det;
+    const w=1-u-v;
+    return u&gt;=-1e-6&amp;&amp;v&gt;=-1e-6&amp;&amp;w&gt;=-1e-6&amp;&amp;u*a[2]+v*b[2]+w*c[2]&gt;p[2]+1e-4;
+  }
+  let width=640,height=390,scale=140;
+  const project=p=&gt;[width/2+scale*p[0],height/2-scale*p[1]];
+  const fourVertices=Array.from({length:8},(_,v)=&gt;[0,1,2,3].map(i=&gt;i===(v&gt;&gt;1)?(v%2?1:-1):0));
+  const fourInputs=Array.from({length:16},(_,mask)=&gt;Array.from({length:4},(_,i)=&gt;(mask&gt;&gt;(3-i))&amp;1));
+  const fourEdges=[];
+  for(let a=0;a&lt;8;a++)for(let b=a+1;b&lt;8;b++)if((a&gt;&gt;1)!==(b&gt;&gt;1))fourEdges.push([a,b]);
+  fourInputs.forEach((bits,i)=&gt;select(&#x27;cell&#x27;).appendChild(makeOption(String(i),bits.join(&#x27;&#x27;))));
+  function makeOption(value,label){const option=document.createElement(&#x27;option&#x27;);option.value=value;option.textContent=label;return option;}
+  function fourAmbiguity(){
+    // Enumerate all consistent signed partial assignments, not merely edges.
+    const result=[];
+    for(let code=0;code&lt;81;code++){
+      let value=code;const face=[];
+      for(let i=0;i&lt;4;i++){const digit=value%3;value=Math.floor(value/3);if(digit)face.push(2*i+digit-1);}
+      const outputs=new Set(fourInputs.filter(bits=&gt;face.every(v=&gt;bits[v&gt;&gt;1]===v%2)).map(h));
+      if(outputs.size===2)result.push(face);
+    }
+    return result;
+  }
+  function projectFour(p){
+    const q=p.slice();
+    for(const [axis,angle] of [[0,state.angle14],[1,state.angle24]]){
+      const a=angle*Math.PI/180,c=Math.cos(a),s=Math.sin(a),u=q[axis],w=q[3];
+      q[axis]=c*u-s*w;q[3]=s*u+c*w;
+    }
+    // Orthogonal projection to coordinates 1,2,3, followed by the ordinary
+    // viewing rotation. Apparent crossings need not be intersections in 4D.
+    return rotate(q.slice(0,3));
+  }
+  function drawLabels(scene,items){
+    const occupied=[];
+    for(const item of items){
+      for(const [dx,dy] of [[0,0],[17,0],[-17,0],[0,17],[0,-17]]){
+        const x=item.x+dx,y=item.y+dy,half=item.text.length*3.5+3;
+        const r={left:x-half,right:x+half,top:y-10,bottom:y+10};
+        if(r.left&lt;3||r.right&gt;width-3||r.top&lt;3||r.bottom&gt;height-3)continue;
+        if(occupied.some(b=&gt;r.left&lt;b.right&amp;&amp;r.right&gt;b.left&amp;&amp;r.top&lt;b.bottom&amp;&amp;r.bottom&gt;b.top))continue;
+        occupied.push(r);scene.appendChild(make(&#x27;text&#x27;,{x,y,class:&#x27;ev-label&#x27;,&#x27;text-anchor&#x27;:&#x27;middle&#x27;,&#x27;dominant-baseline&#x27;:&#x27;middle&#x27;,opacity:item.opacity},item.text));break;
+      }
+    }
+  }
+  function drawHigher(){
+    width=Math.max(280,svg.getBoundingClientRect().width||640);
+    height=Math.min(470,Math.max(320,width*.64));scale=Math.min((width-85)/2.2,(height-85)/2.2);
+    svg.setAttribute(&#x27;viewBox&#x27;,`0 0 ${width} ${height}`);svg.style.height=height+&#x27;px&#x27;;
+    svg.querySelectorAll(&#x27;g&#x27;).forEach(e=&gt;e.remove());
+    const scene=make(&#x27;g&#x27;,{&#x27;data-scene&#x27;:&#x27;true&#x27;});svg.appendChild(scene);
+    const tetra=state.space===&#x27;tetra&#x27;,ambiguous=tetra?[]:fourAmbiguity();
+    const seamTriangles=ambiguous.filter(f=&gt;f.length===3),seamEdges=ambiguous.filter(f=&gt;f.length===2);
+    const seamKeys=new Set(seamEdges.map(e=&gt;e.join(&#x27;-&#x27;)));
+    let vertexPositions,triangleFaces,edges,color,label;
+    if(tetra){
+      vertexPositions=[[1,1,1],[1,-1,-1],[-1,1,-1],[-1,-1,1]].map(p=&gt;rotate(mul(p,1/Math.sqrt(3))));
+      triangleFaces=[[0,1,2],[0,1,3],[0,2,3],[1,2,3]];
+      edges=[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];color=&#x27;var(--muted-foreground)&#x27;;label=v=&gt;&#x27;ABCD&#x27;[v];
+    }else{
+      vertexPositions=fourVertices.map(projectFour);label=signed;
+      const cell=state.view4===&#x27;cell&#x27;,ambient=state.view4===&#x27;ambient&#x27;;
+      const ids=fourInputs[state.cell].map((bit,i)=&gt;2*i+bit);
+      triangleFaces=cell?ids.map((_,i)=&gt;ids.filter((_,j)=&gt;j!==i)):ambient?[]:seamTriangles;
+      edges=cell?fourEdges.filter(e=&gt;e.every(v=&gt;ids.includes(v))):state.view4===&#x27;seam&#x27;?seamEdges:fourEdges;
+      color=cell?outputColor(h(fourInputs[state.cell])):&#x27;var(--ev-ambiguity)&#x27;;
+    }
+    const triangles=triangleFaces.map(ids=&gt;({ids,points:ids.map(v=&gt;vertexPositions[v])}));
+    triangles.sort((a,b)=&gt;a.points.reduce((s,p)=&gt;s+p[2],0)-b.points.reduce((s,p)=&gt;s+p[2],0));
+    for(const t of triangles)scene.appendChild(make(&#x27;polygon&#x27;,{points:t.points.map(p=&gt;project(p).join(&#x27;,&#x27;)).join(&#x27; &#x27;),fill:color,&#x27;fill-opacity&#x27;:state.opacity,&#x27;data-triangle&#x27;:t.ids.join(&#x27;-&#x27;)}));
+    const surface=!tetra&amp;&amp;[&#x27;all&#x27;,&#x27;seam&#x27;].includes(state.view4);
+    for(const edge of edges){
+      const points=edge.map(v=&gt;vertexPositions[v]),[a,b]=points.map(project);
+      const hidden=triangles.some(t=&gt;pointBehindTriangle(midpoint(...points),t));
+      const boundary=surface&amp;&amp;seamKeys.has(edge.join(&#x27;-&#x27;));
+      scene.appendChild(make(&#x27;line&#x27;,{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:boundary?&#x27;var(--ev-ambiguity)&#x27;:&#x27;var(--foreground)&#x27;,
+        &#x27;stroke-width&#x27;:boundary?2.5:1.25,&#x27;stroke-dasharray&#x27;:hidden?&#x27;5 6&#x27;:&#x27;none&#x27;,opacity:hidden?.45:boundary?1:.65,
+        &#x27;data-edge&#x27;:edge.join(&#x27;-&#x27;),&#x27;data-hidden&#x27;:hidden,&#x27;data-boundary&#x27;:boundary}));
+    }
+    const labels=[];
+    for(const v of new Set(edges.flat())){
+      const p=vertexPositions[v],pos=project(p),hidden=triangles.some(t=&gt;pointBehindTriangle(p,t));
+      scene.appendChild(make(&#x27;circle&#x27;,{cx:pos[0],cy:pos[1],r:3,fill:&#x27;var(--foreground)&#x27;,opacity:hidden?.5:1}));
+      const radial=[p[0],-p[1]],length=Math.hypot(...radial)||1;
+      labels.push({x:pos[0]+18*radial[0]/length,y:pos[1]+18*radial[1]/length,text:label(v),opacity:hidden?.65:1});
+    }
+    drawLabels(scene,labels);
+    if(!tetra&amp;&amp;!ambiguous.length&amp;&amp;state.view4===&#x27;seam&#x27;)scene.appendChild(make(&#x27;text&#x27;,{x:width/2,y:height/2,&#x27;text-anchor&#x27;:&#x27;middle&#x27;},&#x27;No ambiguous assignments&#x27;));
+    svg.setAttribute(&#x27;data-yaw&#x27;,state.yaw.toFixed(4));svg.setAttribute(&#x27;data-pitch&#x27;,state.pitch.toFixed(4));
+    svg.setAttribute(&#x27;data-space&#x27;,state.space);svg.setAttribute(&#x27;data-ambiguous-edges&#x27;,seamEdges.length);
+    svg.setAttribute(&#x27;data-ambiguity-faces&#x27;,JSON.stringify(ambiguous));
+    svg.setAttribute(&#x27;data-ambiguous-triangles&#x27;,seamTriangles.length);
+    svg.setAttribute(&#x27;data-rotation4&#x27;,state.angle14+&#x27;,&#x27;+state.angle24);
+  }
+  function drawGraph(){
+    if(state.space!==&#x27;three&#x27;||!state.showGraph)return;
+    const graph=root.querySelector(&#x27;.ev-input-graph&#x27;);
+    const w=Math.max(120,graph.getBoundingClientRect().width||185),height=140;
+    graph.setAttribute(&#x27;viewBox&#x27;,`0 0 ${w} ${height}`);graph.style.height=height+&#x27;px&#x27;;graph.replaceChildren();
+    const positions=[[w/2,23],[22,110],[w-22,110]],graphEdges=[[0,1],[0,2],[1,2]];
+    graphEdges.forEach(([i,j],k)=&gt;{
+      const [a,b]=[positions[i],positions[j]];
+      graph.appendChild(make(&#x27;line&#x27;,{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:state.bits[k]?&#x27;var(--ev-selected)&#x27;:&#x27;var(--border)&#x27;,
+        &#x27;stroke-width&#x27;:state.bits[k]?3:1.2,&#x27;stroke-dasharray&#x27;:state.bits[k]?&#x27;none&#x27;:&#x27;4 5&#x27;,&#x27;data-graph-edge&#x27;:k,&#x27;data-present&#x27;:state.bits[k]}));
+    });
+    positions.forEach(([x,y],i)=&gt;{graph.appendChild(make(&#x27;circle&#x27;,{cx:x,cy:y,r:5,fill:&#x27;var(--foreground)&#x27;}));if(state.graphLabels)graph.appendChild(make(&#x27;text&#x27;,{x,y:y+(i===0?-12:20),&#x27;text-anchor&#x27;:&#x27;middle&#x27;},String(i+1)));});
+    root.querySelectorAll(&#x27;[data-bit]&#x27;).forEach(e=&gt;{e.checked=!!state.bits[Number(e.dataset.bit)];});
+    const count=state.bits.reduce((a,b)=&gt;a+b,0);
+    const detail=`Input ${state.bits.join(&#x27;&#x27;)} → ${h(state.bits)} · ${count} edge${count===1?&#x27;&#x27;:&#x27;s&#x27;}`;
+    if(select(&#x27;graph-detail&#x27;).textContent!==detail)select(&#x27;graph-detail&#x27;).textContent=detail;
+    graph.setAttribute(&#x27;aria-label&#x27;,`Graph with ${count} edges, input ${state.bits.join(&#x27;&#x27;)}, output ${h(state.bits)}. Present edges are solid; absent edges are dashed.`);
+  }
+  function decisionDepth(inputs,remaining){
+    if(new Set(inputs.map(f=&gt;h(f.bits))).size&lt;=1)return 0;
+    return 1+Math.min(...remaining.map(i=&gt;Math.max(...[0,1].map(b=&gt;decisionDepth(inputs.filter(f=&gt;f.bits[i]===b),remaining.filter(j=&gt;j!==i))))));
+  }
+  function queryBranches(){
+    const q=queryIndex(),remaining=[0,1,2].filter(i=&gt;i!==q);
+    return [0,1].map(answer=&gt;{
+      const inputs=faces.filter(f=&gt;f.bits[q]===answer),linkFaces=[];
+      for(let code=0;code&lt;9;code++){
+        let value=code;const face=[];
+        for(const i of remaining){const digit=value%3;value=Math.floor(value/3);if(digit)face.push(2*i+digit-1);}
+        const values=new Set(inputs.filter(f=&gt;face.every(v=&gt;f.bits[v&gt;&gt;1]===v%2)).map(f=&gt;h(f.bits)));
+        if(values.size===2)linkFaces.push(face);
+      }
+      const apex=2*q+answer;
+      const starFaces=linkFaces.flatMap(f=&gt;[f.slice(),[...f,apex].sort((a,b)=&gt;a-b)]);
+      const depth=decisionDepth(inputs,remaining),table=inputs.map(f=&gt;h(f.bits)).join(&#x27;&#x27;);
+      const variable=i=&gt;&#x27;x&#x27;+[&#x27;₁&#x27;,&#x27;₂&#x27;,&#x27;₃&#x27;][i];
+      const name=({&#x27;0001&#x27;:&#x27;AND&#x27;,&#x27;0111&#x27;:&#x27;OR&#x27;,&#x27;0110&#x27;:&#x27;XOR&#x27;,&#x27;0011&#x27;:variable(remaining[0]),&#x27;0101&#x27;:variable(remaining[1])})[table]||&#x27;&#x27;;
+      return {answer,apex,remaining,inputs,outputs:[...new Set(inputs.map(f=&gt;h(f.bits)))].sort(),linkFaces,starFaces,depth,name};
+    });
+  }
+  function drawQuery(){
+    drawGraph();
+    const q=queryIndex(),model=queryBranches();
+    const branches=state.view===&#x27;all&#x27;?model:model.filter(b=&gt;b.answer===(state.view===&#x27;zero&#x27;?0:1));
+    const both=branches.length===2,stacked=both&amp;&amp;(svg.getBoundingClientRect().width&lt;450);
+    const separation=both?state.separation:0;
+    width=Math.max(280,svg.getBoundingClientRect().width||640);
+    height=stacked?340+230*separation:Math.min(470,Math.max(350,width*.66));
+    scale=Math.min((width-85)/(stacked?2.2:2.2+2.4*separation),(height-100)/(stacked?2.2+2.4*separation:2.2));
+    svg.setAttribute(&#x27;viewBox&#x27;,`0 0 ${width} ${height}`);svg.style.height=height+&#x27;px&#x27;;
+    svg.querySelectorAll(&#x27;g&#x27;).forEach(e=&gt;e.remove());
+    const scene=make(&#x27;g&#x27;,{&#x27;data-scene&#x27;:&#x27;true&#x27;});svg.appendChild(scene);
+    const displace=b=&gt;stacked?[0,(b?-1:1)*separation*1.2,0]:[(b?1:-1)*separation*1.2,0,0];
+    const point=(v,b)=&gt;add(rotate(vertices[v]),displace(b));
+    const triangles=[],segments=[],dots=[],labels=[];
+    for(const branch of branches){
+      const b=branch.answer,starEdges=branch.starFaces.filter(f=&gt;f.length===2);
+      const greenEdges=new Set(starEdges.map(e=&gt;e.join(&#x27;-&#x27;)));
+      let shownVertices;
+      if(state.queryView===&#x27;disks&#x27;){
+        for(const f of branch.inputs)triangles.push({...f,answer:b,output:h(f.bits),points:f.verts.map(v=&gt;point(v,b))});
+        const edges=ambientEdges.filter(e=&gt;branch.inputs.some(f=&gt;e.every(v=&gt;f.verts.includes(v))));
+        for(const edge of edges)segments.push({edge,answer:b,points:edge.map(v=&gt;point(v,b)),ambiguous:greenEdges.has(edge.join(&#x27;-&#x27;))});
+        shownVertices=new Set(edges.flat());
+      }else if(state.queryView===&#x27;stars&#x27;){
+        for(const edge of starEdges)segments.push({edge,answer:b,points:edge.map(v=&gt;point(v,b)),ambiguous:true});
+        shownVertices=new Set(branch.starFaces.filter(f=&gt;f.length===1).flat());
+      }else{
+        for(const f of branch.inputs){
+          const edge=f.verts.filter(v=&gt;(v&gt;&gt;1)!==q);
+          segments.push({edge,answer:b,points:edge.map(v=&gt;point(v,b)),output:h(f.bits),input:f.name,ambiguous:false});
+        }
+        shownVertices=new Set(branch.remaining.flatMap(i=&gt;[2*i,2*i+1]));
+      }
+      const linkVertices=new Set(branch.linkFaces.filter(f=&gt;f.length===1).flat());
+      for(const v of shownVertices)dots.push({v,answer:b,p:point(v,b),ambiguous:state.queryView===&#x27;stars&#x27;||(state.queryView===&#x27;links&#x27;&amp;&amp;linkVertices.has(v))});
+      const center=project(displace(b));
+      if(!both||separation&gt;=.4)labels.push({x:center[0],y:center[1]-scale-22,text:`x${[&#x27;₁&#x27;,&#x27;₂&#x27;,&#x27;₃&#x27;][q]} = ${b}`,opacity:1});
+      if(state.queryView===&#x27;stars&#x27;&amp;&amp;branch.outputs.length===1&amp;&amp;(!both||separation&gt;=.4))labels.push({x:center[0],y:center[1],text:`Resolved: f = ${branch.outputs[0]}`,opacity:1});
+    }
+    triangles.sort((a,b)=&gt;a.points.reduce((s,p)=&gt;s+p[2],0)-b.points.reduce((s,p)=&gt;s+p[2],0));
+    let pink=null;
+    for(const t of triangles){
+      const selected=state.showGraph&amp;&amp;state.highlight&amp;&amp;t.name===state.bits.join(&#x27;&#x27;);
+      const polygon=make(&#x27;polygon&#x27;,{points:t.points.map(p=&gt;project(p).join(&#x27;,&#x27;)).join(&#x27; &#x27;),fill:selected?&#x27;var(--ev-selected)&#x27;:outputColor(t.output),
+        &#x27;fill-opacity&#x27;:selected&amp;&amp;state.opacity&gt;0?Math.max(.55,state.opacity):state.opacity,
+        stroke:selected?&#x27;var(--ev-selected)&#x27;:&#x27;none&#x27;,&#x27;stroke-width&#x27;:2.8,&#x27;data-face&#x27;:t.name,&#x27;data-output&#x27;:t.output,&#x27;data-answer&#x27;:t.answer,&#x27;data-selected&#x27;:selected});
+      polygon.appendChild(make(&#x27;title&#x27;,{},`${t.name} → ${t.output}; query answer ${t.answer}`));scene.appendChild(polygon);if(selected)pink=polygon;
+    }
+    if(pink)scene.appendChild(pink);
+    for(const s of segments){
+      const [a,b]=s.points.map(project),hidden=triangles.some(t=&gt;pointBehindTriangle(midpoint(...s.points),t));
+      const selected=state.queryView===&#x27;links&#x27;&amp;&amp;state.showGraph&amp;&amp;state.highlight&amp;&amp;s.input===state.bits.join(&#x27;&#x27;);
+      scene.appendChild(make(&#x27;line&#x27;,{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:selected?&#x27;var(--ev-selected)&#x27;:s.ambiguous?&#x27;var(--ev-ambiguity)&#x27;:s.output!==undefined?outputColor(s.output):&#x27;var(--foreground)&#x27;,
+        &#x27;stroke-width&#x27;:selected?4:s.ambiguous||s.output!==undefined?3.3:1.25,&#x27;stroke-linecap&#x27;:&#x27;round&#x27;,&#x27;stroke-dasharray&#x27;:hidden?&#x27;5 6&#x27;:&#x27;none&#x27;,opacity:hidden?.52:1,
+        &#x27;data-edge&#x27;:s.edge.join(&#x27;-&#x27;),&#x27;data-answer&#x27;:s.answer,&#x27;data-boundary&#x27;:s.ambiguous,&#x27;data-hidden&#x27;:hidden,&#x27;data-output&#x27;:s.output??&#x27;&#x27;,
+        ...(s.input?{&#x27;data-face&#x27;:s.input,&#x27;data-selected&#x27;:selected}:{})}));
+    }
+    for(const dot of dots){
+      const pos=project(dot.p),center=project(displace(dot.answer)),radial=[pos[0]-center[0],pos[1]-center[1]],norm=Math.hypot(...radial)||1;
+      const hidden=triangles.some(t=&gt;pointBehindTriangle(dot.p,t));
+      scene.appendChild(make(&#x27;circle&#x27;,{cx:pos[0],cy:pos[1],r:dot.ambiguous?5:3,fill:dot.ambiguous?&#x27;var(--ev-ambiguity)&#x27;:&#x27;var(--foreground)&#x27;,opacity:hidden?.5:1,
+        &#x27;data-vertex&#x27;:dot.v,&#x27;data-answer&#x27;:dot.answer,&#x27;data-ambiguous-vertex&#x27;:dot.ambiguous}));
+      labels.push({x:pos[0]+17*radial[0]/norm,y:pos[1]+17*radial[1]/norm,text:signed(dot.v),opacity:hidden?.65:1});
+    }
+    if(state.labels&amp;&amp;state.queryView===&#x27;disks&#x27;&amp;&amp;width&gt;=600){
+      for(const t of triangles){
+        const center=mul(t.points.reduce(add,[0,0,0]),1/3);
+        if(triangles.some(other=&gt;other!==t&amp;&amp;pointBehindTriangle(center,other)))continue;
+        const p=project(center);labels.push({x:p[0],y:p[1],text:t.name,opacity:1});
+      }
+    }
+    if(both&amp;&amp;separation&lt;.4)labels.unshift({x:width/2,y:22,text:`x${[&#x27;₁&#x27;,&#x27;₂&#x27;,&#x27;₃&#x27;][q]} = 0 and 1 · overlapping views`,opacity:1});
+    drawLabels(scene,labels);
+    const seam=ambientEdges.filter(edgeIsAmbiguous);
+    svg.setAttribute(&#x27;data-yaw&#x27;,state.yaw.toFixed(4));svg.setAttribute(&#x27;data-pitch&#x27;,state.pitch.toFixed(4));svg.setAttribute(&#x27;data-space&#x27;,&#x27;three&#x27;);
+    svg.setAttribute(&#x27;data-ambiguous-edges&#x27;,seam.length);svg.setAttribute(&#x27;data-ambiguous-triangles&#x27;,&#x27;0&#x27;);
+    svg.setAttribute(&#x27;data-ambiguity-faces&#x27;,JSON.stringify([...(seam.length?[[]]:[]),...Array.from(new Set(seam.flat())).sort((a,b)=&gt;a-b).map(v=&gt;[v]),...seam]));
+    svg.setAttribute(&#x27;data-query-axis&#x27;,q);svg.setAttribute(&#x27;data-query-view&#x27;,state.queryView);
+    svg.setAttribute(&#x27;data-query-model&#x27;,JSON.stringify(model.map(b=&gt;({answer:b.answer,inputs:b.inputs.map(f=&gt;f.name),outputs:b.outputs,linkFaces:b.linkFaces,starFaces:b.starFaces,depth:b.depth}))));
+  }
+  function draw(){
+    if(state.space!==&#x27;three&#x27;){drawHigher();return;}
+    if(queryIndex()&gt;=0){drawQuery();return;}
+    svg.setAttribute(&#x27;data-query-axis&#x27;,&#x27;-1&#x27;);
+    drawGraph();
+    width=Math.max(280,svg.getBoundingClientRect().width||root.clientWidth||640);
+    height=Math.min(470,Math.max(320,width*.64));
+    const span=2.2+(state.view===&#x27;all&#x27;?2.4*state.separation:0);
+    scale=Math.min((width-85)/span,(height-85)/span);
+    svg.setAttribute(&#x27;viewBox&#x27;,`0 0 ${width} ${height}`);
+    svg.style.height=height+&#x27;px&#x27;;
+    svg.querySelectorAll(&#x27;g&#x27;).forEach(e=&gt;e.remove());
+    const scene=make(&#x27;g&#x27;,{&#x27;data-scene&#x27;:&#x27;true&#x27;});svg.appendChild(scene);
+    const seam=ambientEdges.filter(edgeIsAmbiguous);
+    const wantSeam=state.view===&#x27;seam&#x27;;
+    const separation=state.view===&#x27;all&#x27;?state.separation:0;
+    // Move the two rigid copies left and right in viewing coordinates, so the
+    // separation control exposes both pieces at every viewing angle.
+    const displace=output=&gt;[(output?1:-1)*separation*1.2,0,0];
+    const transformed=(v,output)=&gt;add(rotate(vertices[v]),displace(output));
+    const visibleFaces=wantSeam?[]:faces.filter(f=&gt;state.view===&#x27;all&#x27;||h(f.bits)===(state.view===&#x27;zero&#x27;?0:1));
+    const triangles=visibleFaces.map(f=&gt;{
+      const output=h(f.bits),points=f.verts.map(v=&gt;transformed(v,output));
+      return {...f,output,points,depth:points.reduce((s,p)=&gt;s+p[2],0)/3};
+    }).sort((a,b)=&gt;a.depth-b.depth);
+    let selectedPolygon=null;
+    for(const t of triangles){
+      const chosen=state.showGraph&amp;&amp;state.highlight&amp;&amp;t.name===state.bits.join(&#x27;&#x27;);
+      const el=make(&#x27;polygon&#x27;,{points:t.points.map(p=&gt;project(p).join(&#x27;,&#x27;)).join(&#x27; &#x27;),
+        fill:chosen?&#x27;var(--ev-selected)&#x27;:outputColor(t.output),&#x27;fill-opacity&#x27;:chosen&amp;&amp;state.opacity&gt;0?Math.max(.55,state.opacity):state.opacity,
+        &#x27;stroke&#x27;:chosen?&#x27;var(--ev-selected)&#x27;:&#x27;none&#x27;,&#x27;stroke-width&#x27;:2.8,
+        &#x27;data-selected&#x27;:chosen,&#x27;data-face&#x27;:t.name,&#x27;data-output&#x27;:t.output});
+      el.appendChild(make(&#x27;title&#x27;,{},t.name+&#x27; → &#x27;+t.output));scene.appendChild(el);
+      if(chosen)selectedPolygon=el;
+    }
+    // Pink is a selection overlay: show it above other translucent fills, but
+    // below the ambiguity edges. It never moves the facet or changes its value.
+    if(selectedPolygon)scene.appendChild(selectedPolygon);
+    const instances=[];
+    if(wantSeam){
+      seam.forEach(e=&gt;instances.push({edge:e,points:e.map(v=&gt;rotate(vertices[v])),boundary:true,key:&#x27;x&#x27;}));
+    } else if(separation&gt;0){
+      for(const output of [0,1]){
+        for(const edge of ambientEdges){
+          if(!visibleFaces.some(f=&gt;h(f.bits)===output&amp;&amp;edge.every(v=&gt;f.verts.includes(v))))continue;
+          instances.push({edge,points:edge.map(v=&gt;transformed(v,output)),boundary:edgeIsAmbiguous(edge),key:String(output)});
+        }
+      }
+    } else {
+      ambientEdges.filter(e=&gt;visibleFaces.some(f=&gt;e.every(v=&gt;f.verts.includes(v))))
+        .forEach(edge=&gt;instances.push({edge,points:edge.map(v=&gt;rotate(vertices[v])),boundary:edgeIsAmbiguous(edge),key:&#x27;x&#x27;}));
+    }
+    const segments=[];
+    for(const e of instances){
+      const hidden=!wantSeam&amp;&amp;triangles.some(t=&gt;pointBehindTriangle(midpoint(...e.points),t));
+      segments.push({...e,hidden});
+    }
+    segments.sort((a,b)=&gt;Number(b.hidden)-Number(a.hidden)||Number(a.boundary)-Number(b.boundary));
+    for(const e of segments){
+      const [a,b]=e.points.map(project);
+      scene.appendChild(make(&#x27;line&#x27;,{x1:a[0],y1:a[1],x2:b[0],y2:b[1],
+        stroke:e.boundary?&#x27;var(--ev-ambiguity)&#x27;:&#x27;var(--foreground)&#x27;,
+        &#x27;stroke-width&#x27;:e.boundary?3.3:1.25,&#x27;stroke-linecap&#x27;:&#x27;round&#x27;,
+        &#x27;stroke-dasharray&#x27;:e.hidden?&#x27;5 6&#x27;:&#x27;none&#x27;,&#x27;opacity&#x27;:e.hidden?.52:(e.boundary?1:.58),
+        &#x27;data-edge&#x27;:e.edge.join(&#x27;-&#x27;),&#x27;data-hidden&#x27;:e.hidden,&#x27;data-boundary&#x27;:e.boundary}));
+    }
+    const pendingLabels=[];
+    if(state.labels&amp;&amp;!wantSeam&amp;&amp;width&gt;=450){
+      for(const t of triangles){
+        // Only front labels are shown. Turning the object exposes the rear
+        // assignment labels without piling eight labels on top of one another.
+        const center=mul(t.points.reduce(add,[0,0,0]),1/3);
+        const hidden=triangles.some(other=&gt;other!==t&amp;&amp;pointBehindTriangle(center,other));
+        if(hidden)continue;
+        const p=project(center);
+        pendingLabels.push({kind:&#x27;face&#x27;,x:p[0],y:p[1],text:t.name,opacity:1});
+      }
+    }
+    const points=new Map();
+    for(const e of instances) e.edge.forEach((v,i)=&gt;points.set(e.key+&#x27;:&#x27;+v,{v,p:e.points[i]}));
+    for(const {v,p} of points.values()){
+      const hidden=!wantSeam&amp;&amp;triangles.some(t=&gt;pointBehindTriangle(p,t));
+      const pos=project(p),radial=[pos[0]-width/2,pos[1]-height/2];
+      const norm=Math.hypot(...radial)||1;
+      const offset=[radial[0]/norm*17,radial[1]/norm*17];
+      scene.appendChild(make(&#x27;circle&#x27;,{cx:pos[0],cy:pos[1],r:3,fill:&#x27;var(--foreground)&#x27;,opacity:hidden?.45:1}));
+      pendingLabels.push({kind:&#x27;vertex&#x27;,x:pos[0]+offset[0],y:pos[1]+offset[1],text:signed(v),opacity:hidden?.6:1});
+    }
+    // Keep signed vertices first; suppress labels on foreshortened faces when
+    // they collide. Assignment labels reappear as those faces turn toward us.
+    const occupied=[];
+    pendingLabels.sort((a,b)=&gt;Number(a.kind===&#x27;face&#x27;)-Number(b.kind===&#x27;face&#x27;));
+    for(const item of pendingLabels){
+      const shifts=item.kind===&#x27;vertex&#x27;?[[0,0],[16,0],[-16,0],[0,16],[0,-16]]:[[0,0]];
+      for(const [dx,dy] of shifts){
+        const x=item.x+dx,y=item.y+dy,half=item.text.length*3.5+3;
+        const rect={left:x-half,right:x+half,top:y-10,bottom:y+10};
+        if(rect.left&lt;3||rect.right&gt;width-3||rect.top&lt;3||rect.bottom&gt;height-3)continue;
+        if(occupied.some(r=&gt;rect.left&lt;r.right&amp;&amp;rect.right&gt;r.left&amp;&amp;rect.top&lt;r.bottom&amp;&amp;rect.bottom&gt;r.top))continue;
+        occupied.push(rect);
+        scene.appendChild(make(&#x27;text&#x27;,{x,y,class:&#x27;ev-label&#x27;,&#x27;text-anchor&#x27;:&#x27;middle&#x27;,&#x27;dominant-baseline&#x27;:&#x27;middle&#x27;,opacity:item.opacity},item.text));
+        break;
+      }
+    }
+    svg.setAttribute(&#x27;data-yaw&#x27;,state.yaw.toFixed(4));
+    svg.setAttribute(&#x27;data-pitch&#x27;,state.pitch.toFixed(4));
+    svg.setAttribute(&#x27;data-space&#x27;,state.space);
+    svg.setAttribute(&#x27;data-ambiguous-edges&#x27;,seam.length);
+    svg.setAttribute(&#x27;data-ambiguous-triangles&#x27;,&#x27;0&#x27;);
+    svg.setAttribute(&#x27;data-ambiguity-faces&#x27;,JSON.stringify([...(seam.length?[[]]:[]),...Array.from(new Set(seam.flat())).sort((a,b)=&gt;a-b).map(v=&gt;[v]),...seam]));
+    if(wantSeam&amp;&amp;!seam.length)scene.appendChild(make(&#x27;text&#x27;,{x:width/2,y:height/2,&#x27;text-anchor&#x27;:&#x27;middle&#x27;},&#x27;No ambiguous assignments&#x27;));
+  }
+  function updateDetail(){
+    if(state.space===&#x27;tetra&#x27;){select(&#x27;detail&#x27;).textContent=&#x27;Tetrahedron · 4 vertices · 6 edges · 4 triangular faces · shape only&#x27;;return;}
+    if(state.space===&#x27;four&#x27;){
+      const a=fourAmbiguity(),vertices=a.filter(f=&gt;f.length===1).length,edges=a.filter(f=&gt;f.length===2).length,triangles=a.filter(f=&gt;f.length===3).length;
+      const status=[&#x27;zero&#x27;,&#x27;one&#x27;].includes(state.example)?&#x27;Empty ambiguity complex&#x27;:[&#x27;exactlytwo&#x27;,&#x27;parity&#x27;].includes(state.example)?&#x27;Not a sphere&#x27;:&#x27;Ambiguity surface: a 2-sphere&#x27;;
+      select(&#x27;detail&#x27;).textContent=state.view4===&#x27;cell&#x27;?`Input ${fourInputs[state.cell].join(&#x27;&#x27;)} → ${h(fourInputs[state.cell])} · one of 16 tetrahedral facets · projected from 4D`:
+        state.view4===&#x27;ambient&#x27;?&#x27;4D cross-polytope · 8 vertices · 24 edges · 16 tetrahedral facets (edges shown)&#x27;:`${status} · ${vertices} vertices, ${edges} edges, ${triangles} triangles`;
+      select(&#x27;detail&#x27;).textContent+=&#x27; · 4D → 3D projection; crossings may be artifacts&#x27;;return;
+    }
+    if(queryIndex()&gt;=0){
+      const q=queryIndex(),subscript=[&#x27;₁&#x27;,&#x27;₂&#x27;,&#x27;₃&#x27;][q],model=queryBranches();
+      const branches=state.view===&#x27;all&#x27;?model:model.filter(b=&gt;b.answer===(state.view===&#x27;zero&#x27;?0:1));
+      const stages={disks:&#x27;Answer disks: retain the queried vertex&#x27;,stars:&#x27;Closed stars: ambiguity with the queried vertex retained&#x27;,links:&#x27;Links: remove the queried vertex; green points remain ambiguous&#x27;};
+      const summary=branches.map(b=&gt;`x${subscript}=${b.answer}: `+(b.outputs.length===1?`resolved, f=${b.outputs[0]}`:`${b.name?b.name+&#x27; · &#x27;:&#x27;&#x27;}${b.depth} more quer${b.depth===1?&#x27;y&#x27;:&#x27;ies&#x27;} in the worst case`)).join(&#x27; | &#x27;);
+      select(&#x27;detail&#x27;).textContent=stages[state.queryView]+&#x27; · &#x27;+summary;return;
+    }
+    const descriptions={majority:&#x27;At least two edges (majority) · 6-edge circle&#x27;,exactlytwo:&#x27;Any two edges · nonmonotone · D = 3 (worst-case queries) · 9 ambiguity edges · not a sphere&#x27;,only110:&#x27;Only 110: edges 12 and 13 present, edge 23 absent · nonmonotone · D = 3 · 3-edge ambiguity circle&#x27;,selector:&#x27;Selector: x₁=0 → x₃; x₁=1 → x₂ · nonmonotone · D = 2 · 6-edge ambiguity circle&#x27;,dictator:&#x27;Dictator · 4-edge circle&#x27;,or:&#x27;OR · 3-edge circle&#x27;,parity:&#x27;Parity · 12 edges · degree 4 at every vertex · not a sphere&#x27;,zero:&#x27;Constant 0 · whole octahedron has output 0 · no ambiguous assignments&#x27;,one:&#x27;Constant 1 · whole octahedron has output 1 · no ambiguous assignments&#x27;};
+    select(&#x27;detail&#x27;).textContent=descriptions[state.example]+(state.separation&gt;0&amp;&amp;state.view===&#x27;all&#x27;?&#x27; · Separated copies of the common boundary&#x27;:&#x27;&#x27;);
+  }
+  function syncControls(){
+    const querying=state.space===&#x27;three&#x27;&amp;&amp;queryIndex()&gt;=0;
+    root.querySelectorAll(&#x27;[data-part]&#x27;).forEach(el=&gt;{
+      const part=el.dataset.part;
+      el.hidden=part===&#x27;three&#x27;?state.space!==&#x27;three&#x27;:part===&#x27;query&#x27;?!querying:part===&#x27;graph&#x27;?!(state.space===&#x27;three&#x27;&amp;&amp;state.showGraph):part===&#x27;selection&#x27;?!(state.space===&#x27;three&#x27;&amp;&amp;state.showGraph&amp;&amp;state.highlight&amp;&amp;state.view!==&#x27;seam&#x27;&amp;&amp;(!querying||state.queryView!==&#x27;stars&#x27;)):part===&#x27;four&#x27;?state.space!==&#x27;four&#x27;:part===&#x27;cell&#x27;?!(state.space===&#x27;four&#x27;&amp;&amp;state.view4===&#x27;cell&#x27;):state.space===&#x27;tetra&#x27;;
+    });
+    root.querySelector(&#x27;.ev-layout&#x27;).classList.toggle(&#x27;ev-shape-only&#x27;,state.space!==&#x27;three&#x27;||!state.showGraph);
+    select(&#x27;highlight&#x27;).disabled=!state.showGraph;
+    const names3={majority:&#x27;At least two edges (majority)&#x27;,exactlytwo:&#x27;Any two edges · nonmonotone&#x27;,only110:&#x27;Only 110 · prescribed graph&#x27;,selector:&#x27;Selector · x₁ chooses x₃ or x₂&#x27;,dictator:&#x27;Edge 12 present (dictator: x₁)&#x27;,or:&#x27;At least one edge (OR)&#x27;,parity:&#x27;Odd number of edges (parity)&#x27;,zero:&#x27;Constant 0 · whole octahedron&#x27;,one:&#x27;Constant 1 · whole octahedron&#x27;};
+    const names4={majority:&#x27;At least two ones&#x27;,exactlytwo:&#x27;Exactly two ones&#x27;,only110:&#x27;Only 1100 · prescribed input&#x27;,selector:&#x27;Selector · x₄ ignored&#x27;,dictator:&#x27;Dictator: x₁&#x27;,or:&#x27;At least one 1 (OR)&#x27;,parity:&#x27;Odd number of ones (parity)&#x27;,zero:&#x27;Constant 0&#x27;,one:&#x27;Constant 1&#x27;};
+    for(const option of select(&#x27;example&#x27;).options)option.textContent=(state.space===&#x27;four&#x27;?names4:names3)[option.value];
+    for(const option of select(&#x27;view&#x27;).options){
+      option.textContent=(querying?{all:&#x27;Both query answers&#x27;,zero:&#x27;Only answer 0&#x27;,one:&#x27;Only answer 1&#x27;,seam:&#x27;Only the ambiguity complex&#x27;}:{all:&#x27;Both colored regions&#x27;,zero:&#x27;Only the 0-region&#x27;,one:&#x27;Only the 1-region&#x27;,seam:&#x27;Only the ambiguity complex&#x27;})[option.value];
+      option.hidden=option.disabled=querying&amp;&amp;option.value===&#x27;seam&#x27;;
+    }
+    select(&#x27;separation-label&#x27;).textContent=querying?&#x27;Separate query answers&#x27;:&#x27;Separate colors&#x27;;
+    select(&#x27;separation&#x27;).disabled=querying&amp;&amp;state.view!==&#x27;all&#x27;;
+    svg.setAttribute(&#x27;aria-label&#x27;,state.space===&#x27;three&#x27;?&#x27;Rotatable octahedron of three edge variables. Orange facets have output zero; blue facets have output one; green marks ambiguity. Query mode separates answer zero from answer one and can show disks, closed stars, or links. Optional pink marks the selected input.&#x27;:state.space===&#x27;tetra&#x27;?&#x27;Rotatable tetrahedron, a separate geometric shape with four triangular faces.&#x27;:&#x27;A 3D projection of a four-dimensional cross-polytope or its ambiguity complex. Extra sliders rotate into the fourth dimension.&#x27;);
+    svg.querySelector(&#x27;title&#x27;).textContent=state.space===&#x27;three&#x27;?&#x27;Three-variable ambiguity complex&#x27;:state.space===&#x27;tetra&#x27;?&#x27;Tetrahedron&#x27;:&#x27;Four-variable ambiguity complex projected from 4D&#x27;;
+    svg.querySelector(&#x27;desc&#x27;).textContent=svg.getAttribute(&#x27;aria-label&#x27;);
+  }
+  for(const name of [&#x27;space&#x27;,&#x27;example&#x27;,&#x27;view&#x27;,&#x27;view4&#x27;,&#x27;cell&#x27;,&#x27;split&#x27;,&#x27;queryView&#x27;])select(name).addEventListener(&#x27;change&#x27;,e=&gt;{
+    state[name]=name===&#x27;cell&#x27;?Number(e.target.value):e.target.value;
+    if(name===&#x27;split&#x27;){
+      state.view=&#x27;all&#x27;;select(&#x27;view&#x27;).value=&#x27;all&#x27;;
+      if(queryIndex()&gt;=0&amp;&amp;state.separation===0){state.separation=1;select(&#x27;separation&#x27;).value=&#x27;100&#x27;;root.querySelector(&#x27;[data-value=&quot;separation&quot;]&#x27;).textContent=&#x27;100%&#x27;;}
+    }
+    if(name===&#x27;example&#x27;&amp;&amp;[&#x27;zero&#x27;,&#x27;one&#x27;].includes(state.example)&amp;&amp;state.space===&#x27;three&#x27;&amp;&amp;queryIndex()&lt;0){
+      state.view=&#x27;all&#x27;;select(&#x27;view&#x27;).value=&#x27;all&#x27;;state.separation=0;select(&#x27;separation&#x27;).value=&#x27;0&#x27;;root.querySelector(&#x27;[data-value=&quot;separation&quot;]&#x27;).textContent=&#x27;0%&#x27;;
+    }
+    syncControls();updateDetail();draw();
+  });
+  for(const name of [&#x27;angle14&#x27;,&#x27;angle24&#x27;])select(name).addEventListener(&#x27;input&#x27;,e=&gt;{
+    state[name]=Number(e.target.value);root.querySelector(&#x27;[data-value=&quot;&#x27;+name+&#x27;&quot;]&#x27;).textContent=e.target.value+&#x27;°&#x27;;draw();
+  });
+  root.querySelectorAll(&#x27;[data-bit]&#x27;).forEach(e=&gt;e.addEventListener(&#x27;change&#x27;,()=&gt;{state.bits[Number(e.dataset.bit)]=+e.checked;draw();}));
+  for(const name of [&#x27;opacity&#x27;,&#x27;separation&#x27;])select(name).addEventListener(&#x27;input&#x27;,e=&gt;{
+    state[name]=Number(e.target.value)/100;
+    root.querySelector(&#x27;[data-value=&quot;&#x27;+name+&#x27;&quot;]&#x27;).textContent=e.target.value+&#x27;%&#x27;;updateDetail();draw();
+  });
+  select(&#x27;labels&#x27;).addEventListener(&#x27;change&#x27;,e=&gt;{state.labels=e.target.checked;draw();});
+  for(const name of [&#x27;showGraph&#x27;,&#x27;highlight&#x27;,&#x27;graphLabels&#x27;])select(name).addEventListener(&#x27;change&#x27;,e=&gt;{state[name]=e.target.checked;syncControls();draw();});
+  let drag=null;
+  svg.addEventListener(&#x27;pointerdown&#x27;,e=&gt;{moving++;drag={x:e.clientX,y:e.clientY,distance:0,face:e.target.getAttribute(&#x27;data-face&#x27;)};svg.setPointerCapture(e.pointerId);});
+  svg.addEventListener(&#x27;pointermove&#x27;,e=&gt;{
+    if(!drag)return;
+    state.yaw+=(e.clientX-drag.x)*.012;state.pitch+=(e.clientY-drag.y)*.012;
+    drag.distance+=Math.hypot(e.clientX-drag.x,e.clientY-drag.y);drag.x=e.clientX;drag.y=e.clientY;draw();
+  });
+  svg.addEventListener(&#x27;pointerup&#x27;,()=&gt;{if(drag&amp;&amp;drag.distance&lt;5&amp;&amp;drag.face&amp;&amp;state.space===&#x27;three&#x27;&amp;&amp;state.showGraph){state.bits=drag.face.split(&#x27;&#x27;).map(Number);draw();}drag=null;});
+  svg.addEventListener(&#x27;pointercancel&#x27;,()=&gt;{drag=null;});
+  let moving=0;
+  root.querySelectorAll(&#x27;[data-turn]&#x27;).forEach(button=&gt;button.addEventListener(&#x27;click&#x27;,()=&gt;{
+    const kind=button.dataset.turn,dy=kind===&#x27;back&#x27;?Math.PI:kind===&#x27;left&#x27;?-.5:kind===&#x27;right&#x27;?.5:0,dp=kind===&#x27;up&#x27;?-.4:kind===&#x27;down&#x27;?.4:0;
+    const y=state.yaw,p=state.pitch,token=++moving;
+    if(matchMedia(&#x27;(prefers-reduced-motion: reduce)&#x27;).matches){state.yaw+=dy;state.pitch+=dp;draw();return;}
+    const start=performance.now();
+    function frame(now){if(token!==moving)return;const t=Math.min(1,(now-start)/420),s=t*t*(3-2*t);state.yaw=y+dy*s;state.pitch=p+dp*s;draw();if(t&lt;1)requestAnimationFrame(frame);}
+    requestAnimationFrame(frame);
+  }));
+  const observer=new ResizeObserver(()=&gt;draw());observer.observe(root);
+  syncControls();updateDetail();draw();
+})();
+&lt;/script&gt;
+
+
+
+&lt;script&gt;
+(() =&gt; {
+  if (window.FloatingUIDOM == null) {
+    return;
+  }
+  const { autoUpdate, computePosition, flip, offset, shift, size } =
+    window.FloatingUIDOM;
+  const tooltipPlacements = new Set([&quot;top&quot;, &quot;right&quot;, &quot;bottom&quot;, &quot;left&quot;]);
+  const tooltipId = `codex-visualization-tooltip-${
+    window.crypto?.randomUUID?.() ?? Date.now().toString(36)
+  }`;
+  const tooltipGap = 5;
+  const hoverDelay = 700;
+  const skipDelay = 300;
+  let activeTrigger = null;
+  let pendingTrigger = null;
+  let tooltip = null;
+  let openTimeout = null;
+  let autoUpdateCleanup = null;
+  let positionRequest = 0;
+  let skipDelayUntil = 0;
+  let lastPointerWasTouch = false;
+  let pinnedByTouch = false;
+
+  const getTrigger = (target) =&gt;
+    target?.nodeType === Node.ELEMENT_NODE
+      ? target.closest(&quot;[data-tooltip]&quot;)
+      : null;
+  const containsTarget = (trigger, target) =&gt;
+    target?.nodeType != null &amp;&amp; trigger.contains(target);
+  const getContent = (trigger) =&gt;
+    trigger.getAttribute(&quot;data-tooltip&quot;)?.trim() ?? &quot;&quot;;
+  const getPlacement = (trigger) =&gt; {
+    const placement = trigger.getAttribute(&quot;data-tooltip-placement&quot;);
+    return tooltipPlacements.has(placement) ? placement : &quot;top&quot;;
+  };
+  const getTooltip = () =&gt; {
+    if (tooltip == null) {
+      tooltip = document.createElement(&quot;div&quot;);
+      tooltip.id = tooltipId;
+      tooltip.className = &quot;tooltip&quot;;
+      tooltip.setAttribute(&quot;role&quot;, &quot;tooltip&quot;);
+    }
+    return tooltip;
+  };
+  const setDescribedBy = (trigger, described) =&gt; {
+    const ids = new Set(
+      (trigger.getAttribute(&quot;aria-describedby&quot;) ?? &quot;&quot;)
+        .split(/\s+/)
+        .filter(Boolean),
+    );
+    if (described) {
+      ids.add(tooltipId);
+    } else {
+      ids.delete(tooltipId);
+    }
+    if (ids.size === 0) {
+      trigger.removeAttribute(&quot;aria-describedby&quot;);
+    } else {
+      trigger.setAttribute(&quot;aria-describedby&quot;, [...ids].join(&quot; &quot;));
+    }
+  };
+  const clearOpenTimeout = () =&gt; {
+    if (openTimeout != null) {
+      window.clearTimeout(openTimeout);
+      openTimeout = null;
+    }
+    pendingTrigger = null;
+  };
+  const closeTooltip = (activateSkipDelay = true) =&gt; {
+    clearOpenTimeout();
+    pinnedByTouch = false;
+    positionRequest += 1;
+    autoUpdateCleanup?.();
+    autoUpdateCleanup = null;
+    if (activeTrigger == null) {
+      return;
+    }
+    setDescribedBy(activeTrigger, false);
+    activeTrigger = null;
+    tooltip?.remove();
+    if (activateSkipDelay) {
+      skipDelayUntil = Date.now() + skipDelay;
+    }
+  };
+  const updatePosition = (trigger, floating) =&gt; {
+    const request = ++positionRequest;
+    void computePosition(trigger, floating, {
+      middleware: [
+        offset(tooltipGap),
+        flip({ padding: tooltipGap }),
+        shift({ padding: tooltipGap }),
+        size({
+          padding: tooltipGap,
+          apply({ availableHeight, availableWidth, elements }) {
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-width&quot;,
+              `${Math.max(0, availableWidth)}px`,
+            );
+            elements.floating.style.setProperty(
+              &quot;--tooltip-available-height&quot;,
+              `${Math.max(0, availableHeight)}px`,
+            );
+          },
+        }),
+      ],
+      placement: getPlacement(trigger),
+      strategy: &quot;fixed&quot;,
+    })
+      .then(({ x, y }) =&gt; {
+        if (activeTrigger !== trigger || request !== positionRequest) {
+          return;
+        }
+        const scale = window.devicePixelRatio || 1;
+        floating.style.transform = `translate(${Math.round(x * scale) / scale}px, ${Math.round(y * scale) / scale}px)`;
+        floating.style.visibility = &quot;visible&quot;;
+      })
+      .catch(() =&gt; {
+        if (activeTrigger === trigger &amp;&amp; request === positionRequest) {
+          closeTooltip(false);
+        }
+      });
+  };
+  const openTooltip = (trigger) =&gt; {
+    const content = getContent(trigger);
+    if (!trigger.isConnected || content.length === 0) {
+      return;
+    }
+    clearOpenTimeout();
+    if (activeTrigger === trigger) {
+      return;
+    }
+    closeTooltip();
+    const floating = getTooltip();
+    floating.textContent = content;
+    floating.style.visibility = &quot;hidden&quot;;
+    floating.style.transform = &quot;translate(0, 0)&quot;;
+    document.body.appendChild(floating);
+    activeTrigger = trigger;
+    setDescribedBy(trigger, true);
+    autoUpdateCleanup = autoUpdate(trigger, floating, () =&gt; {
+      updatePosition(trigger, floating);
+    });
+  };
+  const requestOpen = (trigger, immediate = false) =&gt; {
+    if (
+      getContent(trigger).length === 0 ||
+      activeTrigger === trigger ||
+      pendingTrigger === trigger
+    ) {
+      return;
+    }
+    clearOpenTimeout();
+    pendingTrigger = trigger;
+    const delay =
+      immediate || activeTrigger != null || Date.now() &lt; skipDelayUntil
+        ? 0
+        : hoverDelay;
+    if (delay === 0) {
+      openTooltip(trigger);
+      return;
+    }
+    openTimeout = window.setTimeout(() =&gt; {
+      openTimeout = null;
+      pendingTrigger = null;
+      openTooltip(trigger);
+    }, delay);
+  };
+  const handlePointerOpen = (event) =&gt; {
+    if (event.pointerType === &quot;touch&quot;) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    requestOpen(trigger);
+  };
+  const handlePointer = (event) =&gt; {
+    lastPointerWasTouch =
+      event.type === &quot;pointerdown&quot; &amp;&amp; event.pointerType === &quot;touch&quot;;
+  };
+  const handleTouchClick = (event) =&gt; {
+    const isTouch = event.pointerType === &quot;touch&quot; || lastPointerWasTouch;
+    lastPointerWasTouch = false;
+    if (!isTouch || event.detail === 0) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (
+      trigger == null ||
+      !trigger.isConnected ||
+      getContent(trigger).length === 0 ||
+      (pinnedByTouch &amp;&amp; activeTrigger === trigger)
+    ) {
+      if (pinnedByTouch) {
+        closeTooltip();
+      }
+      return;
+    }
+    openTooltip(trigger);
+    pinnedByTouch = activeTrigger === trigger;
+    window.setTimeout(() =&gt; {
+      if (activeTrigger === trigger &amp;&amp; !trigger.isConnected) {
+        closeTooltip(false);
+      }
+    }, 0);
+  };
+  const handleLeave = (event) =&gt; {
+    if (pinnedByTouch) {
+      return;
+    }
+    const trigger = getTrigger(event.target);
+    if (trigger == null || containsTarget(trigger, event.relatedTarget)) {
+      return;
+    }
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const handleFocusIn = (event) =&gt; {
+    const trigger = getTrigger(event.target);
+    if (trigger?.matches(&quot;:focus-visible&quot;)) {
+      requestOpen(trigger, true);
+    }
+  };
+  const handleKeyDown = (event) =&gt; {
+    if (event.key === &quot;Escape&quot;) {
+      closeTooltip();
+    }
+  };
+  const handleContextMenu = (event) =&gt; {
+    lastPointerWasTouch = false;
+    const trigger = getTrigger(event.target);
+    if (activeTrigger === trigger || pendingTrigger === trigger) {
+      closeTooltip();
+    }
+  };
+  const destroy = () =&gt; {
+    closeTooltip(false);
+    lastPointerWasTouch = false;
+    document.removeEventListener(&quot;pointerover&quot;, handlePointerOpen);
+    document.removeEventListener(&quot;pointerdown&quot;, handlePointer);
+    document.removeEventListener(&quot;pointercancel&quot;, handlePointer);
+    document.removeEventListener(&quot;click&quot;, handleTouchClick);
+    document.removeEventListener(&quot;pointerout&quot;, handleLeave);
+    document.removeEventListener(&quot;focusin&quot;, handleFocusIn);
+    document.removeEventListener(&quot;focusout&quot;, handleLeave);
+    document.removeEventListener(&quot;keydown&quot;, handleKeyDown);
+    document.removeEventListener(&quot;contextmenu&quot;, handleContextMenu);
+    tooltip = null;
+  };
+
+  document.addEventListener(&quot;pointerover&quot;, handlePointerOpen);
+  document.addEventListener(&quot;pointerdown&quot;, handlePointer);
+  document.addEventListener(&quot;pointercancel&quot;, handlePointer);
+  document.addEventListener(&quot;click&quot;, handleTouchClick);
+  document.addEventListener(&quot;pointerout&quot;, handleLeave);
+  document.addEventListener(&quot;focusin&quot;, handleFocusIn);
+  document.addEventListener(&quot;focusout&quot;, handleLeave);
+  document.addEventListener(&quot;keydown&quot;, handleKeyDown);
+  document.addEventListener(&quot;contextmenu&quot;, handleContextMenu);
+  window.addEventListener(&quot;pagehide&quot;, destroy, { once: true });
+})();
+&lt;/script&gt;
+&lt;script id=&quot;codex-visualization-tabs&quot;&gt;
+(() =&gt; {
+  const selector = &#x27;.nav[role=&quot;tablist&quot;] [role=&quot;tab&quot;]&#x27;;
+  const disabled = &#x27;:disabled,[aria-disabled=&quot;true&quot;]&#x27;;
+  const selectTab = (selected) =&gt; {
+    const panelId = selected.getAttribute(&quot;aria-controls&quot;);
+    for (const tab of selected.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;)) {
+      const active = tab === selected;
+      tab.classList.toggle(&quot;active&quot;, active);
+      tab.setAttribute(&quot;aria-selected&quot;, String(active));
+      const id = tab.getAttribute(&quot;aria-controls&quot;);
+      const panel = id &amp;&amp; document.getElementById(id);
+      if (panel != null) {
+        panel.hidden = id !== panelId;
+        if (!panel.hidden &amp;&amp; selected.id) {
+          panel.setAttribute(&quot;aria-labelledby&quot;, selected.id);
+        }
+      }
+    }
+  };
+  const interact = (event) =&gt; {
+    const tab = event.target?.closest?.(selector);
+    if (event.defaultPrevented || tab == null || tab.matches(disabled)) {
+      return;
+    }
+    if (event.type === &quot;click&quot;) {
+      selectTab(tab);
+      return;
+    }
+    const tabs = Array.from(
+      tab.closest(&#x27;[role=&quot;tablist&quot;]&#x27;).querySelectorAll(&#x27;[role=&quot;tab&quot;]&#x27;),
+    ).filter((candidate) =&gt; !candidate.matches(disabled));
+    const current = tabs.indexOf(tab);
+    let next;
+    if (event.key === &quot;ArrowRight&quot; || event.key === &quot;ArrowDown&quot;) {
+      next = (current + 1) % tabs.length;
+    } else if (event.key === &quot;ArrowLeft&quot; || event.key === &quot;ArrowUp&quot;) {
+      next = (current + tabs.length - 1) % tabs.length;
+    } else if (event.key === &quot;Home&quot;) {
+      next = 0;
+    } else if (event.key === &quot;End&quot;) {
+      next = tabs.length - 1;
+    } else {
+      return;
+    }
+    event.preventDefault();
+    tabs[next].focus();
+    selectTab(tabs[next]);
+  };
+
+  for (const list of document.querySelectorAll(&#x27;.nav[role=&quot;tablist&quot;]&#x27;)) {
+    const selected =
+      list.querySelector(&#x27;[role=&quot;tab&quot;][aria-selected=&quot;true&quot;]&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;].active&#x27;) ??
+      list.querySelector(&#x27;[role=&quot;tab&quot;]&#x27;);
+    if (selected != null) {
+      selectTab(selected);
+    }
+  }
+  document.addEventListener(&quot;click&quot;, interact);
+  document.addEventListener(&quot;keydown&quot;, interact);
+  window.addEventListener(&quot;pagehide&quot;, () =&gt; {
+    document.removeEventListener(&quot;click&quot;, interact);
+    document.removeEventListener(&quot;keydown&quot;, interact);
+  }, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;script&gt;
+(() =&gt; {
+  const initialize = () =&gt; {
+    globalThis.lucide?.createIcons({ attrs: { width: 16, height: 16 } });
+  };
+  if (globalThis.lucide != null) {
+    initialize();
+    return;
+  }
+  document
+    .getElementById(&quot;codex-visualization-lucide&quot;)
+    ?.addEventListener(&quot;load&quot;, initialize, { once: true });
+})();
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+</body>
+</html>
