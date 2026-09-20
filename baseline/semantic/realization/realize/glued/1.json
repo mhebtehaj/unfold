@@ -1,0 +1,506 @@
+{
+ "scenes": [
+  {
+   "id": "real-picture",
+   "viewBox": "0 0 641 290",
+   "role": "img",
+   "ariaLabel": "Geometric realization. Drag the circled point inside the selected simplex.",
+   "size": [
+    640.91,
+    290
+   ],
+   "bbox": [
+    199.55,
+    39.33,
+    237.9,
+    208.34
+   ],
+   "counts": {
+    "path": 7,
+    "circle": 8,
+    "text": 4
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M217.16666666666666,145L320.5,62.333333333333314L320.5,227.66666666666669Z",
+     "paint": {
+      "fill": "rgb(243, 244, 247)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M320.5,62.333333333333314L320.5,227.66666666666669L423.83333333333337,145Z",
+     "paint": {
+      "fill": "rgb(243, 244, 247)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M217.16666666666666,145L320.5,62.333333333333314",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "path",
+     "d": "M217.16666666666666,145L320.5,227.66666666666669",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "path",
+     "d": "M320.5,62.333333333333314L320.5,227.66666666666669",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "path",
+     "d": "M320.5,62.333333333333314L423.83333333333337,145",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "path",
+     "d": "M320.5,227.66666666666669L423.83333333333337,145",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "circle",
+     "cx": "320.5",
+     "cy": "62.33",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(230, 107, 67)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "circle",
+     "cx": "217.17",
+     "cy": "145",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(58, 112, 225)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 9,
+     "tag": "text",
+     "x": "203.17",
+     "y": "134",
+     "text-anchor": "middle",
+     "text": "a",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 10,
+     "tag": "circle",
+     "cx": "320.5",
+     "cy": "62.33",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(230, 107, 67)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 11,
+     "tag": "circle",
+     "cx": "320.5",
+     "cy": "227.67",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(52, 171, 130)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 12,
+     "tag": "text",
+     "x": "330.5",
+     "y": "244.67",
+     "text-anchor": "middle",
+     "text": "c",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 13,
+     "tag": "circle",
+     "cx": "423.83",
+     "cy": "145",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(158, 95, 214)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 14,
+     "tag": "text",
+     "x": "433.83",
+     "y": "134",
+     "text-anchor": "middle",
+     "text": "d",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 15,
+     "tag": "circle",
+     "cx": "320.5",
+     "cy": "62.33",
+     "r": "7",
+     "paint": {
+      "fill": "rgb(255, 255, 255)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 16,
+     "tag": "circle",
+     "cx": "320.5",
+     "cy": "62.33",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(230, 107, 67)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 17,
+     "tag": "circle",
+     "cx": "320.5",
+     "cy": "62.33",
+     "r": "8",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(37, 40, 45)",
+      "stroke-width": "1.6px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 18,
+     "tag": "text",
+     "x": "331.5",
+     "y": "51.33",
+     "text-anchor": "start",
+     "text": "x = b",
+     "paint": {
+      "fill": "rgb(37, 40, 45)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "font-weight": "600",
+      "display": "block"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Realizations & carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-carriers",
+   "text": "Carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-extensions",
+   "text": "Build a map"
+  },
+  {
+   "tag": "button",
+   "id": "tab-solids",
+   "text": "Prisms & cones"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Complex"
+  },
+  {
+   "tag": "button",
+   "id": "placement",
+   "text": "Change drawing"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Δ lists the faces. |Δ| contains every point of the corresponding filled simplices."
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Abstract complex Δ"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Vertices"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{c}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{d}"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Edges"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a,b}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a,c}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b,c}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b,d}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{c,d}"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Filled triangles"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a,b,c}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b,c,d}"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Select a face σ."
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "A drawing of |Δ|"
+  },
+  {
+   "tag": "p",
+   "id": "real-caption",
+   "text": "σ = {b}. Its realization is one point."
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "λb1.00"
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "What exactly is being realized?"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "A face σ is a finite set of vertex names. Its geometric simplex ⟨σ⟩ contains all convex combinations of those vertices: λᵢ ≥ 0 and ∑λᵢ = 1. The realization |Δ| is the union of these simplices."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "In the standard realization, each vertex is a basis vector eᵥ. Thus a point is the coordinate vector (λₐ, λᵦ, …). Only mixtures whose positive-coordinate support is a face of Δ belong to |Δ|. The planar drawing uses other vertex positions and the same weights."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Moving vertices in a valid drawing preserves the abstract complex. Adding a filled triangle changes the complex. The empty face contributes no points."
+  }
+ ],
+ "controls": [
+  {
+   "k": "complex",
+   "type": "select-one",
+   "v": "glued"
+  },
+  {
+   "k": "0",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1",
+   "type": "button",
+   "v": "true"
+  },
+  {
+   "k": "2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "3",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,1",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1,2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1,3",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "2,3",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,1,2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1,2,3",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "Weight of vertex b",
+   "type": "range",
+   "v": "1",
+   "disabled": true
+  }
+ ],
+ "a11y": {
+  "liveRegions": 0,
+  "tablists": 1,
+  "tabs": 4,
+  "focusable": 56,
+  "headings": [
+   "H1:Realizations & carriers",
+   "H2:Abstract complex Δ",
+   "H2:A drawing of |Δ|",
+   "H3:Point x",
+   "H3:Start f₀",
+   "H3:Image under f",
+   "H3:End f₁",
+   "H2:X · two triangles sharing bc",
+   "H2:Y · allowed regions and outputs",
+   "H2:A × [0,1] · the domain",
+   "H2:C(A) ⊆ Y · the allowed outputs"
+  ],
+  "imgRoleOnInteractive": 8
+ },
+ "title": "Realizations & carriers · Unfold"
+}

@@ -1,0 +1,990 @@
+{
+ "scenes": [
+  {
+   "id": "extension-source",
+   "viewBox": "0 0 494 310",
+   "role": "img",
+   "ariaLabel": "Construction domain. Colored points have been assigned an output. Drag a point, or use arrow keys along the shared edge.",
+   "size": [
+    494,
+    310
+   ],
+   "bbox": [
+    118.1,
+    40.67,
+    257.8,
+    224.67
+   ],
+   "counts": {
+    "path": 4290,
+    "circle": 7,
+    "text": 5
+   },
+   "probe": {},
+   "groups": {
+    "path": {
+     "n": 4290,
+     "digest": "31cd7f0b2113de39",
+     "samples": [
+      {
+       "i": 0,
+       "tag": "path",
+       "d": "M135.33333333333331,155L247,65.66666666666666L247,244.33333333333334Z",
+       "paint": {
+        "fill": "rgb(243, 244, 247)",
+        "stroke": "rgb(203, 208, 217)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 390,
+       "tag": "path",
+       "d": "M240.7962962962963,196.35802469135803L240.7962962962963,204.62962962962965L238.7283950617284,201.320987654321Z",
+       "paint": {
+        "fill": "rgb(90, 154, 122)",
+        "stroke": "rgb(90, 154, 122)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 780,
+       "tag": "path",
+       "d": "M205.9866255144033,121.63786008230451L209.77777777777777,118.60493827160494L209.77777777777777,121.91358024691358Z",
+       "paint": {
+        "fill": "rgb(147, 117, 130)",
+        "stroke": "rgb(147, 117, 130)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 1170,
+       "tag": "path",
+       "d": "M204.2633744855967,177.0576131687243L201.50617283950618,174.85185185185185L202.54012345679013,172.37037037037038Z",
+       "paint": {
+        "fill": "rgb(88, 135, 156)",
+        "stroke": "rgb(88, 135, 156)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 1560,
+       "tag": "path",
+       "d": "M218.0493827160494,146.1769547325103L218.0493827160494,148.3827160493827L215.98148148148147,150.03703703703704Z",
+       "paint": {
+        "fill": "rgb(126, 129, 130)",
+        "stroke": "rgb(126, 129, 130)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 1950,
+       "tag": "path",
+       "d": "M247,85.51851851851852L247,95.44444444444443L249.0679012345679,98.75308641975307Z",
+       "paint": {
+        "fill": "rgb(203, 117, 77)",
+        "stroke": "rgb(203, 117, 77)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 2339,
+       "tag": "path",
+       "d": "M335.91975308641975,163.27160493827162L337.29835390946505,158.86008230452674L332.4732510288066,162.7201646090535Z",
+       "paint": {
+        "fill": "rgb(148, 107, 192)",
+        "stroke": "rgb(148, 107, 192)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 2729,
+       "tag": "path",
+       "d": "M261.4753086419753,179.2633744855967L263.5432098765432,182.57201646090536L263.5432098765432,177.0576131687243Z",
+       "paint": {
+        "fill": "rgb(119, 142, 124)",
+        "stroke": "rgb(119, 142, 124)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 3119,
+       "tag": "path",
+       "d": "M289.7366255144033,132.9423868312757L286.6347736625514,133.76954732510288L289.0473251028807,135.69958847736626Z",
+       "paint": {
+        "fill": "rgb(168, 115, 134)",
+        "stroke": "rgb(168, 115, 134)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 3509,
+       "tag": "path",
+       "d": "M285.6008230452675,167.13168724279836L286.2901234567901,163.2716049382716L285.2561728395062,164.09876543209876Z",
+       "paint": {
+        "fill": "rgb(137, 127, 142)",
+        "stroke": "rgb(137, 127, 142)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 3899,
+       "tag": "path",
+       "d": "M147.89583333333331,144.95L149.29166666666666,143.83333333333334",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(78, 111, 206)",
+        "stroke-width": "3.5px",
+        "stroke-dasharray": "none",
+        "stroke-linecap": "round"
+       }
+      },
+      {
+       "i": 4289,
+       "tag": "path",
+       "d": "M357.27083333333337,156.11666666666667L358.6666666666667,155",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(157, 95, 213)",
+        "stroke-width": "3.5px",
+        "stroke-dasharray": "none",
+        "stroke-linecap": "round"
+       }
+      }
+     ]
+    },
+    "circle": {
+     "n": 7,
+     "marks": [
+      {
+       "i": 4290,
+       "tag": "circle",
+       "cx": "135.33",
+       "cy": "155",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(58, 112, 225)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4292,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "65.67",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(230, 107, 67)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4294,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "244.33",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(52, 171, 130)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4296,
+       "tag": "circle",
+       "cx": "358.67",
+       "cy": "155",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(158, 95, 214)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4298,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "155",
+       "r": "7",
+       "paint": {
+        "fill": "rgb(255, 255, 255)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4299,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "155",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(141, 139, 99)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4300,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "155",
+       "r": "8",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(37, 40, 45)",
+        "stroke-width": "1.6px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "text": {
+     "n": 5,
+     "marks": [
+      {
+       "i": 4291,
+       "tag": "text",
+       "x": "125.33",
+       "y": "175",
+       "text-anchor": "end",
+       "text": "a",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4293,
+       "tag": "text",
+       "x": "247",
+       "y": "52.67",
+       "text-anchor": "middle",
+       "text": "b",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4295,
+       "tag": "text",
+       "x": "247",
+       "y": "262.33",
+       "text-anchor": "middle",
+       "text": "c",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4297,
+       "tag": "text",
+       "x": "368.67",
+       "y": "175",
+       "text-anchor": "start",
+       "text": "d",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4301,
+       "tag": "text",
+       "x": "258",
+       "y": "144",
+       "text-anchor": "start",
+       "text": "x",
+       "paint": {
+        "fill": "rgb(37, 40, 45)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "font-weight": "600",
+        "display": "block"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "extension-target",
+   "viewBox": "0 0 494 310",
+   "role": "img",
+   "ariaLabel": "Images of the constructed pieces inside their carrier regions",
+   "size": [
+    494,
+    310
+   ],
+   "bbox": [
+    105.83,
+    26.58,
+    282.33,
+    256.83
+   ],
+   "counts": {
+    "path": 4372,
+    "circle": 10,
+    "text": 6
+   },
+   "probe": {},
+   "groups": {
+    "path": {
+     "n": 4372,
+     "digest": "995a21f964143379",
+     "samples": [
+      {
+       "i": 0,
+       "tag": "path",
+       "d": "M115.23333333333335,283.41666666666663L378.76666666666665,283.41666666666663L378.76666666666665,26.583333333333343L115.23333333333335,26.583333333333343Z",
+       "paint": {
+        "fill": "rgb(243, 244, 247)",
+        "stroke": "rgb(223, 226, 231)",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 397,
+       "tag": "path",
+       "d": "M248.87343295019159,235.30116858237545L248.95044444444446,235.84666666666666L245.13392592592592,231.15666666666667Z",
+       "paint": {
+        "fill": "rgb(66, 162, 131)",
+        "stroke": "rgb(66, 162, 131)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 795,
+       "tag": "path",
+       "d": "M217.3065925925926,101.0774074074074L217.36306768837804,101.47743933588761L215.03030395913154,107.29736909323117Z",
+       "paint": {
+        "fill": "rgb(179, 118, 98)",
+        "stroke": "rgb(179, 118, 98)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 1192,
+       "tag": "path",
+       "d": "M169.78125925925926,166.62574074074075L173.02583908045978,166.33994252873563L172.9128888888889,166.46444444444444Z",
+       "paint": {
+        "fill": "rgb(95, 124, 169)",
+        "stroke": "rgb(95, 124, 169)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 1589,
+       "tag": "path",
+       "d": "M206.8729042145594,184.1942017879949L206.5411623931624,183.97797720797723L202.83153846153846,179.35764957264956Z",
+       "paint": {
+        "fill": "rgb(101, 137, 140)",
+        "stroke": "rgb(101, 137, 140)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 1987,
+       "tag": "path",
+       "d": "M261.9117948717949,248.25025641025644L264.1794871794872,245.75064102564102L266.40136752136755,240.86403133903133Z",
+       "paint": {
+        "fill": "rgb(69, 159, 142)",
+        "stroke": "rgb(69, 159, 142)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 2384,
+       "tag": "path",
+       "d": "M251.07228979584957,84.99380434599368L257.26107275914967,94.47993370589523L254.8652214770984,90.19365165461318Z",
+       "paint": {
+        "fill": "rgb(191, 118, 91)",
+        "stroke": "rgb(191, 118, 91)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 2782,
+       "tag": "path",
+       "d": "M334.5352136752137,145.98076923076923L329.2035220125786,145.37840670859538L331.77504273504275,147.05448717948718Z",
+       "paint": {
+        "fill": "rgb(161, 109, 166)",
+        "stroke": "rgb(161, 109, 166)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 3179,
+       "tag": "path",
+       "d": "M290.03450733752624,190.4389500349406L292.07495990836196,188.1898148148148L293.80329896907216,183.84722222222223Z",
+       "paint": {
+        "fill": "rgb(122, 134, 142)",
+        "stroke": "rgb(122, 134, 142)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 3576,
+       "tag": "path",
+       "d": "M294.1791322889216,144.67615250807341L298.2325000841038,150.36494853679898L297.5105326370588,149.04799056093782Z",
+       "paint": {
+        "fill": "rgb(152, 124, 130)",
+        "stroke": "rgb(152, 124, 130)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none",
+        "opacity": "0.83"
+       }
+      },
+      {
+       "i": 3974,
+       "tag": "path",
+       "d": "M135.5228921073313,168.5235517009094L135.67882136279928,168.62518416206262",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(58, 115, 221)",
+        "stroke-width": "3.5px",
+        "stroke-dasharray": "none",
+        "stroke-linecap": "round"
+       }
+      },
+      {
+       "i": 4379,
+       "tag": "path",
+       "d": "M247,155L274.9166666666667,151.65",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(178, 51, 41)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "3px, 3px"
+       }
+      }
+     ]
+    },
+    "circle": {
+     "n": 10,
+     "marks": [
+      {
+       "i": 4371,
+       "tag": "circle",
+       "cx": "135.33",
+       "cy": "168.4",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(58, 112, 225)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4373,
+       "tag": "circle",
+       "cx": "233.6",
+       "cy": "60.08",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(230, 107, 67)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4375,
+       "tag": "circle",
+       "cx": "260.4",
+       "cy": "249.92",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(52, 171, 130)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4377,
+       "tag": "circle",
+       "cx": "358.67",
+       "cy": "141.6",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(158, 95, 214)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4380,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "155",
+       "r": "7",
+       "paint": {
+        "fill": "rgb(255, 255, 255)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4381,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "155",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(141, 139, 99)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4382,
+       "tag": "circle",
+       "cx": "247",
+       "cy": "155",
+       "r": "8",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(37, 40, 45)",
+        "stroke-width": "1.6px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4383,
+       "tag": "circle",
+       "cx": "274.92",
+       "cy": "151.65",
+       "r": "7",
+       "paint": {
+        "fill": "rgb(255, 255, 255)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4384,
+       "tag": "circle",
+       "cx": "274.92",
+       "cy": "151.65",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(141, 139, 99)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 4385,
+       "tag": "circle",
+       "cx": "274.92",
+       "cy": "151.65",
+       "r": "8",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(178, 51, 41)",
+        "stroke-width": "1.6px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "text": {
+     "n": 6,
+     "marks": [
+      {
+       "i": 4372,
+       "tag": "text",
+       "x": "125.33",
+       "y": "188.4",
+       "text-anchor": "end",
+       "text": "f(a)",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4374,
+       "tag": "text",
+       "x": "233.6",
+       "y": "47.08",
+       "text-anchor": "middle",
+       "text": "f(b)",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4376,
+       "tag": "text",
+       "x": "260.4",
+       "y": "267.92",
+       "text-anchor": "middle",
+       "text": "f(c)",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4378,
+       "tag": "text",
+       "x": "368.67",
+       "y": "161.6",
+       "text-anchor": "start",
+       "text": "f(d)",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4386,
+       "tag": "text",
+       "x": "237",
+       "y": "142",
+       "text-anchor": "end",
+       "text": "left",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 4387,
+       "tag": "text",
+       "x": "284.92",
+       "y": "138.65",
+       "text-anchor": "start",
+       "text": "right",
+       "paint": {
+        "fill": "rgb(178, 51, 41)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Realizations & carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-carriers",
+   "text": "Carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-extensions",
+   "text": "Build a map"
+  },
+  {
+   "tag": "button",
+   "id": "tab-solids",
+   "text": "Prisms & cones"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Extend without changing earlier values. The two triangles must use the same map on their shared edge."
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "1 · Vertices"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "2 · Edges"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "3 · Fill abc"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "4 · Fill bcd"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "5 · Complete"
+  },
+  {
+   "tag": "p",
+   "id": "extension-copy",
+   "text": "An attempted second filling changes bc. Watch one shared input acquire two outputs."
+  },
+  {
+   "tag": "button",
+   "id": "extension-prev",
+   "text": "← Back"
+  },
+  {
+   "tag": "button",
+   "id": "extension-play",
+   "text": "↻ Replay"
+  },
+  {
+   "tag": "button",
+   "id": "extension-next",
+   "text": "Next →"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Reveal100%"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "X · two triangles sharing bc"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Y · allowed regions and outputs"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Allowed regionsMatching colors = matching inputsUncolored interior = not yet assigned"
+  },
+  {
+   "tag": "button",
+   "id": "extension-track",
+   "text": "Track shared edge bc"
+  },
+  {
+   "tag": "button",
+   "id": "extension-connect",
+   "text": "Connect points"
+  },
+  {
+   "tag": "button",
+   "id": "extension-alternate",
+   "text": "Different filling, same boundary"
+  },
+  {
+   "tag": "p",
+   "id": "extension-point",
+   "text": "Same input x on bc, two different outputs. The attempted filling changed an earlier value."
+  },
+  {
+   "tag": "p",
+   "id": "extension-status",
+   "text": "Not an extension: the two pieces disagree on bc and do not define a function on X."
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "How is the interior filled?"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "The purple triangle assigned to each source triangle is convex, hence contractible. Each edge is assigned its corresponding target segment, and each vertex its marked target point. These regions are nested."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "First choose the vertex images and extend along every edge. On an edge with parameter s, this example uses the continuous parameter s² / (s² + (1−s)²), so the endpoints stay fixed."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "For a triangle, choose an interior target point r. Every source point lies on a ray from its barycenter c to a boundary point u. Define F((1−ρ)c + ρu) = (1−ρ)r + ρf(u). At ρ = 1 this is exactly the previously defined boundary map; at ρ = 0 all rays meet at r. The slider reveals this fixed map from the boundary inward."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Each extension preserves the earlier map. The second triangle reuses the entire map on bc. The two continuous pieces therefore agree on their intersection and glue to one continuous map. “Break agreement” deliberately changes bc in the second piece: it then has two competing outputs, so these pieces do not define a function on X."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "“Different filling” changes the interior choices while fixing every boundary value. Both valid choices are carried by the same contractible carrier."
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "What comes next? Two choices give homotopic maps."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "For two continuous carried maps f₀ and f₁, build their homotopy using the same extension principle on σ × [0,1]. Its boundary already contains the starting map, the ending map, and the homotopies chosen on smaller faces. Extend over the remaining interior while preserving all those values. Neighboring pieces agree throughout the motion."
+  },
+  {
+   "tag": "button",
+   "id": "extension-homotopy",
+   "text": "See two carried maps deform"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Björner · Carrier Lemma, p. 89"
+  },
+  {
+   "tag": "a",
+   "id": null,
+   "text": "Björner · Carrier Lemma, p. 89"
+  }
+ ],
+ "controls": [
+  {
+   "k": null,
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": null,
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": null,
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": null,
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": null,
+   "type": "button",
+   "v": "true"
+  },
+  {
+   "k": "extension-progress",
+   "type": "range",
+   "v": "1",
+   "disabled": true
+  },
+  {
+   "k": "extension-connect",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "extension-break",
+   "type": "checkbox",
+   "v": true
+  }
+ ],
+ "a11y": {
+  "liveRegions": 0,
+  "tablists": 1,
+  "tabs": 4,
+  "focusable": 59,
+  "headings": [
+   "H1:Realizations & carriers",
+   "H2:Abstract complex Δ",
+   "H2:A drawing of |Δ|",
+   "H3:Point x",
+   "H3:Start f₀",
+   "H3:Image under f",
+   "H3:End f₁",
+   "H2:X · two triangles sharing bc",
+   "H2:Y · allowed regions and outputs",
+   "H2:A × [0,1] · the domain",
+   "H2:C(A) ⊆ Y · the allowed outputs"
+  ],
+  "imgRoleOnInteractive": 8
+ },
+ "title": "Realizations & carriers · Unfold"
+}

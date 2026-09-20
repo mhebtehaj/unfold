@@ -1,0 +1,88 @@
+{
+ "main": {
+  "scheme": "dark",
+  "tokens": {
+   "--bg": {
+    "authored": "light-dark(#faf9f6,#191a1d)",
+    "resolved": "rgb(25, 26, 29)",
+    "srgb": [
+     25,
+     26,
+     29,
+     1
+    ]
+   },
+   "--card": {
+    "authored": "light-dark(#fff,#202126)",
+    "resolved": "rgb(32, 33, 38)",
+    "srgb": [
+     32,
+     33,
+     38,
+     1
+    ]
+   },
+   "--fg": {
+    "authored": "light-dark(#24252a,#eeeef2)",
+    "resolved": "rgb(238, 238, 242)",
+    "srgb": [
+     238,
+     238,
+     242,
+     1
+    ]
+   },
+   "--line": {
+    "authored": "light-dark(#dedee4,#393a43)",
+    "resolved": "rgb(57, 58, 67)",
+    "srgb": [
+     57,
+     58,
+     67,
+     1
+    ]
+   },
+   "--muted": {
+    "authored": "light-dark(#6c6d77,#acadb8)",
+    "resolved": "rgb(172, 173, 184)",
+    "srgb": [
+     172,
+     173,
+     184,
+     1
+    ]
+   },
+   "--orange": {
+    "authored": "light-dark(#b46942,#e3a07b)",
+    "resolved": "rgb(227, 160, 123)",
+    "srgb": [
+     227,
+     160,
+     123,
+     1
+    ]
+   },
+   "--teal": {
+    "authored": "light-dark(#287a76,#7bc6b9)",
+    "resolved": "rgb(123, 198, 185)",
+    "srgb": [
+     123,
+     198,
+     185,
+     1
+    ]
+   },
+   "--violet": {
+    "authored": "light-dark(#7360b5,#b6a3ef)",
+    "resolved": "rgb(182, 163, 239)",
+    "srgb": [
+     182,
+     163,
+     239,
+     1
+    ]
+   }
+  }
+ },
+ "frame": null
+}

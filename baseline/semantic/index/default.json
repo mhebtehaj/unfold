@@ -1,0 +1,473 @@
+{
+ "scenes": [
+  {
+   "id": null,
+   "viewBox": "0 0 32 32",
+   "role": null,
+   "ariaLabel": null,
+   "size": [
+    30,
+    30
+   ],
+   "bbox": [
+    4,
+    4,
+    24,
+    24
+   ],
+   "counts": {
+    "path": 2
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M4 8l8-4 8 8 8-4v16l-8 4-8-8-8 4z",
+     "paint": {
+      "fill": "rgb(115, 96, 181)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "opacity": "0.14"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M4 8l8-4 8 8 8-4v16l-8 4-8-8-8 4zM12 4v16m8-8v16",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 96, 181)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round"
+     }
+    }
+   ]
+  },
+  {
+   "id": null,
+   "viewBox": "0 0 260 170",
+   "role": null,
+   "ariaLabel": null,
+   "size": [
+    288.66,
+    169
+   ],
+   "bbox": [
+    33,
+    45.5,
+    195,
+    74.5
+   ],
+   "counts": {
+    "path": 4,
+    "circle": 4
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M37 116C68 22 193 22 224 116",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 96, 181)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none",
+      "opacity": "0.2"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M37 116C75 47 185 67 224 116",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 96, 181)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none",
+      "opacity": "0.45"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M37 116C78 99 170 47 224 116",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 96, 181)",
+      "stroke-width": "3px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "path",
+     "d": "M37 116H224",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 96, 181)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "4px, 6px",
+      "opacity": "0.22"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "circle",
+     "cx": "135",
+     "cy": "82",
+     "r": "7",
+     "paint": {
+      "fill": "rgb(115, 96, 181)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "circle",
+     "cx": "135",
+     "cy": "82",
+     "r": "13",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 96, 181)",
+      "stroke-dasharray": "none",
+      "opacity": "0.3"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "37",
+     "cy": "116",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(115, 96, 181)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "circle",
+     "cx": "224",
+     "cy": "116",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(115, 96, 181)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  },
+  {
+   "id": null,
+   "viewBox": "0 0 260 170",
+   "role": null,
+   "ariaLabel": null,
+   "size": [
+    288.67,
+    169
+   ],
+   "bbox": [
+    48,
+    31,
+    166,
+    98
+   ],
+   "counts": {
+    "path": 3,
+    "circle": 6
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M52 125L130 35L210 125Z",
+     "paint": {
+      "fill": "rgb(40, 122, 118)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "opacity": "0.09"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M52 125L130 35L210 125Z",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(40, 122, 118)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M130 35L130 97M52 125L130 97L210 125",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(40, 122, 118)",
+      "stroke-dasharray": "4px, 5px",
+      "opacity": "0.4"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "130",
+     "cy": "97",
+     "r": "24",
+     "paint": {
+      "fill": "rgb(40, 122, 118)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "opacity": "0.12"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "circle",
+     "cx": "130",
+     "cy": "97",
+     "r": "7",
+     "paint": {
+      "fill": "rgb(40, 122, 118)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "circle",
+     "cx": "130",
+     "cy": "97",
+     "r": "12",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(40, 122, 118)",
+      "stroke-dasharray": "none",
+      "opacity": "0.5"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "52",
+     "cy": "125",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(40, 122, 118)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "circle",
+     "cx": "130",
+     "cy": "35",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(40, 122, 118)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "circle",
+     "cx": "210",
+     "cy": "125",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(40, 122, 118)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  },
+  {
+   "id": null,
+   "viewBox": "0 0 260 170",
+   "role": null,
+   "ariaLabel": null,
+   "size": [
+    288.66,
+    169
+   ],
+   "bbox": [
+    49,
+    20,
+    162,
+    130
+   ],
+   "counts": {
+    "path": 4,
+    "circle": 5
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M130 25L54 85L130 145L206 85Z",
+     "paint": {
+      "fill": "rgb(180, 105, 66)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "opacity": "0.07"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M130 25L54 85L130 145L206 85ZM54 85L130 67L206 85M130 25V145",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(180, 105, 66)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none",
+      "opacity": "0.3"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M54 85L130 103L206 85M130 25L130 103L130 145",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(180, 105, 66)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "path",
+     "d": "M54 85L130 25L206 85",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(180, 105, 66)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "circle",
+     "cx": "130",
+     "cy": "25",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(180, 105, 66)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "circle",
+     "cx": "54",
+     "cy": "85",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(180, 105, 66)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "130",
+     "cy": "103",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(180, 105, 66)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "circle",
+     "cx": "206",
+     "cy": "85",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(180, 105, 66)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "circle",
+     "cx": "130",
+     "cy": "145",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(180, 105, 66)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Mathematics you can move."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Drag a point, change a map, and see what happens."
+  },
+  {
+   "tag": "a",
+   "id": null,
+   "text": "HomotopiesFollow a map as it changes. See what can deform—and what gets in the way.Explore↗"
+  },
+  {
+   "tag": "a",
+   "id": null,
+   "text": "Realizations & carriersTurn faces into spaces. Give each face a region, then build a map inside it.Explore↗"
+  },
+  {
+   "tag": "a",
+   "id": null,
+   "text": "AmbiguityReveal an input one query at a time. Watch the geometry of uncertainty change.Explore↗"
+  },
+  {
+   "tag": "a",
+   "id": null,
+   "text": "View on GitHub ↗"
+  }
+ ],
+ "controls": [],
+ "a11y": {
+  "liveRegions": 0,
+  "tablists": 0,
+  "tabs": 0,
+  "focusable": 4,
+  "headings": [
+   "H1:Mathematics you can move.",
+   "H2:Homotopies",
+   "H2:Realizations & carriers",
+   "H2:Ambiguity"
+  ],
+  "imgRoleOnInteractive": 0
+ },
+ "title": "Unfold — Interactive mathematics"
+}

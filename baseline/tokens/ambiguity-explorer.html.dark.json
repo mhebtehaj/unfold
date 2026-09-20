@@ -1,0 +1,721 @@
+{
+ "main": {
+  "scheme": "dark",
+  "tokens": {}
+ },
+ "frame": {
+  "scheme": "dark",
+  "tokens": {
+   "--accent": {
+    "authored": "light-dark(rgb(229 242 255), rgb(13 39 63))",
+    "resolved": "rgb(13, 39, 63)",
+    "srgb": [
+     13,
+     39,
+     63,
+     1
+    ]
+   },
+   "--accent-foreground": {
+    "authored": "light-dark(rgb(51 156 255), rgb(131 195 255))",
+    "resolved": "rgb(131, 195, 255)",
+    "srgb": [
+     131,
+     195,
+     255,
+     1
+    ]
+   },
+   "--background": {
+    "authored": "light-dark(rgb(255 255 255), rgb(24 24 24))",
+    "resolved": "rgb(24, 24, 24)",
+    "srgb": [
+     24,
+     24,
+     24,
+     1
+    ]
+   },
+   "--blue": {
+    "authored": "light-dark(rgb(51 156 255), rgb(51 156 255))",
+    "resolved": "rgb(51, 156, 255)",
+    "srgb": [
+     51,
+     156,
+     255,
+     1
+    ]
+   },
+   "--border": {
+    "authored": "light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))",
+    "resolved": "rgba(255, 255, 255, 0.082)",
+    "srgb": [
+     255,
+     255,
+     255,
+     0.0824
+    ]
+   },
+   "--card": {
+    "authored": "color-mix(in oklab, light-dark(rgb(26 28 31), rgb(255 255 255)) 5%, light-dark(rgb(255 255 255), rgb(24 24 24)))",
+    "resolved": "oklab(0.248565 0.0000113029 0.0000049822)",
+    "srgb": [
+     33,
+     33,
+     33,
+     1
+    ]
+   },
+   "--card-foreground": {
+    "authored": "light-dark(rgb(26 28 31), rgb(255 255 255))",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--checkmark-image": {
+    "authored": "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 17 17'%3E%3Cpath d='M12.8961 3.64101C13.1297 3.41418 13.4984 3.37523 13.7779 3.56581C14.0571 3.75635 14.1554 4.11331 14.0299 4.41347L13.9615 4.53847L7.71151 13.7045C7.59411 13.8767 7.4063 13.9877 7.19881 14.0072C6.99136 14.0267 6.78564 13.9533 6.63826 13.806L2.88826 10.056L2.79842 9.9457C2.6192 9.67407 2.64927 9.30496 2.88826 9.06581C3.12738 8.82669 3.49647 8.79676 3.76815 8.97597L3.8785 9.06581L7.03084 12.2182L12.8053 3.74941L12.8961 3.64101Z'/%3E%3C/svg%3E\")",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--color-background-primary": {
+    "authored": "",
+    "resolved": "rgb(24, 24, 24)",
+    "srgb": [
+     24,
+     24,
+     24,
+     1
+    ]
+   },
+   "--color-border-secondary": {
+    "authored": "",
+    "resolved": "rgba(255, 255, 255, 0.082)",
+    "srgb": [
+     255,
+     255,
+     255,
+     0.0824
+    ]
+   },
+   "--color-text-primary": {
+    "authored": "",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--corner-shape": {
+    "authored": "round",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--destructive": {
+    "authored": "light-dark(rgb(226 85 7), rgb(255 133 73))",
+    "resolved": "rgb(255, 133, 73)",
+    "srgb": [
+     255,
+     133,
+     73,
+     1
+    ]
+   },
+   "--ev-ambiguity": {
+    "authored": "",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--ev-one": {
+    "authored": "",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--ev-selected": {
+    "authored": "",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--ev-zero": {
+    "authored": "",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-mono": {
+    "authored": "ui-monospace, SFMono-Regular, \"SF Mono\", Menlo, Consolas, \"Liberation Mono\",\n    monospace",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-sans": {
+    "authored": "-apple-system, system-ui, \"Segoe UI\", sans-serif",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-size-base": {
+    "authored": "14px",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-size-h1": {
+    "authored": "calc(max(11px, 14px) * 1.7142857143)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-size-h2": {
+    "authored": "calc(max(11px, 14px) * 1.4285714286)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-size-h3": {
+    "authored": "calc(max(11px, 14px) * 1.2857142857)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-size-normal": {
+    "authored": "max(11px, 14px)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-size-small": {
+    "authored": "max(11px, calc(14px - 2px))",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-size-tooltip": {
+    "authored": "calc(14px - 1px)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-weight-medium": {
+    "authored": "500",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--font-weight-normal": {
+    "authored": "430",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--foreground": {
+    "authored": "light-dark(rgb(26 28 31), rgb(255 255 255))",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--green": {
+    "authored": "light-dark(rgb(0 162 64), rgb(64 201 119))",
+    "resolved": "rgb(64, 201, 119)",
+    "srgb": [
+     64,
+     201,
+     119,
+     1
+    ]
+   },
+   "--icon-size": {
+    "authored": "16px",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--input": {
+    "authored": "light-dark(\n      rgb(26 28 31 / 11.8%),\n      color-mix(in oklab, rgb(0 0 0) 10%, transparent)\n    )",
+    "resolved": "oklab(0 0 0 / 0.1)",
+    "srgb": [
+     0,
+     0,
+     0,
+     0.102
+    ]
+   },
+   "--line-height-normal": {
+    "authored": "calc(max(11px, 14px) * 1.5)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--line-height-small": {
+    "authored": "calc(max(11px, calc(14px - 2px)) + 4px)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--line-height-tooltip": {
+    "authored": "calc(calc(14px - 1px) * 1.4285714286)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--muted": {
+    "authored": "color-mix(in srgb, light-dark(rgb(26 28 31), rgb(255 255 255)) 10%, transparent)",
+    "resolved": "color(srgb 1 1 1 / 0.1)",
+    "srgb": [
+     255,
+     255,
+     255,
+     0.102
+    ]
+   },
+   "--muted-foreground": {
+    "authored": "light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))",
+    "resolved": "rgba(255, 255, 255, 0.498)",
+    "srgb": [
+     255,
+     255,
+     255,
+     0.498
+    ]
+   },
+   "--orange": {
+    "authored": "light-dark(rgb(226 85 7), rgb(251 106 34))",
+    "resolved": "rgb(251, 106, 34)",
+    "srgb": [
+     251,
+     106,
+     34,
+     1
+    ]
+   },
+   "--popover": {
+    "authored": "light-dark(rgb(255 255 255), rgb(45 45 45))",
+    "resolved": "rgb(45, 45, 45)",
+    "srgb": [
+     45,
+     45,
+     45,
+     1
+    ]
+   },
+   "--popover-foreground": {
+    "authored": "light-dark(rgb(26 28 31), rgb(255 255 255))",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--primary": {
+    "authored": "light-dark(rgb(51 156 255), rgb(131 195 255))",
+    "resolved": "rgb(131, 195, 255)",
+    "srgb": [
+     131,
+     195,
+     255,
+     1
+    ]
+   },
+   "--primary-foreground": {
+    "authored": "light-dark(rgb(255 255 255), rgb(13 13 13))",
+    "resolved": "rgb(13, 13, 13)",
+    "srgb": [
+     13,
+     13,
+     13,
+     1
+    ]
+   },
+   "--purple": {
+    "authored": "light-dark(rgb(146 79 247), rgb(173 123 249))",
+    "resolved": "rgb(173, 123, 249)",
+    "srgb": [
+     173,
+     123,
+     249,
+     1
+    ]
+   },
+   "--radius": {
+    "authored": "10px",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--radius-2xl": {
+    "authored": "calc(10px * 1.6)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--radius-full": {
+    "authored": "9999px",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--radius-lg": {
+    "authored": "10px",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--radius-md": {
+    "authored": "calc(10px * 0.8)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--radius-sm": {
+    "authored": "calc(10px * 0.6)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--red": {
+    "authored": "light-dark(rgb(224 46 42), rgb(255 103 100))",
+    "resolved": "rgb(255, 103, 100)",
+    "srgb": [
+     255,
+     103,
+     100,
+     1
+    ]
+   },
+   "--ring": {
+    "authored": "light-dark(rgb(51 156 255), rgb(131 195 255 / 76%))",
+    "resolved": "rgba(131, 195, 255, 0.76)",
+    "srgb": [
+     131,
+     195,
+     255,
+     0.7608
+    ]
+   },
+   "--secondary": {
+    "authored": "light-dark(rgb(255 255 255 / 96%), rgb(54 54 54 / 96%))",
+    "resolved": "rgba(54, 54, 54, 0.96)",
+    "srgb": [
+     54,
+     54,
+     54,
+     0.9608
+    ]
+   },
+   "--secondary-foreground": {
+    "authored": "light-dark(rgb(26 28 31), rgb(255 255 255))",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--shadow-sm": {
+    "authored": "0 1px 2px -1px rgb(0 0 0 / 8%)",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--viz-accent": {
+    "authored": "light-dark(rgb(51 156 255), rgb(131 195 255))",
+    "resolved": "rgb(131, 195, 255)",
+    "srgb": [
+     131,
+     195,
+     255,
+     1
+    ]
+   },
+   "--viz-accent-bg": {
+    "authored": "light-dark(rgb(229 242 255), rgb(13 39 63))",
+    "resolved": "rgb(13, 39, 63)",
+    "srgb": [
+     13,
+     39,
+     63,
+     1
+    ]
+   },
+   "--viz-accent-text": {
+    "authored": "light-dark(rgb(255 255 255), rgb(13 13 13))",
+    "resolved": "rgb(13, 13, 13)",
+    "srgb": [
+     13,
+     13,
+     13,
+     1
+    ]
+   },
+   "--viz-bg": {
+    "authored": "transparent",
+    "resolved": "rgba(0, 0, 0, 0)",
+    "srgb": [
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   "--viz-border": {
+    "authored": "light-dark(rgb(26 28 31 / 8%), rgb(255 255 255 / 8.2%))",
+    "resolved": "rgba(255, 255, 255, 0.082)",
+    "srgb": [
+     255,
+     255,
+     255,
+     0.0824
+    ]
+   },
+   "--viz-font-size": {
+    "authored": "14px",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--viz-muted": {
+    "authored": "light-dark(rgb(26 28 31 / 49.4%), rgb(255 255 255 / 49.8%))",
+    "resolved": "rgba(255, 255, 255, 0.498)",
+    "srgb": [
+     255,
+     255,
+     255,
+     0.498
+    ]
+   },
+   "--viz-panel": {
+    "authored": "color-mix(in oklab, light-dark(rgb(26 28 31), rgb(255 255 255)) 5%, light-dark(rgb(255 255 255), rgb(24 24 24)))",
+    "resolved": "oklab(0.248565 0.0000113029 0.0000049822)",
+    "srgb": [
+     33,
+     33,
+     33,
+     1
+    ]
+   },
+   "--viz-series-1": {
+    "authored": "light-dark(rgb(51 156 255), rgb(131 195 255))",
+    "resolved": "rgb(131, 195, 255)",
+    "srgb": [
+     131,
+     195,
+     255,
+     1
+    ]
+   },
+   "--viz-series-2": {
+    "authored": "light-dark(rgb(243 136 59), rgb(245 154 86))",
+    "resolved": "rgb(245, 154, 86)",
+    "srgb": [
+     245,
+     154,
+     86,
+     1
+    ]
+   },
+   "--viz-series-3": {
+    "authored": "light-dark(rgb(93 201 119), rgb(116 213 139))",
+    "resolved": "rgb(116, 213, 139)",
+    "srgb": [
+     116,
+     213,
+     139,
+     1
+    ]
+   },
+   "--viz-series-4": {
+    "authored": "light-dark(rgb(235 119 177), rgb(240 143 192))",
+    "resolved": "rgb(240, 143, 192)",
+    "srgb": [
+     240,
+     143,
+     192,
+     1
+    ]
+   },
+   "--viz-series-5": {
+    "authored": "light-dark(rgb(155 121 236), rgb(170 145 239))",
+    "resolved": "rgb(170, 145, 239)",
+    "srgb": [
+     170,
+     145,
+     239,
+     1
+    ]
+   },
+   "--viz-series-6": {
+    "authored": "light-dark(rgb(58 185 177), rgb(90 203 194))",
+    "resolved": "rgb(90, 203, 194)",
+    "srgb": [
+     90,
+     203,
+     194,
+     1
+    ]
+   },
+   "--viz-text": {
+    "authored": "light-dark(rgb(26 28 31), rgb(255 255 255))",
+    "resolved": "rgb(255, 255, 255)",
+    "srgb": [
+     255,
+     255,
+     255,
+     1
+    ]
+   },
+   "--viz-warning": {
+    "authored": "light-dark(rgb(226 85 7), rgb(255 133 73))",
+    "resolved": "rgb(255, 133, 73)",
+    "srgb": [
+     255,
+     133,
+     73,
+     1
+    ]
+   },
+   "--yellow": {
+    "authored": "light-dark(rgb(255 195 0), rgb(255 210 64))",
+    "resolved": "rgb(255, 210, 64)",
+    "srgb": [
+     255,
+     210,
+     64,
+     1
+    ]
+   }
+  }
+ }
+}

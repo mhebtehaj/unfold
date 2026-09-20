@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Unfold — tests</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M6 17l6 6 14-14' fill='none' stroke='%237360b5' stroke-width='4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    color-scheme:light dark;
+    --bg:light-dark(#faf9f6,#191a1d);--fg:light-dark(#24252a,#eeeef2);
+    --muted:light-dark(#6c6d77,#acadb8);--line:light-dark(#dedee4,#393a43);
+    --card:light-dark(#fff,#202126);
+    --pass:light-dark(#27714f,#79c9a2);--fail:light-dark(#a8372c,#ef8a7d);
+    --known:light-dark(#8a6420,#e0b366);
+    font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:var(--bg);color:var(--fg);
+  }
+  *{box-sizing:border-box}body{margin:0}
+  main{max-width:860px;margin:auto;padding:38px 32px 48px}
+  h1{font-size:clamp(26px,4vw,38px);line-height:1.15;letter-spacing:-1.2px;font-weight:600;margin:0 0 8px}
+  .lede{color:var(--muted);font-size:15px;margin:0 0 26px}
+  .summary{border:1px solid var(--line);border-radius:12px;background:var(--card);
+           padding:16px 18px;margin:0 0 26px;font-variant-numeric:tabular-nums}
+  .summary b{font-weight:600}
+  .verdict{font-size:19px;font-weight:600;letter-spacing:-.3px;margin:0 0 6px}
+  .verdict[data-ok="true"]{color:var(--pass)} .verdict[data-ok="false"]{color:var(--fail)}
+  h2{font-size:14px;font-weight:600;letter-spacing:.02em;text-transform:uppercase;
+     color:var(--muted);margin:26px 0 8px}
+  ul{list-style:none;margin:0;padding:0}
+  li{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:5px 0;
+     border-top:1px solid var(--line);font-size:14px}
+  li:first-child{border-top:0}
+  .mark{font-size:12px;font-weight:600;letter-spacing:.04em;padding-top:2px}
+  .pass .mark{color:var(--pass)} .fail .mark{color:var(--fail)}
+  .tracked .mark,.fixed .mark{color:var(--known)}
+  .msg{color:var(--muted);font-size:13px;margin-top:3px;white-space:pre-wrap;
+       font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+  .fail .msg{color:var(--fail)}
+  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
+  footer{margin-top:34px;padding-top:18px;border-top:1px solid var(--line);
+         color:var(--muted);font-size:12px}
+  a{color:inherit}
+</style>
+</head>
+<body>
+<main>
+  <h1>Unfold tests</h1>
+  <p class="lede">No runner, no install. This page is the test suite —
+     serve the repo and open <code>/tests/run.html</code>.</p>
+  <div class="summary" id="summary">Running…</div>
+  <div id="out"></div>
+  <footer>
+    Known issues are tracked defects: they do not fail the run, but a known
+    issue that starts passing does, so the marker cannot outlive the bug.
+  </footer>
+</main>
+
+<script type="module">
+import { runAll } from './index.mjs';
+
+const MARK = { pass: 'ok', fail: 'FAIL', tracked: 'known', fixed: 'FIXED' };
+const el = (tag, cls, text) => {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text != null) n.textContent = text;
+  return n;
+};
+
+const report = await runAll();
+
+const summary = document.getElementById('summary');
+summary.textContent = '';
+const verdict = el('div', 'verdict', report.ok ? 'All green' : 'Failures');
+verdict.dataset.ok = String(report.ok);
+summary.append(verdict, el('div', null,
+  `${report.pass} passed · ${report.fail} failed · ` +
+  `${report.tracked} known issue${report.tracked === 1 ? '' : 's'} · ` +
+  `${report.fixed} newly fixed`));
+
+const out = document.getElementById('out');
+for (const s of report.suites) {
+  out.append(el('h2', null, s.name));
+  const ul = el('ul');
+  for (const r of s.results) {
+    const li = el('li', r.status);
+    li.append(el('span', 'mark', MARK[r.status]));
+    const body = el('div');
+    body.append(el('div', null, r.label));
+    if (r.status === 'fail') body.append(el('div', 'msg', r.message));
+    if (r.status === 'tracked') body.append(el('div', 'msg', r.known));
+    if (r.status === 'fixed') body.append(el('div', 'msg',
+      'marked as a known issue but now passes — remove the marker'));
+    li.append(body);
+    ul.append(li);
+  }
+  out.append(ul);
+}
+
+// Consumed by tools/run-tests.mjs.
+globalThis.__unfoldReport = report;
+document.documentElement.dataset.testsDone = 'true';
+document.documentElement.dataset.testsOk = String(report.ok);
+</script>
+</body>
+</html>

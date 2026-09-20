@@ -1,0 +1,457 @@
+{
+ "scenes": [
+  {
+   "id": "carrier-source",
+   "viewBox": "0 0 492 280",
+   "role": "img",
+   "ariaLabel": "Input realization. Drag the point within the selected face.",
+   "size": [
+    492,
+    280
+   ],
+   "bbox": [
+    148.75,
+    117,
+    200.12,
+    31
+   ],
+   "counts": {
+    "path": 1,
+    "circle": 6,
+    "text": 2
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M156.75,140L335.25,140",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "circle",
+     "cx": "156.75",
+     "cy": "140",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(58, 112, 225)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "circle",
+     "cx": "156.75",
+     "cy": "140",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(58, 112, 225)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "335.25",
+     "cy": "140",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(230, 107, 67)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "text",
+     "x": "345.25",
+     "y": "129",
+     "text-anchor": "middle",
+     "text": "b",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "circle",
+     "cx": "156.75",
+     "cy": "140",
+     "r": "7",
+     "paint": {
+      "fill": "rgb(255, 255, 255)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "156.75",
+     "cy": "140",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(58, 112, 225)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "circle",
+     "cx": "156.75",
+     "cy": "140",
+     "r": "8",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(37, 40, 45)",
+      "stroke-width": "1.6px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "text",
+     "x": "167.75",
+     "y": "129",
+     "text-anchor": "start",
+     "text": "x = a",
+     "paint": {
+      "fill": "rgb(37, 40, 45)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "font-weight": "600",
+      "display": "block"
+     }
+    }
+   ]
+  },
+  {
+   "id": "carrier-now",
+   "viewBox": "0 0 492 280",
+   "role": "img",
+   "ariaLabel": "Current image and its allowed carrier region",
+   "size": [
+    492,
+    280
+   ],
+   "bbox": [
+    127,
+    21,
+    238,
+    238
+   ],
+   "counts": {
+    "path": 2,
+    "circle": 6,
+    "text": 1
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M127,259L365,259L365,21L127,21Z",
+     "paint": {
+      "fill": "rgb(243, 244, 247)",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "1.2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M146.83333333333331,181.65L345.1666666666667,181.65L345.1666666666667,98.35L146.83333333333331,98.35Z",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "1.3px",
+      "stroke-dasharray": "4px, 3px"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "circle",
+     "cx": "166.67",
+     "cy": "72.57",
+     "r": "15.87",
+     "paint": {
+      "fill": "rgba(168, 144, 223, 0.2)",
+      "stroke": "rgb(121, 97, 186)",
+      "stroke-width": "1.8px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "166.67",
+     "cy": "72.57",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(58, 112, 225)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "circle",
+     "cx": "166.67",
+     "cy": "72.57",
+     "r": "15.87",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(121, 97, 186)",
+      "stroke-width": "1.8px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "circle",
+     "cx": "166.67",
+     "cy": "72.57",
+     "r": "7",
+     "paint": {
+      "fill": "rgb(255, 255, 255)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "166.67",
+     "cy": "72.57",
+     "r": "4",
+     "paint": {
+      "fill": "rgb(58, 112, 225)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "circle",
+     "cx": "166.67",
+     "cy": "72.57",
+     "r": "8",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(37, 40, 45)",
+      "stroke-width": "1.6px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "text",
+     "x": "177.67",
+     "y": "61.57",
+     "text-anchor": "start",
+     "text": "f(x)",
+     "paint": {
+      "fill": "rgb(37, 40, 45)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "font-weight": "600",
+      "display": "block"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Realizations & carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-carriers",
+   "text": "Carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-extensions",
+   "text": "Build a map"
+  },
+  {
+   "tag": "button",
+   "id": "tab-solids",
+   "text": "Prisms & cones"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Example"
+  },
+  {
+   "tag": "p",
+   "id": "carrier-note",
+   "text": "This assignment is not a carrier: the region for a is outside the region for the edge."
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b}"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Show nesting"
+  },
+  {
+   "tag": "button",
+   "id": "connect",
+   "text": "Connect points"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "|Δ| · domainSelected ⟨{a}⟩"
+  },
+  {
+   "tag": "h3",
+   "id": null,
+   "text": "Point x"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Y · filled squareC({a})"
+  },
+  {
+   "tag": "h3",
+   "id": "current-title",
+   "text": "Image under f"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Allowed region C(σ)Matching colors = matching inputs"
+  },
+  {
+   "tag": "p",
+   "id": "point-condition",
+   "text": "x has support {a}. Its image is inside C({a})."
+  },
+  {
+   "tag": "p",
+   "id": "nesting-condition",
+   "text": "C({a}) is disjoint from C({a,b}): the required containment fails."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Select a face, then drag x. The condition must hold for every face and every point."
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "Why? / The definition"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "A carrier assigns regions, not individual output points. For each nonempty face σ, C(σ) is a subspace of Y. Smaller faces must receive smaller allowed regions: τ ⊆ σ ⇒ C(τ) ⊆ C(σ)."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "A continuous map f: |Δ| → Y is carried when f(⟨σ⟩) ⊆ C(σ) for every nonempty face σ. Neither the carrier regions nor the images have to equal Y."
+  },
+  {
+   "tag": "p",
+   "id": "case-explanation",
+   "text": "Since {a} ⊆ {a,b}, a carrier must satisfy C({a}) ⊆ C({a,b}). Here these two regions are disjoint. No map can satisfy both constraints at a: f(a) would have to lie in both. Having nonempty, contractible regions is not sufficient without nesting."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Source: Björner, Nerves, fibers and homotopy groups, p. 89 (Carrier Lemma)."
+  },
+  {
+   "tag": "a",
+   "id": null,
+   "text": "Source: Björner, Nerves, fibers and homotopy groups, p. 89 (Carrier Lemma)."
+  }
+ ],
+ "controls": [
+  {
+   "k": "carrier-example",
+   "type": "select-one",
+   "v": "nesting"
+  },
+  {
+   "k": "0",
+   "type": "button",
+   "v": "true"
+  },
+  {
+   "k": "1",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,1",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "nesting",
+   "type": "checkbox",
+   "v": true
+  },
+  {
+   "k": "connect",
+   "type": "button",
+   "v": "false"
+  }
+ ],
+ "a11y": {
+  "liveRegions": 0,
+  "tablists": 1,
+  "tabs": 4,
+  "focusable": 55,
+  "headings": [
+   "H1:Realizations & carriers",
+   "H2:Abstract complex Δ",
+   "H2:A drawing of |Δ|",
+   "H3:Point x",
+   "H3:Start f₀",
+   "H3:Image under f",
+   "H3:End f₁",
+   "H2:X · two triangles sharing bc",
+   "H2:Y · allowed regions and outputs",
+   "H2:A × [0,1] · the domain",
+   "H2:C(A) ⊆ Y · the allowed outputs"
+  ],
+  "imgRoleOnInteractive": 8
+ },
+ "title": "Realizations & carriers · Unfold"
+}

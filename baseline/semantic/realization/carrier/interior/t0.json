@@ -1,0 +1,752 @@
+{
+ "scenes": [
+  {
+   "id": "carrier-source",
+   "viewBox": "0 0 492 280",
+   "role": "img",
+   "ariaLabel": "Input realization. Drag the point within the selected face.",
+   "size": [
+    492,
+    280
+   ],
+   "bbox": [
+    144.09,
+    32.71,
+    199.82,
+    191.75
+   ],
+   "counts": {
+    "path": 328,
+    "circle": 6,
+    "text": 4
+   },
+   "probe": {},
+   "groups": {
+    "path": {
+     "n": 328,
+     "digest": "4f297c3f9e376359",
+     "samples": [
+      {
+       "i": 0,
+       "tag": "path",
+       "d": "M161.70833333333331,204.45833333333334L330.2916666666667,204.45833333333334L246,55.70833333333333Z",
+       "paint": {
+        "fill": "rgb(243, 244, 247)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 30,
+       "tag": "path",
+       "d": "M306.8773148148148,163.13888888888889L302.19444444444446,171.40277777777777L311.5601851851852,171.40277777777777Z",
+       "paint": {
+        "fill": "rgb(184, 123, 85)",
+        "stroke": "rgb(184, 123, 85)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 59,
+       "tag": "path",
+       "d": "M288.1458333333333,146.61111111111111L283.46296296296293,154.875L292.8287037037037,154.875Z",
+       "paint": {
+        "fill": "rgb(155, 130, 101)",
+        "stroke": "rgb(155, 130, 101)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 89,
+       "tag": "path",
+       "d": "M269.41435185185185,146.61111111111111L274.09722222222223,154.875L278.7800925925926,146.61111111111111Z",
+       "paint": {
+        "fill": "rgb(139, 131, 114)",
+        "stroke": "rgb(139, 131, 114)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 119,
+       "tag": "path",
+       "d": "M269.41435185185185,146.61111111111111L264.73148148148147,154.875L274.09722222222223,154.875Z",
+       "paint": {
+        "fill": "rgb(136, 130, 118)",
+        "stroke": "rgb(136, 130, 118)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 149,
+       "tag": "path",
+       "d": "M260.0486111111111,163.13888888888889L264.73148148148147,171.40277777777777L269.41435185185185,163.13888888888889Z",
+       "paint": {
+        "fill": "rgb(139, 125, 124)",
+        "stroke": "rgb(139, 125, 124)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 178,
+       "tag": "path",
+       "d": "M260.0486111111111,179.66666666666669L264.73148148148147,187.93055555555554L269.41435185185185,179.66666666666669Z",
+       "paint": {
+        "fill": "rgb(149, 118, 126)",
+        "stroke": "rgb(149, 118, 126)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 208,
+       "tag": "path",
+       "d": "M208.53703703703704,121.81944444444444L213.2199074074074,130.08333333333334L217.90277777777777,121.81944444444444Z",
+       "paint": {
+        "fill": "rgb(61, 144, 168)",
+        "stroke": "rgb(61, 144, 168)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 238,
+       "tag": "path",
+       "d": "M231.95138888888889,163.13888888888889L227.26851851851853,171.40277777777777L236.63425925925927,171.40277777777777Z",
+       "paint": {
+        "fill": "rgb(108, 125, 155)",
+        "stroke": "rgb(108, 125, 155)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 268,
+       "tag": "path",
+       "d": "M208.53703703703704,154.875L203.85416666666666,163.13888888888889L213.2199074074074,163.13888888888889Z",
+       "paint": {
+        "fill": "rgb(79, 129, 176)",
+        "stroke": "rgb(79, 129, 176)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 297,
+       "tag": "path",
+       "d": "M194.48842592592592,179.66666666666669L199.1712962962963,187.93055555555554L203.85416666666666,179.66666666666669Z",
+       "paint": {
+        "fill": "rgb(83, 120, 188)",
+        "stroke": "rgb(83, 120, 188)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 327,
+       "tag": "path",
+       "d": "M166.3912037037037,196.19444444444446L161.70833333333331,204.45833333333334L171.07407407407408,204.45833333333334Z",
+       "paint": {
+        "fill": "rgb(61, 113, 220)",
+        "stroke": "rgb(61, 113, 220)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "circle": {
+     "n": 6,
+     "marks": [
+      {
+       "i": 328,
+       "tag": "circle",
+       "cx": "161.71",
+       "cy": "204.46",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(58, 112, 225)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 330,
+       "tag": "circle",
+       "cx": "330.29",
+       "cy": "204.46",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(230, 107, 67)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 332,
+       "tag": "circle",
+       "cx": "246",
+       "cy": "55.71",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(52, 171, 130)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 334,
+       "tag": "circle",
+       "cx": "246",
+       "cy": "154.88",
+       "r": "7",
+       "paint": {
+        "fill": "rgb(255, 255, 255)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 335,
+       "tag": "circle",
+       "cx": "246",
+       "cy": "154.88",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(113, 130, 141)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 336,
+       "tag": "circle",
+       "cx": "246",
+       "cy": "154.88",
+       "r": "8",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(37, 40, 45)",
+        "stroke-width": "1.6px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "text": {
+     "n": 4,
+     "marks": [
+      {
+       "i": 329,
+       "tag": "text",
+       "x": "147.71",
+       "y": "221.46",
+       "text-anchor": "middle",
+       "text": "a",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 331,
+       "tag": "text",
+       "x": "340.29",
+       "y": "221.46",
+       "text-anchor": "middle",
+       "text": "b",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 333,
+       "tag": "text",
+       "x": "256",
+       "y": "44.71",
+       "text-anchor": "middle",
+       "text": "c",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 337,
+       "tag": "text",
+       "x": "257",
+       "y": "143.88",
+       "text-anchor": "start",
+       "text": "x",
+       "paint": {
+        "fill": "rgb(37, 40, 45)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "font-weight": "600",
+        "display": "block"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "carrier-now",
+   "viewBox": "0 0 492 280",
+   "role": "img",
+   "ariaLabel": "Current image and its allowed carrier region",
+   "size": [
+    492,
+    280
+   ],
+   "bbox": [
+    127,
+    21,
+    238,
+    238
+   ],
+   "counts": {
+    "path": 327,
+    "circle": 3,
+    "text": 1
+   },
+   "probe": {},
+   "groups": {
+    "path": {
+     "n": 327,
+     "digest": "64f9106a0a42459a",
+     "samples": [
+      {
+       "i": 0,
+       "tag": "path",
+       "d": "M127,259L365,259L365,21L127,21Z",
+       "paint": {
+        "fill": "rgb(243, 244, 247)",
+        "stroke": "rgb(203, 208, 217)",
+        "stroke-width": "1.2px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 30,
+       "tag": "path",
+       "d": "M307.7037037037037,171.9537037037037L303.2962962962963,158.59375L312.11111111111114,178.84027777777777Z",
+       "paint": {
+        "fill": "rgb(194, 119, 82)",
+        "stroke": "rgb(194, 119, 82)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 59,
+       "tag": "path",
+       "d": "M290.0740740740741,126.36458333333333L285.6666666666667,112.04050925925927L294.48148148148147,136.1435185185185Z",
+       "paint": {
+        "fill": "rgb(165, 126, 97)",
+        "stroke": "rgb(165, 126, 97)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 89,
+       "tag": "path",
+       "d": "M272.44444444444446,80.08680555555554L276.85185185185185,92.75810185185183L281.25925925925924,100.33333333333331Z",
+       "paint": {
+        "fill": "rgb(148, 128, 110)",
+        "stroke": "rgb(148, 128, 110)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 119,
+       "tag": "path",
+       "d": "M272.44444444444446,80.08680555555554L268.03703703703707,78.29629629629629L276.85185185185185,92.75810185185183Z",
+       "paint": {
+        "fill": "rgb(145, 127, 115)",
+        "stroke": "rgb(145, 127, 115)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 148,
+       "tag": "path",
+       "d": "M268.03703703703707,78.29629629629629L263.6296296296296,85.18287037037037L272.44444444444446,94.82407407407408Z",
+       "paint": {
+        "fill": "rgb(146, 124, 120)",
+        "stroke": "rgb(146, 124, 120)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 178,
+       "tag": "path",
+       "d": "M263.6296296296296,127.8796296296296L268.03703703703707,160.7974537037037L272.44444444444446,132.70023148148144Z",
+       "paint": {
+        "fill": "rgb(159, 115, 123)",
+        "stroke": "rgb(159, 115, 123)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 207,
+       "tag": "path",
+       "d": "M219.55555555555554,96.89004629629629L215.14814814814815,102.8125L223.96296296296296,76.78125Z",
+       "paint": {
+        "fill": "rgb(68, 142, 164)",
+        "stroke": "rgb(68, 142, 164)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 237,
+       "tag": "path",
+       "d": "M228.37037037037038,85.18287037037037L232.77777777777777,100.7465277777778L237.1851851851852,79.39814814814815Z",
+       "paint": {
+        "fill": "rgb(111, 122, 156)",
+        "stroke": "rgb(111, 122, 156)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 267,
+       "tag": "path",
+       "d": "M206.33333333333331,112.04050925925925L210.74074074074073,108.32175925925925L215.14814814814815,92.75810185185183Z",
+       "paint": {
+        "fill": "rgb(82, 127, 177)",
+        "stroke": "rgb(82, 127, 177)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 296,
+       "tag": "path",
+       "d": "M206.33333333333331,126.77777777777779L201.92592592592592,148.1261574074074L210.74074074074073,139.44907407407405Z",
+       "paint": {
+        "fill": "rgb(89, 119, 183)",
+        "stroke": "rgb(89, 119, 183)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 326,
+       "tag": "path",
+       "d": "M166.66666666666666,199.5L325.33333333333337,199.5L246,75.54166666666666Z",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(121, 97, 186)",
+        "stroke-width": "1.8px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "circle": {
+     "n": 3,
+     "marks": [
+      {
+       "i": 327,
+       "tag": "circle",
+       "cx": "246",
+       "cy": "54.06",
+       "r": "7",
+       "paint": {
+        "fill": "rgb(255, 255, 255)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 328,
+       "tag": "circle",
+       "cx": "246",
+       "cy": "54.06",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(113, 130, 141)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 329,
+       "tag": "circle",
+       "cx": "246",
+       "cy": "54.06",
+       "r": "8",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(178, 51, 41)",
+        "stroke-width": "1.6px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "text": {
+     "n": 1,
+     "marks": [
+      {
+       "i": 330,
+       "tag": "text",
+       "x": "257",
+       "y": "43.06",
+       "text-anchor": "start",
+       "text": "f(x)",
+       "paint": {
+        "fill": "rgb(178, 51, 41)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "font-weight": "600",
+        "display": "block"
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Realizations & carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-carriers",
+   "text": "Carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-extensions",
+   "text": "Build a map"
+  },
+  {
+   "tag": "button",
+   "id": "tab-solids",
+   "text": "Prisms & cones"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Example"
+  },
+  {
+   "tag": "p",
+   "id": "carrier-note",
+   "text": "All vertices and edges pass. Some interior points still leave C({a,b,c})."
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{c}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a,b}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a,c}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b,c}"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Show nesting"
+  },
+  {
+   "tag": "button",
+   "id": "connect",
+   "text": "Connect points"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "|Δ| · domainSelected ⟨{a,b,c}⟩"
+  },
+  {
+   "tag": "h3",
+   "id": null,
+   "text": "Point x"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Y · filled squareC({a,b,c})"
+  },
+  {
+   "tag": "h3",
+   "id": "current-title",
+   "text": "Image under f"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Allowed region C(σ)Matching colors = matching inputs"
+  },
+  {
+   "tag": "p",
+   "id": "point-condition",
+   "text": "x has support {a,b,c}. Its image is outside C({a,b,c})."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Select a face, then drag x. The condition must hold for every face and every point."
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "Why? / The definition"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "A carrier assigns regions, not individual output points. For each nonempty face σ, C(σ) is a subspace of Y. Smaller faces must receive smaller allowed regions: τ ⊆ σ ⇒ C(τ) ⊆ C(σ)."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "A continuous map f: |Δ| → Y is carried when f(⟨σ⟩) ⊆ C(σ) for every nonempty face σ. Neither the carrier regions nor the images have to equal Y."
+  },
+  {
+   "tag": "p",
+   "id": "case-explanation",
+   "text": "The map is the ordinary affine map plus a vertical bump 1.05·27λₐλᵦλ𝚌. That bump vanishes on the entire boundary, but pushes the barycenter above the allowed triangle. All outputs remain in Y. The full two-dimensional face must be checked too."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Source: Björner, Nerves, fibers and homotopy groups, p. 89 (Carrier Lemma)."
+  },
+  {
+   "tag": "a",
+   "id": null,
+   "text": "Source: Björner, Nerves, fibers and homotopy groups, p. 89 (Carrier Lemma)."
+  }
+ ],
+ "controls": [
+  {
+   "k": "carrier-example",
+   "type": "select-one",
+   "v": "interior"
+  },
+  {
+   "k": "0",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,1",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1,2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,1,2",
+   "type": "button",
+   "v": "true"
+  },
+  {
+   "k": "nesting",
+   "type": "checkbox",
+   "v": false
+  },
+  {
+   "k": "connect",
+   "type": "button",
+   "v": "false"
+  }
+ ],
+ "a11y": {
+  "liveRegions": 0,
+  "tablists": 1,
+  "tabs": 4,
+  "focusable": 59,
+  "headings": [
+   "H1:Realizations & carriers",
+   "H2:Abstract complex Δ",
+   "H2:A drawing of |Δ|",
+   "H3:Point x",
+   "H3:Start f₀",
+   "H3:Image under f",
+   "H3:End f₁",
+   "H2:X · two triangles sharing bc",
+   "H2:Y · allowed regions and outputs",
+   "H2:A × [0,1] · the domain",
+   "H2:C(A) ⊆ Y · the allowed outputs"
+  ],
+  "imgRoleOnInteractive": 8
+ },
+ "title": "Realizations & carriers · Unfold"
+}

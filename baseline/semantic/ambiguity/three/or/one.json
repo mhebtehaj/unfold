@@ -1,0 +1,990 @@
+{
+ "scenes": [
+  {
+   "id": "ev-scene",
+   "viewBox": "0 0 1043 470",
+   "role": "img",
+   "ariaLabel": "Rotatable octahedron of three edge variables. Orange facets have output zero; blue facets have output one; green marks ambiguity. Query mode separates answer zero from answer one and can show disks, closed stars, or links. Optional pink marks the selected input.",
+   "size": [
+    1043,
+    470
+   ],
+   "bbox": [
+    365.95,
+    52.16,
+    311.1,
+    364.68
+   ],
+   "counts": {
+    "polygon": 7,
+    "line": 12,
+    "circle": 6,
+    "text": 10
+   },
+   "probe": {
+    "data-query-axis": "-1",
+    "data-yaw": "0.7200",
+    "data-pitch": "0.4300",
+    "data-space": "three",
+    "data-ambiguous-edges": "3",
+    "data-ambiguous-triangles": "0",
+    "data-ambiguity-faces": "[[],[0],[2],[4],[0,2],[0,4],[2,4]]"
+   },
+   "marks": [
+    {
+     "i": 0,
+     "tag": "polygon",
+     "points": "653.07,235 473.4,394.07 416.61,162.05",
+     "paint": {
+      "fill": "rgb(51, 156, 255)",
+      "stroke": "none",
+      "stroke-width": "2.8px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-selected": "false",
+      "data-face": "100",
+      "data-output": "1"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "polygon",
+     "points": "653.07,235 473.4,394.07 626.39,307.95",
+     "paint": {
+      "fill": "rgb(51, 156, 255)",
+      "stroke": "none",
+      "stroke-width": "2.8px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-selected": "false",
+      "data-face": "101",
+      "data-output": "1"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "polygon",
+     "points": "389.93,235 569.6,75.93 416.61,162.05",
+     "paint": {
+      "fill": "rgb(51, 156, 255)",
+      "stroke": "none",
+      "stroke-width": "2.8px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-selected": "false",
+      "data-face": "010",
+      "data-output": "1"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "polygon",
+     "points": "653.07,235 569.6,75.93 626.39,307.95",
+     "paint": {
+      "fill": "rgb(51, 156, 255)",
+      "stroke": "none",
+      "stroke-width": "2.8px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-selected": "false",
+      "data-face": "111",
+      "data-output": "1"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "polygon",
+     "points": "389.93,235 473.4,394.07 626.39,307.95",
+     "paint": {
+      "fill": "rgb(51, 156, 255)",
+      "stroke": "none",
+      "stroke-width": "2.8px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-selected": "false",
+      "data-face": "001",
+      "data-output": "1"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "polygon",
+     "points": "389.93,235 569.6,75.93 626.39,307.95",
+     "paint": {
+      "fill": "rgb(51, 156, 255)",
+      "stroke": "none",
+      "stroke-width": "2.8px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-selected": "false",
+      "data-face": "011",
+      "data-output": "1"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "polygon",
+     "points": "653.07,235 569.6,75.93 416.61,162.05",
+     "paint": {
+      "fill": "rgb(213, 43, 145)",
+      "stroke": "rgb(213, 43, 145)",
+      "stroke-width": "2.8px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.55"
+     },
+     "data": {
+      "data-selected": "true",
+      "data-face": "110",
+      "data-output": "1"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "line",
+     "x1": "653.07",
+     "y1": "235",
+     "x2": "473.4",
+     "y2": "394.07",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "5px, 6px",
+      "stroke-linecap": "round",
+      "opacity": "0.52"
+     },
+     "data": {
+      "data-edge": "1-2",
+      "data-hidden": "true",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "line",
+     "x1": "653.07",
+     "y1": "235",
+     "x2": "416.61",
+     "y2": "162.05",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "5px, 6px",
+      "stroke-linecap": "round",
+      "opacity": "0.52"
+     },
+     "data": {
+      "data-edge": "1-4",
+      "data-hidden": "true",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 9,
+     "tag": "line",
+     "x1": "473.4",
+     "y1": "394.07",
+     "x2": "416.61",
+     "y2": "162.05",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "3.3px",
+      "stroke-dasharray": "5px, 6px",
+      "stroke-linecap": "round",
+      "opacity": "0.52"
+     },
+     "data": {
+      "data-edge": "2-4",
+      "data-hidden": "true",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 10,
+     "tag": "line",
+     "x1": "389.93",
+     "y1": "235",
+     "x2": "569.6",
+     "y2": "75.93",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round",
+      "opacity": "0.58"
+     },
+     "data": {
+      "data-edge": "0-3",
+      "data-hidden": "false",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 11,
+     "tag": "line",
+     "x1": "389.93",
+     "y1": "235",
+     "x2": "626.39",
+     "y2": "307.95",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round",
+      "opacity": "0.58"
+     },
+     "data": {
+      "data-edge": "0-5",
+      "data-hidden": "false",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 12,
+     "tag": "line",
+     "x1": "653.07",
+     "y1": "235",
+     "x2": "569.6",
+     "y2": "75.93",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round",
+      "opacity": "0.58"
+     },
+     "data": {
+      "data-edge": "1-3",
+      "data-hidden": "false",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 13,
+     "tag": "line",
+     "x1": "653.07",
+     "y1": "235",
+     "x2": "626.39",
+     "y2": "307.95",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round",
+      "opacity": "0.58"
+     },
+     "data": {
+      "data-edge": "1-5",
+      "data-hidden": "false",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 14,
+     "tag": "line",
+     "x1": "473.4",
+     "y1": "394.07",
+     "x2": "626.39",
+     "y2": "307.95",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round",
+      "opacity": "0.58"
+     },
+     "data": {
+      "data-edge": "2-5",
+      "data-hidden": "false",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 15,
+     "tag": "line",
+     "x1": "569.6",
+     "y1": "75.93",
+     "x2": "416.61",
+     "y2": "162.05",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round",
+      "opacity": "0.58"
+     },
+     "data": {
+      "data-edge": "3-4",
+      "data-hidden": "false",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 16,
+     "tag": "line",
+     "x1": "569.6",
+     "y1": "75.93",
+     "x2": "626.39",
+     "y2": "307.95",
+     "paint": {
+      "stroke": "rgb(26, 28, 31)",
+      "stroke-width": "1.25px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round",
+      "opacity": "0.58"
+     },
+     "data": {
+      "data-edge": "3-5",
+      "data-hidden": "false",
+      "data-boundary": "false"
+     }
+    },
+    {
+     "i": 17,
+     "tag": "line",
+     "x1": "389.93",
+     "y1": "235",
+     "x2": "473.4",
+     "y2": "394.07",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "3.3px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     },
+     "data": {
+      "data-edge": "0-2",
+      "data-hidden": "false",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 18,
+     "tag": "line",
+     "x1": "389.93",
+     "y1": "235",
+     "x2": "416.61",
+     "y2": "162.05",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "3.3px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     },
+     "data": {
+      "data-edge": "0-4",
+      "data-hidden": "false",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 19,
+     "tag": "circle",
+     "cx": "389.93",
+     "cy": "235",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 20,
+     "tag": "circle",
+     "cx": "473.4",
+     "cy": "394.07",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 21,
+     "tag": "circle",
+     "cx": "569.6",
+     "cy": "75.93",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 22,
+     "tag": "circle",
+     "cx": "416.61",
+     "cy": "162.05",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 23,
+     "tag": "circle",
+     "cx": "626.39",
+     "cy": "307.95",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 24,
+     "tag": "circle",
+     "cx": "653.07",
+     "cy": "235",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 25,
+     "tag": "text",
+     "x": "372.93",
+     "y": "235",
+     "text-anchor": "middle",
+     "text": "1⁻",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 26,
+     "tag": "text",
+     "x": "468.48",
+     "y": "410.34",
+     "text-anchor": "middle",
+     "text": "2⁻",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 27,
+     "tag": "text",
+     "x": "574.52",
+     "y": "59.66",
+     "text-anchor": "middle",
+     "text": "2⁺",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 28,
+     "tag": "text",
+     "x": "402.66",
+     "y": "152.34",
+     "text-anchor": "middle",
+     "text": "3⁻",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 29,
+     "tag": "text",
+     "x": "640.34",
+     "y": "317.66",
+     "text-anchor": "middle",
+     "text": "3⁺",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 30,
+     "tag": "text",
+     "x": "670.07",
+     "y": "235",
+     "text-anchor": "middle",
+     "text": "1⁺",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 31,
+     "tag": "text",
+     "x": "458.72",
+     "y": "157.66",
+     "text-anchor": "middle",
+     "text": "010",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 32,
+     "tag": "text",
+     "x": "616.35",
+     "y": "206.29",
+     "text-anchor": "middle",
+     "text": "111",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 33,
+     "tag": "text",
+     "x": "496.57",
+     "y": "312.34",
+     "text-anchor": "middle",
+     "text": "001",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 34,
+     "tag": "text",
+     "x": "528.64",
+     "y": "206.29",
+     "text-anchor": "middle",
+     "text": "011",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    }
+   ]
+  },
+  {
+   "id": "ev-input-graph",
+   "viewBox": "0 0 185 140",
+   "role": "img",
+   "ariaLabel": "Graph with 2 edges, input 110, output 1. Present edges are solid; absent edges are dashed.",
+   "size": [
+    185,
+    140
+   ],
+   "bbox": [
+    17,
+    0,
+    151,
+    133
+   ],
+   "counts": {
+    "line": 3,
+    "circle": 3,
+    "text": 3
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "line",
+     "x1": "92.5",
+     "y1": "23",
+     "x2": "22",
+     "y2": "110",
+     "paint": {
+      "stroke": "rgb(213, 43, 145)",
+      "stroke-width": "3px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-graph-edge": "0",
+      "data-present": "1"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "line",
+     "x1": "92.5",
+     "y1": "23",
+     "x2": "163",
+     "y2": "110",
+     "paint": {
+      "stroke": "rgb(213, 43, 145)",
+      "stroke-width": "3px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-graph-edge": "1",
+      "data-present": "1"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "line",
+     "x1": "22",
+     "y1": "110",
+     "x2": "163",
+     "y2": "110",
+     "paint": {
+      "stroke": "rgba(26, 28, 31, 0.08)",
+      "stroke-width": "1.2px",
+      "stroke-dasharray": "4px, 5px"
+     },
+     "data": {
+      "data-graph-edge": "2",
+      "data-present": "0"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "92.5",
+     "cy": "23",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "text",
+     "x": "92.5",
+     "y": "11",
+     "text-anchor": "middle",
+     "text": "1",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "12px",
+      "font-weight": "430",
+      "display": "block"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "circle",
+     "cx": "22",
+     "cy": "110",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "text",
+     "x": "22",
+     "y": "130",
+     "text-anchor": "middle",
+     "text": "2",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "12px",
+      "font-weight": "430",
+      "display": "block"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "circle",
+     "cx": "163",
+     "cy": "110",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "text",
+     "x": "163",
+     "y": "130",
+     "text-anchor": "middle",
+     "text": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "12px",
+      "font-weight": "430",
+      "display": "block"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "h3",
+   "id": null,
+   "text": "Ambiguity complexes and their geometry"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Geometry Three edge variables · octahedron Tetrahedron · shape only Four Boolean variables · 4D projection"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Function At least two edges (majority) Any two edges · nonmonotone Only 110 · prescribed graph Selector · x₁ chooses x₃ or x₂ Edge 12 present (dictator: x₁) At least one edge (OR) Odd number of edges (parity) Constant 0 · whole octahedron Constant 1 · whole octahedron"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Show Both colored regions Only the 0-region Only the 1-region Only the ambiguity complex"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Separate by Function output (colors) Query x₁ · edge 12 Query x₂ · edge 13 Query x₃ · edge 23"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Surface opacity 28%"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Separate colors 0%"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Left"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Right"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Up"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Down"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Turn over"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Assignment labels"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Show graph selector"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Highlight selected facet"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Edge 12 · x₁"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Edge 13 · x₂"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Edge 23 · x₃"
+  },
+  {
+   "tag": "div",
+   "id": null,
+   "text": "Input 110 → 1 · 2 edges"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Vertex labels"
+  },
+  {
+   "tag": "div",
+   "id": null,
+   "text": "OR · 3-edge circle"
+  }
+ ],
+ "controls": [
+  {
+   "k": "space",
+   "type": "select-one",
+   "v": "three"
+  },
+  {
+   "k": "example",
+   "type": "select-one",
+   "v": "or"
+  },
+  {
+   "k": "view",
+   "type": "select-one",
+   "v": "one"
+  },
+  {
+   "k": "split",
+   "type": "select-one",
+   "v": "output"
+  },
+  {
+   "k": "opacity",
+   "type": "range",
+   "v": "28"
+  },
+  {
+   "k": "separation",
+   "type": "range",
+   "v": "0"
+  },
+  {
+   "k": "labels",
+   "type": "checkbox",
+   "v": true
+  },
+  {
+   "k": "showGraph",
+   "type": "checkbox",
+   "v": true
+  },
+  {
+   "k": "highlight",
+   "type": "checkbox",
+   "v": true
+  },
+  {
+   "k": null,
+   "type": "checkbox",
+   "v": true
+  },
+  {
+   "k": null,
+   "type": "checkbox",
+   "v": true
+  },
+  {
+   "k": null,
+   "type": "checkbox",
+   "v": false
+  },
+  {
+   "k": "graphLabels",
+   "type": "checkbox",
+   "v": true
+  }
+ ],
+ "a11y": {
+  "liveRegions": 2,
+  "tablists": 0,
+  "tabs": 0,
+  "focusable": 23,
+  "headings": [
+   "H3:Ambiguity complexes and their geometry"
+  ],
+  "imgRoleOnInteractive": 1
+ },
+ "title": "Ambiguity explorer — graphs and higher dimensions"
+}
