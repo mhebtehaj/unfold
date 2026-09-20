@@ -54,14 +54,36 @@ because grouping is per tag.
 **Screenshots are the backstop**, not the primary test — 78 states in both schemes,
 plus a responsive sweep at tablet and phone widths.
 
+Screenshots are compared by pixel, not by byte. With the DOM in a byte-identical
+state, headless Chromium alternates between two stable rasterisations of the same
+SVG, differing by a few subpixel values — a byte gate reports that as a regression
+on every run until nobody reads it. Chromium now launches with rasterisation
+pinned (`DETERMINISTIC_ARGS` in `tools/lib/imagediff.mjs`), which makes capture
+byte-stable in this environment, and the pixel comparison remains as a safety net
+that also *reports a number*: percentage of pixels changed, maximum delta, and the
+bounding box of the change. Diff images land in `baseline/diff/` (git-ignored).
+
+The noise tolerance is deliberately almost zero — a few pixels differing by at most
+a couple of levels. An earlier, laxer rule (ignore anything under 0.08 % of pixels)
+was caught swallowing a real change: recolouring `--orange` showed as 0.105 % at
+desktop width but covered fewer pixels at phone width and was dismissed as noise.
+A real change that happens to be small is still a real change, and the smallest
+viewport is where a regression is hardest to catch by eye.
+
 **Tokens are captured resolved.** `getPropertyValue('--x')` returns the literal string
 `light-dark(#a,#b)` and tells you nothing about which branch is live, so the capture
 assigns each token to a real element, reads the computed colour, and paints it into a
 1×1 canvas to get sRGB bytes — Chromium reports a `color-mix()` result in `oklab()`.
 
-Capture is deterministic: re-running over all three explorers reports zero changes.
-The harness waits for the drawn geometry to stop changing before capturing, which is
-what makes the eased camera moves and the play loops reproducible.
+Capture is deterministic: a full re-run over all 319 states and 196 screenshots
+reports zero changes. The harness waits for the drawn geometry to stop changing
+before capturing, which is what makes the eased camera moves and the play loops
+reproducible.
+
+The gate was verified by breaking it on purpose. Applying the proposed `--orange`
+fix to `index.html` was reported as changes to the semantic capture, both token
+files and all three screenshots, each with its changed region; reverting returned a
+clean run. A baseline that has never failed has not been shown to work.
 
 ## What the state space turned out to be
 

@@ -13,9 +13,10 @@
 import { chromium } from 'playwright';
 import { mkdir, writeFile, readFile, rm } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
-import { dirname, join } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 import { serve, CHROMIUM } from './lib/serve.mjs';
 import { CAPTURE, TOKENS } from './lib/capture.mjs';
+import { comparePNG, isNoise, DETERMINISTIC_ARGS } from './lib/imagediff.mjs';
 import { STATES, WIDTHS, THEMES, RESPONSIVE } from './states.mjs';
 
 const argv = process.argv.slice(2);
@@ -33,10 +34,12 @@ const states = ONLY ? STATES.filter(s => s.id.startsWith(ONLY)) : STATES;
 if (!states.length) { console.error(`no states match ${ONLY}`); process.exit(1); }
 
 const srv = await serve('.');
-const browser = await chromium.launch({ executablePath: CHROMIUM });
+const browser = await chromium.launch({ executablePath: CHROMIUM, args: DETERMINISTIC_ARGS });
+// A scratch page used only to decode and diff PNGs.
+const differ = await (await browser.newContext()).newPage();
 
 const pageErrors = [];
-const results = { captured: 0, changed: [], added: [], errors: [] };
+const results = { captured: 0, changed: [], added: [], errors: [], noise: 0, diffs: [] };
 
 /** Apply one step, in the main document or the sandboxed iframe. */
 async function applyStep(ctx, [action, sel, value]) {
@@ -95,22 +98,47 @@ const ctxFor = (page, state) => {
   return f;
 };
 
+/**
+ * Text goldens compare exactly. PNGs compare by pixels with a tolerance,
+ * because headless rasterisation of SVG antialiasing is not byte-stable: with
+ * the DOM in an identical state, successive screenshots alternate between two
+ * encodings differing by a few subpixel values. A byte gate reports that as a
+ * regression, every run, until nobody reads it.
+ */
 async function writeIfChanged(path, body, binary = false) {
   await mkdir(dirname(path), { recursive: true });
   const exists = existsSync(path);
-  if (exists && !UPDATE) {
-    const old = await readFile(path);
-    const same = binary ? old.equals(body) : old.toString() === body;
-    if (!same) results.changed.push(path);
+
+  if (!exists) {
+    results.added.push(path);
+    await writeFile(path, body);
     return;
   }
-  if (!exists) results.added.push(path);
-  else if (UPDATE) {
-    const old = await readFile(path);
-    const same = binary ? old.equals(body) : old.toString() === body;
-    if (!same) results.changed.push(path);
+
+  const old = await readFile(path);
+  let same;
+  if (!binary) {
+    same = old.toString() === body;
+  } else if (old.equals(body)) {
+    same = true;
+  } else {
+    const diff = await comparePNG(differ, old, body, 0).catch(() => null);
+    if (!diff) same = false;
+    else if (isNoise(diff)) { same = true; results.noise++; }
+    else {
+      same = false;
+      results.diffs.push({ path, diff });
+      if (diff.image) {
+        const png = Buffer.from(diff.image.split(',')[1], 'base64');
+        const at = join(OUT, 'diff', relative(join(OUT, 'png'), path));
+        await mkdir(dirname(at), { recursive: true });
+        await writeFile(at, png);
+      }
+    }
   }
-  if (UPDATE || !exists) await writeFile(path, body);
+
+  if (!same) results.changed.push(path);
+  if (UPDATE && !same) await writeFile(path, body);
 }
 
 // ---------------------------------------------------------------- run -------
@@ -209,10 +237,19 @@ await srv.close();
 const secs = ((Date.now() - t0) / 1000).toFixed(1);
 console.log(`\n${UPDATE ? 'updated' : 'checked'} ${results.captured} semantic states in ${secs}s`);
 if (results.added.length) console.log(`  new:     ${results.added.length}`);
+if (results.noise) console.log(`  ${results.noise} screenshot(s) differed only as rasteriser noise (ignored)`);
 if (results.changed.length) {
   console.log(`  CHANGED: ${results.changed.length}`);
-  for (const p of results.changed.slice(0, 40)) console.log(`    ${p}`);
+  const byPath = new Map(results.diffs.map(d => [d.path, d.diff]));
+  for (const p of results.changed.slice(0, 40)) {
+    const d = byPath.get(p);
+    if (!d) { console.log(`    ${p}`); continue; }
+    if (d.sizeMismatch) { console.log(`    ${p}  size ${d.a} -> ${d.b}`); continue; }
+    console.log(`    ${p}  ${(d.ratio * 100).toFixed(3)}% of pixels, max delta ${d.maxDelta}` +
+                (d.box ? `, region ${d.box.join(',')}` : ''));
+  }
   if (results.changed.length > 40) console.log(`    ...and ${results.changed.length - 40} more`);
+  if (results.diffs.length) console.log(`  diff images written to ${join(OUT, 'diff')}/`);
 }
 if (pageErrors.length) {
   const uniq = [...new Set(pageErrors)];
