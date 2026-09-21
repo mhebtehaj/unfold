@@ -18,8 +18,11 @@
 // Anything the transform does not fully understand is a hard error. A bundler
 // that guesses produces a file that differs from the thing you tested.
 
-import { readFile, writeFile, mkdir, readdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, readdir, mkdtemp, rm } from 'node:fs/promises';
 import { dirname, join, normalize, relative, basename } from 'node:path';
+import { tmpdir } from 'node:os';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath } from 'node:url';
 
 // ------------------------------------------------------------- transform ----
 const RE = {
@@ -43,6 +46,9 @@ const names = s => s.split(',').map(x => x.trim()).filter(Boolean).map(x => {
   const [local, exported] = x.split(/\s+as\s+/).map(y => y.trim());
   return { local, exported: exported ?? local };
 });
+
+/** An import list as a destructuring: `a, b as c` → `a, b: c`. */
+const destructure = s => names(s).map(x => (x.local === x.exported ? x.local : `${x.local}: ${x.exported}`)).join(', ');
 
 /**
  * Rewrite one module into a registry factory.
@@ -83,7 +89,7 @@ export function transform(id, src) {
     if ((m = RE.importNamed.exec(line))) {
       const dep = resolveSpec(id, m[2]);
       deps.add(dep);
-      out.push(`const { ${m[1].trim()} } = __req(${JSON.stringify(dep)});`);
+      out.push(`const { ${destructure(m[1])} } = __req(${JSON.stringify(dep)});`);
       return;
     }
     if ((m = RE.importStar.exec(line))) {
@@ -102,7 +108,10 @@ export function transform(id, src) {
       throw new Error(`${where}: default import — the engine uses named exports only`);
     // Anywhere in the line, not just at its start: `const x = import('./y.js')`
     // is the common shape. The lookbehind keeps `foo.import(` from matching.
-    if (/(?<![\w.$])import\s*\(/.test(line))
+    // A comment line is not code: `@param {import('./labels.js').Placed} p` is
+    // how JSDoc names a type from another module, and nothing loads it.
+    const comment = /^\s*(?:\*|\/\*|\/\/)/.test(line);
+    if (!comment && /(?<![\w.$])import\s*\(/.test(line))
       throw new Error(`${where}: dynamic import cannot be bundled into one file`);
 
     if ((m = RE.exportList.exec(line))) {
@@ -247,6 +256,23 @@ const FIXTURES = [
   { name: 'export * is refused', files: { 'a': `export * from './b.js';` }, entry: 'a', throws: /export \*/ },
   { name: 'dynamic import is refused', files: { 'a': `const x = import('./b.js');` }, entry: 'a', throws: /dynamic import/ },
   {
+    name: 'an aliased import binds the alias',
+    files: {
+      'a': `export const LAYER = 0;\nexport const one = 1;`,
+      'b': `export const LAYER = 0;\nimport { one as uno } from './a.js';\nexport const two = uno + 1;`,
+    },
+    entry: 'b',
+    expect: src => src.includes('const { one: uno } = __req("a");'),
+  },
+  {
+    name: 'a JSDoc type import is not a dynamic import',
+    files: {
+      'a': `export const LAYER = 0;\n/**\n * @param {import('./b.js').Thing} t\n */\nexport const f = t => t;\n// import('./c.js') in a line comment\n/* import('./d.js') */`,
+    },
+    entry: 'a',
+    expect: src => src.includes('__def("a"'),
+  },
+  {
     name: 'import cycle is named',
     files: {
       'a': `export const LAYER = 0;\nimport { b } from './b.js';\nexport const a = 1;`,
@@ -280,7 +306,36 @@ async function selfTest() {
     console.log(`  ${ok ? 'ok   ' : 'FAIL '} ${f.name}`);
     if (!ok) { failed++; if (err) console.log(`        ${err.message}`); }
   }
+  failed += await pageFixture();
   return failed;
+}
+
+/**
+ * The page inliner, end to end: bundle a real page in a temporary directory
+ * and run its module. It must survive an aliased import, which a destructuring
+ * spells differently, and dollar signs in module source, which a string
+ * replacement would read as substitution patterns.
+ */
+async function pageFixture() {
+  const name = 'page: aliased imports and dollar signs survive inlining';
+  const dir = await mkdtemp(join(tmpdir(), 'unfold-bundle-'));
+  let ok = false, err = null;
+  try {
+    await writeFile(join(dir, 'm.js'), "export const LAYER = 0;\nexport const one = '$&' + \"$'\" + '$`';\n");
+    await writeFile(join(dir, 'p.html'),
+      '<!doctype html><script type="module">\nimport { one as uno } from \'./m.js\';\nglobalThis.__bundled = uno;\n</script>\n');
+    execFileSync(process.execPath, [fileURLToPath(import.meta.url), 'page', 'p.html'], { cwd: dir, stdio: 'pipe' });
+    const html = await readFile(join(dir, 'dist', 'p.html'), 'utf8');
+    const code = /<script type="module">([\s\S]*)<\/script>/.exec(html)?.[1];
+    if (code == null) throw new Error('no module script in the bundled page');
+    await import('data:text/javascript;base64,' + Buffer.from(code).toString('base64'));
+    ok = globalThis.__bundled === "$&$'$`";
+    if (!ok) err = new Error(`the module saw ${JSON.stringify(globalThis.__bundled)}`);
+  } catch (e) { err = e; }
+  finally { delete globalThis.__bundled; await rm(dir, { recursive: true, force: true }); }
+  console.log(`  ${ok ? 'ok   ' : 'FAIL '} ${name}`);
+  if (!ok && err) console.log(`        ${err.message}`);
+  return ok ? 0 : 1;
 }
 
 // ---------------------------------------------------------------- main ------
@@ -289,7 +344,7 @@ const [cmd, arg] = process.argv.slice(2);
 if (cmd === '--self-test' || process.argv.includes('--self-test')) {
   console.log('bundle self-test');
   const failed = await selfTest();
-  console.log(failed ? `\n${failed} fixture(s) failed` : `\nall ${FIXTURES.length} fixtures pass`);
+  console.log(failed ? `\n${failed} fixture(s) failed` : `\nall ${FIXTURES.length + 1} fixtures pass`);
   process.exit(failed ? 1 : 0);
 }
 
@@ -366,9 +421,11 @@ if (cmd === 'page') {
         const id = idOf(normalize(join(dirname(arg), spec)));
         inlined = inlined.replace(
           new RegExp(`import\\s*\\{([^}]*)\\}\\s*from\\s*['"]${spec.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}['"]\\s*;?`),
-          (_, n) => `const { ${n.trim()} } = __req(${JSON.stringify(id)});`);
+          (_, n) => `const { ${destructure(n)} } = __req(${JSON.stringify(id)});`);
       }
-      doc = doc.replace(tag, `<script type="module">\n${PRELUDE}\n${shim}\n${inlined}\n</script>`);
+      // A function, not a string: in a replacement string `$&`, `$'` and `$\``
+      // are substitution patterns, and module source is full of dollar signs.
+      doc = doc.replace(tag, () => `<script type="module">\n${PRELUDE}\n${shim}\n${inlined}\n</script>`);
     }
     return doc;
   }

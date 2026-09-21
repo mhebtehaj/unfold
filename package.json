@@ -11,6 +11,7 @@
     "site": "node tools/site.mjs",
     "baseline": "node tools/shots.mjs",
     "baseline:update": "node tools/shots.mjs --update",
+    "parity": "node tools/parity.mjs",
     "probe": "node tools/probe.mjs",
     "bundle": "node tools/bundle.mjs engine"
   },

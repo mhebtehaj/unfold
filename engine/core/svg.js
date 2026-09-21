@@ -28,9 +28,17 @@ const isDev = () => globalThis.UNFOLD_DEV !== false;
 // Float noise out of a projection is not information, it is fourteen characters
 // of diff in every golden file and a semantic baseline that never settles.
 // Round once, on the way out, here.
-let PRECISION = 3;
+//
+// Six decimals, not three. Phase 3 measured three against the realization
+// explorer's own drawing: its 324-cell barycentric triangle, redrawn with
+// coordinates rounded to 1/1000 px, moved the antialiasing of 115 pixels by up
+// to 4 levels, because a cell edge shifted by 0.0005 px changes which fraction
+// of a pixel it covers. At six the redraw is identical to the pixel in every
+// width and scheme tried, and the 1e-14 float noise is still gone.
+const DEFAULT_PRECISION = 6;
+let PRECISION = DEFAULT_PRECISION;
 
-export function setPrecision(digits = 3) {
+export function setPrecision(digits = DEFAULT_PRECISION) {
   const d = Math.trunc(digits);
   if (!Number.isFinite(d) || d < 0 || d > 15)
     throw new RangeError(`setPrecision: ${digits} is outside 0..15`);
@@ -71,12 +79,15 @@ const ALIAS = { className: 'class' };
  */
 function put(node, name, v) {
   if (v == null || v === false) { node.removeAttribute(name); return; }
-  if (v === true) { node.setAttribute(name, ''); return; }
   // NaN and Infinity deliberately fall through to String(v). "NaN" makes the
   // element refuse to render, which names the bug at the first frame; silently
   // dropping it leaves the node at its previous coordinates, which does not.
   const n = typeof v === 'number' && Number.isFinite(v) && !name.startsWith('data-');
-  node.setAttribute(name, n ? num(v) : String(v));
+  const s = v === true ? '' : n ? num(v) : String(v);
+  // Written only when it differs. setAttribute queues a mutation record and
+  // invalidates style even for the value already there, so a redraw of an
+  // unchanged scene would otherwise touch every attribute of every mark.
+  if (node.getAttribute(name) !== s) node.setAttribute(name, s);
 }
 
 function apply(node, attrs) {
@@ -257,7 +268,7 @@ export function reconcile(parent, items, spec) {
       // — and it means "kept it", not "replace with nothing".
       if (returned && returned !== node) node = returned;
     }
-    put(node, 'data-k', k);
+    put(node, 'data-k', k);   // a no-op when unchanged, like every write here
     next.set(k, node);
     nodes[i] = node;
   }

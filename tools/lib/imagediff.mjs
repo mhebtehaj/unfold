@@ -13,7 +13,7 @@
 // it decodes PNG correctly. No image library is added for this.
 
 /** Runs in page context. Returns a summary plus a diff image as a data URL. */
-const DIFF = async ([aURL, bURL, threshold]) => {
+const DIFF = async ([aURL, bURL, threshold, metric]) => {
   const load = src => new Promise((ok, no) => {
     const img = new Image();
     img.onload = () => ok(img);
@@ -50,7 +50,11 @@ const DIFF = async ([aURL, bURL, threshold]) => {
     const dg = Math.abs(A.data[i + 1] - B.data[i + 1]);
     const db = Math.abs(A.data[i + 2] - B.data[i + 2]);
     const da = Math.abs(A.data[i + 3] - B.data[i + 3]);
-    const delta = Math.max(da, Math.round(0.299 * dr + 0.587 * dg + 0.114 * db));
+    // 'luma' weighs a change by how visible it is; 'max' counts any change in
+    // any channel, which is what "identical" has to mean — a luma-weighted
+    // delta of a one-level blue change rounds to 0.
+    const delta = metric === 'max' ? Math.max(dr, dg, db, da)
+      : Math.max(da, Math.round(0.299 * dr + 0.587 * dg + 0.114 * db));
     if (delta > maxDelta) maxDelta = delta;
 
     const p = i / 4, x = p % w, y = (p / w) | 0;
@@ -84,10 +88,11 @@ const DIFF = async ([aURL, bURL, threshold]) => {
  * @param {import('playwright').Page} page a page to borrow for decoding
  * @param {Buffer} a @param {Buffer} b
  * @param {number} threshold per-pixel delta (0-255) below which pixels match
+ * @param {{metric?: 'luma'|'max'}} [o]  'max': the largest change in any channel
  */
-export async function comparePNG(page, a, b, threshold = 12) {
+export async function comparePNG(page, a, b, threshold = 12, { metric = 'luma' } = {}) {
   const url = buf => 'data:image/png;base64,' + buf.toString('base64');
-  return page.evaluate(DIFF, [url(a), url(b), threshold]);
+  return page.evaluate(DIFF, [url(a), url(b), threshold, metric]);
 }
 
 /**

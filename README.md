@@ -42,6 +42,7 @@ directly, because ES modules do not load over `file://`.
     npm run layers       # engine layering invariants
     npm run site         # check the homepage is in step with SITE
     npm run baseline     # compare the pages against the captured baseline
+    npm run parity       # an engine redraw against the shipped drawing, pixel for pixel
     npm run probe        # dump every page's live control surface
 
 `baseline/` records what the site looked like and did before the engine work began —

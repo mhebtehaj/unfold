@@ -38,11 +38,11 @@ function register() {
   suite('svg — elements and attributes', ({ test }) => {
     test('el() creates in the SVG namespace and coerces attributes', () => {
       const n = el('circle', {
-        cx: 1.23456, cy: 2, r: 4, class: 'uf-mark', fill: 'var(--violet)',
+        cx: 1.23456789, cy: 2, r: 4, class: 'uf-mark', fill: 'var(--violet)',
       });
       assert.equal(n.namespaceURI, SVG_NS);
       assert.equal(n.tagName, 'circle');
-      assert.equal(n.getAttribute('cx'), '1.235', 'rounded to PRECISION');
+      assert.equal(n.getAttribute('cx'), '1.234568', 'rounded to PRECISION');
       assert.equal(n.getAttribute('r'), '4', 'and trailing zeros dropped');
       assert.equal(n.getAttribute('class'), 'uf-mark');
       assert.equal(n.getAttribute('fill'), 'var(--violet)');
@@ -75,7 +75,7 @@ function register() {
     });
 
     test('a rounded negative zero is written as "0"', () => {
-      const n = el('circle', { cx: -0.0004 });
+      const n = el('circle', { cx: -0.0000004 });
       assert.equal(n.getAttribute('cx'), '0', 'not "-0"');
     });
 
@@ -100,7 +100,7 @@ function register() {
       } finally {
         setPrecision(before);
       }
-      assert.equal(getPrecision(), 3, 'restored');
+      assert.equal(getPrecision(), 6, 'restored');
     });
 
     test('className is an alias for class', () => {
@@ -110,7 +110,7 @@ function register() {
     test('setPrecision refuses a nonsense value', () => {
       assert.throws(() => setPrecision(-1));
       assert.throws(() => setPrecision(NaN));
-      assert.equal(getPrecision(), 3, 'and leaves the module unchanged');
+      assert.equal(getPrecision(), 6, 'and leaves the module unchanged');
     });
 
     test('group() appends children and skips the nullish ones', () => {
@@ -119,6 +119,30 @@ function register() {
       assert.equal(g.tagName, 'g');
       assert.equal(g.children.length, 2);
       assert.equal(g.getAttribute('data-layer'), 'faces');
+    });
+  });
+
+  suite('svg — writes only what changed', ({ test }) => {
+    test('attr() with the values already there queues no mutation', () => {
+      const n = el('circle', { cx: 1.5, r: 3, class: 'a', hidden: true, data: { v: 0.1234567 } });
+      const mo = new MutationObserver(() => {});
+      mo.observe(n, { attributes: true });
+      attr(n, { cx: 1.5, r: 3, class: 'a', hidden: true, fill: null, data: { v: 0.1234567 } });
+      assert.equal(mo.takeRecords().length, 0, 'same values, and removing an absent one, write nothing');
+      attr(n, { cx: 2, r: 3 });
+      assert.equal(mo.takeRecords().map(r => r.attributeName), ['cx']);
+      attr(n, { class: null });
+      assert.equal(mo.takeRecords().map(r => r.attributeName), ['class']);
+      mo.disconnect();
+    });
+
+    test('rounding decides sameness: a change below the precision is no change', () => {
+      const n = el('circle', { cx: 1 });
+      const mo = new MutationObserver(() => {});
+      mo.observe(n, { attributes: true });
+      attr(n, { cx: 1 + 1e-9 });
+      assert.equal(mo.takeRecords().length, 0);
+      mo.disconnect();
     });
   });
 
@@ -140,6 +164,20 @@ function register() {
       assert.ok(after[2] === first[0], 'a');
       assert.ok(after[3] === first[2], 'c');
       assert.ok(after.every((n, i) => n === p.children[i]), 'returned in document order');
+    });
+
+    test('a pass that changes nothing writes nothing', () => {
+      // setAttribute queues a mutation record even for the value already
+      // there, so rewriting data-k every pass made every redraw of an
+      // unchanged scene look, to an observer, like a change to every node.
+      const p = el('g');
+      reconcile(p, items(['a', 'b', 'c']), counting());
+      const mo = new MutationObserver(() => {});
+      mo.observe(p, { attributes: true, childList: true, subtree: true });
+      reconcile(p, items(['a', 'b', 'c']), counting());
+      const records = mo.takeRecords();
+      mo.disconnect();
+      assert.equal(records.length, 0, `${records.length} mutation(s)`);
     });
 
     test('removing a middle key detaches it and leaves the rest alone', () => {
@@ -340,10 +378,10 @@ function register() {
 
   suite('svg — text and the halo', ({ test }) => {
     test('text() sets the geometry and the halo class', () => {
-      const t = text('110', { x: 12.3456, y: -4, data: { face: '110' } });
+      const t = text('110', { x: 12.3456789, y: -4, data: { face: '110' } });
       assert.equal(t.tagName, 'text');
       assert.equal(t.textContent, '110');
-      assert.equal(t.getAttribute('x'), '12.346');
+      assert.equal(t.getAttribute('x'), '12.345679');
       assert.equal(t.getAttribute('text-anchor'), 'middle');
       assert.equal(t.getAttribute('dominant-baseline'), 'middle');
       assert.ok(t.getAttribute('class').split(' ').includes('uf-halo'));

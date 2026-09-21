@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Fixture: the realization triangle, drawn by the engine</title>
+<!--
+  Phase 3's proof. realization-carrier-explorer.html draws its "A drawing of |Δ|"
+  panel by concatenating SVG strings (drawComplex, coloredFace, pointRing). This
+  page draws the same picture through the engine: a Viewport, one SvgScene, and
+  one Renderable whose vertices, primitives and styles restate that drawing's
+  geometry and nothing else. tools/parity.mjs puts both side by side and
+  compares them pixel for pixel; tests/realize.test.mjs compares every drawn
+  element's geometry and resolved paint.
+
+  The CSS below is the explorer's own: its token values and its drawing-text
+  rules, copied so that the comparison isolates the engine's rendering from the
+  question of which token values the ported page will use (that is the port's
+  decision, Phase 6).
+-->
+<style>
+  :root{color-scheme:light dark;--bg:light-dark(#fff,#181818);--fg:light-dark(#25282d,#efeff2);
+        --muted:light-dark(#626873,#a8adb6);--soft:light-dark(#f3f4f7,#272a32);
+        --gray:light-dark(#cbd0d9,#606773);--bad:light-dark(#b23329,#ff9e92);
+        --p0:rgb(58 112 225);--p1:rgb(230 107 67);--p2:rgb(52 171 130);--p3:rgb(158 95 214);
+        font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg)}
+  *{box-sizing:border-box}
+  body{margin:0}
+  .drawing{width:100%;height:290px;display:block;touch-action:none;cursor:crosshair}
+  .drawing text{font:13px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;fill:var(--muted)}
+  .drawing .point-label{fill:var(--fg);font-weight:600}
+  .drawing .point-label.bad{fill:var(--bad)}
+  #stage{position:absolute;left:0;top:0;width:541px}
+</style>
+</head>
+<body>
+<div id="stage"><svg id="picture" class="drawing"></svg></div>
+<script type="module">
+import { Viewport, svg as svgKit } from '../../engine/core/index.js';
+import { SvgScene, blendNumeric, blend } from '../../engine/render/index.js';
+
+// ---- the explorer's data, restated (realization-carrier-explorer.html) ----
+const LABELS = ['a', 'b', 'c', 'd'];
+const PALETTE = [[58, 112, 225], [230, 107, 67], [52, 171, 130], [158, 95, 214]];
+const key = f => [...f].sort().join('');
+const closure = maxima => {
+  const out = new Map();
+  for (const f of maxima) for (let bits = 1; bits < 1 << f.length; bits++) {
+    const q = f.filter((_, i) => bits & (1 << i));
+    out.set(key(q), q);
+  }
+  return [...out.values()].sort((a, b) => a.length - b.length || key(a).localeCompare(key(b)));
+};
+const COMPLEXES = {
+  edge: { vertices: [[-0.9, 0], [0.9, 0]], max: [[0, 1]] },
+  vertices: { vertices: [[-0.85, -0.65], [0.85, -0.65], [0, 0.85]], max: [[0], [1], [2]], missing: [0, 1] },
+  boundary: { vertices: [[-0.85, -0.65], [0.85, -0.65], [0, 0.85]], max: [[0, 1], [1, 2], [0, 2]], missing: [0, 1, 2] },
+  triangle: { vertices: [[-0.85, -0.65], [0.85, -0.65], [0, 0.85]], max: [[0, 1, 2]] },
+  glued: { vertices: [[-1, 0], [0, 0.8], [0, -0.8], [1, 0]], max: [[0, 1, 2], [1, 2, 3]] },
+  tail: { vertices: [[-0.9, -0.65], [-0.9, 0.65], [0.2, 0], [1, 0]], max: [[0, 1, 2], [2, 3]] },
+  chain: { vertices: [[-0.9, 0.45], [0, -0.5], [0.9, 0.45]], max: [[0, 1], [1, 2]] },
+};
+for (const c of Object.values(COMPLEXES)) c.faces = closure(c.max);
+
+const centroid = (face, n) => { const w = Array(n).fill(0); face.forEach(i => (w[i] = 1 / face.length)); return w; };
+const combine = (w, V) => w.reduce((p, v, i) => [p[0] + v * V[i][0], p[1] + v * V[i][1]], [0, 0]);
+const support = w => w.flatMap((v, i) => (v > 0 ? [i] : []));
+const placed = (V, on) => V.map(([x, y]) => (on ? [0.77 * x + 0.22 * y + 0.03, 0.84 * y - 0.16 * x] : [x, y]));
+
+// ---- the one Renderable ----------------------------------------------------
+// Vertices: the complex's, then every point the coloured face is drawn
+// through, then x. Primitives refer to them by index; the scene transforms.
+let state = { complex: 'triangle', face: [0, 1, 2], w: [0.2, 0.3, 0.5], placement: 0 };
+let colour = w => blendNumeric(w, PALETTE);
+
+const realization = {
+  id: 'realize',
+  dim: 2,
+  vertices() {
+    const c = COMPLEXES[state.complex], V = placed(c.vertices, state.placement), n = V.length;
+    const pts = [...V];
+    const weights = [];                       // weight vector of every extra point
+    const add = w => { weights.push(w); pts.push(combine(w, V)); return pts.length - 1; };
+    this.grid = null;
+    const f = state.face, valid = c.faces.some(g => key(g) === key(f));
+    if (valid && f.length === 2) {
+      const res = 110;
+      this.grid = Array.from({ length: res + 1 }, (_, i) => {
+        const w = Array(n).fill(0); w[f[0]] = 1 - i / res; w[f[1]] = i / res; return add(w);
+      });
+    } else if (valid && f.length === 3) {
+      const steps = 18, at = new Map();
+      for (let i = 0; i <= steps; i++) for (let j = 0; j <= steps - i; j++) {
+        const w = Array(n).fill(0); w[f[0]] = i / steps; w[f[1]] = j / steps; w[f[2]] = 1 - (i + j) / steps;
+        at.set(`${i},${j}`, add(w));
+      }
+      this.grid = at;
+    }
+    this.weights = weights;
+    this.x = add(state.w);
+    this.n = n;
+    this.valid = valid;
+    return pts;
+  },
+  primitives(ctx) {
+    const c = COMPLEXES[state.complex], f = state.face, n = this.n, out = [];
+    for (const m of c.max) if (m.length === 3)
+      out.push({ key: `soft:${key(m)}`, kind: 'face', indices: m, layer: 'base', meta: 'soft' });
+    for (const e of c.faces) if (e.length === 2)
+      out.push({ key: `edge:${key(e)}`, kind: 'polyline', indices: e, layer: 'skeleton', meta: 'edge' });
+    const wOf = i => this.weights[i - n];
+    if (!this.valid) {
+      out.push({ key: 'missing', kind: f.length === 3 ? 'face' : 'polyline', indices: f, layer: 'image', meta: 'missing' });
+    } else if (f.length === 1) {
+      out.push({ key: 'vertex-face', kind: 'point', indices: [f[0]], layer: 'image', meta: { w: centroid(f, n) } });
+    } else if (f.length === 2) {
+      for (let i = 0; i < this.grid.length - 1; i++) {
+        const a = wOf(this.grid[i]), b = wOf(this.grid[i + 1]);
+        out.push({ key: `seg:${i}`, kind: 'edge', indices: [this.grid[i], this.grid[i + 1]], layer: 'image',
+                   meta: { w: a.map((v, j) => (v + b[j]) / 2) } });
+      }
+    } else {
+      const steps = 18, at = (i, j) => this.grid.get(`${i},${j}`);
+      const cell = (k, ids) => {
+        const ws = ids.map(wOf);
+        out.push({ key: `cell:${k}`, kind: 'face', indices: ids, layer: 'image',
+                   meta: { w: ws[0].map((_, j) => (ws[0][j] + ws[1][j] + ws[2][j]) / 3) } });
+      };
+      for (let i = 0; i < steps; i++) for (let j = 0; j < steps - i; j++) {
+        cell(`${i},${j},a`, [at(i, j), at(i + 1, j), at(i, j + 1)]);
+        if (i + j < steps - 1) cell(`${i},${j},b`, [at(i + 1, j), at(i + 1, j + 1), at(i, j + 1)]);
+      }
+    }
+    // Vertices, each followed by its label unless x sits on top of it.
+    const xp = ctx.screen(this.x);
+    for (let i = 0; i < n; i++) {
+      out.push({ key: `v:${i}`, kind: 'point', indices: [i], layer: 'marks', meta: { w: centroid([i], n) } });
+      const p = ctx.screen(i), v = ctx.model(i);
+      if (Math.hypot(p[0] - xp[0], p[1] - xp[1]) < 19) continue;
+      out.push({ key: `vl:${i}`, kind: 'text', indices: [i], layer: 'marks', text: LABELS[i],
+                 meta: { offset: [v[0] < -0.05 ? -14 : 10, v[1] < -0.05 ? 17 : -11] } });
+    }
+    const sup = support(state.w);
+    const ok = c.faces.some(g => key(g) === key(sup));
+    out.push({ key: 'x', kind: 'point', indices: [this.x], layer: 'marks', meta: { ring: true, ok } });
+    out.push({ key: 'x-label', kind: 'text', indices: [this.x], layer: 'marks',
+               text: sup.length === 1 ? 'x = ' + LABELS[sup[0]] : 'x', meta: { ok, left: xp[0] > ctx.frame.w * 0.68 } });
+    return out;
+  },
+  style(p) {
+    const m = p.meta;
+    if (m === 'soft') return { fill: 'var(--soft)', stroke: 'none' };
+    if (m === 'edge') return { stroke: 'var(--gray)', width: 2 };
+    if (m === 'missing') return { fill: 'none', stroke: 'var(--bad)', width: 1.7, dash: '4 4' };
+    if (p.key === 'vertex-face') return { r: 4, fill: colour(m.w) };
+    if (p.key.startsWith('seg:')) return { stroke: colour(m.w), width: 5, cap: 'round' };
+    if (p.key.startsWith('cell:')) { const k = colour(m.w); return { fill: k, stroke: k, width: 0.5, opacity: 1 }; }
+    if (p.key.startsWith('v:')) return { r: 4, fill: colour(m.w), stroke: 'var(--bg)', width: 1.5 };
+    if (p.key.startsWith('vl:')) return { dx: m.offset[0], dy: m.offset[1], anchor: 'middle' };
+    if (p.key === 'x') return { r: 4, fill: colour(state.w), halo: { width: 3 },
+                                ring: { r: 8, stroke: m.ok ? 'var(--fg)' : 'var(--bad)', width: 1.6 } };
+    if (p.key === 'x-label') return { dx: m.left ? -11 : 11, dy: -11, anchor: m.left ? 'end' : 'start',
+                                      class: m.ok ? 'point-label' : 'point-label bad' };
+    return {};
+  },
+  probe() { return { complex: state.complex, face: state.face.join(','), cells: this.grid?.size ?? this.grid?.length ?? 0 }; },
+};
+
+const svg = document.getElementById('picture');
+const viewport = new Viewport(svg, { pad: [18, 21], extent: 1.2, radius: { min: 12 }, minSize: [60, 90], observe: false });
+const scene = new SvgScene(svg, { viewport, layers: ['base', 'skeleton', 'image', 'marks'] });
+scene.add(realization);
+
+/** The harness's handle: position the drawing, set the state, draw synchronously. */
+window.__realize = {
+  scene,
+  draw(next = {}, o = {}) {
+    if (o.box) {
+      const stage = document.getElementById('stage');
+      Object.assign(stage.style, { left: `${o.box.x}px`, top: `${o.box.y}px`, width: `${o.box.width}px` });
+      svg.style.height = `${o.box.height}px`;
+    }
+    if (o.precision != null) svgKit.setPrecision(o.precision);
+    colour = o.blend === 'css'
+      ? w => blend(w, ['var(--p0)', 'var(--p1)', 'var(--p2)', 'var(--p3)'], { space: 'srgb' })
+      : w => blendNumeric(w, PALETTE);
+    state = { ...state, ...next };
+    return scene.draw();
+  },
+};
+window.__realize.draw();
+document.documentElement.dataset.ready = 'true';
+</script>
+</body>
+</html>
