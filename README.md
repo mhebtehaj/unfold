@@ -14,6 +14,11 @@ Interactive mathematics: homotopies, geometric realizations, carriers, and ambig
 Each explorer is a standalone HTML file. No installation or build step is required.
 The mathematical references are linked inside the explorers.
 
+The homepage is styled by `engine/unfold.css`, the shared stylesheet the explorers
+will move onto. Its tiles, brand and footer are generated from the `SITE` list in
+`engine/page/shell.js`: to add or change a tile, edit `SITE` and run
+`npm run site -- --write`.
+
 ## Update the website
 
 Edit the HTML files and commit the changes to `main`. GitHub Pages publishes that
@@ -35,6 +40,7 @@ directly, because ES modules do not load over `file://`.
     npm install          # playwright, for the baseline and the test runner
     npm test             # the test suite (or open /tests/run.html)
     npm run layers       # engine layering invariants
+    npm run site         # check the homepage is in step with SITE
     npm run baseline     # compare the pages against the captured baseline
     npm run probe        # dump every page's live control surface
 

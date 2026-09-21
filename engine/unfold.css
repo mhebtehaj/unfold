@@ -1,0 +1,195 @@
+/* unfold.css — the one stylesheet.
+ *
+ * Tokens first, then components, then breakpoints. Every colour is defined
+ * once, as a light-dark() pair, in a custom property below; a component rule
+ * never names a colour, only a token (tools/check-layers.mjs enforces this the
+ * same way it keeps colour literals out of the JS).
+ *
+ * A rule enters this file with the first page that can verify it. Phase 2
+ * ported the homepage, so what is here is the token layer, the page chrome and
+ * the homepage's own components, each held to the captured baseline, plus the
+ * explorers' back-link bar, held to the three copies it replaces by a fixture
+ * test. Explorer components arrive with the ports that exercise them.
+ */
+
+/* ---- tokens ------------------------------------------------------------- */
+:root{
+  color-scheme:light dark;
+
+  /* surfaces — the white "work" ground of the explorers */
+  --bg:light-dark(#fff,#181818);
+  --surface:light-dark(#fff,#202126);          /* raised: a tile, a card */
+  --surface-soft:light-dark(#f3f4f7,#272a32);  /* inset or hover fill */
+  --inert:light-dark(#f0f2f5,#292d34);         /* "given" geometry in a drawing */
+  --line:light-dark(#dfe2e7,#393d45);          /* hairline border, 1.2-1.6:1 on purpose */
+  --line-strong:light-dark(#aeb6c1,#727b8b);   /* drawn boundary of inert geometry */
+  --gray:light-dark(#cbd0d9,#606773);          /* neutral geometry stroke */
+
+  /* text */
+  --fg:light-dark(#25282d,#f1f1f2);
+  --muted:light-dark(#626873,#a8adb6);
+  --on-accent:light-dark(#fff,#0d0d0d);
+
+  /* interaction — data-hue (below) repoints --accent at a page hue */
+  --accent:light-dark(#386acf,#96b5ff);
+  --accent-soft:light-dark(#f3f6fd,#242f45);
+
+  /* semantic: failure red is deliberately heavier than the accents */
+  --good:light-dark(#2a745d,#8fceae);
+  --bad:light-dark(#b23329,#ff9e92);
+
+  /* page hues, weight-matched: every light value sits at 5.1 +/- 0.1 to 1 on
+     white. --orange was #b46942 (4.17:1, the homepage's one AA failure); the
+     fix keeps its hue and chroma and lowers only its lightness. */
+  --violet:light-dark(#7360b5,#b6a3ef);
+  --teal:light-dark(#287a76,#7bc6b9);
+  --orange:light-dark(#a35c37,#e3a07b);
+  --pink:light-dark(#d52b91,#ff8bd1);
+
+  /* data encoding */
+  --zone:light-dark(#a890df33,#a88bea30);      /* translucent region fill */
+  --data-1:light-dark(#3a70e1,#7fa8f2);
+  --data-2:light-dark(#e66b43,#f09a76);
+  --data-3:light-dark(#1f9078,#6fd0ae);
+  --data-4:light-dark(#9e5fd6,#bd93ea);
+  --face-1:light-dark(#3979df,#7fa8f2);
+  --face-2:light-dark(#c4761f,#e9a253);
+  --face-3:light-dark(#239b86,#5cc0ad);
+
+  /* Every colour token above is measured by tests/unfold-css.test.mjs. The
+     scales below carry only the steps a verified rule uses; the rest of each
+     scale arrives with the component that needs it. */
+
+  /* type: 14 for "read this", 13 for chrome, 12 for footnotes */
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --fs-xs:12px; --fs-sm:13px; --fs-base:14px; --fs-md:15px; --fs-lg:17px;
+  --fs-display:clamp(30px,4.5vw,47px);
+  --fw-semi:600; --fw-head:650;                /* never 700, never bold */
+  --lh-body:1.5; --lh-head:1.3; --lh-tight:1.14;
+
+  /* geometry */
+  --r-xs:2px; --r-lg:14px;
+  --shell:1100px; --shell-pad-x:24px;          /* the explorers' column, as the back link sees it */
+
+  /* motion and focus: one transition on the whole site */
+  --dur:.18s; --lift:-4px; --focus-w:3px;
+}
+
+/* ---- grounds -------------------------------------------------------------
+ * Two, deliberately. The explorers work on white; the homepage is paper, the
+ * single strongest cue that it is a place to look and the explorers are places
+ * to work. Paper brings its own ink — the homepage's neutrals were tuned
+ * against it — so a ground swaps the neutral set as a unit, not one background
+ * token. It follows :root at equal specificity, so it wins wherever it applies.
+ */
+[data-ground=paper]{
+  --bg:light-dark(#faf9f6,#191a1d);
+  --fg:light-dark(#24252a,#eeeef2);
+  --muted:light-dark(#6c6d77,#acadb8);
+  --line:light-dark(#dedee4,#393a43);
+  --lh-body:1.55;
+}
+/* A ground paints and sets type itself, so it works at any depth. */
+:root,[data-ground]{font:16px/var(--lh-body) var(--font);background:var(--bg);color:var(--fg)}
+
+/* ---- the page hue --------------------------------------------------------
+ * data-hue promotes one hue to --accent: on <html> for a whole page, on any
+ * element for part of one — each homepage tile carries its explorer's hue this
+ * way, and its border, focus ring, call to action and currentColor drawing all
+ * follow. Unscoped, so it works at any depth, and it needs no inline style.
+ * Pink is a data colour, not a page hue: at 4.58:1 it is outside the band.
+ */
+[data-hue=violet]{--accent:var(--violet)}
+[data-hue=teal]{--accent:var(--teal)}
+[data-hue=orange]{--accent:var(--orange)}
+
+/* ---- reset -------------------------------------------------------------- */
+*{box-sizing:border-box}
+body{margin:0}
+a{color:inherit}
+
+/* ---- homepage column ---------------------------------------------------- */
+/* The explorers' column arrives with their ports: homotopy's is 1080px wide
+   with 22px/24px padding and realization's 1100px with 21px/24px, and which
+   one wins is that phase's decision to verify, not this file's to guess. */
+.uf-home{max-width:1080px;margin:auto;padding:38px 32px 24px}
+
+/* ---- back-navigation bar -------------------------------------------------
+ * The explorers' back link, until now three byte-identical <style> blocks
+ * with hardcoded colours. On the work ground and the default accent, --muted
+ * and --accent resolve to exactly the literals those copies use. A page that
+ * takes a data-hue gets its hover and focus in that hue — one accent per page —
+ * which makes adopting a hue a visible change, decided at that page's port.
+ */
+.uf-nav{max-width:var(--shell);margin:0 auto;padding:14px var(--shell-pad-x) 0;font:var(--fs-sm)/1.5 var(--font)}
+.uf-nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:7px;padding:3px 0}
+.uf-nav a:hover{color:var(--accent)}
+.uf-nav a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:var(--r-xs)}
+
+/* ---- brand -------------------------------------------------------------- */
+.uf-brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:var(--fw-head);letter-spacing:-.7px}
+.uf-brand svg{width:30px;height:30px;color:var(--violet)}
+
+/* ---- homepage intro: the only display type on the site ------------------ */
+.uf-intro{margin:70px 0 38px}
+.uf-intro h1{font-size:var(--fs-display);line-height:var(--lh-tight);letter-spacing:-1.6px;font-weight:var(--fw-semi);margin:0 0 16px}
+.uf-intro p{font-size:var(--fs-lg);color:var(--muted);margin:0}
+
+/* ---- homepage tiles ------------------------------------------------------
+ * The whole tile is one link. Its illustration is painted in currentColor, so
+ * the tile's data-hue recolours border, ring, drawing and call to action at
+ * once and nothing else on it is coloured. margin-top:auto on the call to
+ * action keeps the three tiles' last lines level whatever their copy.
+ */
+.uf-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.uf-tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);text-decoration:none;overflow:hidden;display:flex;flex-direction:column;transition:transform var(--dur),border-color var(--dur)}
+.uf-tile:hover{transform:translateY(var(--lift));border-color:var(--accent)}
+.uf-tile:focus-visible{outline:var(--focus-w) solid var(--accent);outline-offset:5px}
+.uf-tile__art{height:170px;margin:12px 18px 0;border-bottom:1px solid var(--line);color:var(--accent)}
+.uf-tile__art svg{width:100%;height:100%;display:block}
+.uf-tile__copy{padding:23px 24px 22px;display:flex;flex-direction:column;flex:1}
+.uf-tile h2{font-size:20px;line-height:var(--lh-head);letter-spacing:-.4px;font-weight:var(--fw-semi);margin:0 0 10px}
+.uf-tile__copy p{font-size:var(--fs-base);color:var(--muted);margin:0 0 22px}
+.uf-tile__cta{font-size:var(--fs-sm);font-weight:var(--fw-semi);margin-top:auto;color:var(--accent);display:flex;justify-content:space-between}
+.uf-tile__cta>span{font-size:19px;line-height:1}
+
+/* ---- footer ------------------------------------------------------------- */
+.uf-footer{margin-top:34px;padding:20px 0 8px;border-top:1px solid var(--line);color:var(--muted);font-size:var(--fs-xs);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.uf-footer a{text-decoration:none}
+.uf-footer a:hover{text-decoration:underline}
+
+/* ---- motion ------------------------------------------------------------- */
+@media(prefers-reduced-motion:reduce){
+  .uf-tile{transition:none}
+  .uf-tile:hover{transform:none}
+}
+
+/* ---- breakpoints ---------------------------------------------------------
+ * 760px turns each homepage tile from a card into a row: the drawing becomes a
+ * narrow rail and loses its rule, because it no longer separates anything.
+ * 370px narrows that rail again. (The explorers break at 600 and 380; the
+ * homepage keeps its own two, which is what it has always done.)
+ */
+@media(max-width:760px){
+  .uf-home{padding:25px 20px}
+  .uf-intro{margin:44px 0 28px}
+  .uf-intro h1{letter-spacing:-1px}
+  .uf-intro p{font-size:var(--fs-md)}
+  .uf-tiles{grid-template-columns:1fr;gap:14px}
+  .uf-tile{display:grid;grid-template-columns:108px 1fr}
+  .uf-tile__art{height:100%;min-height:145px;margin:0 0 0 8px;border:0}
+  .uf-tile__copy{padding:23px 20px 21px 12px}
+  .uf-tile__copy p{margin-bottom:15px}
+  .uf-tile h2{font-size:19px}
+  .uf-footer{margin-top:25px}
+}
+@media(max-width:600px){
+  :root{--shell-pad-x:12px}
+  .uf-nav{padding-top:12px}
+}
+@media(max-width:370px){
+  .uf-home{padding:22px 15px}
+  .uf-tile{grid-template-columns:87px 1fr}
+  .uf-tile__copy{padding-right:14px}
+  .uf-tile h2{font-size:18px}
+}

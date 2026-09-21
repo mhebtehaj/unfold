@@ -31,6 +31,7 @@ const RE = {
   exportList: /^\s*export\s*\{([^}]*)\}\s*;?\s*$/,
   exportDecl: /^\s*export\s+(const|let|var|function\*?|class|async\s+function\*?)\s+(\w+)/,
   exportStar: /^\s*export\s*\*/,
+  exportStarAs: /^\s*export\s*\*\s*as\s+(\w+)\s+from\s*['"]([^'"]+)['"]\s*;?\s*$/,
   exportDefault: /^\s*export\s+default\b/,
 };
 
@@ -59,10 +60,19 @@ export function transform(id, src) {
 
     if (RE.exportDefault.test(line))
       throw new Error(`${where}: default export — the engine uses named exports only`);
+    let m;
+    // `export * as ns from` names what it provides -- one namespace -- so it
+    // is allowed; a bare `export *` is not.
+    if ((m = RE.exportStarAs.exec(line))) {
+      const dep = resolveSpec(id, m[2]);
+      deps.add(dep);
+      reexports.push({ from: dep, local: null, exported: m[1] });
+      out.push('');
+      return;
+    }
     if (RE.exportStar.test(line) && !RE.reexport.test(line))
       throw new Error(`${where}: \`export *\` hides what a module provides; name the exports`);
 
-    let m;
     if ((m = RE.reexport.exec(line))) {
       const dep = resolveSpec(id, m[2]);
       deps.add(dep);
@@ -113,7 +123,8 @@ export function transform(id, src) {
 
   const fields = [
     ...exported.map(n => `${JSON.stringify(n.exported)}: ${n.local}`),
-    ...reexports.map(n => `${JSON.stringify(n.exported)}: __req(${JSON.stringify(n.from)}).${n.local}`),
+    ...reexports.map(n => `${JSON.stringify(n.exported)}: __req(${JSON.stringify(n.from)})` +
+                          (n.local === null ? '' : `.${n.local}`)),
   ];
 
   const body =
@@ -121,7 +132,9 @@ export function transform(id, src) {
     out.join('\n').replace(/\n+$/, '') + '\n' +
     `return { ${fields.join(', ')} };\n});`;
 
-  return { id, deps: [...deps], body, exports: exported.map(n => n.exported) };
+  // A module's public surface includes what it re-exports: a barrel is
+  // nothing but re-exports, and as a bundle's entry it must surface them.
+  return { id, deps: [...deps], body, exports: [...exported, ...reexports].map(n => n.exported) };
 }
 
 /** Kahn topological sort; names the cycle if there is one. */
@@ -219,7 +232,16 @@ const FIXTURES = [
       'i': `export const LAYER = 0;\nexport { one } from './a.js';`,
     },
     entry: 'i',
-    expect: src => src.includes('__req("a").one'),
+    expect: src => src.includes('__req("a").one') && src.includes('export const { LAYER, one }'),
+  },
+  {
+    name: 'namespace re-export is the whole module',
+    files: {
+      'a': `export const LAYER = 0;\nexport const one = 1;`,
+      'i': `export const LAYER = 0;\nexport * as a from './a.js';`,
+    },
+    entry: 'i',
+    expect: src => src.includes('"a": __req("a") }') && !src.includes('__req("a").'),
   },
   { name: 'default export is refused', files: { 'a': `export default 1;` }, entry: 'a', throws: /default export/ },
   { name: 'export * is refused', files: { 'a': `export * from './b.js';` }, entry: 'a', throws: /export \*/ },
@@ -284,9 +306,23 @@ if (cmd === 'engine') {
   }
   const entry = mods.find(m => m.id === 'index') ?? mods.find(m => m.id === 'page/index');
   if (!entry) { console.error('no engine/index.js entry point'); process.exit(1); }
-  const src = link(mods, entry.id);
+  // Only what the entry can reach: a page imports the entry, so anything it
+  // cannot reach is dead weight that would still have to be parsed.
+  const byId = new Map(mods.map(m => [m.id, m]));
+  const reach = new Set();
+  const visit = id => {
+    if (reach.has(id)) return;
+    reach.add(id);
+    for (const d of byId.get(id)?.deps ?? []) visit(d);
+  };
+  visit(entry.id);
+  const used = mods.filter(m => reach.has(m.id));
+  const src = link(used, entry.id);
   await writeFile('engine/unfold.js', src);
-  console.log(`engine/unfold.js — ${mods.length} modules, ${(src.length / 1024).toFixed(1)} KB`);
+  console.log(`engine/unfold.js — entry ${entry.id}, ${used.length} modules, ` +
+              `${(src.length / 1024).toFixed(1)} KB; exports ${entry.exports.join(', ')}`);
+  const left = mods.filter(m => !reach.has(m.id)).map(m => m.id);
+  if (left.length) console.log(`  not reachable from ${entry.id}, left out: ${left.join(', ')}`);
   process.exit(0);
 }
 
@@ -307,9 +343,15 @@ if (cmd === 'page') {
     const links = [...doc.matchAll(/<link[^>]+rel=["']stylesheet["'][^>]*>/g)];
     for (const [tag] of links) {
       const href = /href=["']([^"']+)["']/.exec(tag)?.[1];
-      if (!href || /^https?:/.test(href)) continue;
-      const css = await readFile(href, 'utf8').catch(() => null);
-      if (css != null) doc = doc.replace(tag, `<style>\n${css}\n</style>`);
+      if (!href || /^(?:https?:|data:)/.test(href)) continue;
+      // Relative to the page, not to wherever this was run from; and a local
+      // stylesheet that cannot be read is an error, not a link left behind in
+      // a file that claims to be standalone.
+      const file = join(dirname(arg), href.replace(/[?#].*$/, ''));
+      const css = await readFile(file, 'utf8').catch(() => {
+        throw new Error(`${arg}: cannot read stylesheet ${href} (looked for ${file})`);
+      });
+      doc = doc.replace(tag, () => `<style>\n${css}\n</style>`);
     }
     const scripts = [...doc.matchAll(/<script[^>]*type=["']module["'][^>]*>([\s\S]*?)<\/script>/g)];
     for (const [tag, body] of scripts) {

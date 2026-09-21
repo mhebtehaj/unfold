@@ -17,4 +17,12 @@ import './viewport.test.mjs';
 import './controls.test.mjs';
 import './probe.test.mjs';
 
+// Layer 1 — render
+import './palette.test.mjs';
+
+// The stylesheet, and Layer 4 — page
+import './unfold-css.test.mjs';
+import './shell.test.mjs';
+import './home.test.mjs';
+
 export { runAll, format, suites } from './harness.mjs';

@@ -43,6 +43,9 @@ const TEXT_PAIRS = {
     ['--fg', '--bg'], ['--muted', '--bg'], ['--fg', '--card'], ['--muted', '--card'],
     ['--violet', '--bg'], ['--teal', '--bg'], ['--orange', '--bg'],
     ['--good', '--bg'], ['--bad', '--bg'], ['--warning', '--bg'],
+    // engine/unfold.css names (--card became --surface)
+    ['--fg', '--surface'], ['--muted', '--surface'], ['--accent', '--bg'],
+    ['--violet', '--surface'], ['--teal', '--surface'], ['--orange', '--surface'],
   ],
   frame: [
     ['--foreground', '--background'],
@@ -103,17 +106,11 @@ suite('tokens/contrast', ({ test, known }) => {
     assert.equal(over([255, 255, 255, 0], [10, 20, 30]), [10, 20, 30]);
   });
 
-  // ---------------------------------------------------------------- debts --
-  // Declared, not ignored. These fail today; each is a line item the engine
-  // work is committed to fixing. If one starts passing, the run fails and the
-  // marker must be removed.
-
-  known('--orange on --bg meets AA in light mode',
-        'Measured 3.96:1 on the real #faf9f6 background (the 4.17:1 figure in the ' +
-        'inventory was computed against pure white). It is the homepage "Explore ↗" ' +
-        'colour. Proposed #a35c37 = 4.81:1, which also matches the perceived weight ' +
-        'of --violet (4.90) and --teal (4.82) so no page shouts.',
-        async () => {
+  // Was a tracked debt until Phase 2: #b46942 measured 3.96:1 here (4.17:1 on
+  // the white tile, the figure the inventory quoted). engine/unfold.css now
+  // gives #a35c37 — same hue and chroma, lower lightness — 4.81:1 on this
+  // ground and 5.07:1 on the tile, level with --teal and --violet.
+  test('--orange on --bg meets AA in light mode', async () => {
     const t = await tokens();
     const set = t['index.html:main:light'];
     assert.ok(set, 'index light tokens missing');
@@ -123,11 +120,18 @@ suite('tokens/contrast', ({ test, known }) => {
     assert.ok(ratio >= AA, `--orange on --bg is ${ratio.toFixed(2)}:1, want >= ${AA}`);
   });
 
+  // ---------------------------------------------------------------- debts --
+  // Declared, not ignored. These fail today; each is a line item the engine
+  // work is committed to fixing. If one starts passing, the run fails and the
+  // marker must be removed.
+
   known('token vocabularies agree across the author/widget seam',
         'Three names mean the opposite thing either side of the iframe: --muted is ' +
         'secondary TEXT in the author pages but a 10%-alpha SURFACE tint in the ' +
         'widget; --card is an opaque raised surface vs a 5% tint; --accent is a ' +
-        'foreground blue vs an accent background. Unifying the token set is Phase 2.',
+        'foreground blue vs an accent background. The author side is unified in ' +
+        'engine/unfold.css (Phase 2); the widget side joins it when the ambiguity ' +
+        'page is de-iframed (Phase 5).',
         async () => {
     const t = await tokens();
     const main = t['index.html:main:light'];
@@ -176,7 +180,7 @@ suite('tokens/contrast', ({ test, known }) => {
   // ------------------------------------------------------------- the gate --
   test('all other text tokens meet AA in both schemes', async () => {
     const t = await tokens();
-    const OWNED = new Set(['--orange', '--muted-foreground']);   // tracked above
+    const OWNED = new Set(['--muted-foreground']);   // tracked above
     const failures = [];
     for (const [key, set] of Object.entries(t)) {
       const [, where] = key.split(':');

@@ -22,7 +22,9 @@
 //
 //   I3  Colour literals live in exactly one file. No hex, rgb(, hsl( or
 //       light-dark( outside render/palette.js. Colour reaches the DOM only as
-//       var(--token) or color-mix().
+//       var(--token) or color-mix(). The stylesheet gets the CSS form of the
+//       same rule: in engine/*.css a colour literal may appear only in a
+//       custom-property declaration -- a token -- never in a component rule.
 //
 //   I4  One forced layout per frame. Only core/viewport.js may call
 //       getBoundingClientRect, getBBox, clientWidth or clientHeight.
@@ -71,6 +73,41 @@ const COLOUR_RE = [
   { name: 'hsl()', re: /\bhsla?\s*\(/g },
   { name: 'light-dark()', re: /\blight-dark\s*\(/g },
 ];
+
+// Any CSS colour spelled out rather than named by a token: hex, a colour
+// function, or one of the 148 named colours. color-mix() is not here -- it is
+// how a component derives from tokens -- and neither are the relative forms,
+// rgb(from var(--x) ...), for the same reason, or the system colours that
+// forced-colors blocks are meant to use.
+const CSS_NAMED = ('aliceblue antiquewhite aqua aquamarine azure beige bisque black blanchedalmond ' +
+  'blue blueviolet brown burlywood cadetblue chartreuse chocolate coral cornflowerblue cornsilk ' +
+  'crimson cyan darkblue darkcyan darkgoldenrod darkgray darkgreen darkgrey darkkhaki darkmagenta ' +
+  'darkolivegreen darkorange darkorchid darkred darksalmon darkseagreen darkslateblue darkslategray ' +
+  'darkslategrey darkturquoise darkviolet deeppink deepskyblue dimgray dimgrey dodgerblue firebrick ' +
+  'floralwhite forestgreen fuchsia gainsboro ghostwhite gold goldenrod gray green greenyellow grey ' +
+  'honeydew hotpink indianred indigo ivory khaki lavender lavenderblush lawngreen lemonchiffon ' +
+  'lightblue lightcoral lightcyan lightgoldenrodyellow lightgray lightgreen lightgrey lightpink ' +
+  'lightsalmon lightseagreen lightskyblue lightslategray lightslategrey lightsteelblue lightyellow ' +
+  'lime limegreen linen magenta maroon mediumaquamarine mediumblue mediumorchid mediumpurple ' +
+  'mediumseagreen mediumslateblue mediumspringgreen mediumturquoise mediumvioletred midnightblue ' +
+  'mintcream mistyrose moccasin navajowhite navy oldlace olive olivedrab orange orangered orchid ' +
+  'palegoldenrod palegreen paleturquoise palevioletred papayawhip peachpuff peru pink plum ' +
+  'powderblue purple rebeccapurple red rosybrown royalblue saddlebrown salmon sandybrown seagreen ' +
+  'seashell sienna silver skyblue slateblue slategray slategrey snow springgreen steelblue tan teal ' +
+  'thistle tomato turquoise violet wheat white whitesmoke yellow yellowgreen').split(' ');
+const CSS_COLOUR_RE = new RegExp(
+  '#[0-9a-f]{3,8}(?![\\w-])' +
+  '|\\b(?:rgba?|hsla?|hwb|lab|lch|oklab|oklch|color|light-dark)\\s*\\((?!\\s*from\\b)' +
+  `|(?<![\\w-])(?:${CSS_NAMED.join('|')})(?![\\w-])`, 'i');
+
+// A token block defines tokens: its selectors are :root, html, or attribute
+// selectors on data-* ([data-ground=paper], [data-hue=teal]). Only there may a
+// custom property be given a literal; everywhere else a colour is a var().
+const TOKEN_SELECTOR = /^(?::root|html)?(?:\[data-[\w-]+(?:[~|^$*]?=(?:"[^"]*"|'[^']*'|[^\]]*))?\])*$/;
+const isTokenBlock = prelude => prelude.split(',').every(sel => {
+  const s = sel.trim();
+  return s !== '' && TOKEN_SELECTOR.test(s);
+});
 
 // ------------------------------------------------------------------ helpers --
 const IMPORT_RE =
@@ -142,6 +179,58 @@ function orderOf(id) {
 /** Line number of the first match, for readable output. */
 const lineOf = (src, index) => src.slice(0, index).split('\n').length;
 
+/**
+ * I3 for a stylesheet. Comments, strings and url() bodies are blanked first --
+ * keeping every offset, so line numbers stay true -- because '#abc' in content
+ * or url(#fade) is not a colour. The rest is a small brace walk: a segment
+ * that ends at `{` opens a rule or at-rule, one that ends at `;` or `}` is a
+ * declaration of the innermost open block, which is what makes nested rules
+ * and @media bodies work without a real CSS parser.
+ */
+function checkCss(path, src, add) {
+  const keep = m => m.replace(/[^\n]/g, ' ');
+  const text = src
+    .replace(/\/\*[\s\S]*?\*\//g, keep)
+    .replace(/"(?:[^"\\\n]|\\.)*"|'(?:[^'\\\n]|\\.)*'/g, m => m[0] + keep(m.slice(1, -1)) + m[0])
+    .replace(/\burl\(([^)]*)\)/gi, (m, body) => 'url(' + keep(body) + ')');
+
+  const stack = [];
+  let seg = 0;
+  const declaration = (from, to) => {
+    const block = stack[stack.length - 1];
+    if (!block) return;                                   // a top-level statement
+    const decl = text.slice(from, to);
+    const colon = decl.indexOf(':');
+    if (colon <= 0) return;
+    const prop = decl.slice(0, colon).trim();
+    const hit = CSS_COLOUR_RE.exec(decl.slice(colon + 1));
+    if (!hit) return;
+    const custom = prop.startsWith('--');
+    const allowed = (custom && block.tokens) || (block.property && prop === 'initial-value');
+    if (allowed) return;
+    add('I3', path, lineOf(src, from + colon + 1 + hit.index),
+        custom
+          ? `\`${prop}\` gives a token a literal (${hit[0]}) outside a token block — define tokens in :root or [data-*]`
+          : `\`${prop}\` spells a colour (${hit[0]}) — name a token (var(--x)) instead`);
+  };
+
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (c === '{') {
+      const prelude = text.slice(seg, i).trim();
+      stack.push({ tokens: isTokenBlock(prelude), property: /^@property\b/i.test(prelude) });
+      seg = i + 1;
+    } else if (c === ';') {
+      declaration(seg, i);
+      seg = i + 1;
+    } else if (c === '}') {
+      declaration(seg, i);
+      stack.pop();
+      seg = i + 1;
+    }
+  }
+}
+
 // ------------------------------------------------------------------- rules --
 /**
  * @param {{path:string, src:string}[]} files
@@ -153,6 +242,7 @@ export function check(files) {
   const add = (rule, file, line, msg) => problems.push({ rule, file, line, msg });
 
   for (const { path, src } of files) {
+    if (path.endsWith('.css')) { checkCss(path, src, add); continue; }
     const id = idOf(path);
     const layer = layerOf(id);
     const text = blank(src, { strings: false });   // strings kept: imports, colours
@@ -247,7 +337,8 @@ async function walk(dir, out = []) {
   for (const e of entries) {
     const p = join(dir, e.name);
     if (e.isDirectory()) await walk(p, out);
-    else if (/\.m?js$/.test(e.name)) out.push(p);
+    // engine/unfold.js is generated by tools/bundle.mjs, not a module of the layering.
+    else if (/\.(m?js|css)$/.test(e.name) && p !== join('engine', 'unfold.js')) out.push(p);
   }
   return out;
 }
@@ -289,6 +380,31 @@ const FIXTURES = [
     files: [{ path: 'engine/core/vec.js', src: 'export const LAYER = 2;' }] },
   { name: 'unlisted module', expect: ['manifest'],
     files: [{ path: 'engine/core/mystery.js', src: 'export const LAYER = 0;' }] },
+  { name: 'css: literals in token blocks, tokens everywhere else', expect: [],
+    files: [{ path: 'engine/unfold.css', src:
+      ':root{--x:light-dark(#fff,#000);--y:#123456}\n[data-ground=paper]{--x:#faf9f6}\n' +
+      ':root[data-hue=teal],html{--z:rgb(1 2 3)}\n/* #ff0000 in a comment */\n' +
+      '.a{color:var(--x);border-color:color-mix(in oklab,var(--y) 20%,transparent)}\n' +
+      '.b{content:"#abc";mask:url(#fade);background:rgb(from var(--x) r g b)}\n' +
+      '.c{color:var(--violet);border:1px solid currentColor}\n' +
+      '@property --c{syntax:"<color>";initial-value:#fff;inherits:false}\n' +
+      'a:hover{color:var(--y)}\n@media(max-width:600px){:root{--y:#654321}.a{outline:2px solid var(--x)}}' }] },
+  { name: 'css: literal in a component rule', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: ':root{--x:#fff}\n.a{color:#ff0000}' }] },
+  { name: 'css: literal inside a media query', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: '@media(prefers-color-scheme:dark){.a{background:rgb(0 0 0)}}' }] },
+  { name: 'css: a colour function inside a shorthand', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: '.a{border:1px solid light-dark(#fff,#000)}' }] },
+  { name: 'css: a named colour, in any case', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: '.a{background:White}' }] },
+  { name: 'css: an upper-case function', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: '.a{color:RGB(0 0 0)}' }] },
+  { name: 'css: a declaration beside a nested rule', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: '.a{color:#f00;&:hover{color:var(--x)}}' }] },
+  { name: 'css: a component giving a token a literal', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: '.uf-tile{--c:#f00;color:var(--c)}' }] },
+  { name: 'css: a literal on a real property of :root', expect: ['I3'],
+    files: [{ path: 'engine/unfold.css', src: ':root{--x:#fff;background:#fff}' }] },
 ];
 
 function selfTest() {
@@ -352,8 +468,11 @@ if (!files.length) {
   process.exit(0);
 }
 
+const sheets = files.filter(f => f.path.endsWith('.css')).length;
+const modules = files.length - sheets;
 if (!problems.length) {
-  console.log(`${files.length} modules, all invariants hold (${FIXTURES.length} self-test fixtures pass)`);
+  console.log(`${modules} modules and ${sheets} stylesheet(s), all invariants hold ` +
+              `(${FIXTURES.length} self-test fixtures pass)`);
   process.exit(0);
 }
 
@@ -363,5 +482,5 @@ for (const [rule, list] of Object.entries(byRule)) {
   console.log(`\n${rule}  (${list.length})`);
   for (const p of list) console.log(`  ${p.file}:${p.line}  ${p.msg}`);
 }
-console.log(`\n${problems.length} problem(s) across ${files.length} modules`);
+console.log(`\n${problems.length} problem(s) across ${modules} modules and ${sheets} stylesheet(s)`);
 process.exit(1);

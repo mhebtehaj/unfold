@@ -320,7 +320,7 @@
      "tag": "path",
      "d": "M130 25L54 85L130 145L206 85Z",
      "paint": {
-      "fill": "rgb(180, 105, 66)",
+      "fill": "rgb(163, 92, 55)",
       "stroke": "none",
       "stroke-dasharray": "none",
       "opacity": "0.07"
@@ -332,7 +332,7 @@
      "d": "M130 25L54 85L130 145L206 85ZM54 85L130 67L206 85M130 25V145",
      "paint": {
       "fill": "none",
-      "stroke": "rgb(180, 105, 66)",
+      "stroke": "rgb(163, 92, 55)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none",
       "opacity": "0.3"
@@ -344,7 +344,7 @@
      "d": "M54 85L130 103L206 85M130 25L130 103L130 145",
      "paint": {
       "fill": "none",
-      "stroke": "rgb(180, 105, 66)",
+      "stroke": "rgb(163, 92, 55)",
       "stroke-width": "2.5px",
       "stroke-dasharray": "none"
      }
@@ -355,7 +355,7 @@
      "d": "M54 85L130 25L206 85",
      "paint": {
       "fill": "none",
-      "stroke": "rgb(180, 105, 66)",
+      "stroke": "rgb(163, 92, 55)",
       "stroke-width": "2.5px",
       "stroke-dasharray": "none"
      }
@@ -367,7 +367,7 @@
      "cy": "25",
      "r": "5",
      "paint": {
-      "fill": "rgb(180, 105, 66)",
+      "fill": "rgb(163, 92, 55)",
       "stroke": "none",
       "stroke-dasharray": "none"
      }
@@ -379,7 +379,7 @@
      "cy": "85",
      "r": "5",
      "paint": {
-      "fill": "rgb(180, 105, 66)",
+      "fill": "rgb(163, 92, 55)",
       "stroke": "none",
       "stroke-dasharray": "none"
      }
@@ -391,7 +391,7 @@
      "cy": "103",
      "r": "5",
      "paint": {
-      "fill": "rgb(180, 105, 66)",
+      "fill": "rgb(163, 92, 55)",
       "stroke": "none",
       "stroke-dasharray": "none"
      }
@@ -403,7 +403,7 @@
      "cy": "85",
      "r": "5",
      "paint": {
-      "fill": "rgb(180, 105, 66)",
+      "fill": "rgb(163, 92, 55)",
       "stroke": "none",
       "stroke-dasharray": "none"
      }
@@ -415,7 +415,7 @@
      "cy": "145",
      "r": "5",
      "paint": {
-      "fill": "rgb(180, 105, 66)",
+      "fill": "rgb(163, 92, 55)",
       "stroke": "none",
       "stroke-dasharray": "none"
      }
