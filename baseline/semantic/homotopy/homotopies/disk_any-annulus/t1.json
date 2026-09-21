@@ -1,0 +1,769 @@
+{
+ "scenes": [
+  {
+   "id": "source",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Input space. Click or drag on a colored point to select it. Arrow keys move the selection; Escape clears it.",
+   "size": [
+    462.8,
+    190
+   ],
+   "bbox": [
+    158.5,
+    17,
+    146,
+    146
+   ],
+   "counts": {
+    "polygon": 1152
+   },
+   "probe": {},
+   "groups": {
+    "polygon": {
+     "n": 1152,
+     "digest": "84beaa6faebf7471",
+     "samples": [
+      {
+       "i": 0,
+       "tag": "polygon",
+       "points": "231.5,90 237.58,90 237.57,89.6 231.5,90",
+       "paint": {
+        "fill": "rgb(184, 185, 189)",
+        "stroke": "rgb(184, 185, 189)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 105,
+       "tag": "polygon",
+       "points": "236.56,86.62 241.62,83.24 241.15,82.59 236.33,86.3",
+       "paint": {
+        "fill": "rgb(181, 175, 190)",
+        "stroke": "rgb(181, 175, 190)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 209,
+       "tag": "polygon",
+       "points": "236.88,79.09 239.57,73.63 238.48,73.14 236.16,78.76",
+       "paint": {
+        "fill": "rgb(190, 164, 192)",
+        "stroke": "rgb(190, 164, 192)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 314,
+       "tag": "polygon",
+       "points": "229.12,71.91 228.32,65.87 226.75,66.13 227.94,72.1",
+       "paint": {
+        "fill": "rgb(194, 154, 174)",
+        "stroke": "rgb(194, 154, 174)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 419,
+       "tag": "polygon",
+       "points": "215.46,71.71 211.44,67.13 209.99,68.49 214.29,72.79",
+       "paint": {
+        "fill": "rgb(197, 145, 142)",
+        "stroke": "rgb(197, 145, 142)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 523,
+       "tag": "polygon",
+       "points": "202.7,80.22 196.94,78.27 196.24,80.55 202.12,82.13",
+       "paint": {
+        "fill": "rgb(200, 169, 130)",
+        "stroke": "rgb(200, 169, 130)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 628,
+       "tag": "polygon",
+       "points": "196.24,99.45 190.37,101.02 191.18,103.69 196.94,101.73",
+       "paint": {
+        "fill": "rgb(194, 204, 118)",
+        "stroke": "rgb(194, 204, 118)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 732,
+       "tag": "polygon",
+       "points": "201.39,120.11 197.09,124.41 199.41,126.59 203.42,122.02",
+       "paint": {
+        "fill": "rgb(145, 209, 105)",
+        "stroke": "rgb(145, 209, 105)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 837,
+       "tag": "polygon",
+       "points": "222.01,137.73 220.82,143.7 224.35,144.28 225.15,138.25",
+       "paint": {
+        "fill": "rgb(91, 214, 113)",
+        "stroke": "rgb(91, 214, 113)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 942,
+       "tag": "polygon",
+       "points": "252.45,140.58 254.78,146.2 258.41,144.56 255.72,139.1",
+       "paint": {
+        "fill": "rgb(77, 220, 183)",
+        "stroke": "rgb(77, 220, 183)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1046,
+       "tag": "polygon",
+       "points": "279.76,127.03 284.59,130.74 287.14,127.18 282.08,123.8",
+       "paint": {
+        "fill": "rgb(62, 187, 227)",
+        "stroke": "rgb(62, 187, 227)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1151,
+       "tag": "polygon",
+       "points": "298.27,94.38 304.34,94.77 304.5,90 298.42,90",
+       "paint": {
+        "fill": "rgb(46, 83, 234)",
+        "stroke": "rgb(46, 83, 234)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "start",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Starting map, fixed at time zero. Click a colored point to select its input.",
+   "size": [
+    462.81,
+    190
+   ],
+   "bbox": [
+    158.5,
+    16.96,
+    146,
+    146.07
+   ],
+   "counts": {
+    "path": 2,
+    "polygon": 1152,
+    "circle": 3
+   },
+   "probe": {},
+   "groups": {
+    "path": {
+     "n": 2,
+     "marks": [
+      {
+       "i": 0,
+       "tag": "path",
+       "d": "M158.5,90a73,73 0 1,0 146,0a73,73 0 1,0 -146,0 M198.65,90a32.85,32.85 0 1,0 65.7,0a32.85,32.85 0 1,0 -65.7,0",
+       "paint": {
+        "fill": "rgb(240, 242, 245)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1155,
+       "tag": "path",
+       "d": "M0,6L6,0",
+       "paint": {
+        "stroke": "rgb(174, 182, 193)",
+        "stroke-width": "0.6px",
+        "stroke-dasharray": "none",
+        "opacity": "0.5"
+       }
+      }
+     ]
+    },
+    "polygon": {
+     "n": 1152,
+     "digest": "f5470e8e2b0a48c2",
+     "samples": [
+      {
+       "i": 1,
+       "tag": "polygon",
+       "points": "284.43,90 282.96,77.64 283.06,77.65 284.43,90",
+       "paint": {
+        "fill": "rgb(184, 185, 189)",
+        "stroke": "rgb(184, 185, 189)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 106,
+       "tag": "polygon",
+       "points": "284.21,79.54 281.91,69.17 282.42,70.02 284.38,80",
+       "paint": {
+        "fill": "rgb(181, 175, 190)",
+        "stroke": "rgb(181, 175, 190)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 210,
+       "tag": "polygon",
+       "points": "285.84,78.51 285.6,72.51 286.4,74.78 286.22,80.02",
+       "paint": {
+        "fill": "rgb(190, 164, 192)",
+        "stroke": "rgb(190, 164, 192)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 315,
+       "tag": "polygon",
+       "points": "288.52,95.28 289.77,97.2 289.16,100.72 288.18,97.87",
+       "paint": {
+        "fill": "rgb(194, 154, 174)",
+        "stroke": "rgb(194, 154, 174)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 420,
+       "tag": "polygon",
+       "points": "278.1,123.37 273.16,130.95 270.57,132.98 276.35,125.27",
+       "paint": {
+        "fill": "rgb(197, 145, 142)",
+        "stroke": "rgb(197, 145, 142)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 524,
+       "tag": "polygon",
+       "points": "255.8,139.64 244.32,144.25 242.75,144.03 254.49,139.76",
+       "paint": {
+        "fill": "rgb(200, 169, 130)",
+        "stroke": "rgb(200, 169, 130)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 629,
+       "tag": "polygon",
+       "points": "241.82,139.59 230.38,140.27 231.95,139.64 243.03,138.77",
+       "paint": {
+        "fill": "rgb(194, 204, 118)",
+        "stroke": "rgb(194, 204, 118)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 733,
+       "tag": "polygon",
+       "points": "249.49,132.01 242.03,133.41 245.72,131.79 252.52,130.06",
+       "paint": {
+        "fill": "rgb(145, 209, 105)",
+        "stroke": "rgb(145, 209, 105)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 838,
+       "tag": "polygon",
+       "points": "270.2,104.91 268.16,106.1 269.88,100.9 271.6,100.07",
+       "paint": {
+        "fill": "rgb(91, 214, 113)",
+        "stroke": "rgb(91, 214, 113)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 943,
+       "tag": "polygon",
+       "points": "259.58,60.42 255.96,59.07 251.59,55.61 255.83,56.83",
+       "paint": {
+        "fill": "rgb(77, 220, 183)",
+        "stroke": "rgb(77, 220, 183)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1047,
+       "tag": "polygon",
+       "points": "218.55,47.91 211.37,51.84 207.23,53.3 214.53,48.52",
+       "paint": {
+        "fill": "rgb(62, 187, 227)",
+        "stroke": "rgb(62, 187, 227)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1152,
+       "tag": "polygon",
+       "points": "187.42,62.65 182.35,73.7 181.17,73.65 186.37,62.35",
+       "paint": {
+        "fill": "rgb(46, 83, 234)",
+        "stroke": "rgb(46, 83, 234)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "circle": {
+     "n": 3,
+     "marks": [
+      {
+       "i": 1153,
+       "tag": "circle",
+       "cx": "231.5",
+       "cy": "90",
+       "r": "73",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(174, 182, 193)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1154,
+       "tag": "circle",
+       "cx": "231.5",
+       "cy": "90",
+       "r": "32.85",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(174, 182, 193)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1156,
+       "tag": "circle",
+       "cx": "231.5",
+       "cy": "90",
+       "r": "32.85",
+       "paint": {
+        "fill": "url(\"#hole-start\")",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "now",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Current map. Click or drag on a colored point to select its input.",
+   "size": [
+    462.81,
+    190
+   ],
+   "bbox": [
+    158.5,
+    16.96,
+    146,
+    168.04
+   ],
+   "counts": {
+    "path": 2,
+    "circle": 4,
+    "text": 1
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M158.5,90a73,73 0 1,0 146,0a73,73 0 1,0 -146,0 M198.65,90a32.85,32.85 0 1,0 65.7,0a32.85,32.85 0 1,0 -65.7,0",
+     "paint": {
+      "fill": "rgb(240, 242, 245)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "circle",
+     "cx": "284.43",
+     "cy": "90",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(37, 40, 45)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "text",
+     "x": "231.5",
+     "y": "182",
+     "text-anchor": "middle",
+     "text": "all inputs",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "12px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "32.85",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "path",
+     "d": "M0,6L6,0",
+     "paint": {
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "0.6px",
+      "stroke-dasharray": "none",
+      "opacity": "0.5"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "32.85",
+     "paint": {
+      "fill": "url(\"#hole-now\")",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Final map, fixed at time one. Click a colored point to select its input.",
+   "size": [
+    462.81,
+    190
+   ],
+   "bbox": [
+    158.5,
+    16.96,
+    146,
+    168.04
+   ],
+   "counts": {
+    "path": 2,
+    "circle": 4,
+    "text": 1
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M158.5,90a73,73 0 1,0 146,0a73,73 0 1,0 -146,0 M198.65,90a32.85,32.85 0 1,0 65.7,0a32.85,32.85 0 1,0 -65.7,0",
+     "paint": {
+      "fill": "rgb(240, 242, 245)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "circle",
+     "cx": "284.43",
+     "cy": "90",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(37, 40, 45)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "text",
+     "x": "231.5",
+     "y": "182",
+     "text-anchor": "middle",
+     "text": "all inputs",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "12px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "32.85",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "path",
+     "d": "M0,6L6,0",
+     "paint": {
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "0.6px",
+      "stroke-dasharray": "none",
+      "opacity": "0.5"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "32.85",
+     "paint": {
+      "fill": "url(\"#hole-end\")",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Homotopy explorer"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Category"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Example"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Target Y"
+  },
+  {
+   "tag": "button",
+   "id": "play",
+   "text": "↻ Replay"
+  },
+  {
+   "tag": "output",
+   "id": "time-value",
+   "text": "1.00"
+  },
+  {
+   "tag": "button",
+   "id": "connect",
+   "text": "Connect points"
+  },
+  {
+   "tag": "p",
+   "id": "example-note",
+   "text": "Every continuous map f from a disk to Y can shrink to a constant: H(x,t) = f((1−t)x)."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "X = filled disk"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Input x"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Y = ring (annulus)"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Start f₀(x)"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Now fₜ(x)"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "End f₁(x)"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Same color = same input. Click or drag on a colored shape to circle corresponding points."
+  },
+  {
+   "tag": "span",
+   "id": "selection-note",
+   "text": "The hatched hole is not part of Y."
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "Why?"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Move the input x toward the disk’s center, then apply the original map f. At t = 0 this gives f(x); at t = 1 every input gives f(0)."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "This works for any target space Y and any continuous starting map f: disk → Y. The outputs stay in Y because they are always outputs of f. You are deforming the map; Y itself stays fixed."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "The selector shows four sample maps. For the circle target, several inputs share each output; circle an input in X to follow its color."
+  }
+ ],
+ "controls": [
+  {
+   "k": "category",
+   "type": "select-one",
+   "v": "homotopies"
+  },
+  {
+   "k": "example",
+   "type": "select-one",
+   "v": "disk_any"
+  },
+  {
+   "k": "disk-target",
+   "type": "select-one",
+   "v": "annulus"
+  },
+  {
+   "k": "time",
+   "type": "range",
+   "v": "1"
+  },
+  {
+   "k": "connect",
+   "type": "button",
+   "v": "false"
+  }
+ ],
+ "a11y": {
+  "liveRegions": 2,
+  "tablists": 0,
+  "tabs": 0,
+  "focusable": 25,
+  "headings": [
+   "H1:Homotopy explorer",
+   "H2:Input x",
+   "H2:Start f₀(x)",
+   "H2:Now fₜ(x)",
+   "H2:End f₁(x)",
+   "H2:x · t = 0",
+   "H2:f(x)",
+   "H2:Hₜ(x)",
+   "H2:g(f(x)) · t = 1",
+   "H2:f(x) · copy"
+  ],
+  "imgRoleOnInteractive": 9
+ },
+ "title": "Homotopy explorer · Unfold"
+}

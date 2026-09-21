@@ -1,0 +1,118 @@
+{
+ "main": {
+  "scheme": "dark",
+  "tokens": {
+   "--accent": {
+    "authored": "light-dark(#386acf,#96b5ff)",
+    "resolved": "rgb(150, 181, 255)",
+    "srgb": [
+     150,
+     181,
+     255,
+     1
+    ]
+   },
+   "--bad": {
+    "authored": "light-dark(#b23329,#ff9e92)",
+    "resolved": "rgb(255, 158, 146)",
+    "srgb": [
+     255,
+     158,
+     146,
+     1
+    ]
+   },
+   "--bg": {
+    "authored": "light-dark(#fff,#181818)",
+    "resolved": "rgb(24, 24, 24)",
+    "srgb": [
+     24,
+     24,
+     24,
+     1
+    ]
+   },
+   "--border": {
+    "authored": "light-dark(#dfe2e7,#393d45)",
+    "resolved": "rgb(57, 61, 69)",
+    "srgb": [
+     57,
+     61,
+     69,
+     1
+    ]
+   },
+   "--fg": {
+    "authored": "light-dark(#25282d,#efeff2)",
+    "resolved": "rgb(239, 239, 242)",
+    "srgb": [
+     239,
+     239,
+     242,
+     1
+    ]
+   },
+   "--good": {
+    "authored": "light-dark(#2a745d,#8fceae)",
+    "resolved": "rgb(143, 206, 174)",
+    "srgb": [
+     143,
+     206,
+     174,
+     1
+    ]
+   },
+   "--gray": {
+    "authored": "light-dark(#cbd0d9,#606773)",
+    "resolved": "rgb(96, 103, 115)",
+    "srgb": [
+     96,
+     103,
+     115,
+     1
+    ]
+   },
+   "--muted": {
+    "authored": "light-dark(#626873,#a8adb6)",
+    "resolved": "rgb(168, 173, 182)",
+    "srgb": [
+     168,
+     173,
+     182,
+     1
+    ]
+   },
+   "--purple": {
+    "authored": "light-dark(#7961ba,#b7a0f0)",
+    "resolved": "rgb(183, 160, 240)",
+    "srgb": [
+     183,
+     160,
+     240,
+     1
+    ]
+   },
+   "--soft": {
+    "authored": "light-dark(#f3f4f7,#272a32)",
+    "resolved": "rgb(39, 42, 50)",
+    "srgb": [
+     39,
+     42,
+     50,
+     1
+    ]
+   },
+   "--zone": {
+    "authored": "light-dark(#a890df33,#a88bea30)",
+    "resolved": "rgba(168, 139, 234, 0.19)",
+    "srgb": [
+     170,
+     138,
+     234,
+     0.1882
+    ]
+   }
+  }
+ },
+ "frame": null
+}

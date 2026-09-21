@@ -1,0 +1,714 @@
+{
+ "scenes": [
+  {
+   "id": "solid-left",
+   "viewBox": "0 0 551 350",
+   "role": "img",
+   "ariaLabel": "Rotatable three dimensional prism. Drag or use arrow keys to rotate. Click the time slice to choose an input point.",
+   "size": [
+    551.33,
+    350
+   ],
+   "bbox": [
+    106.23,
+    70.62,
+    338.55,
+    284.13
+   ],
+   "counts": {
+    "path": 15,
+    "circle": 4,
+    "text": 2
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M106.22680954430663,240.3186819062442L325.1661070847168,177.8015869385901",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M325.1661070847168,177.8015869385901L444.77319045569334,292.2383616740122",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M136.12858038705076,268.9278755900997L355.0678779274609,206.41078062244563",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "366.72",
+     "cy": "224.28",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(206, 59, 84)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "path",
+     "d": "M270.43128269961426,193.43086068050363L390.0383660705908,307.86763541592575",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "path",
+     "d": "M215.69645831451172,209.06013442241715L335.3035416854883,323.49690915783924",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "path",
+     "d": "M166.03035122979492,297.53706927395524L384.9696487702051,235.01997430630115",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "path",
+     "d": "M184.27529269149574,276.37572502772866L366.72470730850426,224.27814588801692",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(57, 121, 223)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "path",
+     "d": "M366.72470730850426,224.27814588801692L366.72470730850426,73.62427497227135",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(206, 59, 84)",
+      "stroke-width": "1.2px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.55"
+     }
+    },
+    {
+     "i": 9,
+     "tag": "path",
+     "d": "M160.96163392940917,224.68940816433067L280.56871730038574,339.1261828997528",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 10,
+     "tag": "path",
+     "d": "M195.93212207253904,326.1462629578108L414.87141961294924,263.6291679901567",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 11,
+     "tag": "path",
+     "d": "M106.22680954430663,240.3186819062442L225.83389291528317,354.75545664166634",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 12,
+     "tag": "circle",
+     "cx": "184.28",
+     "cy": "276.38",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(59, 157, 206)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 13,
+     "tag": "path",
+     "d": "M184.27529269149574,276.37572502772866L366.72470730850426,224.27814588801692L366.72470730850426,73.62427497227135L184.27529269149574,125.72185411198308Z",
+     "paint": {
+      "fill": "rgb(121, 97, 186)",
+      "stroke": "rgb(121, 97, 186)",
+      "stroke-width": "1.6px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.18",
+      "stroke-opacity": "0.18"
+     }
+    },
+    {
+     "i": 14,
+     "tag": "circle",
+     "cx": "366.72",
+     "cy": "73.62",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(206, 59, 84)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 15,
+     "tag": "path",
+     "d": "M225.83389291528317,354.75545664166634L444.77319045569334,292.2383616740122",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 16,
+     "tag": "path",
+     "d": "M184.27529269149574,276.37572502772866L184.27529269149574,125.72185411198308",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(59, 157, 206)",
+      "stroke-width": "1.2px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.55"
+     }
+    },
+    {
+     "i": 17,
+     "tag": "path",
+     "d": "M184.27529269149574,125.72185411198308L366.72470730850426,73.62427497227135",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(228, 138, 50)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 18,
+     "tag": "circle",
+     "cx": "184.28",
+     "cy": "125.72",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(59, 157, 206)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 19,
+     "tag": "text",
+     "x": "275.5",
+     "y": "82.67",
+     "text-anchor": "middle",
+     "text": "top copy of Z",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 20,
+     "tag": "text",
+     "x": "275.5",
+     "y": "273.33",
+     "text-anchor": "middle",
+     "text": "Z · edge",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    }
+   ]
+  },
+  {
+   "id": "solid-right",
+   "viewBox": "0 0 437 350",
+   "role": "img",
+   "ariaLabel": "Corresponding outputs, or a rotatable cone in the cylinder-to-cone example.",
+   "size": [
+    436.66,
+    350
+   ],
+   "bbox": [
+    49.23,
+    70.66,
+    338.55,
+    284.09
+   ],
+   "counts": {
+    "path": 15,
+    "circle": 4,
+    "text": 2
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "path",
+     "d": "M49.22680954430663,240.3186819062442L268.1661070847168,177.8015869385901",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M268.1661070847168,177.8015869385901L387.77319045569334,292.2383616740122",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M79.12858038705076,268.9278755900997L298.0678779274609,206.41078062244563",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "309.72",
+     "cy": "224.28",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(206, 59, 84)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "path",
+     "d": "M213.43128269961426,193.43086068050363L333.0383660705908,307.86763541592575",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "path",
+     "d": "M158.69645831451172,209.06013442241715L278.3035416854883,323.49690915783924",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "path",
+     "d": "M109.0303512297949,297.53706927395524L327.9696487702051,235.01997430630115",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "path",
+     "d": "M127.27529269149574,276.37572502772866L309.72470730850426,224.27814588801692",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(57, 121, 223)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "path",
+     "d": "M309.72470730850426,224.27814588801692L273.23482438510257,84.0437908002137",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(206, 59, 84)",
+      "stroke-width": "1.2px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.55"
+     }
+    },
+    {
+     "i": 9,
+     "tag": "path",
+     "d": "M103.96163392940916,224.68940816433067L223.56871730038574,339.1261828997528",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 10,
+     "tag": "path",
+     "d": "M138.93212207253904,326.1462629578108L357.87141961294924,263.6291679901567",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 11,
+     "tag": "path",
+     "d": "M49.22680954430663,240.3186819062442L168.83389291528317,354.75545664166634",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 12,
+     "tag": "circle",
+     "cx": "127.28",
+     "cy": "276.38",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(59, 157, 206)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 13,
+     "tag": "path",
+     "d": "M127.27529269149574,276.37572502772866L309.72470730850426,224.27814588801692L273.23482438510257,84.0437908002137L163.76517561489746,115.30233828404073Z",
+     "paint": {
+      "fill": "rgb(121, 97, 186)",
+      "stroke": "rgb(121, 97, 186)",
+      "stroke-width": "1.6px",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.18",
+      "stroke-opacity": "0.18"
+     }
+    },
+    {
+     "i": 14,
+     "tag": "circle",
+     "cx": "273.23",
+     "cy": "84.04",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(206, 59, 84)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 15,
+     "tag": "path",
+     "d": "M127.27529269149574,276.37572502772866L163.76517561489746,115.30233828404073",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(59, 157, 206)",
+      "stroke-width": "1.2px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.55"
+     }
+    },
+    {
+     "i": 16,
+     "tag": "path",
+     "d": "M168.83389291528317,354.75545664166634L387.77319045569334,292.2383616740122",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 208, 217)",
+      "stroke-width": "0.7px",
+      "stroke-dasharray": "none",
+      "stroke-opacity": "0.2"
+     }
+    },
+    {
+     "i": 17,
+     "tag": "path",
+     "d": "M163.76517561489746,115.30233828404073L273.23482438510257,84.0437908002137",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(228, 138, 50)",
+      "stroke-width": "2px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 18,
+     "tag": "circle",
+     "cx": "163.77",
+     "cy": "115.3",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(59, 157, 206)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "1.7px",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 19,
+     "tag": "text",
+     "x": "218.5",
+     "y": "82.67",
+     "text-anchor": "middle",
+     "text": "top copy of Z",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 20,
+     "tag": "text",
+     "x": "218.5",
+     "y": "273.33",
+     "text-anchor": "middle",
+     "text": "Z · edge",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "13px",
+      "display": "block"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Realizations & carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-carriers",
+   "text": "Carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-extensions",
+   "text": "Build a map"
+  },
+  {
+   "tag": "button",
+   "id": "tab-solids",
+   "text": "Prisms & cones"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Explore"
+  },
+  {
+   "tag": "button",
+   "id": "solid-reset",
+   "text": "Reset view"
+  },
+  {
+   "tag": "p",
+   "id": "solid-intro",
+   "text": "Keep the bottom copy of Z. Collapse the whole top copy to one point."
+  },
+  {
+   "tag": "h2",
+   "id": "solid-left-title",
+   "text": "Z × [0,1] · cylinder"
+  },
+  {
+   "tag": "h2",
+   "id": "solid-right-title",
+   "text": "Collapse the top copy of Z"
+  },
+  {
+   "tag": "button",
+   "id": "solid-play",
+   "text": "▶ Play"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Collapse λ0.40"
+  },
+  {
+   "tag": "p",
+   "id": "solid-hint",
+   "text": "Drag either shape to rotate both · arrow keys also rotate."
+  },
+  {
+   "tag": "p",
+   "id": "solid-equation",
+   "text": "Cone(Z) = (Z × [0,1]) / (Z × {1})"
+  },
+  {
+   "tag": "p",
+   "id": "solid-status",
+   "text": "The top is 60% of its original width. The identification happens at 1. The cone on an edge is a filled triangle."
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "What am I looking at?"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "A cylinder keeps a separate copy of Z at every height. The cone identifies every point at height 1 to the same apex. This is a quotient construction."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "For a circle base, there are no filled caps: the cylinder and cone here are surfaces. Choosing a filled disk includes every interior point and produces a solid cylinder or solid cone."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "The intermediate pictures show how the top approaches the identification. Here Cone(Z) names a space; C(A) in the other views names an assigned carrier region."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Carrier proof · pp. 21–22 · Cones · Hatcher, Chapter 0"
+  }
+ ],
+ "controls": [
+  {
+   "k": "solid-scene",
+   "type": "select-one",
+   "v": "cone"
+  },
+  {
+   "k": "solid-base",
+   "type": "select-one",
+   "v": "edge"
+  },
+  {
+   "k": "solid-progress",
+   "type": "range",
+   "v": "0.4"
+  }
+ ],
+ "a11y": {
+  "liveRegions": 0,
+  "tablists": 1,
+  "tabs": 4,
+  "focusable": 55,
+  "headings": [
+   "H1:Realizations & carriers",
+   "H2:Abstract complex Δ",
+   "H2:A drawing of |Δ|",
+   "H3:Point x",
+   "H3:Start f₀",
+   "H3:Image under f",
+   "H3:End f₁",
+   "H2:X · two triangles sharing bc",
+   "H2:Y · allowed regions and outputs",
+   "H2:Z × [0,1] · cylinder",
+   "H2:Collapse the top copy of Z"
+  ],
+  "imgRoleOnInteractive": 8
+ },
+ "title": "Realizations & carriers · Unfold"
+}

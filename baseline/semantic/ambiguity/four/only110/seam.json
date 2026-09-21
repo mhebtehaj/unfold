@@ -1,0 +1,433 @@
+{
+ "scenes": [
+  {
+   "id": "ev-scene",
+   "viewBox": "0 0 1248 470",
+   "role": "img",
+   "ariaLabel": "A 3D projection of a four-dimensional cross-polytope or its ambiguity complex. Extra sliders rotate into the fourth dimension.",
+   "size": [
+    1248,
+    470
+   ],
+   "bbox": [
+    497.35,
+    66.11,
+    246.45,
+    220.66
+   ],
+   "counts": {
+    "polygon": 4,
+    "line": 6,
+    "circle": 4,
+    "text": 4
+   },
+   "probe": {
+    "data-query-axis": "-1",
+    "data-yaw": "0.7200",
+    "data-pitch": "0.4300",
+    "data-space": "four",
+    "data-ambiguous-edges": "6",
+    "data-ambiguous-triangles": "4",
+    "data-ambiguity-faces": "[[],[1],[3],[1,3],[4],[1,4],[3,4],[1,3,4],[6],[1,6],[3,6],[1,3,6],[4,6],[1,4,6],[3,4,6]]",
+    "data-rotation4": "35,25"
+   },
+   "marks": [
+    {
+     "i": 0,
+     "tag": "polygon",
+     "points": "720.11,273.56 519.11,162.05 716.12,179.93",
+     "paint": {
+      "fill": "rgb(0, 162, 64)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-triangle": "1-4-6"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "polygon",
+     "points": "720.11,273.56 667.6,90.83 519.11,162.05",
+     "paint": {
+      "fill": "rgb(0, 162, 64)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-triangle": "1-3-4"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "polygon",
+     "points": "667.6,90.83 519.11,162.05 716.12,179.93",
+     "paint": {
+      "fill": "rgb(0, 162, 64)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-triangle": "3-4-6"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "polygon",
+     "points": "720.11,273.56 667.6,90.83 716.12,179.93",
+     "paint": {
+      "fill": "rgb(0, 162, 64)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "fill-opacity": "0.28"
+     },
+     "data": {
+      "data-triangle": "1-3-6"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "line",
+     "x1": "720.11",
+     "y1": "273.56",
+     "x2": "667.6",
+     "y2": "90.83",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-edge": "1-3",
+      "data-hidden": "false",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "line",
+     "x1": "720.11",
+     "y1": "273.56",
+     "x2": "519.11",
+     "y2": "162.05",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-edge": "1-4",
+      "data-hidden": "false",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "line",
+     "x1": "667.6",
+     "y1": "90.83",
+     "x2": "519.11",
+     "y2": "162.05",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-edge": "3-4",
+      "data-hidden": "false",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "line",
+     "x1": "720.11",
+     "y1": "273.56",
+     "x2": "716.12",
+     "y2": "179.93",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-edge": "1-6",
+      "data-hidden": "false",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "line",
+     "x1": "667.6",
+     "y1": "90.83",
+     "x2": "716.12",
+     "y2": "179.93",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-edge": "3-6",
+      "data-hidden": "false",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 9,
+     "tag": "line",
+     "x1": "519.11",
+     "y1": "162.05",
+     "x2": "716.12",
+     "y2": "179.93",
+     "paint": {
+      "stroke": "rgb(0, 162, 64)",
+      "stroke-width": "2.5px",
+      "stroke-dasharray": "5px, 6px",
+      "opacity": "0.45"
+     },
+     "data": {
+      "data-edge": "4-6",
+      "data-hidden": "true",
+      "data-boundary": "true"
+     }
+    },
+    {
+     "i": 10,
+     "tag": "circle",
+     "cx": "720.11",
+     "cy": "273.56",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 11,
+     "tag": "circle",
+     "cx": "667.6",
+     "cy": "90.83",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 12,
+     "tag": "circle",
+     "cx": "519.11",
+     "cy": "162.05",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 13,
+     "tag": "circle",
+     "cx": "716.12",
+     "cy": "179.93",
+     "r": "3",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 14,
+     "tag": "text",
+     "x": "736.82",
+     "y": "280.26",
+     "text-anchor": "middle",
+     "text": "1⁺",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 15,
+     "tag": "text",
+     "x": "672.81",
+     "y": "73.61",
+     "text-anchor": "middle",
+     "text": "2⁺",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 16,
+     "tag": "text",
+     "x": "504.34",
+     "y": "151.77",
+     "text-anchor": "middle",
+     "text": "3⁻",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    },
+    {
+     "i": 17,
+     "tag": "text",
+     "x": "731.57",
+     "y": "170.7",
+     "text-anchor": "middle",
+     "text": "4⁻",
+     "paint": {
+      "fill": "rgb(26, 28, 31)",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none",
+      "stroke-linejoin": "round",
+      "font-size": "12px",
+      "paint-order": "stroke",
+      "display": "block"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "h3",
+   "id": null,
+   "text": "Ambiguity complexes and their geometry"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Geometry Three edge variables · octahedron Tetrahedron · shape only Four Boolean variables · 4D projection"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Function At least two ones Exactly two ones Only 1100 · prescribed input Selector · x₄ ignored Dictator: x₁ At least one 1 (OR) Odd number of ones (parity) Constant 0 Constant 1"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Show Ambiguity surface + ambient edges Only the ambiguity surface Only the 4D polytope's edges One full assignment (tetrahedron)"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Rotate x₁–x₄ 35°"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Rotate x₂–x₄ 25°"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Surface opacity 28%"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Left"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Right"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Up"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Down"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "Turn over"
+  },
+  {
+   "tag": "div",
+   "id": null,
+   "text": "Ambiguity surface: a 2-sphere · 4 vertices, 6 edges, 4 triangles · 4D → 3D projection; crossings may be artifacts"
+  }
+ ],
+ "controls": [
+  {
+   "k": "space",
+   "type": "select-one",
+   "v": "four"
+  },
+  {
+   "k": "example",
+   "type": "select-one",
+   "v": "only110"
+  },
+  {
+   "k": "view4",
+   "type": "select-one",
+   "v": "seam"
+  },
+  {
+   "k": "angle14",
+   "type": "range",
+   "v": "35"
+  },
+  {
+   "k": "angle24",
+   "type": "range",
+   "v": "25"
+  },
+  {
+   "k": "opacity",
+   "type": "range",
+   "v": "28"
+  }
+ ],
+ "a11y": {
+  "liveRegions": 2,
+  "tablists": 0,
+  "tabs": 0,
+  "focusable": 23,
+  "headings": [
+   "H3:Ambiguity complexes and their geometry"
+  ],
+  "imgRoleOnInteractive": 1
+ },
+ "title": "Ambiguity explorer — graphs and higher dimensions"
+}

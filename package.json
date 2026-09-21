@@ -1,0 +1,19 @@
+{
+  "name": "unfold",
+  "private": true,
+  "type": "module",
+  "description": "Interactive mathematics: homotopies, geometric realizations, carriers, and ambiguity.",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "test": "node tools/run-tests.mjs",
+    "check": "node tools/check-layers.mjs && node tools/run-tests.mjs",
+    "layers": "node tools/check-layers.mjs",
+    "baseline": "node tools/shots.mjs",
+    "baseline:update": "node tools/shots.mjs --update",
+    "probe": "node tools/probe.mjs",
+    "bundle": "node tools/bundle.mjs engine"
+  },
+  "devDependencies": {
+    "playwright": "^1.56.0"
+  }
+}

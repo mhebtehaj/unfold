@@ -1,0 +1,532 @@
+{
+ "scenes": [
+  {
+   "id": "real-picture",
+   "viewBox": "0 0 641 290",
+   "role": "img",
+   "ariaLabel": "Geometric realization. Drag the circled point inside the selected simplex.",
+   "size": [
+    640.91,
+    290
+   ],
+   "bbox": [
+    223.57,
+    48.22,
+    166.5,
+    187.26
+   ],
+   "counts": {
+    "path": 328,
+    "circle": 6,
+    "text": 4
+   },
+   "probe": {},
+   "groups": {
+    "path": {
+     "n": 328,
+     "digest": "d4a1255b1959a879",
+     "samples": [
+      {
+       "i": 0,
+       "tag": "path",
+       "d": "M241.19166666666666,187.36666666666667L376.455,215.47333333333336L342.92333333333335,71.22Z",
+       "paint": {
+        "fill": "rgb(243, 244, 247)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 30,
+       "tag": "path",
+       "d": "M367.14064814814816,175.40296296296296L361.4888888888889,181.85555555555555L369.0035185185185,183.41703703703706Z",
+       "paint": {
+        "fill": "rgb(184, 123, 85)",
+        "stroke": "rgb(184, 123, 85)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 59,
+       "tag": "path",
+       "d": "M355.9002777777778,157.81333333333333L350.2485185185185,164.26592592592593L357.76314814814816,165.8274074074074Z",
+       "paint": {
+        "fill": "rgb(155, 130, 101)",
+        "stroke": "rgb(155, 130, 101)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 89,
+       "tag": "path",
+       "d": "M340.8710185185185,154.69037037037037L342.7338888888889,162.70444444444445L348.38564814814816,156.25185185185185Z",
+       "paint": {
+        "fill": "rgb(139, 131, 114)",
+        "stroke": "rgb(139, 131, 114)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 119,
+       "tag": "path",
+       "d": "M340.8710185185185,154.69037037037037L335.2192592592593,161.14296296296297L342.7338888888889,162.70444444444445Z",
+       "paint": {
+        "fill": "rgb(136, 130, 118)",
+        "stroke": "rgb(136, 130, 118)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 149,
+       "tag": "path",
+       "d": "M329.5675,167.59555555555556L331.4303703703704,175.60962962962964L337.08212962962966,169.15703703703704Z",
+       "paint": {
+        "fill": "rgb(139, 125, 124)",
+        "stroke": "rgb(139, 125, 124)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 178,
+       "tag": "path",
+       "d": "M325.7786111111111,182.06222222222223L327.6414814814815,190.0762962962963L333.29324074074077,183.6237037037037Z",
+       "paint": {
+        "fill": "rgb(149, 118, 126)",
+        "stroke": "rgb(149, 118, 126)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 208,
+       "tag": "path",
+       "d": "M297.7092592592593,122.84074074074074L299.5721296296296,130.8548148148148L305.2238888888889,124.40222222222222Z",
+       "paint": {
+        "fill": "rgb(61, 144, 168)",
+        "stroke": "rgb(61, 144, 168)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 238,
+       "tag": "path",
+       "d": "M307.0236111111111,162.91111111111113L301.37185185185183,169.36370370370372L308.8864814814815,170.9251851851852Z",
+       "paint": {
+        "fill": "rgb(108, 125, 155)",
+        "stroke": "rgb(108, 125, 155)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 268,
+       "tag": "path",
+       "d": "M290.1314814814815,151.77407407407406L284.4797222222222,158.22666666666666L291.99435185185183,159.78814814814814Z",
+       "paint": {
+        "fill": "rgb(79, 129, 176)",
+        "stroke": "rgb(79, 129, 176)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 297,
+       "tag": "path",
+       "d": "M273.1762037037037,171.13185185185185L275.03907407407405,179.14592592592592L280.69083333333333,172.69333333333333Z",
+       "paint": {
+        "fill": "rgb(83, 120, 188)",
+        "stroke": "rgb(83, 120, 188)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 327,
+       "tag": "path",
+       "d": "M246.84342592592594,180.91407407407408L241.19166666666666,187.36666666666667L248.7062962962963,188.92814814814815Z",
+       "paint": {
+        "fill": "rgb(61, 113, 220)",
+        "stroke": "rgb(61, 113, 220)",
+        "stroke-width": "0.5px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "circle": {
+     "n": 6,
+     "marks": [
+      {
+       "i": 328,
+       "tag": "circle",
+       "cx": "241.19",
+       "cy": "187.37",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(58, 112, 225)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 330,
+       "tag": "circle",
+       "cx": "376.45",
+       "cy": "215.47",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(230, 107, 67)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 332,
+       "tag": "circle",
+       "cx": "342.92",
+       "cy": "71.22",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(52, 171, 130)",
+        "stroke": "rgb(255, 255, 255)",
+        "stroke-width": "1.5px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 334,
+       "tag": "circle",
+       "cx": "320.19",
+       "cy": "158.02",
+       "r": "7",
+       "paint": {
+        "fill": "rgb(255, 255, 255)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 335,
+       "tag": "circle",
+       "cx": "320.19",
+       "cy": "158.02",
+       "r": "4",
+       "paint": {
+        "fill": "rgb(113, 130, 141)",
+        "stroke": "none",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 336,
+       "tag": "circle",
+       "cx": "320.19",
+       "cy": "158.02",
+       "r": "8",
+       "paint": {
+        "fill": "none",
+        "stroke": "rgb(37, 40, 45)",
+        "stroke-width": "1.6px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    },
+    "text": {
+     "n": 4,
+     "marks": [
+      {
+       "i": 329,
+       "tag": "text",
+       "x": "227.19",
+       "y": "204.37",
+       "text-anchor": "middle",
+       "text": "a",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 331,
+       "tag": "text",
+       "x": "386.45",
+       "y": "232.47",
+       "text-anchor": "middle",
+       "text": "b",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 333,
+       "tag": "text",
+       "x": "352.92",
+       "y": "60.22",
+       "text-anchor": "middle",
+       "text": "c",
+       "paint": {
+        "fill": "rgb(98, 104, 115)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "display": "block"
+       }
+      },
+      {
+       "i": 337,
+       "tag": "text",
+       "x": "331.19",
+       "y": "147.02",
+       "text-anchor": "start",
+       "text": "x",
+       "paint": {
+        "fill": "rgb(37, 40, 45)",
+        "stroke": "none",
+        "stroke-dasharray": "none",
+        "font-size": "13px",
+        "font-weight": "600",
+        "display": "block"
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Realizations & carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-carriers",
+   "text": "Carriers"
+  },
+  {
+   "tag": "button",
+   "id": "tab-extensions",
+   "text": "Build a map"
+  },
+  {
+   "tag": "button",
+   "id": "tab-solids",
+   "text": "Prisms & cones"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Complex"
+  },
+  {
+   "tag": "button",
+   "id": "placement",
+   "text": "Change drawing"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Δ lists the faces. |Δ| contains every point of the corresponding filled simplices."
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Abstract complex Δ"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Vertices"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{c}"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Edges"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a,b}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{a,c}"
+  },
+  {
+   "tag": "button",
+   "id": null,
+   "text": "{b,c}"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Filled triangles"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Select a face σ."
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "A drawing of |Δ|"
+  },
+  {
+   "tag": "p",
+   "id": "real-caption",
+   "text": "σ = {a,b,c}. Its realization contains the entire filled triangle."
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "λa0.33"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "λb0.33"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "λc0.33"
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "What exactly is being realized?"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "A face σ is a finite set of vertex names. Its geometric simplex ⟨σ⟩ contains all convex combinations of those vertices: λᵢ ≥ 0 and ∑λᵢ = 1. The realization |Δ| is the union of these simplices."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "In the standard realization, each vertex is a basis vector eᵥ. Thus a point is the coordinate vector (λₐ, λᵦ, …). Only mixtures whose positive-coordinate support is a face of Δ belong to |Δ|. The planar drawing uses other vertex positions and the same weights."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Moving vertices in a valid drawing preserves the abstract complex. Adding a filled triangle changes the complex. The empty face contributes no points."
+  }
+ ],
+ "controls": [
+  {
+   "k": "complex",
+   "type": "select-one",
+   "v": "triangle"
+  },
+  {
+   "k": "0",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,1",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "1,2",
+   "type": "button",
+   "v": "false"
+  },
+  {
+   "k": "0,1,2",
+   "type": "button",
+   "v": "true"
+  },
+  {
+   "k": "Weight of vertex a",
+   "type": "range",
+   "v": "0.333"
+  },
+  {
+   "k": "Weight of vertex b",
+   "type": "range",
+   "v": "0.333"
+  },
+  {
+   "k": "Weight of vertex c",
+   "type": "range",
+   "v": "0.333"
+  }
+ ],
+ "a11y": {
+  "liveRegions": 0,
+  "tablists": 1,
+  "tabs": 4,
+  "focusable": 55,
+  "headings": [
+   "H1:Realizations & carriers",
+   "H2:Abstract complex Δ",
+   "H2:A drawing of |Δ|",
+   "H3:Point x",
+   "H3:Start f₀",
+   "H3:Image under f",
+   "H3:End f₁",
+   "H2:X · two triangles sharing bc",
+   "H2:Y · allowed regions and outputs",
+   "H2:A × [0,1] · the domain",
+   "H2:C(A) ⊆ Y · the allowed outputs"
+  ],
+  "imgRoleOnInteractive": 8
+ },
+ "title": "Realizations & carriers · Unfold"
+}

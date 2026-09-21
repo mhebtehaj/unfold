@@ -1,0 +1,3945 @@
+{
+ "scenes": [
+  {
+   "id": "source",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Input space. Click or drag on a colored point to select it. Arrow keys move the selection; Escape clears it.",
+   "size": [
+    462.8,
+    190
+   ],
+   "bbox": [
+    158.5,
+    17,
+    146,
+    146
+   ],
+   "counts": {
+    "polygon": 1152
+   },
+   "probe": {},
+   "groups": {
+    "polygon": {
+     "n": 1152,
+     "digest": "84beaa6faebf7471",
+     "samples": [
+      {
+       "i": 0,
+       "tag": "polygon",
+       "points": "231.5,90 237.58,90 237.57,89.6 231.5,90",
+       "paint": {
+        "fill": "rgb(184, 185, 189)",
+        "stroke": "rgb(184, 185, 189)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 105,
+       "tag": "polygon",
+       "points": "236.56,86.62 241.62,83.24 241.15,82.59 236.33,86.3",
+       "paint": {
+        "fill": "rgb(181, 175, 190)",
+        "stroke": "rgb(181, 175, 190)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 209,
+       "tag": "polygon",
+       "points": "236.88,79.09 239.57,73.63 238.48,73.14 236.16,78.76",
+       "paint": {
+        "fill": "rgb(190, 164, 192)",
+        "stroke": "rgb(190, 164, 192)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 314,
+       "tag": "polygon",
+       "points": "229.12,71.91 228.32,65.87 226.75,66.13 227.94,72.1",
+       "paint": {
+        "fill": "rgb(194, 154, 174)",
+        "stroke": "rgb(194, 154, 174)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 419,
+       "tag": "polygon",
+       "points": "215.46,71.71 211.44,67.13 209.99,68.49 214.29,72.79",
+       "paint": {
+        "fill": "rgb(197, 145, 142)",
+        "stroke": "rgb(197, 145, 142)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 523,
+       "tag": "polygon",
+       "points": "202.7,80.22 196.94,78.27 196.24,80.55 202.12,82.13",
+       "paint": {
+        "fill": "rgb(200, 169, 130)",
+        "stroke": "rgb(200, 169, 130)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 628,
+       "tag": "polygon",
+       "points": "196.24,99.45 190.37,101.02 191.18,103.69 196.94,101.73",
+       "paint": {
+        "fill": "rgb(194, 204, 118)",
+        "stroke": "rgb(194, 204, 118)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 732,
+       "tag": "polygon",
+       "points": "201.39,120.11 197.09,124.41 199.41,126.59 203.42,122.02",
+       "paint": {
+        "fill": "rgb(145, 209, 105)",
+        "stroke": "rgb(145, 209, 105)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 837,
+       "tag": "polygon",
+       "points": "222.01,137.73 220.82,143.7 224.35,144.28 225.15,138.25",
+       "paint": {
+        "fill": "rgb(91, 214, 113)",
+        "stroke": "rgb(91, 214, 113)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 942,
+       "tag": "polygon",
+       "points": "252.45,140.58 254.78,146.2 258.41,144.56 255.72,139.1",
+       "paint": {
+        "fill": "rgb(77, 220, 183)",
+        "stroke": "rgb(77, 220, 183)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1046,
+       "tag": "polygon",
+       "points": "279.76,127.03 284.59,130.74 287.14,127.18 282.08,123.8",
+       "paint": {
+        "fill": "rgb(62, 187, 227)",
+        "stroke": "rgb(62, 187, 227)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      },
+      {
+       "i": 1151,
+       "tag": "polygon",
+       "points": "298.27,94.38 304.34,94.77 304.5,90 298.42,90",
+       "paint": {
+        "fill": "rgb(46, 83, 234)",
+        "stroke": "rgb(46, 83, 234)",
+        "stroke-width": "0.45px",
+        "stroke-dasharray": "none"
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "id": "start",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Starting map, fixed at time zero. Click a colored point to select its input.",
+   "size": [
+    462.81,
+    190
+   ],
+   "bbox": [
+    158.5,
+    17,
+    146,
+    146
+   ],
+   "counts": {
+    "circle": 2,
+    "path": 144
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M158.5,90.00000000000001L158.56947982452436,93.18421527766954",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(237, 204, 39)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M158.56947982452436,93.18421527766954L158.77778703930258,96.36236922057905",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(236, 203, 42)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "path",
+     "d": "M158.77778703930258,96.36236922057905L159.12452511971185,99.52841203206377",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(234, 203, 45)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "path",
+     "d": "M159.12452511971185,99.52841203206377L159.60903403010883,102.67631696968594",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(233, 202, 47)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "path",
+     "d": "M159.60903403010883,102.67631696968594L160.23039148024486,105.8000918174815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(232, 202, 50)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "path",
+     "d": "M160.23039148024486,105.8000918174815L160.98741468089804,108.89379029248403",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(231, 201, 53)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "path",
+     "d": "M160.98741468089804,108.89379029248403L161.87866259537944,111.95152336381196",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(229, 200, 55)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "path",
+     "d": "M161.87866259537944,111.95152336381196L162.9024386826287,114.96747046277383",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(228, 200, 58)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 9,
+     "tag": "path",
+     "d": "M162.9024386826287,114.96747046277383L164.05679412667607,117.93589056265157",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(227, 199, 60)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 10,
+     "tag": "path",
+     "d": "M164.05679412667607,117.93589056265157L165.33953154632457,120.85113310707106",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(226, 199, 63)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 11,
+     "tag": "path",
+     "d": "M165.33953154632457,120.85113310707106L166.74820917798982,123.70764876615748",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(225, 198, 65)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 12,
+     "tag": "path",
+     "d": "M166.74820917798982,123.70764876615748L168.28014552373597,126.5",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(224, 198, 68)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 13,
+     "tag": "path",
+     "d": "M168.28014552373597,126.5L169.93242445565937,129.22287140931815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(223, 197, 70)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 14,
+     "tag": "path",
+     "d": "M169.93242445565937,129.22287140931815L171.70190076690358,131.87107985362636",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(222, 197, 73)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 15,
+     "tag": "path",
+     "d": "M171.70190076690358,131.87107985362636L173.58520615873985,134.43958431763662",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(221, 196, 75)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 16,
+     "tag": "path",
+     "d": "M173.58520615873985,134.43958431763662L175.5787556523146,136.92349550711737",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(220, 196, 78)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 17,
+     "tag": "path",
+     "d": "M175.5787556523146,136.92349550711737L177.67875441286094,139.3180851559432",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(219, 196, 80)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 18,
+     "tag": "path",
+     "d": "M177.67875441286094,139.3180851559432L179.88120497338204,141.618795026618",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(218, 195, 83)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 19,
+     "tag": "path",
+     "d": "M179.88120497338204,141.618795026618L182.1819148440568,143.82124558713906",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(217, 195, 85)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 20,
+     "tag": "path",
+     "d": "M182.1819148440568,143.82124558713906L184.57650449288263,145.9212443476854",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(216, 194, 87)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 21,
+     "tag": "path",
+     "d": "M184.57650449288263,145.9212443476854L187.0604156823634,147.91479384126018",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(215, 194, 90)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 22,
+     "tag": "path",
+     "d": "M187.0604156823634,147.91479384126018L189.62892014637364,149.79809923309642",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(214, 193, 92)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 23,
+     "tag": "path",
+     "d": "M189.62892014637364,149.79809923309642L192.27712859068185,151.56757554434066",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(213, 193, 94)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 24,
+     "tag": "path",
+     "d": "M192.27712859068185,151.56757554434066L195,153.219854476264",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(212, 193, 97)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 25,
+     "tag": "path",
+     "d": "M195,153.219854476264L197.79235123384254,154.7517908220102",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(211, 192, 99)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 26,
+     "tag": "path",
+     "d": "M197.79235123384254,154.7517908220102L200.64886689292894,156.16046845367543",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(210, 192, 101)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 27,
+     "tag": "path",
+     "d": "M200.64886689292894,156.16046845367543L203.56410943734846,157.44320587332393",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(209, 192, 104)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 28,
+     "tag": "path",
+     "d": "M203.56410943734846,157.44320587332393L206.5325295372262,158.59756131737132",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(209, 191, 106)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 29,
+     "tag": "path",
+     "d": "M206.5325295372262,158.59756131737132L209.54847663618807,159.62133740462056",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(208, 191, 108)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 30,
+     "tag": "path",
+     "d": "M209.54847663618807,159.62133740462056L212.606209707516,160.51258531910202",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(207, 191, 110)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 31,
+     "tag": "path",
+     "d": "M212.606209707516,160.51258531910202L215.6999081825185,161.26960851975514",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(206, 191, 112)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 32,
+     "tag": "path",
+     "d": "M215.6999081825185,161.26960851975514L218.8236830303141,161.89096596989117",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(205, 190, 115)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 33,
+     "tag": "path",
+     "d": "M218.8236830303141,161.89096596989117L221.97158796793622,162.37547488028815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(205, 190, 117)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 34,
+     "tag": "path",
+     "d": "M221.97158796793622,162.37547488028815L225.13763077942096,162.72221296069742",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(204, 190, 119)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 35,
+     "tag": "path",
+     "d": "M225.13763077942096,162.72221296069742L228.31578472233048,162.93052017547564",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 190, 121)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 36,
+     "tag": "path",
+     "d": "M228.31578472233048,162.93052017547564L231.5,163",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 189, 123)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 37,
+     "tag": "path",
+     "d": "M231.5,163L234.68421527766952,162.93052017547564",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(202, 189, 125)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 38,
+     "tag": "path",
+     "d": "M234.68421527766952,162.93052017547564L237.86236922057907,162.72221296069742",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(201, 189, 127)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 39,
+     "tag": "path",
+     "d": "M237.86236922057907,162.72221296069742L241.02841203206376,162.37547488028815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(201, 189, 129)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 40,
+     "tag": "path",
+     "d": "M241.02841203206376,162.37547488028815L244.17631696968593,161.89096596989117",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(200, 189, 131)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 41,
+     "tag": "path",
+     "d": "M244.17631696968593,161.89096596989117L247.3000918174815,161.26960851975514",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(199, 188, 133)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 42,
+     "tag": "path",
+     "d": "M247.3000918174815,161.26960851975514L250.39379029248403,160.51258531910196",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(199, 188, 135)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 43,
+     "tag": "path",
+     "d": "M250.39379029248403,160.51258531910196L253.45152336381193,159.62133740462056",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(198, 188, 137)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 44,
+     "tag": "path",
+     "d": "M253.45152336381193,159.62133740462056L256.4674704627738,158.5975613173713",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(198, 188, 139)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 45,
+     "tag": "path",
+     "d": "M256.4674704627738,158.5975613173713L259.43589056265154,157.44320587332393",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(197, 188, 141)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 46,
+     "tag": "path",
+     "d": "M259.43589056265154,157.44320587332393L262.35113310707106,156.16046845367543",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(197, 188, 143)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 47,
+     "tag": "path",
+     "d": "M262.35113310707106,156.16046845367543L265.2076487661575,154.75179082201018",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(196, 188, 145)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 48,
+     "tag": "path",
+     "d": "M265.2076487661575,154.75179082201018L268,153.21985447626403",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(196, 187, 147)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 49,
+     "tag": "path",
+     "d": "M268,153.21985447626403L270.72287140931815,151.56757554434066",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(195, 187, 149)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 50,
+     "tag": "path",
+     "d": "M270.72287140931815,151.56757554434066L273.3710798536264,149.7980992330964",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(195, 187, 151)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 51,
+     "tag": "path",
+     "d": "M273.3710798536264,149.7980992330964L275.9395843176366,147.91479384126015",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(194, 187, 153)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 52,
+     "tag": "path",
+     "d": "M275.9395843176366,147.91479384126015L278.42349550711737,145.9212443476854",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(194, 187, 155)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 53,
+     "tag": "path",
+     "d": "M278.42349550711737,145.9212443476854L280.8180851559432,143.82124558713903",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(193, 187, 156)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 54,
+     "tag": "path",
+     "d": "M280.8180851559432,143.82124558713903L283.118795026618,141.61879502661796",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(193, 187, 158)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 55,
+     "tag": "path",
+     "d": "M283.118795026618,141.61879502661796L285.32124558713906,139.3180851559432",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(193, 187, 160)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 56,
+     "tag": "path",
+     "d": "M285.32124558713906,139.3180851559432L287.4212443476854,136.92349550711737",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(192, 187, 162)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 57,
+     "tag": "path",
+     "d": "M287.4212443476854,136.92349550711737L289.4147938412602,134.43958431763662",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(192, 187, 164)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 58,
+     "tag": "path",
+     "d": "M289.4147938412602,134.43958431763662L291.2980992330964,131.87107985362636",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(192, 187, 165)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 59,
+     "tag": "path",
+     "d": "M291.2980992330964,131.87107985362636L293.0675755443407,129.22287140931815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(191, 187, 167)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 60,
+     "tag": "path",
+     "d": "M293.0675755443407,129.22287140931815L294.719854476264,126.49999999999999",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(191, 187, 169)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 61,
+     "tag": "path",
+     "d": "M294.719854476264,126.49999999999999L296.2517908220102,123.70764876615748",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(191, 187, 170)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 62,
+     "tag": "path",
+     "d": "M296.2517908220102,123.70764876615748L297.66046845367543,120.85113310707105",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 187, 172)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 63,
+     "tag": "path",
+     "d": "M297.66046845367543,120.85113310707105L298.9432058733239,117.93589056265155",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 187, 174)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 64,
+     "tag": "path",
+     "d": "M298.9432058733239,117.93589056265155L300.0975613173713,114.96747046277383",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 188, 175)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 65,
+     "tag": "path",
+     "d": "M300.0975613173713,114.96747046277383L301.1213374046206,111.95152336381193",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 188, 177)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 66,
+     "tag": "path",
+     "d": "M301.1213374046206,111.95152336381193L302.01258531910196,108.89379029248403",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 188, 179)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 67,
+     "tag": "path",
+     "d": "M302.01258531910196,108.89379029248403L302.76960851975514,105.8000918174815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 180)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 68,
+     "tag": "path",
+     "d": "M302.76960851975514,105.8000918174815L303.39096596989117,102.67631696968593",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 182)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 69,
+     "tag": "path",
+     "d": "M303.39096596989117,102.67631696968593L303.87547488028815,99.52841203206376",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 183)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 70,
+     "tag": "path",
+     "d": "M303.87547488028815,99.52841203206376L304.22221296069745,96.36236922057905",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 185)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 71,
+     "tag": "path",
+     "d": "M304.22221296069745,96.36236922057905L304.43052017547564,93.18421527766952",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 186)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 72,
+     "tag": "path",
+     "d": "M304.43052017547564,93.18421527766952L304.5,90",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 189, 188)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 73,
+     "tag": "path",
+     "d": "M304.5,90L304.43052017547564,86.81578472233048",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(188, 188, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 74,
+     "tag": "path",
+     "d": "M304.43052017547564,86.81578472233048L304.22221296069745,83.63763077942097",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(186, 187, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 75,
+     "tag": "path",
+     "d": "M304.22221296069745,83.63763077942097L303.87547488028815,80.47158796793622",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(185, 186, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 76,
+     "tag": "path",
+     "d": "M303.87547488028815,80.47158796793622L303.39096596989117,77.32368303031407",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(183, 184, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 77,
+     "tag": "path",
+     "d": "M303.39096596989117,77.32368303031407L302.76960851975514,74.1999081825185",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(182, 183, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 78,
+     "tag": "path",
+     "d": "M302.76960851975514,74.1999081825185L302.01258531910196,71.106209707516",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(180, 182, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 79,
+     "tag": "path",
+     "d": "M302.01258531910196,71.106209707516L301.1213374046206,68.04847663618804",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(179, 180, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 80,
+     "tag": "path",
+     "d": "M301.1213374046206,68.04847663618804L300.0975613173713,65.03252953722617",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(177, 179, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 81,
+     "tag": "path",
+     "d": "M300.0975613173713,65.03252953722617L298.9432058733239,62.06410943734845",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(175, 178, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 82,
+     "tag": "path",
+     "d": "M298.9432058733239,62.06410943734845L297.66046845367543,59.14886689292895",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 177, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 83,
+     "tag": "path",
+     "d": "M297.66046845367543,59.14886689292895L296.2517908220102,56.292351233842545",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(172, 175, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 84,
+     "tag": "path",
+     "d": "M296.2517908220102,56.292351233842545L294.719854476264,53.49999999999999",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(170, 174, 191)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 85,
+     "tag": "path",
+     "d": "M294.719854476264,53.49999999999999L293.0675755443407,50.777128590681855",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(169, 172, 191)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 86,
+     "tag": "path",
+     "d": "M293.0675755443407,50.777128590681855L291.2980992330964,48.12892014637364",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(167, 171, 191)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 87,
+     "tag": "path",
+     "d": "M291.2980992330964,48.12892014637364L289.4147938412602,45.560415682363406",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(165, 170, 192)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 88,
+     "tag": "path",
+     "d": "M289.4147938412602,45.560415682363406L287.4212443476854,43.07650449288261",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(164, 168, 192)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 89,
+     "tag": "path",
+     "d": "M287.4212443476854,43.07650449288261L285.32124558713906,40.68191484405679",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(162, 167, 192)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 90,
+     "tag": "path",
+     "d": "M285.32124558713906,40.68191484405679L283.118795026618,38.38120497338203",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(160, 165, 193)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 91,
+     "tag": "path",
+     "d": "M283.118795026618,38.38120497338203L280.8180851559432,36.17875441286096",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(158, 164, 193)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 92,
+     "tag": "path",
+     "d": "M280.8180851559432,36.17875441286096L278.42349550711737,34.07875565231462",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(156, 163, 193)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 93,
+     "tag": "path",
+     "d": "M278.42349550711737,34.07875565231462L275.9395843176366,32.08520615873982",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(155, 161, 194)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 94,
+     "tag": "path",
+     "d": "M275.9395843176366,32.08520615873982L273.3710798536264,30.2019007669036",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(153, 160, 194)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 95,
+     "tag": "path",
+     "d": "M273.3710798536264,30.2019007669036L270.72287140931815,28.432424455659344",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(151, 158, 195)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 96,
+     "tag": "path",
+     "d": "M270.72287140931815,28.432424455659344L268,26.78014552373599",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(149, 157, 195)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 97,
+     "tag": "path",
+     "d": "M268,26.78014552373599L265.2076487661575,25.248209177989807",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(147, 155, 196)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 98,
+     "tag": "path",
+     "d": "M265.2076487661575,25.248209177989807L262.35113310707106,23.83953154632455",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(145, 154, 196)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 99,
+     "tag": "path",
+     "d": "M262.35113310707106,23.83953154632455L259.43589056265154,22.556794126676067",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(143, 152, 197)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 100,
+     "tag": "path",
+     "d": "M259.43589056265154,22.556794126676067L256.4674704627738,21.4024386826287",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(141, 151, 197)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 101,
+     "tag": "path",
+     "d": "M256.4674704627738,21.4024386826287L253.45152336381196,20.37866259537944",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(139, 149, 198)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 102,
+     "tag": "path",
+     "d": "M253.45152336381196,20.37866259537944L250.393790292484,19.487414680898013",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(137, 148, 198)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 103,
+     "tag": "path",
+     "d": "M250.393790292484,19.487414680898013L247.3000918174815,18.73039148024486",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(135, 146, 199)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 104,
+     "tag": "path",
+     "d": "M247.3000918174815,18.73039148024486L244.17631696968593,18.109034030108816",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(133, 144, 199)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 105,
+     "tag": "path",
+     "d": "M244.17631696968593,18.109034030108816L241.02841203206378,17.624525119711848",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(131, 143, 200)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 106,
+     "tag": "path",
+     "d": "M241.02841203206378,17.624525119711848L237.86236922057904,17.27778703930258",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(129, 141, 201)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 107,
+     "tag": "path",
+     "d": "M237.86236922057904,17.27778703930258L234.68421527766952,17.06947982452438",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(127, 140, 201)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 108,
+     "tag": "path",
+     "d": "M234.68421527766952,17.06947982452438L231.5,17",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(125, 138, 202)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 109,
+     "tag": "path",
+     "d": "M231.5,17L228.31578472233048,17.06947982452438",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(123, 136, 203)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 110,
+     "tag": "path",
+     "d": "M228.31578472233048,17.06947982452438L225.137630779421,17.27778703930258",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(121, 135, 203)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 111,
+     "tag": "path",
+     "d": "M225.137630779421,17.27778703930258L221.97158796793622,17.624525119711848",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(119, 133, 204)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 112,
+     "tag": "path",
+     "d": "M221.97158796793622,17.624525119711848L218.8236830303141,18.109034030108816",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(117, 131, 205)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 113,
+     "tag": "path",
+     "d": "M218.8236830303141,18.109034030108816L215.6999081825185,18.73039148024486",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 130, 205)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 114,
+     "tag": "path",
+     "d": "M215.6999081825185,18.73039148024486L212.606209707516,19.487414680898",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(112, 128, 206)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 115,
+     "tag": "path",
+     "d": "M212.606209707516,19.487414680898L209.54847663618804,20.37866259537944",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(110, 126, 207)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 116,
+     "tag": "path",
+     "d": "M209.54847663618804,20.37866259537944L206.5325295372262,21.402438682628684",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(108, 125, 208)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 117,
+     "tag": "path",
+     "d": "M206.5325295372262,21.402438682628684L203.56410943734846,22.556794126676067",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(106, 123, 209)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 118,
+     "tag": "path",
+     "d": "M203.56410943734846,22.556794126676067L200.64886689292894,23.83953154632455",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(104, 121, 209)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 119,
+     "tag": "path",
+     "d": "M200.64886689292894,23.83953154632455L197.79235123384254,25.248209177989807",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(101, 119, 210)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 120,
+     "tag": "path",
+     "d": "M197.79235123384254,25.248209177989807L195,26.78014552373599",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(99, 118, 211)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 121,
+     "tag": "path",
+     "d": "M195,26.78014552373599L192.27712859068185,28.43242445565935",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(97, 116, 212)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 122,
+     "tag": "path",
+     "d": "M192.27712859068185,28.43242445565935L189.62892014637364,30.201900766903584",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(94, 114, 213)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 123,
+     "tag": "path",
+     "d": "M189.62892014637364,30.201900766903584L187.0604156823634,32.085206158739815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(92, 112, 214)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 124,
+     "tag": "path",
+     "d": "M187.0604156823634,32.085206158739815L184.57650449288263,34.078755652314605",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(90, 111, 215)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 125,
+     "tag": "path",
+     "d": "M184.57650449288263,34.078755652314605L182.1819148440568,36.17875441286094",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(87, 109, 216)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 126,
+     "tag": "path",
+     "d": "M182.1819148440568,36.17875441286094L179.88120497338204,38.381204973382026",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(85, 107, 217)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 127,
+     "tag": "path",
+     "d": "M179.88120497338204,38.381204973382026L177.67875441286094,40.68191484405679",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(83, 105, 218)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 128,
+     "tag": "path",
+     "d": "M177.67875441286094,40.68191484405679L175.5787556523146,43.07650449288262",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(80, 103, 219)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 129,
+     "tag": "path",
+     "d": "M175.5787556523146,43.07650449288262L173.58520615873982,45.560415682363406",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(78, 101, 220)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 130,
+     "tag": "path",
+     "d": "M173.58520615873982,45.560415682363406L171.70190076690358,48.128920146373645",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(75, 100, 221)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 131,
+     "tag": "path",
+     "d": "M171.70190076690358,48.128920146373645L169.93242445565937,50.77712859068184",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(73, 98, 222)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 132,
+     "tag": "path",
+     "d": "M169.93242445565937,50.77712859068184L168.280145523736,53.49999999999998",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(70, 96, 223)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 133,
+     "tag": "path",
+     "d": "M168.280145523736,53.49999999999998L166.74820917798982,56.292351233842524",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(68, 94, 224)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 134,
+     "tag": "path",
+     "d": "M166.74820917798982,56.292351233842524L165.33953154632457,59.148866892928936",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(65, 92, 225)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 135,
+     "tag": "path",
+     "d": "M165.33953154632457,59.148866892928936L164.05679412667607,62.064109437348435",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(63, 90, 226)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 136,
+     "tag": "path",
+     "d": "M164.05679412667607,62.064109437348435L162.9024386826287,65.03252953722617",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(60, 88, 227)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 137,
+     "tag": "path",
+     "d": "M162.9024386826287,65.03252953722617L161.87866259537944,68.04847663618804",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(58, 86, 228)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 138,
+     "tag": "path",
+     "d": "M161.87866259537944,68.04847663618804L160.987414680898,71.106209707516",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(55, 84, 229)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 139,
+     "tag": "path",
+     "d": "M160.987414680898,71.106209707516L160.23039148024486,74.1999081825185",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(53, 82, 231)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 140,
+     "tag": "path",
+     "d": "M160.23039148024486,74.1999081825185L159.60903403010883,77.32368303031406",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(50, 80, 232)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 141,
+     "tag": "path",
+     "d": "M159.60903403010883,77.32368303031406L159.12452511971185,80.4715879679362",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(47, 78, 233)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 142,
+     "tag": "path",
+     "d": "M159.12452511971185,80.4715879679362L158.77778703930258,83.63763077942095",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(45, 76, 234)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 143,
+     "tag": "path",
+     "d": "M158.77778703930258,83.63763077942095L158.56947982452436,86.81578472233046",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(42, 74, 236)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 144,
+     "tag": "path",
+     "d": "M158.56947982452436,86.81578472233046L158.5,89.99999999999999",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(39, 72, 237)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 145,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  },
+  {
+   "id": "now",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Current map. Click or drag on a colored point to select its input.",
+   "size": [
+    462.81,
+    190
+   ],
+   "bbox": [
+    158.5,
+    17,
+    146,
+    146
+   ],
+   "counts": {
+    "circle": 2,
+    "path": 144
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "path",
+     "d": "M231.5,163L233.09248660752297,162.98262797683338",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(237, 204, 39)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "path",
+     "d": "M233.09248660752297,162.98262797683338L234.68421527766952,162.93052017547564",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(236, 203, 42)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "path",
+     "d": "M234.68421527766952,162.93052017547564L236.27442843380044,162.84370139641806",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(234, 203, 45)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 4,
+     "tag": "path",
+     "d": "M236.27442843380044,162.84370139641806L237.86236922057907,162.72221296069742",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(233, 202, 47)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 5,
+     "tag": "path",
+     "d": "M237.86236922057907,162.72221296069742L239.4472818641934,162.56611269022932",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(232, 202, 50)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "path",
+     "d": "M239.4472818641934,162.56611269022932L241.02841203206378,162.37547488028815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(231, 201, 53)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 7,
+     "tag": "path",
+     "d": "M241.02841203206378,162.37547488028815L242.60500719186393,162.15039026414652",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(229, 200, 55)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 8,
+     "tag": "path",
+     "d": "M242.60500719186393,162.15039026414652L244.17631696968593,161.89096596989117",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(228, 200, 58)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 9,
+     "tag": "path",
+     "d": "M244.17631696968593,161.89096596989117L245.74159350717736,161.59732546943582",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(227, 199, 60)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 10,
+     "tag": "path",
+     "d": "M245.74159350717736,161.59732546943582L247.3000918174815,161.26960851975514",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(226, 199, 63)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 11,
+     "tag": "path",
+     "d": "M247.3000918174815,161.26960851975514L248.85107013981064,160.9079710963681",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(225, 198, 65)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 12,
+     "tag": "path",
+     "d": "M248.85107013981064,160.9079710963681L250.39379029248403,160.512585319102",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(224, 198, 68)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 13,
+     "tag": "path",
+     "d": "M250.39379029248403,160.512585319102L251.92751802426244,160.0836393701728",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(223, 197, 70)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 14,
+     "tag": "path",
+     "d": "M251.92751802426244,160.0836393701728L253.45152336381193,159.62133740462056",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(222, 197, 73)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 15,
+     "tag": "path",
+     "d": "M253.45152336381193,159.62133740462056L254.9650809671308,159.12589945314272",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(221, 196, 75)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 16,
+     "tag": "path",
+     "d": "M254.9650809671308,159.12589945314272L256.4674704627738,158.5975613173713",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(220, 196, 78)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 17,
+     "tag": "path",
+     "d": "M256.4674704627738,158.5975613173713L257.95797679471025,158.0365744576443",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(219, 196, 80)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 18,
+     "tag": "path",
+     "d": "M257.95797679471025,158.0365744576443L259.43589056265154,157.44320587332393",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(218, 195, 83)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 19,
+     "tag": "path",
+     "d": "M259.43589056265154,157.44320587332393L260.9005083596878,156.81773797571964",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(217, 195, 85)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 20,
+     "tag": "path",
+     "d": "M260.9005083596878,156.81773797571964L262.35113310707106,156.16046845367543",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(216, 194, 87)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 21,
+     "tag": "path",
+     "d": "M262.35113310707106,156.16046845367543L263.7870743859871,155.47171013188625",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(215, 194, 90)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 22,
+     "tag": "path",
+     "d": "M263.7870743859871,155.47171013188625L265.2076487661575,154.75179082201018",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(214, 193, 92)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 23,
+     "tag": "path",
+     "d": "M265.2076487661575,154.75179082201018L266.6121801311153,154.00105316664806",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(213, 193, 94)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 24,
+     "tag": "path",
+     "d": "M266.6121801311153,154.00105316664806L268,153.21985447626403",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(212, 193, 97)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 25,
+     "tag": "path",
+     "d": "M268,153.21985447626403L269.3704478457181,152.4085665591251",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(211, 192, 99)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 26,
+     "tag": "path",
+     "d": "M269.3704478457181,152.4085665591251L270.72287140931815,151.56757554434066",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(210, 192, 101)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 27,
+     "tag": "path",
+     "d": "M270.72287140931815,151.56757554434066L272.056627010431,150.69728169808582",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(209, 192, 104)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 28,
+     "tag": "path",
+     "d": "M272.056627010431,150.69728169808582L273.3710798536264,149.7980992330964",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(209, 191, 106)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 29,
+     "tag": "path",
+     "d": "M273.3710798536264,149.7980992330964L274.6656043305415,148.8704561115262",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(208, 191, 108)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 30,
+     "tag": "path",
+     "d": "M274.6656043305415,148.8704561115262L275.9395843176366,147.91479384126015",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(207, 191, 110)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 31,
+     "tag": "path",
+     "d": "M275.9395843176366,147.91479384126015L277.1924134694363,146.93156726578036",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(206, 191, 112)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 32,
+     "tag": "path",
+     "d": "M277.1924134694363,146.93156726578036L278.42349550711737,145.9212443476854",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(205, 190, 115)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 33,
+     "tag": "path",
+     "d": "M278.42349550711737,145.9212443476854L279.632244502305,144.88430594596537",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(205, 190, 117)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 34,
+     "tag": "path",
+     "d": "M279.632244502305,144.88430594596537L280.8180851559432,143.82124558713906",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(204, 190, 119)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 35,
+     "tag": "path",
+     "d": "M280.8180851559432,143.82124558713906L281.98045307210566,142.73256923036215",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 190, 121)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 36,
+     "tag": "path",
+     "d": "M281.98045307210566,142.73256923036215L283.118795026618,141.61879502661796",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(203, 189, 123)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 37,
+     "tag": "path",
+     "d": "M283.118795026618,141.61879502661796L284.2325692303622,140.48045307210566",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(202, 189, 125)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 38,
+     "tag": "path",
+     "d": "M284.2325692303622,140.48045307210566L285.32124558713906,139.31808515594318",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(201, 189, 127)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 39,
+     "tag": "path",
+     "d": "M285.32124558713906,139.31808515594318L286.38430594596537,138.13224450230504",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(201, 189, 129)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 40,
+     "tag": "path",
+     "d": "M286.38430594596537,138.13224450230504L287.4212443476854,136.92349550711737",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(200, 189, 131)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 41,
+     "tag": "path",
+     "d": "M287.4212443476854,136.92349550711737L288.43156726578036,135.6924134694363",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(199, 188, 133)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 42,
+     "tag": "path",
+     "d": "M288.43156726578036,135.6924134694363L289.4147938412602,134.43958431763662",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(199, 188, 135)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 43,
+     "tag": "path",
+     "d": "M289.4147938412602,134.43958431763662L290.3704561115262,133.1656043305415",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(198, 188, 137)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 44,
+     "tag": "path",
+     "d": "M290.3704561115262,133.1656043305415L291.2980992330964,131.87107985362636",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(198, 188, 139)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 45,
+     "tag": "path",
+     "d": "M291.2980992330964,131.87107985362636L292.1972816980858,130.55662701043096",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(197, 188, 141)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 46,
+     "tag": "path",
+     "d": "M292.1972816980858,130.55662701043096L293.0675755443407,129.22287140931815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(197, 188, 143)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 47,
+     "tag": "path",
+     "d": "M293.0675755443407,129.22287140931815L293.9085665591251,127.87044784571805",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(196, 188, 145)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 48,
+     "tag": "path",
+     "d": "M293.9085665591251,127.87044784571805L294.719854476264,126.5",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(196, 187, 147)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 49,
+     "tag": "path",
+     "d": "M294.719854476264,126.5L295.50105316664803,125.1121801311153",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(195, 187, 149)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 50,
+     "tag": "path",
+     "d": "M295.50105316664803,125.1121801311153L296.2517908220102,123.70764876615748",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(195, 187, 151)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 51,
+     "tag": "path",
+     "d": "M296.2517908220102,123.70764876615748L296.97171013188625,122.2870743859871",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(194, 187, 153)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 52,
+     "tag": "path",
+     "d": "M296.97171013188625,122.2870743859871L297.66046845367543,120.85113310707106",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(194, 187, 155)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 53,
+     "tag": "path",
+     "d": "M297.66046845367543,120.85113310707106L298.31773797571964,119.4005083596878",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(193, 187, 156)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 54,
+     "tag": "path",
+     "d": "M298.31773797571964,119.4005083596878L298.9432058733239,117.93589056265155",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(193, 187, 158)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 55,
+     "tag": "path",
+     "d": "M298.9432058733239,117.93589056265155L299.5365744576443,116.45797679471022",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(193, 187, 160)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 56,
+     "tag": "path",
+     "d": "M299.5365744576443,116.45797679471022L300.0975613173713,114.96747046277382",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(192, 187, 162)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 57,
+     "tag": "path",
+     "d": "M300.0975613173713,114.96747046277382L300.6258994531427,113.4650809671308",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(192, 187, 164)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 58,
+     "tag": "path",
+     "d": "M300.6258994531427,113.4650809671308L301.1213374046206,111.95152336381193",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(192, 187, 165)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 59,
+     "tag": "path",
+     "d": "M301.1213374046206,111.95152336381193L301.5836393701728,110.42751802426243",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(191, 187, 167)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 60,
+     "tag": "path",
+     "d": "M301.5836393701728,110.42751802426243L302.01258531910196,108.89379029248401",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(191, 187, 169)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 61,
+     "tag": "path",
+     "d": "M302.01258531910196,108.89379029248401L302.4079710963681,107.35107013981064",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(191, 187, 170)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 62,
+     "tag": "path",
+     "d": "M302.4079710963681,107.35107013981064L302.76960851975514,105.8000918174815",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 187, 172)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 63,
+     "tag": "path",
+     "d": "M302.76960851975514,105.8000918174815L303.0973254694358,104.24159350717736",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 187, 174)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 64,
+     "tag": "path",
+     "d": "M303.0973254694358,104.24159350717736L303.39096596989117,102.67631696968593",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 188, 175)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 65,
+     "tag": "path",
+     "d": "M303.39096596989117,102.67631696968593L303.6503902641465,101.10500719186392",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 188, 177)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 66,
+     "tag": "path",
+     "d": "M303.6503902641465,101.10500719186392L303.87547488028815,99.52841203206377",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(190, 188, 179)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 67,
+     "tag": "path",
+     "d": "M303.87547488028815,99.52841203206377L304.0661126902293,97.94728186419341",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 180)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 68,
+     "tag": "path",
+     "d": "M304.0661126902293,97.94728186419341L304.22221296069745,96.36236922057905",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 182)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 69,
+     "tag": "path",
+     "d": "M304.22221296069745,96.36236922057905L304.34370139641806,94.77442843380044",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 183)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 70,
+     "tag": "path",
+     "d": "M304.34370139641806,94.77442843380044L304.43052017547564,93.18421527766952",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 185)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 71,
+     "tag": "path",
+     "d": "M304.43052017547564,93.18421527766952L304.4826279768334,91.59248660752296",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 188, 186)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 72,
+     "tag": "path",
+     "d": "M304.4826279768334,91.59248660752296L304.5,90",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(189, 189, 188)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 73,
+     "tag": "path",
+     "d": "M304.5,90L304.4826279768334,88.40751339247704",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(188, 188, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 74,
+     "tag": "path",
+     "d": "M304.4826279768334,88.40751339247704L304.43052017547564,86.81578472233048",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(186, 187, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 75,
+     "tag": "path",
+     "d": "M304.43052017547564,86.81578472233048L304.34370139641806,85.22557156619955",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(185, 186, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 76,
+     "tag": "path",
+     "d": "M304.34370139641806,85.22557156619955L304.22221296069745,83.63763077942095",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(183, 184, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 77,
+     "tag": "path",
+     "d": "M304.22221296069745,83.63763077942095L304.0661126902293,82.05271813580659",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(182, 183, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 78,
+     "tag": "path",
+     "d": "M304.0661126902293,82.05271813580659L303.87547488028815,80.47158796793624",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(180, 182, 189)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 79,
+     "tag": "path",
+     "d": "M303.87547488028815,80.47158796793624L303.6503902641465,78.89499280813607",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(179, 180, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 80,
+     "tag": "path",
+     "d": "M303.6503902641465,78.89499280813607L303.39096596989117,77.32368303031407",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(177, 179, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 81,
+     "tag": "path",
+     "d": "M303.39096596989117,77.32368303031407L303.0973254694358,75.75840649282264",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(175, 178, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 82,
+     "tag": "path",
+     "d": "M303.0973254694358,75.75840649282264L302.76960851975514,74.1999081825185",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 177, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 83,
+     "tag": "path",
+     "d": "M302.76960851975514,74.1999081825185L302.4079710963681,72.64892986018938",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(172, 175, 190)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 84,
+     "tag": "path",
+     "d": "M302.4079710963681,72.64892986018938L302.01258531910196,71.10620970751597",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(170, 174, 191)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 85,
+     "tag": "path",
+     "d": "M302.01258531910196,71.10620970751597L301.5836393701728,69.57248197573757",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(169, 172, 191)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 86,
+     "tag": "path",
+     "d": "M301.5836393701728,69.57248197573757L301.1213374046206,68.04847663618807",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(167, 171, 191)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 87,
+     "tag": "path",
+     "d": "M301.1213374046206,68.04847663618807L300.6258994531427,66.53491903286921",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(165, 170, 192)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 88,
+     "tag": "path",
+     "d": "M300.6258994531427,66.53491903286921L300.0975613173713,65.03252953722617",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(164, 168, 192)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 89,
+     "tag": "path",
+     "d": "M300.0975613173713,65.03252953722617L299.5365744576443,63.54202320528978",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(162, 167, 192)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 90,
+     "tag": "path",
+     "d": "M299.5365744576443,63.54202320528978L298.9432058733239,62.06410943734845",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(160, 165, 193)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 91,
+     "tag": "path",
+     "d": "M298.9432058733239,62.06410943734845L298.31773797571964,60.599491640312195",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(158, 164, 193)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 92,
+     "tag": "path",
+     "d": "M298.31773797571964,60.599491640312195L297.66046845367543,59.14886689292895",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(156, 163, 193)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 93,
+     "tag": "path",
+     "d": "M297.66046845367543,59.14886689292895L296.97171013188625,57.7129256140129",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(155, 161, 194)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 94,
+     "tag": "path",
+     "d": "M296.97171013188625,57.7129256140129L296.2517908220102,56.292351233842524",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(153, 160, 194)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 95,
+     "tag": "path",
+     "d": "M296.2517908220102,56.292351233842524L295.50105316664803,54.887819868884705",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(151, 158, 195)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 96,
+     "tag": "path",
+     "d": "M295.50105316664803,54.887819868884705L294.719854476264,53.500000000000014",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(149, 157, 195)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 97,
+     "tag": "path",
+     "d": "M294.719854476264,53.500000000000014L293.9085665591251,52.129552154281924",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(147, 155, 196)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 98,
+     "tag": "path",
+     "d": "M293.9085665591251,52.129552154281924L293.0675755443407,50.777128590681855",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(145, 154, 196)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 99,
+     "tag": "path",
+     "d": "M293.0675755443407,50.777128590681855L292.1972816980858,49.44337298956904",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(143, 152, 197)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 100,
+     "tag": "path",
+     "d": "M292.1972816980858,49.44337298956904L291.2980992330964,48.12892014637364",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(141, 151, 197)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 101,
+     "tag": "path",
+     "d": "M291.2980992330964,48.12892014637364L290.3704561115262,46.834395669458495",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(139, 149, 198)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 102,
+     "tag": "path",
+     "d": "M290.3704561115262,46.834395669458495L289.4147938412602,45.560415682363384",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(137, 148, 198)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 103,
+     "tag": "path",
+     "d": "M289.4147938412602,45.560415682363384L288.43156726578036,44.30758653056369",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(135, 146, 199)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 104,
+     "tag": "path",
+     "d": "M288.43156726578036,44.30758653056369L287.4212443476854,43.076504492882634",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(133, 144, 199)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 105,
+     "tag": "path",
+     "d": "M287.4212443476854,43.076504492882634L286.38430594596537,41.86775549769498",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(131, 143, 200)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 106,
+     "tag": "path",
+     "d": "M286.38430594596537,41.86775549769498L285.32124558713906,40.68191484405679",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(129, 141, 201)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 107,
+     "tag": "path",
+     "d": "M285.32124558713906,40.68191484405679L284.2325692303622,39.51954692789433",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(127, 140, 201)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 108,
+     "tag": "path",
+     "d": "M284.2325692303622,39.51954692789433L283.118795026618,38.38120497338203",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(125, 138, 202)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 109,
+     "tag": "path",
+     "d": "M283.118795026618,38.38120497338203L281.98045307210566,37.26743076963785",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(123, 136, 203)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 110,
+     "tag": "path",
+     "d": "M281.98045307210566,37.26743076963785L280.8180851559432,36.17875441286096",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(121, 135, 203)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 111,
+     "tag": "path",
+     "d": "M280.8180851559432,36.17875441286096L279.632244502305,35.11569405403464",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(119, 133, 204)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 112,
+     "tag": "path",
+     "d": "M279.632244502305,35.11569405403464L278.42349550711737,34.078755652314605",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(117, 131, 205)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 113,
+     "tag": "path",
+     "d": "M278.42349550711737,34.078755652314605L277.1924134694363,33.068432734219634",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(115, 130, 205)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 114,
+     "tag": "path",
+     "d": "M277.1924134694363,33.068432734219634L275.9395843176366,32.085206158739844",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(112, 128, 206)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 115,
+     "tag": "path",
+     "d": "M275.9395843176366,32.085206158739844L274.6656043305415,31.12954388847377",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(110, 126, 207)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 116,
+     "tag": "path",
+     "d": "M274.6656043305415,31.12954388847377L273.3710798536264,30.2019007669036",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(108, 125, 208)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 117,
+     "tag": "path",
+     "d": "M273.3710798536264,30.2019007669036L272.056627010431,29.302718301914197",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(106, 123, 209)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 118,
+     "tag": "path",
+     "d": "M272.056627010431,29.302718301914197L270.72287140931815,28.432424455659344",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(104, 121, 209)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 119,
+     "tag": "path",
+     "d": "M270.72287140931815,28.432424455659344L269.3704478457181,27.59143344087491",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(101, 119, 210)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 120,
+     "tag": "path",
+     "d": "M269.3704478457181,27.59143344087491L268,26.780145523735975",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(99, 118, 211)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 121,
+     "tag": "path",
+     "d": "M268,26.780145523735975L266.6121801311153,25.998946833351937",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(97, 116, 212)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 122,
+     "tag": "path",
+     "d": "M266.6121801311153,25.998946833351937L265.2076487661575,25.24820917798982",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(94, 114, 213)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 123,
+     "tag": "path",
+     "d": "M265.2076487661575,25.24820917798982L263.7870743859871,24.52828986811376",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(92, 112, 214)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 124,
+     "tag": "path",
+     "d": "M263.7870743859871,24.52828986811376L262.35113310707106,23.83953154632455",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(90, 111, 215)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 125,
+     "tag": "path",
+     "d": "M262.35113310707106,23.83953154632455L260.9005083596878,23.182262024280362",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(87, 109, 216)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 126,
+     "tag": "path",
+     "d": "M260.9005083596878,23.182262024280362L259.43589056265154,22.556794126676067",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(85, 107, 217)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 127,
+     "tag": "path",
+     "d": "M259.43589056265154,22.556794126676067L257.95797679471025,21.963425542355708",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(83, 105, 218)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 128,
+     "tag": "path",
+     "d": "M257.95797679471025,21.963425542355708L256.4674704627738,21.4024386826287",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(80, 103, 219)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 129,
+     "tag": "path",
+     "d": "M256.4674704627738,21.4024386826287L254.9650809671308,20.874100546857278",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(78, 101, 220)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 130,
+     "tag": "path",
+     "d": "M254.9650809671308,20.874100546857278L253.45152336381193,20.37866259537944",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(75, 100, 221)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 131,
+     "tag": "path",
+     "d": "M253.45152336381193,20.37866259537944L251.92751802426244,19.91636062982721",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(73, 98, 222)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 132,
+     "tag": "path",
+     "d": "M251.92751802426244,19.91636062982721L250.39379029248403,19.487414680898027",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(70, 96, 223)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 133,
+     "tag": "path",
+     "d": "M250.39379029248403,19.487414680898027L248.85107013981064,19.092028903631913",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(68, 94, 224)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 134,
+     "tag": "path",
+     "d": "M248.85107013981064,19.092028903631913L247.3000918174815,18.73039148024486",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(65, 92, 225)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 135,
+     "tag": "path",
+     "d": "M247.3000918174815,18.73039148024486L245.74159350717736,18.402674530564184",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(63, 90, 226)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 136,
+     "tag": "path",
+     "d": "M245.74159350717736,18.402674530564184L244.17631696968593,18.109034030108816",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(60, 88, 227)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 137,
+     "tag": "path",
+     "d": "M244.17631696968593,18.109034030108816L242.60500719186393,17.849609735853477",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(58, 86, 228)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 138,
+     "tag": "path",
+     "d": "M242.60500719186393,17.849609735853477L241.02841203206376,17.624525119711848",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(55, 84, 229)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 139,
+     "tag": "path",
+     "d": "M241.02841203206376,17.624525119711848L239.4472818641934,17.433887309770668",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(53, 82, 231)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 140,
+     "tag": "path",
+     "d": "M239.4472818641934,17.433887309770668L237.86236922057907,17.27778703930258",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(50, 80, 232)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 141,
+     "tag": "path",
+     "d": "M237.86236922057907,17.27778703930258L236.27442843380047,17.156298603581945",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(47, 78, 233)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 142,
+     "tag": "path",
+     "d": "M236.27442843380047,17.156298603581945L234.68421527766952,17.06947982452438",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(45, 76, 234)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 143,
+     "tag": "path",
+     "d": "M234.68421527766952,17.06947982452438L233.09248660752297,17.01737202316663",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(42, 74, 236)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 144,
+     "tag": "path",
+     "d": "M233.09248660752297,17.01737202316663L231.5,17",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(39, 72, 237)",
+      "stroke-width": "6px",
+      "stroke-dasharray": "none",
+      "stroke-linecap": "round"
+     }
+    },
+    {
+     "i": 145,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  },
+  {
+   "id": "end",
+   "viewBox": "0 0 463 190",
+   "role": "img",
+   "ariaLabel": "Final map, fixed at time one. Click a colored point to select its input.",
+   "size": [
+    462.81,
+    190
+   ],
+   "bbox": [
+    158.5,
+    17,
+    151,
+    168
+   ],
+   "counts": {
+    "circle": 3,
+    "text": 1
+   },
+   "probe": {},
+   "marks": [
+    {
+     "i": 0,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 1,
+     "tag": "circle",
+     "cx": "304.5",
+     "cy": "90",
+     "r": "5",
+     "paint": {
+      "fill": "rgb(37, 40, 45)",
+      "stroke": "none",
+      "stroke-dasharray": "none"
+     }
+    },
+    {
+     "i": 2,
+     "tag": "text",
+     "x": "231.5",
+     "y": "182",
+     "text-anchor": "middle",
+     "text": "all inputs",
+     "paint": {
+      "fill": "rgb(98, 104, 115)",
+      "stroke": "none",
+      "stroke-dasharray": "none",
+      "font-size": "12px",
+      "display": "block"
+     }
+    },
+    {
+     "i": 3,
+     "tag": "circle",
+     "cx": "231.5",
+     "cy": "90",
+     "r": "73",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     }
+    }
+   ]
+  }
+ ],
+ "prose": [
+  {
+   "tag": "a",
+   "id": null,
+   "text": "← Unfold"
+  },
+  {
+   "tag": "h1",
+   "id": null,
+   "text": "Homotopy explorer"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Category"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Example"
+  },
+  {
+   "tag": "label",
+   "id": null,
+   "text": "Target Y"
+  },
+  {
+   "tag": "button",
+   "id": "play",
+   "text": "▶ Play"
+  },
+  {
+   "tag": "output",
+   "id": "time-value",
+   "text": "0.50"
+  },
+  {
+   "tag": "button",
+   "id": "connect",
+   "text": "Connect points"
+  },
+  {
+   "tag": "p",
+   "id": "example-note",
+   "text": "Every continuous map f from a disk to Y can shrink to a constant: H(x,t) = f((1−t)x)."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "X = filled disk"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Input x"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Y = circle"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Start f₀(x)"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "Now fₜ(x)"
+  },
+  {
+   "tag": "h2",
+   "id": null,
+   "text": "End f₁(x)"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Same color = same input. Click or drag on a colored shape to circle corresponding points."
+  },
+  {
+   "tag": "span",
+   "id": "selection-note",
+   "text": "Only the gray circumference belongs to Y."
+  },
+  {
+   "tag": "summary",
+   "id": null,
+   "text": "Why?"
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "Move the input x toward the disk’s center, then apply the original map f. At t = 0 this gives f(x); at t = 1 every input gives f(0)."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "This works for any target space Y and any continuous starting map f: disk → Y. The outputs stay in Y because they are always outputs of f. You are deforming the map; Y itself stays fixed."
+  },
+  {
+   "tag": "p",
+   "id": null,
+   "text": "The selector shows four sample maps. For the circle target, several inputs share each output; circle an input in X to follow its color."
+  }
+ ],
+ "controls": [
+  {
+   "k": "category",
+   "type": "select-one",
+   "v": "homotopies"
+  },
+  {
+   "k": "example",
+   "type": "select-one",
+   "v": "disk_any"
+  },
+  {
+   "k": "disk-target",
+   "type": "select-one",
+   "v": "circle"
+  },
+  {
+   "k": "time",
+   "type": "range",
+   "v": "0.5"
+  },
+  {
+   "k": "connect",
+   "type": "button",
+   "v": "false"
+  }
+ ],
+ "a11y": {
+  "liveRegions": 2,
+  "tablists": 0,
+  "tabs": 0,
+  "focusable": 25,
+  "headings": [
+   "H1:Homotopy explorer",
+   "H2:Input x",
+   "H2:Start f₀(x)",
+   "H2:Now fₜ(x)",
+   "H2:End f₁(x)",
+   "H2:x · t = 0",
+   "H2:f(x)",
+   "H2:Hₜ(x)",
+   "H2:g(f(x)) · t = 1",
+   "H2:f(x) · copy"
+  ],
+  "imgRoleOnInteractive": 9
+ },
+ "title": "Homotopy explorer · Unfold"
+}
