@@ -13,7 +13,7 @@
 //       strictly earlier in that layer's declared order. No cycles, by
 //       construction.
 //
-//   I2  The pure set never touches the DOM. vec, labels, state, probe, palette,
+//   I2  The pure set never touches the DOM. vec, labels, state, palette,
 //       camera, project, depth and occlude may not mention document, window,
 //       matchMedia, requestAnimationFrame or getBoundingClientRect. This is
 //       what lets the string-building explorers adopt LabelPlacer,
@@ -37,15 +37,23 @@ import { join, relative, resolve, dirname, normalize } from 'node:path';
 // Order within a layer IS the dependency order. Adding a module means adding it
 // here, deliberately, at the right position.
 export const LAYERS = [
-  { n: 0, dir: 'core',   order: ['vec', 'svg', 'a11y', 'viewport', 'labels', 'anim', 'state', 'controls', 'probe'] },
-  { n: 1, dir: 'render', order: ['palette', 'camera', 'project', 'depth', 'occlude', 'marks', 'scene'] },
+  { n: 0, dir: 'core',   order: ['vec', 'svg', 'a11y', 'viewport', 'labels', 'anim', 'state', 'controls', 'probe', 'index'] },
+  { n: 1, dir: 'render', order: ['palette', 'camera', 'project', 'depth', 'occlude', 'marks', 'scene', 'index'] },
   { n: 2, dir: 'geom',   order: ['tolerance', 'claim', 'simplicial', 'cone', 'parametric', 'polytope', 'graph', 'grid', 'map', 'region'] },
   { n: 3, dir: 'domain', order: [] },   // subdirectories; order not constrained
   { n: 4, dir: 'page',   order: ['shell', 'prose', 'legend', 'references', 'controls-ui', 'panels', 'explorable', 'index'] },
 ];
 
+// The DOM-free set. core/probe is deliberately NOT here: the spec gives it the
+// `data-probe` write and the enablement checks (documentElement, location), so
+// only its *computation* half is pure. A whole-file rule cannot express half a
+// file, and splitting it into two modules to satisfy the checker would add a
+// module the manifest does not name. Purity is enforced where it buys
+// something concrete -- letting the string-building explorers reuse
+// LabelPlacer, OcclusionTester, OrbitCamera and sortByDepth during migration --
+// and the probe is not on that list.
 export const PURE = new Set([
-  'core/vec', 'core/labels', 'core/state', 'core/probe',
+  'core/vec', 'core/labels', 'core/state',
   'render/palette', 'render/camera', 'render/project', 'render/depth', 'render/occlude',
 ]);
 
@@ -106,8 +114,17 @@ function blank(src, { strings }) {
   return out.join('');
 }
 
-/** engine-relative "core/vec" from a path like "engine/core/vec.js". */
-const idOf = p => p.replace(/^engine\//, '').replace(/\.m?js$/, '').replace(/\/index$/, '');
+/**
+ * engine-relative "core/vec" from a path like "engine/core/vec.js".
+ *
+ * Note it does NOT collapse "core/index" to "core". A barrel is a module with
+ * its own position in the intra-layer order (last, since it imports everything
+ * in its layer), and collapsing it leaves it unnamed in the manifest and
+ * permanently in violation. Import targets that point at a directory are
+ * resolved by trying "<target>/index" where the import is checked, which is
+ * the only place the fallback belongs.
+ */
+const idOf = p => p.replace(/^engine\//, '').replace(/\.m?js$/, '');
 
 function layerOf(id) {
   const dir = id.split('/')[0];
