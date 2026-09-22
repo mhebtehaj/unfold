@@ -1,9 +1,9 @@
 {
  "scenes": [
   {
-   "id": "source",
+   "id": "homotopy-panel-source",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Input space. Click or drag on a colored point to select it. Arrow keys move the selection; Escape clears it.",
    "size": [
     462.8,
@@ -16,16 +16,18 @@
     146.07
    ],
    "counts": {
-    "path": 1,
-    "polygon": 768,
+    "path": 769,
     "circle": 4,
     "text": 2
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "source"
+   },
    "groups": {
     "path": {
-     "n": 1,
-     "marks": [
+     "n": 769,
+     "digest": "25dcc51c4281c840",
+     "samples": [
       {
        "i": 0,
        "tag": "path",
@@ -34,144 +36,163 @@
         "fill": "rgb(240, 242, 245)",
         "stroke": "none",
         "stroke-dasharray": "none"
-       }
-      }
-     ]
-    },
-    "polygon": {
-     "n": 768,
-     "digest": "b23b9bb8c71e365c",
-     "samples": [
-      {
-       "i": 1,
-       "tag": "polygon",
-       "points": "264.35,90 269.37,90 269.29,87.52 264.28,87.85",
-       "paint": {
-        "fill": "rgb(127, 137, 201)",
-        "stroke": "rgb(127, 137, 201)",
-        "stroke-width": "0.45px",
-        "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r0"
        }
       },
       {
-       "i": 71,
-       "tag": "polygon",
-       "points": "227.21,122.57 226.56,127.54 229.02,127.79 229.35,122.78",
+       "i": 70,
+       "tag": "path",
+       "d": "M225.09128292,122.21879646L224.11217337,127.14111259L226.55713626,127.54477759L227.21221459,122.5689637Z",
        "paint": {
-        "fill": "rgb(127, 201, 144)",
-        "stroke": "rgb(127, 201, 144)",
+        "fill": "rgb(127, 201, 140)",
+        "stroke": "rgb(127, 201, 140)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f70"
        }
       },
       {
        "i": 140,
-       "tag": "polygon",
-       "points": "195.64,77.83 190.89,76.21 190.07,78.9 194.92,80.2",
+       "tag": "path",
+       "d": "M195.64093966,77.82748925L190.88853407,76.21426493L190.07385613,78.8998982L194.92159637,80.19884629Z",
        "paint": {
         "fill": "rgb(205, 165, 116)",
         "stroke": "rgb(205, 165, 116)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f140"
        }
       },
       {
-       "i": 210,
-       "tag": "polygon",
-       "points": "250.47,51.54 252.69,47.03 249.83,45.74 247.91,50.38",
+       "i": 209,
+       "tag": "path",
+       "d": "M252.94375,52.8583355L255.453125,48.5119705L252.68839257,47.03419023L250.4686562,51.5353703Z",
        "paint": {
-        "fill": "rgb(201, 105, 209)",
-        "stroke": "rgb(201, 105, 209)",
+        "fill": "rgb(195, 105, 209)",
+        "stroke": "rgb(195, 105, 209)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f209"
        }
       },
       {
-       "i": 280,
-       "tag": "polygon",
-       "points": "267.16,113.83 271.33,116.62 272.99,113.95 268.64,111.44",
+       "i": 279,
+       "tag": "path",
+       "d": "M265.52494138,116.10825579L269.50658346,119.16347721L271.33259111,116.61528648L267.159653,113.82701837Z",
        "paint": {
-        "fill": "rgb(105, 177, 209)",
-        "stroke": "rgb(105, 177, 209)",
+        "fill": "rgb(105, 184, 209)",
+        "stroke": "rgb(105, 184, 209)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f279"
        }
       },
       {
-       "i": 350,
-       "tag": "polygon",
-       "points": "199.91,126.02 196.6,129.79 199.28,131.99 202.34,128.01",
+       "i": 349,
+       "tag": "path",
+       "d": "M197.62516576,123.87483424L194.07637361,127.42362639L196.60412274,129.79112181L199.91321455,126.01782578Z",
        "paint": {
-        "fill": "rgb(132, 213, 94)",
-        "stroke": "rgb(132, 213, 94)",
+        "fill": "rgb(140, 213, 94)",
+        "stroke": "rgb(140, 213, 94)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f349"
        }
       },
       {
        "i": 419,
-       "tag": "polygon",
-       "points": "199.28,48.01 196.23,44.03 193.3,46.44 196.6,50.21",
+       "tag": "path",
+       "d": "M199.28130137,48.01177447L196.22607995,44.03013239L193.29503093,46.43558216L196.60412274,50.20887819Z",
        "paint": {
         "fill": "rgb(218, 82, 84)",
         "stroke": "rgb(218, 82, 84)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f419"
        }
       },
       {
        "i": 489,
-       "tag": "polygon",
-       "points": "281.68,61.03 286.03,58.52 283.85,55.02 279.68,57.81",
+       "tag": "path",
+       "d": "M281.68075949,61.028125L286.02712449,58.51875L283.85140546,55.0199092L279.67846735,57.80817731Z",
        "paint": {
         "fill": "rgb(126, 70, 223)",
         "stroke": "rgb(126, 70, 223)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f489"
        }
       },
       {
        "i": 559,
-       "tag": "polygon",
-       "points": "253.67,143.53 255.59,148.17 259.35,146.47 257.13,141.97",
+       "tag": "path",
+       "d": "M253.67411313,143.53304466L255.59470561,148.16976507L259.34760166,146.46934999L257.12786529,141.96816992Z",
        "paint": {
         "fill": "rgb(70, 223, 183)",
         "stroke": "rgb(70, 223, 183)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f559"
        }
       },
       {
-       "i": 629,
-       "tag": "polygon",
-       "points": "170.68,106.3 165.84,107.59 167.13,111.85 171.88,110.24",
+       "i": 628,
+       "tag": "path",
+       "d": "M169.74730678,102.2833744L164.82499066,103.26248395L165.83515492,107.59484221L170.68289516,106.29589413Z",
        "paint": {
-        "fill": "rgb(209, 228, 58)",
-        "stroke": "rgb(209, 228, 58)",
+        "fill": "rgb(219, 228, 58)",
+        "stroke": "rgb(219, 228, 58)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f628"
        }
       },
       {
        "i": 698,
-       "tag": "polygon",
-       "points": "227.05,22.16 226.73,17.16 221.97,17.62 222.63,22.6",
+       "tag": "path",
+       "d": "M227.05381352,22.16430307L226.72557157,17.1562986L221.97158797,17.62452512L222.6266663,22.60033902Z",
        "paint": {
         "fill": "rgb(234, 45, 153)",
         "stroke": "rgb(234, 45, 153)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f698"
        }
       },
       {
        "i": 768,
-       "tag": "polygon",
-       "points": "299.34,94.45 304.34,94.77 304.5,90 299.48,90",
+       "tag": "path",
+       "d": "M299.33569693,94.44618648L304.3437014,94.77442843L304.5,90L299.48125,90Z",
        "paint": {
         "fill": "rgb(45, 82, 234)",
         "stroke": "rgb(45, 82, 234)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f768"
        }
       }
      ]
@@ -190,6 +211,9 @@
         "stroke": "rgb(174, 182, 193)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r769"
        }
       },
       {
@@ -203,6 +227,9 @@
         "stroke": "rgb(174, 182, 193)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r770"
        }
       },
       {
@@ -216,6 +243,9 @@
         "stroke": "rgb(163, 41, 36)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/p771"
        }
       },
       {
@@ -229,6 +259,9 @@
         "stroke": "rgb(163, 41, 36)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/p773"
        }
       }
      ]
@@ -249,6 +282,9 @@
         "stroke-dasharray": "none",
         "font-size": "12px",
         "display": "block"
+       },
+       "data": {
+        "data-k": "panel/t772"
        }
       },
       {
@@ -264,6 +300,9 @@
         "stroke-dasharray": "none",
         "font-size": "12px",
         "display": "block"
+       },
+       "data": {
+        "data-k": "panel/t774"
        }
       }
      ]
@@ -271,9 +310,9 @@
    }
   },
   {
-   "id": "start",
+   "id": "homotopy-panel-start",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Starting map, fixed at time zero. Click a colored point to select its input.",
    "size": [
     462.81,
@@ -286,28 +325,20 @@
     146.07
    ],
    "counts": {
-    "path": 2,
-    "polygon": 768,
+    "path": 770,
     "circle": 5,
     "text": 2
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "start"
+   },
    "groups": {
     "path": {
-     "n": 2,
-     "marks": [
+     "n": 770,
+     "digest": "4f35b70c09d9d714",
+     "samples": [
       {
        "i": 0,
-       "tag": "path",
-       "d": "M158.5,90a73,73 0 1,0 146,0a73,73 0 1,0 -146,0 M198.65,90a32.85,32.85 0 1,0 65.7,0a32.85,32.85 0 1,0 -65.7,0",
-       "paint": {
-        "fill": "rgb(240, 242, 245)",
-        "stroke": "none",
-        "stroke-dasharray": "none"
-       }
-      },
-      {
-       "i": 771,
        "tag": "path",
        "d": "M0,6L6,0",
        "paint": {
@@ -316,143 +347,159 @@
         "stroke-dasharray": "none",
         "opacity": "0.5"
        }
-      }
-     ]
-    },
-    "polygon": {
-     "n": 768,
-     "digest": "b23b9bb8c71e365c",
-     "samples": [
-      {
-       "i": 1,
-       "tag": "polygon",
-       "points": "264.35,90 269.37,90 269.29,87.52 264.28,87.85",
-       "paint": {
-        "fill": "rgb(127, 137, 201)",
-        "stroke": "rgb(127, 137, 201)",
-        "stroke-width": "0.45px",
-        "stroke-dasharray": "none"
-       }
       },
       {
-       "i": 71,
-       "tag": "polygon",
-       "points": "227.21,122.57 226.56,127.54 229.02,127.79 229.35,122.78",
+       "i": 70,
+       "tag": "path",
+       "d": "M222.99779437,121.73066339L221.69884629,126.57840363L224.11217337,127.14111259L225.09128292,122.21879646Z",
        "paint": {
-        "fill": "rgb(127, 201, 144)",
-        "stroke": "rgb(127, 201, 144)",
+        "fill": "rgb(127, 201, 135)",
+        "stroke": "rgb(127, 201, 135)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f69"
        }
       },
       {
        "i": 140,
-       "tag": "polygon",
-       "points": "195.64,77.83 190.89,76.21 190.07,78.9 194.92,80.2",
+       "tag": "path",
+       "d": "M196.51383695,75.50825677L191.87711655,73.58766429L190.88853407,76.21426493L195.64093966,77.82748925Z",
        "paint": {
-        "fill": "rgb(205, 165, 116)",
-        "stroke": "rgb(205, 165, 116)",
+        "fill": "rgb(205, 160, 116)",
+        "stroke": "rgb(205, 160, 116)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f139"
        }
       },
       {
        "i": 210,
-       "tag": "polygon",
-       "points": "250.47,51.54 252.69,47.03 249.83,45.74 247.91,50.38",
+       "tag": "path",
+       "d": "M252.94375,52.8583355L255.453125,48.5119705L252.68839257,47.03419023L250.4686562,51.5353703Z",
        "paint": {
-        "fill": "rgb(201, 105, 209)",
-        "stroke": "rgb(201, 105, 209)",
+        "fill": "rgb(195, 105, 209)",
+        "stroke": "rgb(195, 105, 209)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f209"
        }
       },
       {
        "i": 280,
-       "tag": "polygon",
-       "points": "267.16,113.83 271.33,116.62 272.99,113.95 268.64,111.44",
+       "tag": "path",
+       "d": "M265.52494138,116.10825579L269.50658346,119.16347721L271.33259111,116.61528648L267.159653,113.82701837Z",
        "paint": {
-        "fill": "rgb(105, 177, 209)",
-        "stroke": "rgb(105, 177, 209)",
+        "fill": "rgb(105, 184, 209)",
+        "stroke": "rgb(105, 184, 209)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f279"
        }
       },
       {
        "i": 350,
-       "tag": "polygon",
-       "points": "199.91,126.02 196.6,129.79 199.28,131.99 202.34,128.01",
+       "tag": "path",
+       "d": "M197.62516576,123.87483424L194.07637361,127.42362639L196.60412274,129.79112181L199.91321455,126.01782578Z",
        "paint": {
-        "fill": "rgb(132, 213, 94)",
-        "stroke": "rgb(132, 213, 94)",
+        "fill": "rgb(140, 213, 94)",
+        "stroke": "rgb(140, 213, 94)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f349"
        }
       },
       {
        "i": 419,
-       "tag": "polygon",
-       "points": "199.28,48.01 196.23,44.03 193.3,46.44 196.6,50.21",
+       "tag": "path",
+       "d": "M202.09644542,45.99447077L199.30817731,41.82153265L196.22607995,44.03013239L199.28130137,48.01177447Z",
        "paint": {
-        "fill": "rgb(218, 82, 84)",
-        "stroke": "rgb(218, 82, 84)",
+        "fill": "rgb(218, 82, 92)",
+        "stroke": "rgb(218, 82, 92)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f418"
        }
       },
       {
        "i": 489,
-       "tag": "polygon",
-       "points": "281.68,61.03 286.03,58.52 283.85,55.02 279.68,57.81",
+       "tag": "path",
+       "d": "M283.46816992,64.37213471L287.96934999,62.15239834L286.02712449,58.51875L281.68075949,61.028125Z",
        "paint": {
-        "fill": "rgb(126, 70, 223)",
-        "stroke": "rgb(126, 70, 223)",
+        "fill": "rgb(116, 70, 223)",
+        "stroke": "rgb(116, 70, 223)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f488"
        }
       },
       {
        "i": 559,
-       "tag": "polygon",
-       "points": "253.67,143.53 255.59,148.17 259.35,146.47 257.13,141.97",
+       "tag": "path",
+       "d": "M250.12540802,144.86868269L251.73863233,149.62108828L255.59470561,148.16976507L253.67411313,143.53304466Z",
        "paint": {
-        "fill": "rgb(70, 223, 183)",
-        "stroke": "rgb(70, 223, 183)",
+        "fill": "rgb(70, 223, 174)",
+        "stroke": "rgb(70, 223, 174)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f558"
        }
       },
       {
        "i": 629,
-       "tag": "polygon",
-       "points": "170.68,106.3 165.84,107.59 167.13,111.85 171.88,110.24",
+       "tag": "path",
+       "d": "M169.74730678,102.2833744L164.82499066,103.26248395L165.83515492,107.59484221L170.68289516,106.29589413Z",
        "paint": {
-        "fill": "rgb(209, 228, 58)",
-        "stroke": "rgb(209, 228, 58)",
+        "fill": "rgb(219, 228, 58)",
+        "stroke": "rgb(219, 228, 58)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f628"
        }
       },
       {
-       "i": 698,
-       "tag": "polygon",
-       "points": "227.05,22.16 226.73,17.16 221.97,17.62 222.63,22.6",
+       "i": 699,
+       "tag": "path",
+       "d": "M227.05381352,22.16430307L226.72557157,17.1562986L221.97158797,17.62452512L222.6266663,22.60033902Z",
        "paint": {
         "fill": "rgb(234, 45, 153)",
         "stroke": "rgb(234, 45, 153)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f698"
        }
       },
       {
-       "i": 768,
-       "tag": "polygon",
-       "points": "299.34,94.45 304.34,94.77 304.5,90 299.48,90",
+       "i": 769,
+       "tag": "path",
+       "d": "M299.33569693,94.44618648L304.3437014,94.77442843L304.5,90L299.48125,90Z",
        "paint": {
         "fill": "rgb(45, 82, 234)",
         "stroke": "rgb(45, 82, 234)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f768"
        }
       }
      ]
@@ -461,7 +508,7 @@
      "n": 5,
      "marks": [
       {
-       "i": 769,
+       "i": 770,
        "tag": "circle",
        "cx": "231.5",
        "cy": "90",
@@ -471,10 +518,13 @@
         "stroke": "rgb(174, 182, 193)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r769"
        }
       },
       {
-       "i": 770,
+       "i": 771,
        "tag": "circle",
        "cx": "231.5",
        "cy": "90",
@@ -484,6 +534,9 @@
         "stroke": "rgb(174, 182, 193)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r770"
        }
       },
       {
@@ -493,9 +546,12 @@
        "cy": "90",
        "r": "32.85",
        "paint": {
-        "fill": "url(\"#hole-start\")",
+        "fill": "url(\"#homotopy-start-hatch\")",
         "stroke": "none",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r771"
        }
       },
       {
@@ -509,6 +565,9 @@
         "stroke": "rgb(163, 41, 36)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/p772"
        }
       },
       {
@@ -522,6 +581,9 @@
         "stroke": "rgb(163, 41, 36)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/p774"
        }
       }
      ]
@@ -542,6 +604,9 @@
         "stroke-dasharray": "none",
         "font-size": "12px",
         "display": "block"
+       },
+       "data": {
+        "data-k": "panel/t773"
        }
       },
       {
@@ -557,6 +622,9 @@
         "stroke-dasharray": "none",
         "font-size": "12px",
         "display": "block"
+       },
+       "data": {
+        "data-k": "panel/t775"
        }
       }
      ]
@@ -564,9 +632,9 @@
    }
   },
   {
-   "id": "now",
+   "id": "homotopy-panel-now",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Current map. Click or drag on a colored point to select its input.",
    "size": [
     462.81,
@@ -579,28 +647,20 @@
     146.07
    ],
    "counts": {
-    "path": 2,
-    "polygon": 768,
+    "path": 770,
     "circle": 5,
     "text": 2
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "now"
+   },
    "groups": {
     "path": {
-     "n": 2,
-     "marks": [
+     "n": 770,
+     "digest": "4fb17d58caaccc68",
+     "samples": [
       {
        "i": 0,
-       "tag": "path",
-       "d": "M158.5,90a73,73 0 1,0 146,0a73,73 0 1,0 -146,0 M198.65,90a32.85,32.85 0 1,0 65.7,0a32.85,32.85 0 1,0 -65.7,0",
-       "paint": {
-        "fill": "rgb(240, 242, 245)",
-        "stroke": "none",
-        "stroke-dasharray": "none"
-       }
-      },
-      {
-       "i": 771,
        "tag": "path",
        "d": "M0,6L6,0",
        "paint": {
@@ -609,143 +669,159 @@
         "stroke-dasharray": "none",
         "opacity": "0.5"
        }
-      }
-     ]
-    },
-    "polygon": {
-     "n": 768,
-     "digest": "c6a58960b96edb12",
-     "samples": [
-      {
-       "i": 1,
-       "tag": "polygon",
-       "points": "275.3,90 277.81,90 277.78,88.48 275.28,88.57",
-       "paint": {
-        "fill": "rgb(127, 137, 201)",
-        "stroke": "rgb(127, 137, 201)",
-        "stroke-width": "0.45px",
-        "stroke-dasharray": "none"
-       }
       },
       {
-       "i": 71,
-       "tag": "polygon",
-       "points": "202.62,57.07 200.97,55.18 199.84,56.2 201.56,58.03",
+       "i": 70,
+       "tag": "path",
+       "d": "M204.83624941,55.2511237L203.3086387,53.26030266L202.12164351,54.20236904L203.71357415,56.14214214Z",
        "paint": {
-        "fill": "rgb(127, 201, 144)",
-        "stroke": "rgb(127, 201, 144)",
+        "fill": "rgb(127, 201, 135)",
+        "stroke": "rgb(127, 201, 135)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f69"
        }
       },
       {
        "i": 140,
-       "tag": "polygon",
-       "points": "239.04,44.31 239.45,41.83 237.87,41.6 237.54,44.09",
+       "tag": "path",
+       "d": "M240.53451088,44.58044666L241.02406566,42.11928859L239.45235339,41.83330583L239.04358756,44.30916394Z",
        "paint": {
-        "fill": "rgb(205, 165, 116)",
-        "stroke": "rgb(205, 165, 116)",
+        "fill": "rgb(205, 160, 116)",
+        "stroke": "rgb(205, 160, 116)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f139"
        }
       },
       {
        "i": 210,
-       "tag": "polygon",
-       "points": "272.96,64.22 275.09,62.9 274.18,61.48 272.09,62.88",
+       "tag": "path",
+       "d": "M273.77827768,65.590625L275.95146018,64.3359375L275.08795572,62.89526735L272.956989,64.22038762Z",
        "paint": {
-        "fill": "rgb(201, 105, 209)",
-        "stroke": "rgb(201, 105, 209)",
+        "fill": "rgb(195, 105, 209)",
+        "stroke": "rgb(195, 105, 209)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f209"
        }
       },
       {
        "i": 280,
-       "tag": "polygon",
-       "points": "184.78,75.83 182.38,75.1 181.92,76.72 184.34,77.36",
+       "tag": "path",
+       "d": "M185.27205474,74.3077271L182.89585195,73.50111494L182.38204683,75.1002318L184.78336898,75.82866491Z",
        "paint": {
-        "fill": "rgb(105, 177, 209)",
-        "stroke": "rgb(105, 177, 209)",
+        "fill": "rgb(105, 184, 209)",
+        "stroke": "rgb(105, 184, 209)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f279"
        }
       },
       {
        "i": 350,
-       "tag": "polygon",
-       "points": "210.32,43.25 209.28,40.96 207.69,41.71 208.8,43.97",
+       "tag": "path",
+       "d": "M211.85757695,42.57899587L210.89728071,40.26063567L209.28088528,40.96136883L210.31652199,43.24706774Z",
        "paint": {
-        "fill": "rgb(132, 213, 94)",
-        "stroke": "rgb(132, 213, 94)",
+        "fill": "rgb(140, 213, 94)",
+        "stroke": "rgb(140, 213, 94)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f349"
        }
       },
       {
        "i": 419,
-       "tag": "polygon",
-       "points": "255.31,41.71 256.42,39.46 254.75,38.68 253.72,40.96",
+       "tag": "path",
+       "d": "M256.87882182,42.51956393L258.06173301,40.30649276L256.42158554,39.46402374L255.31171736,41.71461378Z",
        "paint": {
-        "fill": "rgb(218, 82, 84)",
-        "stroke": "rgb(218, 82, 84)",
+        "fill": "rgb(218, 82, 92)",
+        "stroke": "rgb(218, 82, 92)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f418"
        }
       },
       {
        "i": 489,
-       "tag": "polygon",
-       "points": "285.93,75.42 288.35,74.77 287.82,72.91 285.42,73.64",
+       "tag": "path",
+       "d": "M286.37492442,77.20496219L288.81874696,76.63514269L288.35077191,74.76688158L285.92690179,75.41635562Z",
        "paint": {
-        "fill": "rgb(126, 70, 223)",
-        "stroke": "rgb(126, 70, 223)",
+        "fill": "rgb(116, 70, 223)",
+        "stroke": "rgb(116, 70, 223)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f488"
        }
       },
       {
        "i": 559,
-       "tag": "polygon",
-       "points": "184.65,58.7 182.56,57.3 181.52,58.92 183.65,60.25",
+       "tag": "path",
+       "d": "M185.69862947,57.17920202L183.65889232,55.71754705L182.56281663,57.30121947L184.64928569,58.69535353Z",
        "paint": {
-        "fill": "rgb(70, 223, 183)",
-        "stroke": "rgb(70, 223, 183)",
+        "fill": "rgb(70, 223, 174)",
+        "stroke": "rgb(70, 223, 174)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f558"
        }
       },
       {
        "i": 629,
-       "tag": "polygon",
-       "points": "223.82,31.65 223.49,29.16 221.5,29.45 221.91,31.93",
+       "tag": "path",
+       "d": "M225.73107868,31.42715893L225.48511692,28.92986726L223.49017864,29.15936643L223.8177178,31.64727338Z",
        "paint": {
-        "fill": "rgb(209, 228, 58)",
-        "stroke": "rgb(209, 228, 58)",
+        "fill": "rgb(219, 228, 58)",
+        "stroke": "rgb(219, 228, 58)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f628"
        }
       },
       {
-       "i": 698,
-       "tag": "polygon",
-       "points": "273.45,45.21 275.16,43.38 273.62,41.98 271.96,43.86",
+       "i": 699,
+       "tag": "path",
+       "d": "M273.44906886,45.21143501L275.16445829,43.37993236L273.61571394,41.9762323L271.96116803,43.86288031Z",
        "paint": {
         "fill": "rgb(234, 45, 153)",
         "stroke": "rgb(234, 45, 153)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f698"
        }
       },
       {
-       "i": 768,
-       "tag": "polygon",
-       "points": "170.17,87.99 167.66,87.91 167.63,90 170.13,90",
+       "i": 769,
+       "tag": "path",
+       "d": "M170.16723092,87.99217303L167.65919947,87.91006858L167.625,90L170.134375,90Z",
        "paint": {
         "fill": "rgb(45, 82, 234)",
         "stroke": "rgb(45, 82, 234)",
         "stroke-width": "0.45px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/f768"
        }
       }
      ]
@@ -754,7 +830,7 @@
      "n": 5,
      "marks": [
       {
-       "i": 769,
+       "i": 770,
        "tag": "circle",
        "cx": "231.5",
        "cy": "90",
@@ -764,10 +840,13 @@
         "stroke": "rgb(174, 182, 193)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r769"
        }
       },
       {
-       "i": 770,
+       "i": 771,
        "tag": "circle",
        "cx": "231.5",
        "cy": "90",
@@ -777,6 +856,9 @@
         "stroke": "rgb(174, 182, 193)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r770"
        }
       },
       {
@@ -786,9 +868,12 @@
        "cy": "90",
        "r": "32.85",
        "paint": {
-        "fill": "url(\"#hole-now\")",
+        "fill": "url(\"#homotopy-now-hatch\")",
         "stroke": "none",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/r771"
        }
       },
       {
@@ -802,6 +887,9 @@
         "stroke": "rgb(163, 41, 36)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/p772"
        }
       },
       {
@@ -815,6 +903,9 @@
         "stroke": "rgb(163, 41, 36)",
         "stroke-width": "1.5px",
         "stroke-dasharray": "none"
+       },
+       "data": {
+        "data-k": "panel/p774"
        }
       }
      ]
@@ -835,6 +926,9 @@
         "stroke-dasharray": "none",
         "font-size": "12px",
         "display": "block"
+       },
+       "data": {
+        "data-k": "panel/t773"
        }
       },
       {
@@ -850,6 +944,9 @@
         "stroke-dasharray": "none",
         "font-size": "12px",
         "display": "block"
+       },
+       "data": {
+        "data-k": "panel/t775"
        }
       }
      ]
@@ -857,9 +954,9 @@
    }
   },
   {
-   "id": "end",
+   "id": "homotopy-panel-end",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Final map, fixed at time one. Click a colored point to select its input.",
    "size": [
     462.81,
@@ -876,20 +973,36 @@
     "circle": 6,
     "text": 1
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "end"
+   },
    "marks": [
     {
      "i": 0,
+     "tag": "path",
+     "d": "M0,6L6,0",
+     "paint": {
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "0.6px",
+      "stroke-dasharray": "none",
+      "opacity": "0.5"
+     }
+    },
+    {
+     "i": 1,
      "tag": "path",
      "d": "M158.5,90a73,73 0 1,0 146,0a73,73 0 1,0 -146,0 M198.65,90a32.85,32.85 0 1,0 65.7,0a32.85,32.85 0 1,0 -65.7,0",
      "paint": {
       "fill": "rgb(240, 242, 245)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
-     "i": 1,
+     "i": 2,
      "tag": "circle",
      "cx": "286.25",
      "cy": "90",
@@ -898,10 +1011,13 @@
       "fill": "rgb(37, 40, 45)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
-     "i": 2,
+     "i": 3,
      "tag": "text",
      "x": "231.5",
      "y": "182",
@@ -913,10 +1029,13 @@
       "stroke-dasharray": "none",
       "font-size": "12px",
       "display": "block"
+     },
+     "data": {
+      "data-k": "panel/t2"
      }
     },
     {
-     "i": 3,
+     "i": 4,
      "tag": "circle",
      "cx": "231.5",
      "cy": "90",
@@ -926,10 +1045,13 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r3"
      }
     },
     {
-     "i": 4,
+     "i": 5,
      "tag": "circle",
      "cx": "231.5",
      "cy": "90",
@@ -939,17 +1061,9 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
-     }
-    },
-    {
-     "i": 5,
-     "tag": "path",
-     "d": "M0,6L6,0",
-     "paint": {
-      "stroke": "rgb(174, 182, 193)",
-      "stroke-width": "0.6px",
-      "stroke-dasharray": "none",
-      "opacity": "0.5"
+     },
+     "data": {
+      "data-k": "panel/r4"
      }
     },
     {
@@ -959,9 +1073,12 @@
      "cy": "90",
      "r": "32.85",
      "paint": {
-      "fill": "url(\"#hole-end\")",
+      "fill": "url(\"#homotopy-end-hatch\")",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r5"
      }
     },
     {
@@ -975,6 +1092,9 @@
       "stroke": "rgb(163, 41, 36)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p6"
      }
     },
     {
@@ -988,6 +1108,9 @@
       "stroke": "rgb(163, 41, 36)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p7"
      }
     }
    ]
@@ -1010,28 +1133,38 @@
    "text": "Category"
   },
   {
+   "tag": "select",
+   "id": "choose-category",
+   "text": "HomotopiesCan / cannotHomotopy classes (maps)Homotopy types (spaces)"
+  },
+  {
    "tag": "label",
    "id": null,
    "text": "Example"
   },
   {
+   "tag": "select",
+   "id": "choose-example",
+   "text": "Circle: open the loop? — failsAnnulus: go around the hole? — failsAnnulus: straight to a point — failsAnnulus → its inner circle — worksAround the hole once → twice — impossibleA loop beside the hole → a point — worksCircle → circle: straight shrink — fails"
+  },
+  {
    "tag": "button",
-   "id": "play",
+   "id": null,
    "text": "▶ Play"
   },
   {
    "tag": "output",
-   "id": "time-value",
+   "id": null,
    "text": "0.50"
   },
   {
    "tag": "button",
-   "id": "connect",
+   "id": "homotopy-connections",
    "text": "Connect points"
   },
   {
    "tag": "p",
-   "id": "example-note",
+   "id": null,
    "text": "Every point stays in Y, but the marked neighbors split at a seam. This is not continuous."
   },
   {
@@ -1071,12 +1204,12 @@
   },
   {
    "tag": "p",
-   "id": "warning",
+   "id": null,
    "text": "The outputs stay in Y, but the map jumps across the seam between a and b."
   },
   {
    "tag": "span",
-   "id": "selection-note",
+   "id": null,
    "text": "The hatched hole is not part of Y."
   },
   {
@@ -1112,31 +1245,31 @@
  ],
  "controls": [
   {
-   "k": "category",
+   "k": "choose-category",
    "type": "select-one",
    "v": "obstructions"
   },
   {
-   "k": "example",
+   "k": "choose-example",
    "type": "select-one",
    "v": "annulus_paths"
   },
   {
-   "k": "time",
+   "k": "homotopy-t",
    "type": "range",
    "v": "0.5"
   },
   {
-   "k": "connect",
+   "k": "homotopy-connections",
    "type": "button",
    "v": "false"
   }
  ],
  "a11y": {
-  "liveRegions": 2,
+  "liveRegions": 4,
   "tablists": 0,
   "tabs": 0,
-  "focusable": 26,
+  "focusable": 27,
   "headings": [
    "H1:Homotopy explorer",
    "H2:Input x",
@@ -1145,11 +1278,11 @@
    "H2:End f₁(x)",
    "H2:x · t = 0",
    "H2:f(x)",
-   "H2:Hₜ(x)",
+   "H2:Homotopy Hₜ(x)",
    "H2:g(f(x)) · t = 1",
    "H2:f(x) · copy"
   ],
-  "imgRoleOnInteractive": 9
+  "imgRoleOnInteractive": 0
  },
  "title": "Homotopy explorer · Unfold"
 }

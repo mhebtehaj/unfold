@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="See the starting, current, and final maps of a homotopy, with matching colors for corresponding points.">
+<title>Homotopy explorer · Unfold</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 22Q16 0 28 22' fill='none' stroke='%234b7bec' stroke-width='4'/%3E%3Ccircle cx='16' cy='11' r='4' fill='%23ef8354'/%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark;--bg:light-dark(#fff,#181818);--fg:light-dark(#25282d,#f1f1f2);--muted:light-dark(#626873,#a9adb6);--border:light-dark(#dfe2e7,#3b3e43);--target:light-dark(#f0f2f5,#292d34);--outline:light-dark(#aeb6c1,#727b8b);--accent:light-dark(#356acb,#83afff);--active:light-dark(#f4f7fd,#202938);--warning:light-dark(#a32924,#ffac9f);--drawing-height:clamp(142px,calc((100svh - 310px)/3),190px);font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--fg)}
+*{box-sizing:border-box}body{margin:0}main{max-width:1080px;margin:auto;padding:22px 24px}h1{font-size:21px;font-weight:650;letter-spacing:-.35px;margin:0}button,select,input{font:inherit}button,select{color:var(--fg);background:var(--bg);border:1px solid var(--border);border-radius:6px;min-height:38px}button{padding:6px 13px;cursor:pointer}button:hover{background:var(--target)}select{padding:6px 30px 6px 10px;max-width:100%;cursor:pointer}button:focus-visible,select:focus-visible,input:focus-visible,svg:focus-visible{outline:3px solid var(--accent);outline-offset:3px}[hidden]{display:none!important}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-bottom:15px}.example-control{display:flex;align-items:center;gap:9px;font-size:14px}.controls{display:flex;align-items:center;gap:16px;margin:0 0 18px;flex-wrap:wrap}.play{min-width:96px}.time-control{flex:1;display:flex;align-items:center;gap:12px;min-width:130px}.time-control label{font-family:Cambria,Georgia,serif;font-size:19px}.time-control input{width:100%;min-width:30px;margin:0;accent-color:var(--accent);cursor:pointer;min-height:24px}.time-control output{font-variant-numeric:tabular-nums;font-size:15px;min-width:38px}.connect{font-size:14px}.connect[aria-pressed=true]{border-color:var(--accent);background:var(--active);color:var(--accent)}.spaces{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,8vw,110px);align-items:stretch}.source-panel,.maps{min-width:0;display:grid;grid-template-rows:32px minmax(0,1fr)}.space-label{font-size:14px;color:var(--muted);margin:0;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.space-label strong{color:var(--fg);font-weight:600}.map-grid{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(3,minmax(0,1fr));gap:10px}.picture{margin:0;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:transparent}.source-panel .picture{align-self:center;width:100%;border-color:transparent}.picture.current{border-color:var(--accent)}.picture h2{font-size:14px;font-weight:550;text-align:center;margin:9px 5px 0;line-height:22px;white-space:nowrap}.picture h2 span{font-family:Cambria,Georgia,serif;font-size:18px;margin-left:5px}.drawing{position:relative;display:block;width:100%;height:var(--drawing-height);touch-action:none;cursor:crosshair}.drawing text{font-family:inherit;font-size:13px;fill:var(--muted)}.target-shape{fill:var(--target);stroke:none}.circle-only{fill:none}.target-boundary{fill:none;stroke:var(--outline);stroke-width:1.5;pointer-events:none}.collapse-label{font-size:12px!important;fill:var(--muted)}.connectors{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}.hint{font-size:14px;color:var(--muted);margin:14px 0 0}.hint strong{font-weight:550;color:var(--fg)}.selection{display:flex;align-items:center;gap:12px;min-height:32px;margin-top:7px;color:var(--muted);font-size:13px}.selection button{font-size:13px;min-height:29px;padding:3px 9px}.warning{color:var(--warning);font-size:14px;margin:8px 0 0}
+@media(max-width:600px){main{padding:16px 12px}.toolbar{align-items:flex-start;flex-direction:column;gap:8px;margin-bottom:12px}h1{font-size:19px}.example-control{width:100%}.example-control select{flex:1;min-width:0}.spaces{grid-template-columns:minmax(0,1fr) minmax(0,1.18fr);gap:26px}.controls{gap:10px;margin-bottom:15px}.play{min-width:79px;padding:6px 10px}.connect{font-size:13px;padding:6px 9px}.time-control{gap:7px}.picture h2{font-size:13px;margin-top:7px}.picture h2 span{font-size:16px}.space-label{font-size:13px}.hint{font-size:13px}.selection{align-items:flex-start}.source-panel,.maps{grid-template-rows:30px minmax(0,1fr)}}
+@media(max-width:380px){.controls .connect{margin-left:auto}.time-control{min-width:150px}.spaces{gap:18px}.picture h2 span{margin-left:2px}}
+.target-control{justify-content:flex-end;margin-bottom:14px}.target-control select{flex:0 1 auto}.example-note{margin:0 0 14px;font-size:14px;color:var(--muted);max-width:850px}.example-note.failure{color:var(--warning)}.why{margin-top:10px;font-size:14px;max-width:800px}.why summary{cursor:pointer;color:var(--muted)}.why p{margin:9px 0}.why a{color:var(--accent)}.picture h2 .plain-label{font:inherit;margin:0}.hole-overlay{pointer-events:none}.seam-probe{pointer-events:none}.drawing .probe-label{font-size:12px;fill:var(--fg)}
+.toolbar{display:block}.navigation{display:grid;grid-template-columns:minmax(180px,.85fr) minmax(240px,1.3fr);gap:10px 18px;margin-top:12px}.navigation .example-control{min-width:0}.navigation select{width:100%;min-width:0}.category-control label{white-space:nowrap}.class-controls{display:flex;gap:15px;align-items:center;flex-wrap:wrap;margin-bottom:14px;font-size:14px}.class-controls label{display:flex;align-items:center;gap:8px}.class-controls select{min-width:76px}.type-definition{font-size:14px;color:var(--muted);margin:0 0 12px}.type-definition strong{font-weight:550;color:var(--fg)}.roundtrip-choices{display:flex;gap:8px;margin-bottom:12px}.roundtrip-choices button{font-size:14px;flex:1}.roundtrip-choices button[aria-pressed=true]{border-color:var(--accent);color:var(--accent);background:var(--active)}.eq-route{font:18px Cambria,Georgia,serif;text-align:center;margin:0 0 10px;color:var(--fg)}.eq-spaces{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.2fr);gap:clamp(10px,3vw,35px)}.eq-column,.eq-return{display:grid;grid-template-rows:40px minmax(0,1fr);min-width:0}.eq-column>.picture{align-self:center;width:100%}.eq-space-label{text-align:center;font-size:13px;color:var(--muted);margin:0;line-height:18px}.eq-space-label strong{color:var(--fg);font-weight:600}.eq-spaces .drawing{height:clamp(108px,calc((100svh - 390px)/3),160px)}.eq-spaces .picture h2{font:16px Cambria,Georgia,serif}.eq-spaces .drawing text{font-size:11px}.eq-spaces .collapse-label{font-size:10px!important}.eq-spaces .map-grid{gap:8px}.eq-status{font-weight:550}.why code{font:14px Cambria,Georgia,serif;white-space:normal}.source-reference{color:var(--muted);font-size:12px}
+@media(max-width:600px){.navigation{grid-template-columns:1fr;gap:8px;margin-top:10px}.navigation label{width:65px;flex-shrink:0}.eq-spaces .picture h2{font-size:13px;margin:7px 2px 0}.eq-spaces .eq-space-label{font-size:12px}.eq-column,.eq-return{grid-template-rows:43px minmax(0,1fr)}.roundtrip-choices button{font-size:12px;padding:5px}.type-definition{font-size:13px}.eq-spaces .drawing{height:110px}.eq-spaces{gap:10px}.eq-route{font-size:17px}.eq-spaces .picture{border-radius:6px}}
+
+/* The two spaces remain in fixed columns; switching the round trip mirrors
+   the five pictures and moves only the homotopy to the other side. */
+.eq-spaces{grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);grid-template-rows:auto repeat(3,auto);column-gap:8px;row-gap:10px;align-items:center}
+.eq-axis-x{grid-column:1;grid-row:1}.eq-axis-y{grid-column:3;grid-row:1}
+#eq-source-panel{grid-column:1;grid-row:2}#eq-middle-panel{grid-column:3;grid-row:2}#eq-now-panel{grid-column:1;grid-row:3}#eq-compose-panel{grid-column:1;grid-row:4}#eq-copy-panel{grid-column:3;grid-row:4}
+.eq-leg{grid-column:2;display:flex;flex-direction:column;align-items:center;justify-content:center;font:18px Cambria,Georgia,serif;z-index:4;pointer-events:none}.eq-leg span{background:var(--bg);padding:0 2px}.eq-leg span+span{font-size:27px;line-height:28px}.eq-leg-top{grid-row:2}.eq-leg-bottom{grid-row:4}
+.eq-copy-arrow{grid-column:3;grid-row:3;display:flex;align-items:center;justify-content:center;flex-direction:column;color:var(--muted);font-size:12px;pointer-events:none;z-index:4}.eq-copy-arrow>span{background:var(--bg);padding:0 5px}.eq-copy-arrow>span:first-child{font-size:34px;line-height:40px}
+.eq-spaces[data-side=y] #eq-source-panel,.eq-spaces[data-side=y] #eq-now-panel,.eq-spaces[data-side=y] #eq-compose-panel{grid-column:3}.eq-spaces[data-side=y] #eq-middle-panel,.eq-spaces[data-side=y] #eq-copy-panel,.eq-spaces[data-side=y] .eq-copy-arrow{grid-column:1}
+.eq-spaces .drawing{height:clamp(96px,calc((100svh - 420px)/3),160px)}.eq-spaces .picture h2{font:15px Cambria,Georgia,serif;white-space:normal;margin:7px 3px 0;line-height:21px}.eq-spaces .eq-space-label{font-size:14px;line-height:20px}.eq-route{font-size:15px;margin-bottom:10px;color:var(--muted)}
+@media(max-width:600px){.eq-spaces{column-gap:5px;grid-template-columns:minmax(0,1fr) 23px minmax(0,1fr);row-gap:9px}.eq-spaces .picture h2{font-size:13px}.eq-spaces .drawing{height:121px}.eq-spaces .eq-space-label{font-size:13px}.eq-leg{font-size:16px}}
+</style>
+<style id="unfold-navigation-style">.unfold-navigation{max-width:1100px;margin:0 auto;padding:14px 24px 0;font:13px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.unfold-navigation a{color:light-dark(#626873,#a8adb6);text-decoration:none;display:inline-flex;align-items:center;gap:7px;padding:3px 0}.unfold-navigation a:hover{color:light-dark(#386acf,#96b5ff)}.unfold-navigation a:focus-visible{outline:2px solid light-dark(#386acf,#96b5ff);outline-offset:4px;border-radius:2px}@media(max-width:600px){.unfold-navigation{padding:12px 12px 0}}</style></head>
+<body><nav class="unfold-navigation" aria-label="Back to all explorers"><a href="index.html"><span aria-hidden="true">←</span> Unfold</a></nav>
+<main>
+<div class="toolbar"><h1>Homotopy explorer</h1><div class="navigation">
+<div class="example-control category-control"><label for="category">Category</label><select id="category"><option value="homotopies">Homotopies</option><option value="obstructions">Can / cannot</option><option value="classes">Homotopy classes (maps)</option><option value="types">Homotopy types (spaces)</option></select></div>
+<div class="example-control"><label for="example">Example</label><select id="example"></select></div></div></div>
+<section id="homotopy-panel">
+<div id="class-controls" class="class-controls" hidden><label for="class-start">Start winding <select id="class-start"><option value="-2">−2</option><option value="-1">−1</option><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option></select></label><label for="class-end">End winding <select id="class-end"><option value="-2">−2</option><option value="-1">−1</option><option value="0">0</option><option value="1" selected>1</option><option value="2">2</option></select></label></div>
+<div class="example-control target-control" id="target-control"><label for="disk-target">Target Y</label><select id="disk-target"><option value="annulus">Ring (annulus)</option><option value="circle">Circle</option><option value="disk">Filled disk</option><option value="triangle">Filled triangle</option></select></div>
+<div class="controls"><button type="button" class="play" id="play" aria-label="Play the homotopy">▶ Play</button><div class="time-control"><label for="time">t</label><input id="time" type="range" min="0" max="1" step="0.001" value="0.5" aria-label="Time"><output id="time-value" for="time">0.50</output></div><button type="button" id="connect" class="connect" aria-pressed="false">Connect points</button></div>
+<p class="example-note" id="example-note" hidden></p>
+<div class="spaces" id="spaces">
+<svg id="connections" class="connectors" aria-hidden="true" hidden></svg>
+<section class="source-panel" id="source-panel"><p class="space-label"><strong>X</strong> = <span id="source-name">interval [0,1]</span></p><figure class="picture"><h2>Input <span>x</span></h2><svg class="drawing" id="source" role="img" tabindex="0" aria-label="Input space. Click or drag on a colored point to select it. Arrow keys move the selection; Escape clears it."></svg></figure></section>
+<section class="maps" aria-label="Starting, current, and final maps"><p class="space-label"><strong>Y</strong> = <span id="target-name">filled disk</span></p><div class="map-grid">
+<figure class="picture"><h2>Start <span>f₀(x)</span></h2><svg class="drawing" id="start" role="img" tabindex="0" aria-label="Starting map, fixed at time zero. Click a colored point to select its input."></svg></figure>
+<figure class="picture current"><h2><span id="current-label" class="plain-label">Now</span> <span>fₜ(x)</span></h2><svg class="drawing" id="now" role="img" tabindex="0" aria-label="Current map. Click or drag on a colored point to select its input."></svg></figure>
+<figure class="picture"><h2>End <span>f₁(x)</span></h2><svg class="drawing" id="end" role="img" tabindex="0" aria-label="Final map, fixed at time one. Click a colored point to select its input."></svg></figure>
+</div></section>
+</div>
+
+<p class="hint"><strong>Same color = same input.</strong> Click or drag on a colored shape to circle corresponding points.</p>
+<p class="warning" id="warning" hidden>This attempted homotopy leaves Y: the interior is not part of the circle.</p>
+<div class="selection"><button type="button" id="clear" hidden>Clear circle</button><span id="selection-note" role="status">Gray shows the fixed target Y.</span></div>
+<details id="why" class="why" hidden><summary>Why?</summary><div id="why-text"></div></details>
+</section>
+<section id="equivalence-panel" hidden>
+<p class="type-definition">Same homotopy type: <strong>g∘f ≃ id<sub>X</sub></strong> and <strong>f∘g ≃ id<sub>Y</sub></strong>.</p>
+<div class="roundtrip-choices" aria-label="Choose a round trip"><button id="eq-check-x" type="button" aria-pressed="true"></button><button id="eq-check-y" type="button" aria-pressed="false"></button></div>
+<div class="controls"><button type="button" class="play" id="eq-play">▶ Play</button><div class="time-control"><label for="eq-time">t</label><input id="eq-time" type="range" min="0" max="1" step="0.001" value="0.5" aria-label="Round-trip homotopy time"><output id="eq-time-value" for="eq-time">0.50</output></div><button type="button" id="eq-connect" class="connect" aria-pressed="true">Connect points</button></div>
+<div id="eq-spaces" class="eq-spaces" data-side="x">
+<svg id="eq-connections" class="connectors" aria-hidden="true"></svg>
+<p id="eq-x-name" class="eq-space-label eq-axis-x"></p><p id="eq-y-name" class="eq-space-label eq-axis-y"></p>
+<figure id="eq-source-panel" class="picture"><h2 id="eq-source-title">x · t = 0</h2><svg id="eq-source" class="drawing" role="img" tabindex="0" aria-label="Original input and identity map, fixed at time zero. Click or drag to follow a point."></svg></figure>
+<div class="eq-leg eq-leg-top"><span id="eq-top-map">f</span><span id="eq-top-arrow" aria-hidden="true">→</span></div>
+<figure id="eq-middle-panel" class="picture"><h2 id="eq-middle-title">f(x)</h2><svg id="eq-middle" class="drawing" role="img" tabindex="0" aria-label="Output of the first map, in the top row."></svg></figure>
+<figure id="eq-now-panel" class="picture current"><h2 id="eq-now-title">Hₜ(x)</h2><svg id="eq-now" class="drawing" role="img" tabindex="0" aria-label="Current homotopy between the original input above and the round-trip result below."></svg></figure>
+<div class="eq-copy-arrow"><span aria-hidden="true">↓</span><span>same point</span></div>
+<figure id="eq-compose-panel" class="picture"><h2 id="eq-compose-title">g(f(x)) · t = 1</h2><svg id="eq-compose" class="drawing" role="img" tabindex="0" aria-label="Fixed round-trip composition, at time one."></svg></figure>
+<div class="eq-leg eq-leg-bottom"><span id="eq-bottom-map">g</span><span id="eq-bottom-arrow" aria-hidden="true">←</span></div>
+<figure id="eq-copy-panel" class="picture"><h2 id="eq-copy-title">f(x) · copy</h2><svg id="eq-copy" class="drawing" role="img" tabindex="0" aria-label="A copy of the same output of the first map, ready to map back."></svg></figure>
+</div>
+<p id="eq-note" class="example-note" style="margin-top:12px"></p>
+<p class="hint"><strong>Same color = same original input.</strong> Follow the solid lines around the loop. The dashed lines track the homotopy from the top row to the bottom row.</p>
+<p id="eq-warning" class="warning" hidden></p>
+<div class="selection"><button id="eq-clear" type="button" hidden>Clear circle</button><span id="eq-selection" role="status">Click or drag in the first column.</span></div>
+<details id="eq-why" class="why"><summary>Why? / The two maps</summary><div id="eq-why-text"></div></details>
+</section>
+
+</main>
+<script>
+(() => {
+'use strict';
+const $=id=>document.getElementById(id),TAU=2*Math.PI,N=144,INNER=.45,DEST=.75;
+const state={example:'segment_circle',diskTarget:'annulus',startDegree:1,endDegree:1,t:.5,selected:null,playing:false,last:0,raf:0,drag:null,connections:false};
+const examples={
+ segment_circle:{source:'segment [0,1]',target:'circle',kind:'interval',shape:'circle',note:'The image opens up, but X does not tear: 0 and 1 were always different inputs.',why:'<p>Initially f₀(s) = (cos 2πs, sin 2πs) wraps the segment once around Y. Its two distinct endpoints happen to have the same output.</p><p>H(s,t) = (cos 2π(1−t)s, sin 2π(1−t)s) shortens the arc. Halfway it is a semicircle; at the end all inputs map to (1,0). Every output stays on the circle.</p><p>The endpoints may separate because they are distinct points of X. This is a homotopy of maps from a segment, not a contraction of the circle as a space.</p>'},
+ circle_unwrap:{source:'circle',target:'circle',kind:'circle',shape:'circle',attempt:true,note:'The same “open the loop” attempt fails for X = circle: the two ends now represent one input.',why:'<p>Write a circle point as e²πⁱˢ. The parameters s = 0 and s = 1 denote the same point. The proposed formula e²πⁱ⁽¹⁻ᵗ⁾ˢ assigns different outputs to those two representations halfway through.</p><p>Choosing one angle at each point instead creates a discontinuity at the seam: arbitrarily close neighbors there have far-apart outputs. The image staying inside Y is not enough.</p><p>Winding also rules out any other contraction: the identity has winding 1, and a constant map has winding 0.</p>'},
+ map_classes:{source:'circle',target:'circle',kind:'circle',shape:'circle',why:'<p>A homotopy class groups continuous maps with the same fixed domain and target that can be joined by a homotopy.</p><p>For circle → circle maps, the class is determined by the integer winding number. Here f₀(e²πⁱˢ) = e²πⁱⁿˢ and f₁(e²πⁱˢ) = e²πⁱ⁽ᵐˢ⁺¼⁾. Equal winding numbers allow the displayed rotation. Different winding numbers cannot be joined.</p><p>For unequal numbers, the displayed attempt interpolates angles but breaks continuity across the seam. Negative numbers wind in the opposite direction; 0 gives a constant map in these examples.</p>'},
+ disk_any:{source:'filled disk',kind:'disk',note:'Every continuous map f from a disk to Y can shrink to a constant: H(x,t) = f((1−t)x).',why:'<p>Move the input x toward the disk’s center, then apply the original map f. At t = 0 this gives f(x); at t = 1 every input gives f(0).</p><p>This works for any target space Y and any continuous starting map f: disk → Y. The outputs stay in Y because they are always outputs of f. You are deforming the map; Y itself stays fixed.</p><p>The selector shows four sample maps. For the circle target, several inputs share each output; circle an input in X to follow its color.</p>'},
+ annulus_paths:{source:'annulus',target:'same annulus',kind:'annulus',shape:'annulus',attempt:true,note:'Every point stays in Y, but the marked neighbors split at a seam. This is not continuous.',why:'<p>Each point can travel around the hole to the destination. The problem is choosing all these paths continuously together.</p><p>Look at points of radius ¾ approaching the right-hand seam from above and below. At t = ½, their outputs approach (¾,0) and (−¾,0), even though their inputs approach the same point. The halfway map is discontinuous.</p><p>This rules out this attempt. The general obstruction is winding: a loop going once around the hole cannot become a constant loop while remaining in the annulus.</p>'},
+ annulus_straight:{source:'annulus',target:'same annulus',kind:'annulus',shape:'annulus',attempt:true,note:'The constant map exists. This straight-line attempt to reach it passes through the missing hole.',why:'<p>The final point (¾,0) belongs to the annulus, so the constant map is valid. Intermediate outputs of the displayed interpolation can enter the missing hole and therefore leave Y.</p><p>Failure of this particular formula is not the full proof. Any contraction would also contract a loop going once around the hole. Its winding number would have to change from 1 to 0, which a homotopy avoiding the hole cannot do.</p>'},
+ annulus_retract:{source:'annulus',target:'same annulus',kind:'annulus',shape:'annulus',note:'This homotopy works: move each point radially onto the inner circle. The hole remains.',why:'<p>For a point of radius r and angle θ, keep θ fixed and change its radius to (1−t)r + t·0.45. This always stays between 0.45 and 1, so every intermediate map stays inside the annulus.</p><p>At the end, points on the same radial segment coincide. The image is still a whole circle, not one point.</p>'},
+ winding:{source:'circle',target:'annulus',kind:'circle',shape:'annulus',attempt:true,note:'No homotopy joins these maps in Y: one winds once around the hole; the other winds twice.',why:'<p>Drag an input once around X. Its starting image goes around the hole once, and its final image goes around twice. The two endpoint images are the same circle, but the maps are different.</p><p>A continuous deformation avoiding the hole preserves winding number. Here the endpoint winding numbers are 1 and 2, so no homotopy in this annulus exists. The displayed straight-line attempt crosses the hole.</p>'},
+ local_loop:{source:'circle',target:'annulus',kind:'circle',shape:'annulus',note:'This loop can shrink: it lies beside the hole and does not wind around it.',why:'<p>The image is a small circle centered at (¾,0), with radius 0.2(1−t). Every output has distance between 0.55 and 0.95 from the origin, hence lies in the annulus.</p><p>A hole blocks the contraction of loops that wind around it; it does not block every loop.</p>'},
+ interval:{source:'interval [0,1]',target:'filled disk',kind:'interval',shape:'disk'},
+ point:{source:'one point',target:'circle',kind:'point',shape:'circle'},
+ rotation:{source:'circle',target:'circle',kind:'circle',shape:'circle'},
+ shrink:{source:'circle',target:'filled disk',kind:'circle',shape:'disk'},
+ blocked:{source:'circle',target:'circle',kind:'circle',shape:'circle'},
+ disk:{source:'filled disk',target:'filled disk',kind:'disk',shape:'disk'},
+ triangle:{source:'one edge',target:'filled triangle',kind:'interval',shape:'triangle'}
+};
+const views=['source','start','now','end'];
+const A=[-1,-.8],B=[1,-.8],C=[0,1];
+const clamp=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const polar=(u,r=1)=>[r*Math.cos(TAU*u),r*Math.sin(TAU*u)];
+const diskTargets={annulus:{target:'ring (annulus)',shape:'annulus'},circle:{target:'circle',shape:'circle'},disk:{target:'filled disk',shape:'disk'},triangle:{target:'filled triangle',shape:'triangle'}};
+const cfg=()=>{
+ if(state.example==='disk_any')return {...examples.disk_any,...diskTargets[state.diskTarget]};
+ if(state.example==='map_classes'){const same=state.startDegree===state.endDegree;return {...examples.map_classes,attempt:!same,note:`Winding ${state.startDegree} → ${state.endDegree}: ${same?'same homotopy class. The maps can deform into one another.':'different homotopy classes. No homotopy connects these maps.'}`};}
+ return examples[state.example];
+};
+function diskStartingMap([x,y]){
+ switch(state.diskTarget){
+ case 'annulus':return polar(.45*x,.725+.24*y);
+ case 'circle':return polar(x/2);
+ case 'disk':{const r=Math.hypot(x,y),angle=.8*r,c=Math.cos(angle),s=Math.sin(angle);return[.1+.83*(c*x-s*y),.83*(s*x+c*y)];}
+ case 'triangle':{const r=Math.hypot(x,y);if(!r)return[0,0];const scale=.9*r/Math.max(-y/.8,1.8*Math.abs(x)+y);return[scale*x,scale*y];}
+ }
+}
+function sourcePoint(input){
+ const {u,r}=input;
+ if(cfg().kind==='point')return[0,0];
+ if(cfg().kind==='interval')return[2*u-1,0];
+ return polar(u,['disk','annulus'].includes(cfg().kind)?r:1);
+}
+function mapPoint(input,t){
+ const {u,r}=input,z=polar(u,r);
+ switch(state.example){
+ case 'segment_circle':case 'circle_unwrap':return polar((1-t)*u);
+ case 'map_classes':return polar(((1-t)*state.startDegree+t*state.endDegree)*u+t/4);
+ case 'disk_any':return diskStartingMap(z.map(v=>(1-t)*v));
+ case 'annulus_paths':return polar((1-t)*u,(1-t)*r+t*DEST);
+ case 'annulus_straight':return[(1-t)*z[0]+t*DEST,(1-t)*z[1]];
+ case 'annulus_retract':return polar(u,(1-t)*r+t*INNER);
+ case 'winding':{const a=polar(u,DEST),b=polar(2*u,DEST);return a.map((v,i)=>(1-t)*v+t*b[i]);}
+ case 'local_loop':{const a=polar(u,.2*(1-t));return[DEST+a[0],a[1]];}
+ case 'interval':return[Math.cos(Math.PI*u),(1-2*t)*Math.sin(Math.PI*u)];
+ case 'point':return[Math.cos(Math.PI*t),Math.sin(Math.PI*t)];
+ case 'rotation':return polar(u+t/2);
+ case 'shrink':case 'blocked':return[(1-t)*Math.cos(TAU*u)+t,(1-t)*Math.sin(TAU*u)];
+ case 'disk':return[(1-t)*z[0],(1-t)*z[1]];
+ case 'triangle':return A.map((a,i)=>(1-u)*a+u*((1-t)*B[i]+t*C[i]));
+ default:throw new Error('Unknown example');
+ }
+}
+function timeOf(view){return view==='start'?0:view==='end'?1:state.t;}
+function position(input,view){return view==='source'?sourcePoint(input):mapPoint(input,timeOf(view));}
+function collapsed(view){if(state.example==='map_classes'&&view!=='source'){const t=timeOf(view);return Math.abs((1-t)*state.startDegree+t*state.endDegree)<1e-10;}return view!=='source'&&['segment_circle','circle_unwrap','shrink','blocked','disk','disk_any','annulus_paths','annulus_straight','local_loop'].includes(state.example)&&timeOf(view)===1;}
+function color(input){
+ const {u,r}=input;
+ if(cfg().kind==='point')return'hsl(218 82% 57%)';
+ if(cfg().kind==='interval')return`hsl(${245-230*u} 80% 54%)`;
+ if(['disk','annulus'].includes(cfg().kind))return`hsl(${(230+360*u)%360} ${85*r}% ${74-20*r}%)`;
+ return`hsl(${(230+360*u)%360} 78% 54%)`;
+}
+const elem={
+ circle:(x,y,r,attrs='')=>`<circle cx="${x}" cy="${y}" r="${r}" ${attrs}/>`,
+ line:(a,b,attrs='')=>`<path d="M${a.join(',')}L${b.join(',')}" ${attrs}/>`,
+ polygon:(pts,attrs='')=>`<polygon points="${pts.map(p=>p.join(',')).join(' ')}" ${attrs}/>`,
+ text:(x,y,s,attrs='')=>`<text x="${x}" y="${y}" text-anchor="middle" ${attrs}>${s}</text>`
+};
+const geometry=new Map();
+function geometryFor(view){
+ const el=$(view),w=Math.max(el.clientWidth,70),h=Math.max(el.clientHeight,90);
+ const radius=Math.max(17,Math.min((w-28)/2,(h-44)/2,86));
+ const g={w,h,cx:w/2,cy:h/2-5,radius};geometry.set(view,g);el.setAttribute('viewBox',`0 0 ${w} ${h}`);return g;
+}
+function screenPoint(p,g){return[g.cx+g.radius*p[0],g.cy-g.radius*p[1]];}
+function annulusShape(g,boundary=false){
+ const {cx,cy,radius:R}=g,r=R*INNER;
+ if(boundary)return elem.circle(cx,cy,R,'class="target-boundary"')+elem.circle(cx,cy,r,'class="target-boundary"');
+ return `<path d="M${cx-R},${cy}a${R},${R} 0 1,0 ${2*R},0a${R},${R} 0 1,0 ${-2*R},0 M${cx-r},${cy}a${r},${r} 0 1,0 ${2*r},0a${r},${r} 0 1,0 ${-2*r},0" fill-rule="evenodd" class="target-shape"/>`;
+}
+function targetBackground(g,boundary=false){
+ if(cfg().shape==='annulus')return annulusShape(g,boundary);
+ const klass=boundary?'target-boundary':'target-shape';
+ if(cfg().shape==='triangle')return elem.polygon([A,B,C].map(p=>screenPoint(p,g)),`class="${klass}"`);
+ return elem.circle(g.cx,g.cy,g.radius,`class="${klass} ${!boundary&&cfg().shape==='circle'?'circle-only':''}"`);
+}
+function ring(p){return elem.circle(...p,4,`fill="${color(state.selected)}"`)+elem.circle(...p,10,'fill="none" stroke="white" stroke-width="5"')+elem.circle(...p,10,'fill="none" stroke="#161a21" stroke-width="2"');}
+function renderColors(view,g){
+ const point=input=>screenPoint(position(input,view),g),kind=cfg().kind;
+ if(collapsed(view)){
+  const p=point({u:0,r:0});
+  return elem.circle(...p,5,'fill="var(--fg)"')+elem.text(g.cx,g.cy+g.radius+19,'all inputs','class="collapse-label"');
+ }
+ if(kind==='point')return elem.circle(...point({u:0,r:1}),6,`fill="${color({u:0,r:1})}"`);
+ let s='';
+ if(state.example==='disk_any'&&state.diskTarget==='circle'&&view!=='source'){
+  // f depends only on the horizontal coordinate. Draw representative colors
+  // from the diameter, avoiding filled mesh faces across the circle's interior.
+  const inputAt=x=>({u:x<0?.5:0,r:Math.abs(x)});
+  for(let i=0;i<N;i++){
+   const x0=-1+2*i/N,x1=-1+2*(i+1)/N,c=color(inputAt((x0+x1)/2));
+   s+=elem.line(point(inputAt(x0)),point(inputAt(x1)),`fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round"`);
+  }
+  return s;
+ }
+ if(kind==='annulus' &&state.example==='annulus_retract'&&view!=='source'&&timeOf(view)===1){
+  return elem.circle(g.cx,g.cy,g.radius*INNER,'fill="none" stroke="var(--fg)" stroke-width="3"')+elem.text(g.cx,g.cy+g.radius+19,'radial points meet','class="collapse-label"');
+ }
+ if(kind==='disk'||kind==='annulus'){
+  // Each sector keeps its source color. The affine map moves the entire sector.
+  const radialSteps=kind==='annulus'?8:12,angularSteps=96;
+  for(let j=0;j<radialSteps;j++)for(let k=0;k<angularSteps;k++){
+   const low=kind==='annulus'?INNER:0,r0=low+(1-low)*j/radialSteps,r1=low+(1-low)*(j+1)/radialSteps,u0=k/angularSteps,u1=(k+1)/angularSteps;
+   const c=color({u:(u0+u1)/2,r:(r0+r1)/2});
+   s+=elem.polygon([{u:u0,r:r0},{u:u0,r:r1},{u:u1,r:r1},{u:u1,r:r0}].map(point),`fill="${c}" stroke="${c}" stroke-width=".45"`);
+  }
+  return s;
+ }
+ for(let i=0;i<N;i++){
+  const u0=i/N,u1=(i+1)/N,c=color({u:(u0+u1)/2,r:1});
+  s+=elem.line(point({u:u0,r:1}),point({u:u1,r:1}),`fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round"`);
+ }
+ return s;
+}
+function drawView(view){
+ const g=geometryFor(view);
+ let markup=view==='source'?(cfg().kind==='annulus'?annulusShape(g):''):targetBackground(g);
+ markup+=renderColors(view,g);
+ if(view!=='source')markup+=targetBackground(g,true);
+ if(view==='source'&&cfg().kind==='annulus')markup+=annulusShape(g,true);
+ if(cfg().shape==='annulus'&&view!=='source'){
+  const id='hole-'+view;
+  markup+=`<defs><pattern id="${id}" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0,6L6,0" stroke="var(--outline)" stroke-width=".6" opacity=".5"/></pattern></defs>`;
+  markup+=elem.circle(g.cx,g.cy,g.radius*INNER,`class="hole-overlay" fill="url(#${id})"`);
+ }
+ if(state.example==='annulus_paths'||state.example==='circle_unwrap'||(state.example==='map_classes'&&state.startDegree!==state.endDegree)){
+  const probeRadius=state.example==='annulus_paths'?DEST:1;
+  const probes=[{u:.015,r:probeRadius},{u:.985,r:probeRadius}];
+  probes.forEach((input,i)=>{
+   const q=screenPoint(position(input,view),g);
+   markup+=elem.circle(...q,3.5,'class="seam-probe" fill="white" stroke="var(--warning)" stroke-width="1.5"');
+   const shift=(view==='source'||timeOf(view)===0)?(i?17:-12):-10;
+   if(!collapsed(view))markup+=elem.text(q[0]+9,q[1]+shift,i?'b':'a','class="probe-label"');
+  });
+ }
+ if(state.example==='segment_circle'){
+  const a=screenPoint(position({u:0,r:1},view),g),b=screenPoint(position({u:1,r:1},view),g);
+  if(!collapsed(view)){
+   if(Math.hypot(a[0]-b[0],a[1]-b[1])<1)markup+=elem.circle(...a,4,'fill="var(--fg)"')+elem.text(a[0]-13,a[1]-12,'0, 1','class="probe-label"');
+   else [{u:0,p:a},{u:1,p:b}].forEach(({u,p})=>{markup+=elem.circle(...p,4,`fill="${color({u,r:1})}" stroke="var(--bg)" stroke-width="1.3"`);if(view!=='source')markup+=elem.text(p[0],p[1]-12,String(u),'class="probe-label"');});
+  }
+ }
+ if(state.example==='map_classes'&&view!=='source'&&!collapsed(view)){
+  const label=view==='start'?`winding ${state.startDegree}`:view==='end'?`winding ${state.endDegree}`:'';
+  if(label)markup+=elem.text(g.cx,g.cy+g.radius+19,label,'class="collapse-label"');
+ }
+ if(state.example==='winding'&&view!=='source'){
+  const label=view==='start'?'1 turn':view==='end'?'2 turns':frameLeavesTarget()?'enters the hole':'';
+  if(label)markup+=elem.text(g.cx,g.cy+g.radius+19,label,'class="collapse-label"');
+ }
+ if(state.example==='blocked'&&view==='now'&&state.t>0&&state.t<1){
+  const center=screenPoint([state.t,0],g);
+  markup+=elem.circle(...center,g.radius*(1-state.t)+5,'fill="none" stroke="var(--warning)" stroke-width="1.5" stroke-dasharray="3 4"');
+ }
+ if(state.selected)markup+=ring(screenPoint(position(state.selected,view),g));
+ if(view==='source'&&cfg().kind==='interval'){
+  markup+=elem.text(g.cx-g.radius,g.cy+26,state.example==='triangle'?'a':'0');
+  markup+=elem.text(g.cx+g.radius,g.cy+26,state.example==='triangle'?'b':'1');
+ }
+ $(view).innerHTML=markup;
+}
+function frameLeavesTarget(){
+ const t=state.t;
+ if(state.example==='blocked')return t>0&&t<1;
+ if(state.example==='winding')return DEST*Math.abs(1-2*t)<INNER-1e-8;
+ if(state.example==='annulus_straight'){
+  const c=t*DEST,low=(1-t)*INNER,high=1-t;
+  const minRadius=c<low?low-c:c<=high?0:c-high;
+  return minRadius<INNER-1e-8;
+ }
+ return false;
+}
+function updateText(){
+ $('time').value=state.t;$('time-value').value=state.t.toFixed(2);
+ $('clear').hidden=!state.selected;
+ let warning='';
+ if(state.example==='map_classes'&&Math.abs((1-state.t)*state.startDegree+state.t*state.endDegree-Math.round((1-state.t)*state.startDegree+state.t*state.endDegree))>1e-8)warning='This angle interpolation jumps at the seam; it is not a homotopy.';
+ else if((state.example==='annulus_paths'||state.example==='circle_unwrap')&&state.t>0&&state.t<1)warning='The outputs stay in Y, but the map jumps across the seam between a and b.';
+ else if(frameLeavesTarget())warning=cfg().shape==='annulus'?'Some outputs are in the hole, outside Y.':'The interior is outside the target circle.';
+ $('warning').hidden=!warning;if($('warning').textContent!==warning)$('warning').textContent=warning;
+ if(state.selected){
+  const p=sourcePoint(state.selected),n=v=>Math.abs(v)<.005?'0.00':v.toFixed(2);
+  const input=cfg().kind==='point'?'the single input':cfg().kind==='interval'?'x = '+state.selected.u.toFixed(2):'x = ('+p.map(n).join(', ')+')';
+  const note='Circled in every picture: '+input+'.';
+  if($('selection-note').textContent!==note)$('selection-note').textContent=note;
+ }else $('selection-note').textContent=cfg().shape==='annulus'?'The hatched hole is not part of Y.':cfg().shape==='circle'?'Only the gray circumference belongs to Y.':'Gray shows the fixed target Y.';
+}
+function drawConnections(){
+ const overlay=$('connections');overlay.toggleAttribute('hidden',!state.connections);
+ if(!state.connections){overlay.innerHTML='';return;}
+ const bounds=$('spaces').getBoundingClientRect();
+ overlay.setAttribute('viewBox',`0 0 ${bounds.width} ${bounds.height}`);
+ const toStage=(input,view)=>{
+  const box=$(view).getBoundingClientRect(),g=geometry.get(view),p=screenPoint(position(input,view),g);
+  return[box.left-bounds.left+p[0]*box.width/g.w,box.top-bounds.top+p[1]*box.height/g.h];
+ };
+ const samples=cfg().kind==='point'?[{u:0,r:1}]:Array.from({length:cfg().kind==='circle'?10:9},(_,i)=>({u:i/(cfg().kind==='circle'?10:cfg().kind==='interval'?8:9),r:['disk','annulus'].includes(cfg().kind)?.8:1}));
+ let lines='';
+ const line=(input,view,selected=false)=>{
+  const a=toStage(input,'source'),b=toStage(input,view),dx=b[0]-a[0],opacity=selected?.9:(state.selected?.12:(view==='now'?.38:.2));
+  const bend=view==='now'?(input.u-.5)*60:0;
+  const d=`M${a.join(',')}C${a[0]+dx*.45},${a[1]+bend} ${b[0]-dx*.45},${b[1]+bend} ${b.join(',')}`;
+  return `<path data-correspondence="${view}" d="${d}" fill="none" stroke="${color(input)}" stroke-width="${selected?2.5:1.25}" opacity="${opacity}"/>`;
+ };
+ for(const input of samples)for(const view of ['start','now','end'])lines+=line(input,view);
+ if(state.selected){
+  for(const view of ['start','now','end'])lines+=line(state.selected,view,true);
+  for(const view of views)lines+=ring(toStage(state.selected,view));
+ }
+ overlay.innerHTML=lines;
+}
+function drawAll(){if($('homotopy-panel').hidden)return;views.forEach(drawView);updateText();drawConnections();}
+function stop(){state.playing=false;cancelAnimationFrame(state.raf);$('play').textContent=state.t>=1?'↻ Replay':'▶ Play';$('play').setAttribute('aria-label',state.t>=1?'Replay the homotopy':'Play the homotopy');}
+function tick(now){
+ if(!state.playing)return;
+ state.t=Math.min(1,state.t+Math.min((now-state.last)/1000,.1)/7);state.last=now;
+ drawView('now');updateText();drawConnections();
+ if(state.t>=1)stop();else state.raf=requestAnimationFrame(tick);
+}
+function clearSelection(){state.selected=null;drawAll();}
+function chooseExample(){
+ stop();state.drag=null;state.example=$('example').value;state.t=.5;state.selected=null;
+ $('source-name').textContent=cfg().source;$('target-name').textContent=cfg().target;
+ $('source-panel').dataset.kind=cfg().kind;
+ $('target-control').hidden=state.example!=='disk_any';
+ $('class-controls').hidden=state.example!=='map_classes';
+ $('example-note').hidden=!cfg().note;$('example-note').textContent=cfg().note??'';$('example-note').classList.toggle('failure',!!cfg().attempt);
+ $('current-label').textContent=cfg().attempt?'Attempt':'Now';
+ $('why').hidden=!cfg().why;$('why').open=false;
+ const reference=state.example==='map_classes'?{page:143,label:'Homotopy classes and degree (Hatcher, §2.2)'}:{page:38,label:'Winding number (Hatcher, §1.1)'};
+ $('why-text').innerHTML=(cfg().why??'')+(cfg().why&&!['disk_any','segment_circle'].includes(state.example)?`<p><a href="https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=${reference.page}" target="_blank" rel="noopener">Background: ${reference.label}.</a></p>`:'');
+ if(state.example==='winding'||state.example==='map_classes')state.selected={u:.12,r:1};
+ drawAll();stop();
+}
+function localPoint(event,view){
+ const g=geometry.get(view),box=$(view).getBoundingClientRect();
+ return[(event.clientX-box.left)*g.w/box.width,(event.clientY-box.top)*g.h/box.height];
+}
+function selectNear(event,view,dragging=false){
+ const g=geometry.get(view),p=localPoint(event,view);
+ if(collapsed(view)||(state.example==='annulus_retract'&&view!=='source'&&timeOf(view)===1)){
+  $('selection-note').textContent=(collapsed(view)?'All':'Several')+' inputs meet here. Choose one in X to follow it.';
+  return false;
+ }
+ if((state.example==='winding'||state.example==='map_classes'||(state.example==='disk_any'&&state.diskTarget==='circle'))&&view!=='source'){
+  $('selection-note').textContent='Choose a point in X: an output can have several preimages.';return false;
+ }
+ let best=null,bestDist=Infinity;
+ if(state.example==='disk_any'&&view!=='source'){
+  for(let a=0;a<180;a++)for(let b=0;b<=20;b++){
+   const input={u:a/180,r:b/20},q=screenPoint(position(input,view),g),d=Math.hypot(p[0]-q[0],p[1]-q[1]);
+   if(d<bestDist){bestDist=d;best=input;}
+  }
+ }else if(cfg().kind==='annulus'){
+  // Source picks are exact; target picks use the displayed annular mesh.
+  if(view==='source'){
+   const x=(p[0]-g.cx)/g.radius,y=(g.cy-p[1])/g.radius;
+   best={u:(Math.atan2(y,x)/TAU+1)%1,r:clamp(Math.hypot(x,y),INNER,1)};
+   const q=screenPoint(sourcePoint(best),g);bestDist=Math.hypot(p[0]-q[0],p[1]-q[1]);
+  }else for(let a=0;a<180;a++)for(let b=0;b<=16;b++){
+   const input={u:a/180,r:INNER+(1-INNER)*b/16},q=screenPoint(position(input,view),g),d=Math.hypot(p[0]-q[0],p[1]-q[1]);
+   if(d<bestDist){bestDist=d;best=input;}
+  }
+ }else if(cfg().kind==='disk'){
+  const scale=view==='source'?1:1-timeOf(view);
+  const x=(p[0]-g.cx)/g.radius/scale,y=(g.cy-p[1])/g.radius/scale;
+  const r=clamp(Math.hypot(x,y)),u=(Math.atan2(y,x)/TAU+1)%1;
+  best={u,r};const q=screenPoint(position(best,view),g);bestDist=Math.hypot(p[0]-q[0],p[1]-q[1]);
+ }else{
+  const count=cfg().kind==='point'?1:721;
+  for(let i=0;i<count;i++){
+   const input={u:count===1?0:i/(count-1),r:1},q=screenPoint(position(input,view),g),d=Math.hypot(p[0]-q[0],p[1]-q[1]);
+   if(d<bestDist){bestDist=d;best=input;}
+  }
+ }
+ if(!dragging&&bestDist>24)return false;
+ state.selected=best;drawAll();return true;
+}
+views.forEach(view=>{
+ const el=$(view);
+ el.addEventListener('pointerdown',event=>{if(event.button!==0)return;if(selectNear(event,view)){state.drag={view,id:event.pointerId};el.setPointerCapture(event.pointerId);event.preventDefault();}});
+ el.addEventListener('pointermove',event=>{if(state.drag?.view===view&&state.drag.id===event.pointerId)selectNear(event,view,true);});
+ const endDrag=()=>{state.drag=null;};el.addEventListener('pointerup',endDrag);el.addEventListener('pointercancel',endDrag);el.addEventListener('lostpointercapture',endDrag);
+ el.addEventListener('keydown',event=>{
+  if(event.key==='Escape'){clearSelection();return;}
+  if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.key))return;
+  event.preventDefault();const p=state.selected??{u:.35,r:.7},delta=event.key==='ArrowLeft'||event.key==='ArrowDown'?-.01:.01;
+  let u=p.u,r=p.r;
+  if(['disk','annulus'].includes(cfg().kind)&&(event.key==='ArrowUp'||event.key==='ArrowDown'))r=clamp(r+delta,cfg().kind==='annulus'?INNER:0,1);
+  else u=cfg().kind==='interval'?clamp(u+delta):(u+delta+1)%1;
+  state.selected={u,r};drawAll();
+ });
+});
+$('example').addEventListener('change',changeSelection);
+for(const id of ['class-start','class-end'])$(id).addEventListener('change',()=>{state.startDegree=Number($('class-start').value);state.endDegree=Number($('class-end').value);chooseExample();});
+$('disk-target').addEventListener('change',()=>{state.diskTarget=$('disk-target').value;chooseExample();});
+$('clear').addEventListener('click',clearSelection);
+$('connect').addEventListener('click',()=>{state.connections=!state.connections;$('connect').setAttribute('aria-pressed',String(state.connections));drawConnections();});
+$('time').addEventListener('input',event=>{state.t=Number(event.target.value);stop();drawView('now');updateText();drawConnections();});
+$('play').addEventListener('click',()=>{if(state.playing){stop();return;}if(state.t>=1)state.t=0;state.playing=true;state.last=performance.now();$('play').textContent='Ⅱ Pause';$('play').setAttribute('aria-label','Pause the homotopy');state.raf=requestAnimationFrame(tick);});
+const ro=new ResizeObserver(()=>drawAll());views.forEach(view=>ro.observe($(view)));ro.observe($('spaces'));
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawAll);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)stop();});
+// Round trips between spaces: f and g are fixed; only the comparison with
+// the identity changes with time. Coordinates here are intrinsic to each view.
+const eqCases={
+ eq_annulus:{label:'Annulus ↔ circle — same type',x:'annulus',y:'circle',goodX:true,goodY:true,note:'The round trip forgets radius. It can still deform back to the identity.',maps:'f sends each point radially to the unit circle. g puts that circle at radius 0.7 in the annulus.',proof:'On X, g(f(reⁱθ)) = 0.7eⁱθ. The homotopy [(1−t)·r + t·0.7]eⁱθ moves the original point to its round-trip image and stays in the annulus. On Y, f∘g is already the identity.'},
+ eq_disk_segment:{label:'Disk ↔ segment — same type',x:'disk',y:'segment',goodX:true,goodY:true,note:'The round trip flattens the disk to a diameter. The homotopy restores its height.',maps:'f(x,y) = x in the segment [−1,1]. g(s) = (s,0) in the disk.',proof:'On the disk, g∘f(x,y) = (x,0), and H((x,y),t) = (x,(1−t)y) stays in the disk and moves (x,y) to its round-trip image (x,0). On the segment, f∘g(s) = s exactly.'},
+ eq_disk_point:{label:'Disk ↔ point — same type',x:'disk',y:'point',goodX:true,goodY:true,note:'Going there and back sends the disk to its center. That map is homotopic to the identity.',maps:'f sends the whole disk to the single point. g sends that point to the disk’s center.',proof:'On X, the composition is the constant map 0. H(x,t) = (1−t)x deforms the identity to this constant map. On the one-point space Y, the other composition is already the identity.'},
+ eq_tail:{label:'Circle with a tail ↔ circle — same type',x:'tail',y:'circle',goodX:true,goodY:true,note:'The extra tail can collapse without changing the homotopy type.',maps:'f keeps the loop (rescaled to the unit circle) and collapses the tail to its attachment point. g includes the loop back into the original space.',proof:'The X round trip fixes the loop and collapses the tail. Move each tail point toward its attachment along the tail, keeping the loop fixed, to deform the identity into this composition. The Y round trip is exactly the identity.'},
+ eq_circle_point:{label:'Circle ↔ point — different types',x:'circle',y:'point',goodX:false,goodY:true,note:'The point round trip works. The circle round trip cannot deform into the identity.',maps:'f sends the circle to the point. g sends the point to (1,0) on the circle.',proof:'On X, g∘f is constant (winding 0), while the identity winds once. No homotopy within the circle can join them. The displayed straight-line attempt leaves the circle. Every possible pair of maps through a point has the same obstruction.'},
+ eq_annulus_disk:{label:'Annulus ↔ disk — different types',x:'annulus',y:'disk',goodX:false,goodY:true,note:'Both maps exist. The disk round trip works, but the annulus round trip is obstructed by its hole.',maps:'f includes the annulus in the filled disk. g sends the disk to p = (0.75,0) in the annulus.',proof:'Both compositions are constant. On the disk, (1−t)x + tp gives a homotopy from the identity to the constant composition. On the annulus this attempt enters the hole, and winding rules out every alternative. More generally, a space homotopy equivalent to a disk would be contractible; the annulus is not.'},
+ eq_wrong_maps:{label:'Circle ↔ circle — wrong maps',x:'circle',y:'circle',goodX:false,goodY:false,note:'These spaces have the same type, but this choice of f and g does not witness it.',maps:'f(z) = z² wraps twice around the circle. g(z) = z is the identity.',proof:'Both compositions have winding 2, while the identity has winding 1. These maps fail both checks. The spaces themselves are homotopy equivalent: choosing f = g = identity would work. A failed pair of maps alone does not prove that two spaces have different types.'}
+};
+const eqState={example:'eq_annulus',side:'x',t:.5,selected:null,connections:true,playing:false,raf:0,last:0,drag:null};
+const eqViews=['source','middle','copy','compose','now'],eqGeometry=new Map();
+const eqCfg=()=>eqCases[eqState.example],eqKind=()=>eqCfg()[eqState.side];
+const eqName=kind=>({annulus:'annulus',circle:'circle',disk:'filled disk',segment:'segment',point:'one point',tail:'circle + tail'}[kind]);
+function eqF(p){
+ const [x,y]=p;
+ switch(eqState.example){
+ case 'eq_annulus':{const r=Math.hypot(x,y);return[x/r,y/r];}
+ case 'eq_disk_segment':return[x,0];
+ case 'eq_disk_point':case 'eq_circle_point':return[0,0];
+ case 'eq_tail':{if(x>=.42-1e-10&&Math.abs(y)<1e-9)return[1,0];return[(x+.2)/.62,y/.62];}
+ case 'eq_annulus_disk':return[x,y];
+ case 'eq_wrong_maps':return[x*x-y*y,2*x*y];
+ }
+}
+function eqG(p){
+ const [x,y]=p;
+ switch(eqState.example){
+ case 'eq_annulus':return[.7*x,.7*y];
+ case 'eq_disk_segment':return[x,0];
+ case 'eq_disk_point':return[0,0];
+ case 'eq_circle_point':return[1,0];
+ case 'eq_tail':return[-.2+.62*x,.62*y];
+ case 'eq_annulus_disk':return[DEST,0];
+ case 'eq_wrong_maps':return[x,y];
+ }
+}
+function eqRoundTrip(p){return eqState.side==='x'?eqG(eqF(p)):eqF(eqG(p));}
+function eqHomotopy(p,t){
+ const q=eqRoundTrip(p);
+ // For the annulus the two points lie on the same radial segment; for the
+ // tail they lie on the same edge; for the positive convex cases this stays in X.
+ // Failed cases deliberately show the straight-line attempt leaving the space.
+ return p.map((v,i)=>(1-t)*v+t*q[i]);
+}
+function eqSource(input){
+ const {u,r=1,branch='loop'}=input,kind=eqKind();
+ if(kind==='point')return[0,0];
+ if(kind==='segment')return[2*u-1,0];
+ if(kind==='tail')return branch==='tail'?[.42+.58*u,0]:[-.2+.62*Math.cos(TAU*u),.62*Math.sin(TAU*u)];
+ return polar(u,['disk','annulus'].includes(kind)?r:1);
+}
+function eqPosition(input,view){
+ const p=eqSource(input);
+ if(view==='source')return p;
+ if(view==='middle'||view==='copy')return eqState.side==='x'?eqF(p):eqG(p);
+ if(view==='compose')return eqRoundTrip(p);
+ return eqHomotopy(p,eqState.t);
+}
+function eqColor(input){
+ const kind=eqKind(),{u,r=1,branch='loop'}=input;
+ if(kind==='point')return 'hsl(218 82% 57%)';
+ if(kind==='segment')return `hsl(${245-230*u} 80% 54%)`;
+ if(kind==='tail'&&branch==='tail')return `hsl(230 78% ${54+25*u}%)`;
+ if(['disk','annulus'].includes(kind))return `hsl(${(230+360*u)%360} ${85*r}% ${74-20*r}%)`;
+ return `hsl(${(230+360*u)%360} 78% 54%)`;
+}
+function eqSamples(dense=false){
+ const kind=eqKind();
+ if(kind==='point')return[{u:0,r:1}];
+ if(kind==='tail')return [...Array.from({length:dense?240:9},(_,i)=>({u:i/(dense?240:9),r:1,branch:'loop'})),...Array.from({length:dense?101:4},(_,i)=>({u:i/(dense?100:3),r:1,branch:'tail'}))];
+ if(dense&&['disk','annulus'].includes(kind))return Array.from({length:180*21},(_,i)=>({u:(i%180)/180,r:(kind==='annulus'?INNER:0)+(1-(kind==='annulus'?INNER:0))*Math.floor(i/180)/20}));
+ const n=dense?241:9;
+ return Array.from({length:n},(_,i)=>({u:i/(kind==='segment'?n-1:n),r:kind==='annulus'?.8:kind==='disk'?.8:1}));
+}
+function eqIsCollapsed(view){
+ const points=eqSamples().map(input=>eqPosition(input,view)),a=points[0];
+ return points.every(p=>Math.hypot(p[0]-a[0],p[1]-a[1])<1e-9);
+}
+function eqShape(view){return (view==='middle'||view==='copy')?eqCfg()[eqState.side==='x'?'y':'x']:eqKind();}
+function eqBoundary(kind,g,outline=false){
+ const c=outline?'target-boundary':'target-shape',at=p=>screenPoint(p,g);
+ if(kind==='annulus')return annulusShape(g,outline);
+ if(kind==='point')return elem.circle(g.cx,g.cy,5,`class="${c}"`);
+ if(kind==='segment')return elem.line(at([-1,0]),at([1,0]),'stroke="var(--outline)" stroke-width="2"');
+ if(kind==='tail')return elem.circle(...at([-.2,0]),g.radius*.62,'fill="none" stroke="var(--outline)" stroke-width="2"')+elem.line(at([.42,0]),at([1,0]),'stroke="var(--outline)" stroke-width="2"');
+ return elem.circle(g.cx,g.cy,g.radius,`class="${c} ${kind==='circle'&&!outline?'circle-only':''}"`);
+}
+function eqRing(p,input){return elem.circle(...p,3.5,`fill="${eqColor(input)}"`)+elem.circle(...p,8,'fill="none" stroke="white" stroke-width="4"')+elem.circle(...p,8,'fill="none" stroke="#161a21" stroke-width="1.7"');}
+function eqColors(view,g){
+ const point=input=>screenPoint(eqPosition(input,view),g),kind=eqKind();
+ if(eqIsCollapsed(view)){
+  const single=kind==='point',input=eqSamples()[0];
+  return elem.circle(...point(input),5,`fill="${single?eqColor(input):'var(--fg)'}"`)+(!single?elem.text(g.cx,g.cy+g.radius+16,'all inputs','class="collapse-label"'):'');
+ }
+ const radialProjection=eqState.example==='eq_annulus'&&eqState.side==='x'&&(view==='middle'||view==='copy'||view==='compose'||(view==='now'&&eqState.t===1));
+ const diameterProjection=eqState.example==='eq_disk_segment'&&eqState.side==='x'&&(view==='middle'||view==='copy'||view==='compose'||(view==='now'&&eqState.t===1));
+ let s='';
+ if(['disk','annulus'].includes(kind)&&!radialProjection&&!diameterProjection){
+  const low=kind==='annulus'?INNER:0,radialSteps=8,angularSteps=72;
+  for(let j=0;j<radialSteps;j++)for(let k=0;k<angularSteps;k++){
+   const r0=low+(1-low)*j/radialSteps,r1=low+(1-low)*(j+1)/radialSteps,u0=k/angularSteps,u1=(k+1)/angularSteps;
+   const c=eqColor({u:(u0+u1)/2,r:(r0+r1)/2});
+   s+=elem.polygon([{u:u0,r:r0},{u:u0,r:r1},{u:u1,r:r1},{u:u1,r:r0}].map(point),`fill="${c}" stroke="${c}" stroke-width=".35"`);
+  }
+  return s;
+ }
+ function curve(inputAt,n=144){for(let i=0;i<n;i++){const a=inputAt(i/n),b=inputAt((i+1)/n),c=eqColor(inputAt((i+.5)/n));s+=elem.line(point(a),point(b),`stroke="${c}" stroke-width="4.5" stroke-linecap="round" fill="none"`);}}
+ if(diameterProjection)curve(u=>{const x=2*u-1;return{u:x<0?.5:0,r:Math.abs(x)};});
+ else if(radialProjection)curve(u=>({u,r:.75}));
+ else if(kind==='tail'){
+  curve(u=>({u,r:1,branch:'loop'}));
+  if(view==='middle'||view==='copy'||view==='compose'||(view==='now'&&eqState.t===1))s+=elem.circle(...point({u:0,r:1,branch:'tail'}),4,'fill="var(--fg)"');
+  else curve(u=>({u,r:1,branch:'tail'}),48);
+ }else curve(u=>({u,r:1}));
+ return s;
+}
+function eqDrawView(view){
+ const el=$('eq-'+view),w=Math.max(el.clientWidth,40),h=Math.max(el.clientHeight,80),g={w,h,cx:w/2,cy:h/2-5,radius:Math.max(10,Math.min((w-18)/2,(h-35)/2,72))};
+ eqGeometry.set(view,g);el.setAttribute('viewBox',`0 0 ${w} ${h}`);
+ const kind=eqShape(view);let s=eqBoundary(kind,g)+eqColors(view,g)+eqBoundary(kind,g,true);
+ if(kind==='annulus'){
+  const id='eq-hole-'+view;
+  s+=`<defs><pattern id="${id}" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0,6L6,0" stroke="var(--outline)" stroke-width=".6" opacity=".5"/></pattern></defs>`+elem.circle(g.cx,g.cy,g.radius*INNER,`fill="url(#${id})"`);
+ }
+ if(eqState.selected)s+=eqRing(screenPoint(eqPosition(eqState.selected,view),g),eqState.selected);
+ el.innerHTML=s;
+}
+function eqDrawConnections(){
+ const overlay=$('eq-connections');overlay.toggleAttribute('hidden',!eqState.connections);if(!eqState.connections){overlay.innerHTML='';return;}
+ const bounds=$('eq-spaces').getBoundingClientRect();overlay.setAttribute('viewBox',`0 0 ${bounds.width} ${bounds.height}`);
+ const at=(input,view)=>{const box=$('eq-'+view).getBoundingClientRect(),g=eqGeometry.get(view),p=screenPoint(eqPosition(input,view),g);return[box.left-bounds.left+p[0],box.top-bounds.top+p[1]];};
+ const links=[['source','middle',false],['middle','copy',false],['copy','compose',false],['source','now',true],['now','compose',true]];let s='';
+ function route(input,selected){for(const [from,to,homotopy] of links){
+  const a=at(input,from),b=at(input,to),vertical=homotopy||from==='middle',bend=homotopy?(eqState.side==='x'?-12:12):0;
+  const c=vertical?[a[0]+bend,a[1]+(b[1]-a[1])*.4]:[a[0]+(b[0]-a[0])*.45,a[1]];
+  const d=vertical?[b[0]+bend,b[1]-(b[1]-a[1])*.4]:[b[0]-(b[0]-a[0])*.45,b[1]];
+  s+=`<path data-eq-link="${from}-${to}" data-homotopy="${homotopy}" d="M${a}C${c} ${d} ${b}" fill="none" stroke="${eqColor(input)}" stroke-width="${selected?2.2:1}" opacity="${selected?.9:eqState.selected?.09:.24}" ${homotopy?'stroke-dasharray="3 3"':''}/>`;
+ }}
+ eqSamples().forEach(input=>route(input,false));
+ if(eqState.selected){route(eqState.selected,true);eqViews.forEach(view=>{s+=eqRing(at(eqState.selected,view),eqState.selected);});}
+ overlay.innerHTML=s;
+}
+function eqUpdate(){
+ $('eq-time').value=eqState.t;$('eq-time-value').value=eqState.t.toFixed(2);$('eq-clear').hidden=!eqState.selected;
+ const good=eqCfg()[eqState.side==='x'?'goodX':'goodY'];
+ let invalid=false;
+ if(!good&&eqState.t>0&&eqState.t<1){
+  if(eqKind()==='circle')invalid=true;
+  else if(eqKind()==='annulus'){
+   const c=eqState.t*DEST,low=(1-eqState.t)*INNER,high=1-eqState.t;
+   const minRadius=c<low?low-c:c<=high?0:c-high;
+   invalid=minRadius<INNER-1e-8;
+  }
+ }
+ $('eq-warning').hidden=!invalid;$('eq-warning').textContent=invalid?`This attempted deformation leaves ${eqState.side.toUpperCase()}.`:'';
+ $('eq-selection').textContent=eqState.selected?'The circled point keeps the color of its original input.':`Click or drag in the top ${eqState.side.toUpperCase()} picture. Both round-trip checks are required.`;
+}
+function eqDrawAll(){if($('equivalence-panel').hidden)return;eqViews.forEach(eqDrawView);eqUpdate();eqDrawConnections();}
+function eqStop(){eqState.playing=false;cancelAnimationFrame(eqState.raf);$('eq-play').textContent=eqState.t>=1?'↻ Replay':'▶ Play';}
+function eqTick(now){if(!eqState.playing)return;eqState.t=Math.min(1,eqState.t+Math.min((now-eqState.last)/1000,.1)/7);eqState.last=now;eqDrawView('now');eqUpdate();eqDrawConnections();if(eqState.t>=1)eqStop();else eqState.raf=requestAnimationFrame(eqTick);}
+function eqChoose(resetSide=true){
+ eqStop();eqState.example=$('example').value;if(resetSide)eqState.side='x';eqState.t=.5;eqState.selected={u:.16,r:.82,branch:'loop'};eqState.drag=null;
+ const c=eqCfg(),side=eqState.side,a=side.toUpperCase(),b=side==='x'?'Y':'X',input=side==='x'?'x':'y',first=side==='x'?'f':'g',second=side==='x'?'g':'f',good=c[side==='x'?'goodX':'goodY'];
+ $('eq-check-x').textContent=`On X · ${c.goodX?'✓':'✕'} g∘f ≃ id_X`;$('eq-check-y').textContent=`On Y · ${c.goodY?'✓':'✕'} f∘g ≃ id_Y`;
+ $('eq-check-x').setAttribute('aria-pressed',String(side==='x'));$('eq-check-y').setAttribute('aria-pressed',String(side==='y'));
+ $('eq-note').textContent=c.note;$('eq-note').classList.toggle('failure',!c.goodX||!c.goodY);
+ $('eq-spaces').dataset.side=side;
+ $('eq-x-name').innerHTML=`<strong>X</strong> · ${eqName(c.x)}`;$('eq-y-name').innerHTML=`<strong>Y</strong> · ${eqName(c.y)}`;
+ $('eq-top-map').textContent=first;$('eq-top-arrow').textContent=side==='x'?'→':'←';
+ $('eq-bottom-map').textContent=second;$('eq-bottom-arrow').textContent=side==='x'?'←':'→';
+ $('eq-source-title').textContent=`${input} · t = 0`;$('eq-middle-title').textContent=`${first}(${input})`;$('eq-copy-title').textContent=`${first}(${input}) · copy`;
+ $('eq-compose-title').textContent=`${second}(${first}(${input})) · t = 1`;$('eq-now-title').textContent=`${good?'Homotopy':'Attempt'} Hₜ(${input})`;
+ $('eq-why').open=false;$('eq-why-text').innerHTML=`<p>${c.maps}</p><p>${c.proof}</p><p>The top and bottom ${b} pictures show exactly the same intermediate output. The homotopy is in ${a}: at t = 0 it matches the original input above, and at t = 1 it matches the composition below. The homotopy need not be one-to-one.</p><p class="source-reference"><a href="https://pi.math.cornell.edu/~hatcher/AT/AT.pdf#page=12" target="_blank" rel="noopener">Background: Hatcher, homotopy equivalence.</a></p>`;
+ eqDrawAll();eqStop();
+}
+function eqSelect(event,view,dragging=false){
+ const box=$('eq-'+view).getBoundingClientRect(),g=eqGeometry.get(view),p=[event.clientX-box.left,event.clientY-box.top];
+ if(view!=='source'&&eqIsCollapsed(view)&&eqKind()!=='point'){$('eq-selection').textContent=`Several inputs meet here. Choose one in the top ${eqState.side.toUpperCase()} picture.`;return false;}
+ let best=null,distance=Infinity;
+ for(const input of eqSamples(true)){const q=screenPoint(eqPosition(input,view),g),d=Math.hypot(q[0]-p[0],q[1]-p[1]);if(d<distance){best=input;distance=d;}}
+ if(!dragging&&distance>23)return false;eqState.selected=best;eqDrawAll();return true;
+}
+eqViews.forEach(view=>{
+ const el=$('eq-'+view);
+ el.addEventListener('pointerdown',e=>{if(e.button===0&&eqSelect(e,view)){eqState.drag={view,id:e.pointerId};el.setPointerCapture(e.pointerId);e.preventDefault();}});
+ el.addEventListener('pointermove',e=>{if(eqState.drag?.view===view&&eqState.drag.id===e.pointerId)eqSelect(e,view,true);});
+ for(const name of ['pointerup','pointercancel','lostpointercapture'])el.addEventListener(name,()=>{eqState.drag=null;});
+ el.addEventListener('keydown',e=>{
+  if(e.key==='Escape'){eqState.selected=null;eqDrawAll();return;}if(!['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(e.key))return;e.preventDefault();
+  const p=eqState.selected??{u:.15,r:.8,branch:'loop'},delta=['ArrowLeft','ArrowDown'].includes(e.key)?-.01:.01;let {u,r=1,branch='loop'}=p;
+  if(['disk','annulus'].includes(eqKind())&&['ArrowUp','ArrowDown'].includes(e.key))r=clamp(r+delta,eqKind()==='annulus'?INNER:0,1);
+  else u=eqKind()==='segment'||branch==='tail'?clamp(u+delta):(u+delta+1)%1;
+  eqState.selected={u,r,branch};eqDrawAll();
+ });
+});
+$('eq-check-x').addEventListener('click',()=>{eqState.side='x';eqChoose(false);});$('eq-check-y').addEventListener('click',()=>{eqState.side='y';eqChoose(false);});
+$('eq-clear').addEventListener('click',()=>{eqState.selected=null;eqDrawAll();});
+$('eq-connect').addEventListener('click',()=>{eqState.connections=!eqState.connections;$('eq-connect').setAttribute('aria-pressed',String(eqState.connections));eqDrawConnections();});
+$('eq-time').addEventListener('input',e=>{eqState.t=Number(e.target.value);eqStop();eqDrawView('now');eqUpdate();eqDrawConnections();});
+$('eq-play').addEventListener('click',()=>{if(eqState.playing){eqStop();return;}if(eqState.t>=1)eqState.t=0;eqState.playing=true;eqState.last=performance.now();$('eq-play').textContent='Ⅱ Pause';eqState.raf=requestAnimationFrame(eqTick);});
+const eqObserver=new ResizeObserver(eqDrawAll);eqViews.forEach(view=>eqObserver.observe($('eq-'+view)));eqObserver.observe($('eq-spaces'));
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',eqDrawAll);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)eqStop();});
+
+const categoryExamples={
+ homotopies:[['segment_circle','Segment → circle: open and shrink'],['disk_any','Disk → choose Y — always works'],['interval','Interval → disk'],['point','Point → circle'],['rotation','Circle → circle: rotation'],['shrink','Circle → disk: shrink'],['disk','Disk → disk: contraction'],['triangle','Edge → filled triangle']],
+ obstructions:[['circle_unwrap','Circle: open the loop? — fails'],['annulus_paths','Annulus: go around the hole? — fails'],['annulus_straight','Annulus: straight to a point — fails'],['annulus_retract','Annulus → its inner circle — works'],['winding','Around the hole once → twice — impossible'],['local_loop','A loop beside the hole → a point — works'],['blocked','Circle → circle: straight shrink — fails']],
+ classes:[['map_classes','Circle → circle: choose the winding']],
+ types:Object.entries(eqCases).map(([id,c])=>[id,c.label])
+};
+function changeSelection(){
+ stop();eqStop();const types=$('category').value==='types';
+ $('homotopy-panel').hidden=types;$('equivalence-panel').hidden=!types;
+ if(types)eqChoose();else chooseExample();
+}
+function chooseCategory(){
+ $('example').innerHTML=categoryExamples[$('category').value].map(([id,label])=>`<option value="${id}">${label}</option>`).join('');
+ changeSelection();
+}
+$('category').addEventListener('change',chooseCategory);
+chooseCategory();
+})();
+</script>
+</body>
+</html>

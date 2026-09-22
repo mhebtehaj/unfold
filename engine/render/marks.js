@@ -40,6 +40,7 @@ export const LAYER = 1;
  *           'dashed' → '5 6', 'dotted' → '1 3': the house dash vocabulary
  * @property {'round'|'butt'|'square'} [cap]
  * @property {'round'|'miter'|'bevel'} [join]
+ * @property {'nonzero'|'evenodd'} [fillRule]
  * @property {string} [class]
  * @property {Record<string,string|number>} [data]   data-* attributes: the pick payload.
  *           Keys are letters, digits, _ . -; k, mark and parts are the engine's own
@@ -73,6 +74,9 @@ function paintAttrs(s) {
     'stroke-dasharray': dashOf(s.dash),
     'stroke-linecap': s.cap,
     'stroke-linejoin': s.join,
+    // Only a shape with two subpaths needs it: a ring is one mark with an
+    // even-odd fill, not a disc with the page's own colour punched over it.
+    'fill-rule': s.fillRule,
     class: s.class,
     'pointer-events': s.interactive === false ? 'none' : undefined,
   };
@@ -117,7 +121,7 @@ const reuse = (node, tag) => (node && node.localName === tag ? node : el(tag));
 const SHAPES = new Set(['rect', 'circle', 'path']);
 
 const COMMON = ['fill', 'stroke', 'fillOpacity', 'strokeOpacity', 'opacity', 'width', 'dash', 'cap', 'join',
-  'class', 'data', 'title', 'interactive'];
+  'fillRule', 'class', 'data', 'title', 'interactive'];
 const TEXT = ['dx', 'dy', 'anchor', 'baseline', 'halo', 'class', 'opacity', 'fill', 'interactive', 'data', 'title'];
 /** The style keys each mark reads. Anything else is refused by check(). */
 const KEYS = {

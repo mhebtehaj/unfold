@@ -1,7 +1,7 @@
 {
  "scenes": [
   {
-   "id": "eq-connections",
+   "id": "uf-overlay",
    "viewBox": "0 0 1032 620",
    "role": null,
    "ariaLabel": null,
@@ -19,7 +19,9 @@
     "path": 10,
     "circle": 15
    },
-   "probe": {},
+   "probe": {
+    "data-uf": "overlay"
+   },
    "marks": [
     {
      "i": 0,
@@ -33,7 +35,8 @@
      },
      "data": {
       "data-eq-link": "source-middle",
-      "data-homotopy": "false"
+      "data-homotopy": "false",
+      "data-k": "source-middle:0"
      }
     },
     {
@@ -48,7 +51,8 @@
      },
      "data": {
       "data-eq-link": "middle-copy",
-      "data-homotopy": "false"
+      "data-homotopy": "false",
+      "data-k": "middle-copy:0"
      }
     },
     {
@@ -63,7 +67,8 @@
      },
      "data": {
       "data-eq-link": "copy-compose",
-      "data-homotopy": "false"
+      "data-homotopy": "false",
+      "data-k": "copy-compose:0"
      }
     },
     {
@@ -78,7 +83,8 @@
      },
      "data": {
       "data-eq-link": "source-now",
-      "data-homotopy": "true"
+      "data-homotopy": "true",
+      "data-k": "source-now:0"
      }
     },
     {
@@ -93,7 +99,8 @@
      },
      "data": {
       "data-eq-link": "now-compose",
-      "data-homotopy": "true"
+      "data-homotopy": "true",
+      "data-k": "now-compose:0"
      }
     },
     {
@@ -109,7 +116,8 @@
      },
      "data": {
       "data-eq-link": "source-middle",
-      "data-homotopy": "false"
+      "data-homotopy": "false",
+      "data-k": "source-middle:sel"
      }
     },
     {
@@ -125,7 +133,8 @@
      },
      "data": {
       "data-eq-link": "middle-copy",
-      "data-homotopy": "false"
+      "data-homotopy": "false",
+      "data-k": "middle-copy:sel"
      }
     },
     {
@@ -141,7 +150,8 @@
      },
      "data": {
       "data-eq-link": "copy-compose",
-      "data-homotopy": "false"
+      "data-homotopy": "false",
+      "data-k": "copy-compose:sel"
      }
     },
     {
@@ -157,7 +167,8 @@
      },
      "data": {
       "data-eq-link": "source-now",
-      "data-homotopy": "true"
+      "data-homotopy": "true",
+      "data-k": "source-now:sel"
      }
     },
     {
@@ -173,7 +184,8 @@
      },
      "data": {
       "data-eq-link": "now-compose",
-      "data-homotopy": "true"
+      "data-homotopy": "true",
+      "data-k": "now-compose:sel"
      }
     },
     {
@@ -186,6 +198,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:source:0"
      }
     },
     {
@@ -199,6 +214,9 @@
       "stroke": "rgb(255, 255, 255)",
       "stroke-width": "4px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:source:1"
      }
     },
     {
@@ -212,6 +230,9 @@
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:source:2"
      }
     },
     {
@@ -224,6 +245,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:middle:0"
      }
     },
     {
@@ -237,6 +261,9 @@
       "stroke": "rgb(255, 255, 255)",
       "stroke-width": "4px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:middle:1"
      }
     },
     {
@@ -250,6 +277,9 @@
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:middle:2"
      }
     },
     {
@@ -262,6 +292,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:copy:0"
      }
     },
     {
@@ -275,6 +308,9 @@
       "stroke": "rgb(255, 255, 255)",
       "stroke-width": "4px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:copy:1"
      }
     },
     {
@@ -288,6 +324,9 @@
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:copy:2"
      }
     },
     {
@@ -300,6 +339,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:compose:0"
      }
     },
     {
@@ -313,6 +355,9 @@
       "stroke": "rgb(255, 255, 255)",
       "stroke-width": "4px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:compose:1"
      }
     },
     {
@@ -326,6 +371,9 @@
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:compose:2"
      }
     },
     {
@@ -338,6 +386,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:now:0"
      }
     },
     {
@@ -351,6 +402,9 @@
       "stroke": "rgb(255, 255, 255)",
       "stroke-width": "4px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:now:1"
      }
     },
     {
@@ -364,14 +418,17 @@
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "ring:now:2"
      }
     }
    ]
   },
   {
-   "id": "eq-source",
+   "id": "uf-drawing",
    "viewBox": "0 0 492 160",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Original input and identity map, fixed at time zero. Click or drag to follow a point.",
    "size": [
     492,
@@ -384,20 +441,22 @@
     16
    ],
    "counts": {
+    "path": 1,
     "circle": 6
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "source"
+   },
    "marks": [
     {
      "i": 0,
-     "tag": "circle",
-     "cx": "246",
-     "cy": "75",
-     "r": "5",
+     "tag": "path",
+     "d": "M0,6L6,0",
      "paint": {
-      "fill": "rgb(240, 242, 245)",
-      "stroke": "none",
-      "stroke-dasharray": "none"
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "0.6px",
+      "stroke-dasharray": "none",
+      "opacity": "0.5"
      }
     },
     {
@@ -407,9 +466,12 @@
      "cy": "75",
      "r": "5",
      "paint": {
-      "fill": "rgb(55, 121, 235)",
+      "fill": "rgb(240, 242, 245)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -419,14 +481,32 @@
      "cy": "75",
      "r": "5",
      "paint": {
-      "fill": "none",
-      "stroke": "rgb(174, 182, 193)",
-      "stroke-width": "1.5px",
+      "fill": "rgb(55, 121, 235)",
+      "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
      "i": 3,
+     "tag": "circle",
+     "cx": "246",
+     "cy": "75",
+     "r": "5",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
+     }
+    },
+    {
+     "i": 4,
      "tag": "circle",
      "cx": "246",
      "cy": "75",
@@ -435,19 +515,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
-     }
-    },
-    {
-     "i": 4,
-     "tag": "circle",
-     "cx": "246",
-     "cy": "75",
-     "r": "8",
-     "paint": {
-      "fill": "none",
-      "stroke": "rgb(255, 255, 255)",
-      "stroke-width": "4px",
-      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p3"
      }
     },
     {
@@ -458,17 +528,36 @@
      "r": "8",
      "paint": {
       "fill": "none",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p4"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "246",
+     "cy": "75",
+     "r": "8",
+     "paint": {
+      "fill": "none",
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p5"
      }
     }
    ]
   },
   {
-   "id": "eq-middle",
+   "id": "uf-drawing",
    "viewBox": "0 0 492 160",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Output of the first map, in the top row.",
    "size": [
     492,
@@ -483,7 +572,9 @@
    "counts": {
     "circle": 6
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "middle"
+   },
    "marks": [
     {
      "i": 0,
@@ -495,6 +586,9 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -507,6 +601,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
@@ -520,6 +617,9 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
      }
     },
     {
@@ -532,6 +632,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p3"
      }
     },
     {
@@ -545,6 +648,9 @@
       "stroke": "rgb(255, 255, 255)",
       "stroke-width": "4px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p4"
      }
     },
     {
@@ -558,14 +664,17 @@
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p5"
      }
     }
    ]
   },
   {
-   "id": "eq-now",
+   "id": "uf-drawing",
    "viewBox": "0 0 492 160",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Current homotopy between the original input above and the round-trip result below.",
    "size": [
     492,
@@ -578,20 +687,22 @@
     16
    ],
    "counts": {
+    "path": 1,
     "circle": 6
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "now"
+   },
    "marks": [
     {
      "i": 0,
-     "tag": "circle",
-     "cx": "246",
-     "cy": "75",
-     "r": "5",
+     "tag": "path",
+     "d": "M0,6L6,0",
      "paint": {
-      "fill": "rgb(240, 242, 245)",
-      "stroke": "none",
-      "stroke-dasharray": "none"
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "0.6px",
+      "stroke-dasharray": "none",
+      "opacity": "0.5"
      }
     },
     {
@@ -601,9 +712,12 @@
      "cy": "75",
      "r": "5",
      "paint": {
-      "fill": "rgb(55, 121, 235)",
+      "fill": "rgb(240, 242, 245)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -613,14 +727,32 @@
      "cy": "75",
      "r": "5",
      "paint": {
-      "fill": "none",
-      "stroke": "rgb(174, 182, 193)",
-      "stroke-width": "1.5px",
+      "fill": "rgb(55, 121, 235)",
+      "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
      "i": 3,
+     "tag": "circle",
+     "cx": "246",
+     "cy": "75",
+     "r": "5",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
+     }
+    },
+    {
+     "i": 4,
      "tag": "circle",
      "cx": "246",
      "cy": "75",
@@ -629,19 +761,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
-     }
-    },
-    {
-     "i": 4,
-     "tag": "circle",
-     "cx": "246",
-     "cy": "75",
-     "r": "8",
-     "paint": {
-      "fill": "none",
-      "stroke": "rgb(255, 255, 255)",
-      "stroke-width": "4px",
-      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p3"
      }
     },
     {
@@ -652,17 +774,36 @@
      "r": "8",
      "paint": {
       "fill": "none",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p4"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "246",
+     "cy": "75",
+     "r": "8",
+     "paint": {
+      "fill": "none",
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p5"
      }
     }
    ]
   },
   {
-   "id": "eq-compose",
+   "id": "uf-drawing",
    "viewBox": "0 0 492 160",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Fixed round-trip composition, at time one.",
    "size": [
     492,
@@ -675,20 +816,22 @@
     16
    ],
    "counts": {
+    "path": 1,
     "circle": 6
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "compose"
+   },
    "marks": [
     {
      "i": 0,
-     "tag": "circle",
-     "cx": "246",
-     "cy": "75",
-     "r": "5",
+     "tag": "path",
+     "d": "M0,6L6,0",
      "paint": {
-      "fill": "rgb(240, 242, 245)",
-      "stroke": "none",
-      "stroke-dasharray": "none"
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "0.6px",
+      "stroke-dasharray": "none",
+      "opacity": "0.5"
      }
     },
     {
@@ -698,9 +841,12 @@
      "cy": "75",
      "r": "5",
      "paint": {
-      "fill": "rgb(55, 121, 235)",
+      "fill": "rgb(240, 242, 245)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -710,14 +856,32 @@
      "cy": "75",
      "r": "5",
      "paint": {
-      "fill": "none",
-      "stroke": "rgb(174, 182, 193)",
-      "stroke-width": "1.5px",
+      "fill": "rgb(55, 121, 235)",
+      "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
      "i": 3,
+     "tag": "circle",
+     "cx": "246",
+     "cy": "75",
+     "r": "5",
+     "paint": {
+      "fill": "none",
+      "stroke": "rgb(174, 182, 193)",
+      "stroke-width": "1.5px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
+     }
+    },
+    {
+     "i": 4,
      "tag": "circle",
      "cx": "246",
      "cy": "75",
@@ -726,19 +890,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
-     }
-    },
-    {
-     "i": 4,
-     "tag": "circle",
-     "cx": "246",
-     "cy": "75",
-     "r": "8",
-     "paint": {
-      "fill": "none",
-      "stroke": "rgb(255, 255, 255)",
-      "stroke-width": "4px",
-      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p3"
      }
     },
     {
@@ -749,17 +903,36 @@
      "r": "8",
      "paint": {
       "fill": "none",
+      "stroke": "rgb(255, 255, 255)",
+      "stroke-width": "4px",
+      "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p4"
+     }
+    },
+    {
+     "i": 6,
+     "tag": "circle",
+     "cx": "246",
+     "cy": "75",
+     "r": "8",
+     "paint": {
+      "fill": "none",
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p5"
      }
     }
    ]
   },
   {
-   "id": "eq-copy",
+   "id": "uf-drawing",
    "viewBox": "0 0 492 160",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "A copy of the same output of the first map, ready to map back.",
    "size": [
     492,
@@ -774,7 +947,9 @@
    "counts": {
     "circle": 6
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "copy"
+   },
    "marks": [
     {
      "i": 0,
@@ -786,6 +961,9 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -798,6 +976,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
@@ -811,6 +992,9 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
      }
     },
     {
@@ -823,6 +1007,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p3"
      }
     },
     {
@@ -836,6 +1023,9 @@
       "stroke": "rgb(255, 255, 255)",
       "stroke-width": "4px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p4"
      }
     },
     {
@@ -849,6 +1039,9 @@
       "stroke": "rgb(22, 26, 33)",
       "stroke-width": "1.7px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p5"
      }
     }
    ]
@@ -871,9 +1064,19 @@
    "text": "Category"
   },
   {
+   "tag": "select",
+   "id": "choose-category",
+   "text": "HomotopiesCan / cannotHomotopy classes (maps)Homotopy types (spaces)"
+  },
+  {
    "tag": "label",
    "id": null,
    "text": "Example"
+  },
+  {
+   "tag": "select",
+   "id": "choose-example",
+   "text": "Annulus ↔ circle — same typeDisk ↔ segment — same typeDisk ↔ point — same typeCircle with a tail ↔ circle — same typeCircle ↔ point — different typesAnnulus ↔ disk — different typesCircle ↔ circle — wrong maps"
   },
   {
    "tag": "p",
@@ -881,63 +1084,58 @@
    "text": "Same homotopy type: g∘f ≃ idX and f∘g ≃ idY."
   },
   {
-   "tag": "button",
-   "id": "eq-check-x",
-   "text": "On X · ✕ g∘f ≃ id_X"
+   "tag": "div",
+   "id": "equivalence-side",
+   "text": "On X · ✕ g∘f ≃ id_XOn Y · ✓ f∘g ≃ id_Y"
   },
   {
    "tag": "button",
-   "id": "eq-check-y",
-   "text": "On Y · ✓ f∘g ≃ id_Y"
-  },
-  {
-   "tag": "button",
-   "id": "eq-play",
+   "id": null,
    "text": "▶ Play"
   },
   {
    "tag": "output",
-   "id": "eq-time-value",
+   "id": null,
    "text": "0.00"
   },
   {
    "tag": "button",
-   "id": "eq-connect",
+   "id": "equivalence-connections",
    "text": "Connect points"
   },
   {
    "tag": "p",
-   "id": "eq-x-name",
+   "id": null,
    "text": "X · circle"
   },
   {
    "tag": "p",
-   "id": "eq-y-name",
+   "id": null,
    "text": "Y · one point"
   },
   {
    "tag": "h2",
-   "id": "eq-source-title",
+   "id": null,
    "text": "y · t = 0"
   },
   {
    "tag": "h2",
-   "id": "eq-now-title",
+   "id": null,
    "text": "Homotopy Hₜ(y)"
   },
   {
    "tag": "h2",
-   "id": "eq-compose-title",
+   "id": null,
    "text": "f(g(y)) · t = 1"
   },
   {
    "tag": "h2",
-   "id": "eq-copy-title",
+   "id": null,
    "text": "g(y) · copy"
   },
   {
    "tag": "p",
-   "id": "eq-note",
+   "id": null,
    "text": "The point round trip works. The circle round trip cannot deform into the identity."
   },
   {
@@ -947,12 +1145,12 @@
   },
   {
    "tag": "button",
-   "id": "eq-clear",
+   "id": null,
    "text": "Clear circle"
   },
   {
    "tag": "span",
-   "id": "eq-selection",
+   "id": null,
    "text": "The circled point keeps the color of its original input."
   },
   {
@@ -988,38 +1186,38 @@
  ],
  "controls": [
   {
-   "k": "category",
+   "k": "choose-category",
    "type": "select-one",
    "v": "types"
   },
   {
-   "k": "example",
+   "k": "choose-example",
    "type": "select-one",
    "v": "eq_circle_point"
   },
   {
-   "k": "eq-check-x",
+   "k": null,
    "type": "button",
    "v": "false"
   },
   {
-   "k": "eq-check-y",
+   "k": null,
    "type": "button",
    "v": "true"
   },
   {
-   "k": "eq-time",
+   "k": "equivalence-t",
    "type": "range",
    "v": "0"
   },
   {
-   "k": "eq-connect",
+   "k": "equivalence-connections",
    "type": "button",
    "v": "true"
   }
  ],
  "a11y": {
-  "liveRegions": 2,
+  "liveRegions": 4,
   "tablists": 0,
   "tabs": 0,
   "focusable": 26,
@@ -1035,7 +1233,7 @@
    "H2:f(g(y)) · t = 1",
    "H2:g(y) · copy"
   ],
-  "imgRoleOnInteractive": 9
+  "imgRoleOnInteractive": 0
  },
  "title": "Homotopy explorer · Unfold"
 }

@@ -17,6 +17,7 @@ import { dirname, join, relative } from 'node:path';
 import { serve, CHROMIUM } from './lib/serve.mjs';
 import { CAPTURE, TOKENS } from './lib/capture.mjs';
 import { comparePNG, isNoise, DETERMINISTIC_ARGS } from './lib/imagediff.mjs';
+import { locate } from './lib/port-map.mjs';
 import { STATES, WIDTHS, THEMES, RESPONSIVE } from './states.mjs';
 
 const argv = process.argv.slice(2);
@@ -41,9 +42,14 @@ const differ = await (await browser.newContext()).newPage();
 const pageErrors = [];
 const results = { captured: 0, changed: [], added: [], errors: [], noise: 0, diffs: [] };
 
-/** Apply one step, in the main document or the sandboxed iframe. */
+/**
+ * Apply one step, in the main document or the sandboxed iframe. A selector
+ * that matches nothing on the page (the engine port of the homotopy explorer,
+ * whose ids are generated) resolves through tools/lib/port-map.mjs — and only
+ * then — so the same state list drives the frozen original and the port.
+ */
 async function applyStep(ctx, [action, sel, value]) {
-  const el = ctx.locator(sel).first();
+  const el = action === 'wait' ? null : (await locate(ctx, sel)).locator;
   switch (action) {
     case 'select': await el.selectOption(String(value)); break;
     case 'range':

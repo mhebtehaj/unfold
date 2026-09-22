@@ -26,6 +26,9 @@ export const TOKENS = Object.freeze({
   good: '--good', bad: '--bad',
   // page hues
   violet: '--violet', teal: '--teal', orange: '--orange', pink: '--pink',
+  // the selection ring, deliberately not a light-dark() pair: a wide light halo
+  // under a narrow dark ring reads on either ground and on any data colour
+  halo: '--halo', ink: '--ink',
   // data encoding
   zone: '--zone',
   data1: '--data-1', data2: '--data-2', data3: '--data-3', data4: '--data-4',
@@ -111,6 +114,9 @@ function splitTop(s, sep) {
 const PERCENT = /^(?:\d+(?:\.\d+)?|\.\d+)%$/;
 const NUMBER = '(?:\\d+(?:\\.\\d+)?|\\.\\d+)';
 const RGB = new RegExp(`^\\s*${NUMBER}\\s+${NUMBER}\\s+${NUMBER}(?:\\s*/\\s*${NUMBER}%?)?\\s*$`);
+/** hsl()'s numeric form, as hsl() above writes it: `hsl(h s% l%)`, any sign or exponent. */
+const SIGNED = '(?:[+-]?(?:\\d+(?:\\.\\d+)?|\\.\\d+)(?:e[+-]?\\d+)?)';
+const HSL = new RegExp(`^\\s*${SIGNED}\\s+${SIGNED}%\\s+${SIGNED}%(?:\\s*/\\s*${SIGNED}%?)?\\s*$`, 'i');
 
 /**
  * Throw unless `s` is a colour made only of tokens: var(--name) with no
@@ -132,6 +138,17 @@ function checkColour(s, where) {
   }
   if (fn === 'rgb') {
     if (!RGB.test(body)) throw new Error(`${where}: ${s} — only blendNumeric()'s numeric rgb() is accepted`);
+    return;
+  }
+  if (fn === 'hsl') {
+    if (!HSL.test(body)) throw new Error(`${where}: ${s} — only hsl()'s numeric form is accepted`);
+    return;
+  }
+  // A paint server the scene defined: a hatch pattern, a marker. Not a colour
+  // at all, which is why it is spelled as a reference and not as a literal.
+  if (fn === 'url') {
+    if (!/^\s*#[A-Za-z][\w-]*\s*$/.test(body))
+      throw new Error(`${where}: ${s} — a url() paint must reference a def in this document by id`);
     return;
   }
   const parts = splitTop(body, ',');
@@ -196,6 +213,31 @@ export function mix(a, b, amount, space = 'oklab') {
 export function alpha(ref, a) {
   unit(a, 'alpha');
   return `color-mix(in srgb, ${paint(ref)} ${pct(a)}, transparent)`;
+}
+
+/**
+ * A colour from numbers: the identity ramps.
+ *
+ * The homotopy explorer encodes which INPUT a mark came from as a hue — a
+ * 360° wheel round the source space, saturation and lightness carrying the
+ * radius — and the realization explorer sweeps a hue per marker. Those are
+ * data, computed per point, so they cannot be tokens; and they are deliberately
+ * the same in both schemes, because the wheel IS the space and rotating it in
+ * dark mode would say something false.
+ *
+ * So this is the second numeric escape hatch beside blendNumeric(), and it is
+ * why `hsl(` may appear in this file and nowhere else (I3). Arguments are the
+ * CSS ones: hue in degrees, saturation and lightness in percent. They are
+ * formatted exactly as JavaScript prints them, so a ported drawing can be
+ * compared with the string the original wrote.
+ *
+ * @param {number} h degrees @param {number} s percent @param {number} l percent
+ * @returns {string}
+ */
+export function hsl(h, s, l) {
+  for (const [name, v] of [['h', h], ['s', s], ['l', l]])
+    if (!Number.isFinite(v)) throw new RangeError(`hsl: ${name} must be a finite number, got ${v}`);
+  return `hsl(${h} ${s}% ${l}%)`;
 }
 
 // --------------------------------------------------------------- the blend --

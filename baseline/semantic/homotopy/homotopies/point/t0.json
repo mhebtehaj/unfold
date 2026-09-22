@@ -1,9 +1,9 @@
 {
  "scenes": [
   {
-   "id": "source",
+   "id": "homotopy-panel-source",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Input space. Click or drag on a colored point to select it. Arrow keys move the selection; Escape clears it.",
    "size": [
     462.8,
@@ -18,7 +18,9 @@
    "counts": {
     "circle": 1
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "source"
+   },
    "marks": [
     {
      "i": 0,
@@ -30,14 +32,17 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p0"
      }
     }
    ]
   },
   {
-   "id": "start",
+   "id": "homotopy-panel-start",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Starting map, fixed at time zero. Click a colored point to select its input.",
    "size": [
     462.81,
@@ -52,7 +57,9 @@
    "counts": {
     "circle": 3
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "start"
+   },
    "marks": [
     {
      "i": 0,
@@ -64,6 +71,9 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -76,6 +86,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
@@ -89,14 +102,17 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
      }
     }
    ]
   },
   {
-   "id": "now",
+   "id": "homotopy-panel-now",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Current map. Click or drag on a colored point to select its input.",
    "size": [
     462.81,
@@ -111,7 +127,9 @@
    "counts": {
     "circle": 3
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "now"
+   },
    "marks": [
     {
      "i": 0,
@@ -123,6 +141,9 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -135,6 +156,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
@@ -148,14 +172,17 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
      }
     }
    ]
   },
   {
-   "id": "end",
+   "id": "homotopy-panel-end",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Final map, fixed at time one. Click a colored point to select its input.",
    "size": [
     462.81,
@@ -170,7 +197,9 @@
    "counts": {
     "circle": 3
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "end"
+   },
    "marks": [
     {
      "i": 0,
@@ -182,6 +211,9 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -194,6 +226,9 @@
       "fill": "rgb(55, 121, 235)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
@@ -207,6 +242,9 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r2"
      }
     }
    ]
@@ -229,23 +267,33 @@
    "text": "Category"
   },
   {
+   "tag": "select",
+   "id": "choose-category",
+   "text": "HomotopiesCan / cannotHomotopy classes (maps)Homotopy types (spaces)"
+  },
+  {
    "tag": "label",
    "id": null,
    "text": "Example"
   },
   {
+   "tag": "select",
+   "id": "choose-example",
+   "text": "Segment → circle: open and shrinkDisk → choose Y — always worksInterval → diskPoint → circleCircle → circle: rotationCircle → disk: shrinkDisk → disk: contractionEdge → filled triangle"
+  },
+  {
    "tag": "button",
-   "id": "play",
+   "id": null,
    "text": "▶ Play"
   },
   {
    "tag": "output",
-   "id": "time-value",
+   "id": null,
    "text": "0.00"
   },
   {
    "tag": "button",
-   "id": "connect",
+   "id": "homotopy-connections",
    "text": "Connect points"
   },
   {
@@ -285,37 +333,37 @@
   },
   {
    "tag": "span",
-   "id": "selection-note",
+   "id": null,
    "text": "Only the gray circumference belongs to Y."
   }
  ],
  "controls": [
   {
-   "k": "category",
+   "k": "choose-category",
    "type": "select-one",
    "v": "homotopies"
   },
   {
-   "k": "example",
+   "k": "choose-example",
    "type": "select-one",
    "v": "point"
   },
   {
-   "k": "time",
+   "k": "homotopy-t",
    "type": "range",
    "v": "0"
   },
   {
-   "k": "connect",
+   "k": "homotopy-connections",
    "type": "button",
    "v": "false"
   }
  ],
  "a11y": {
-  "liveRegions": 2,
+  "liveRegions": 4,
   "tablists": 0,
   "tabs": 0,
-  "focusable": 25,
+  "focusable": 26,
   "headings": [
    "H1:Homotopy explorer",
    "H2:Input x",
@@ -324,11 +372,11 @@
    "H2:End f₁(x)",
    "H2:x · t = 0",
    "H2:f(x)",
-   "H2:Hₜ(x)",
+   "H2:Homotopy Hₜ(x)",
    "H2:g(f(x)) · t = 1",
    "H2:f(x) · copy"
   ],
-  "imgRoleOnInteractive": 9
+  "imgRoleOnInteractive": 0
  },
  "title": "Homotopy explorer · Unfold"
 }

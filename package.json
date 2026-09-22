@@ -12,6 +12,7 @@
     "baseline": "node tools/shots.mjs",
     "baseline:update": "node tools/shots.mjs --update",
     "parity": "node tools/parity.mjs",
+    "port-parity": "node tools/port-parity.mjs",
     "probe": "node tools/probe.mjs",
     "bundle": "node tools/bundle.mjs engine"
   },

@@ -5,7 +5,7 @@
 // lives in tests/unfold-css.test.mjs.
 
 import { suite, assert } from './harness.mjs';
-import { LAYER, TOKENS, HUES, token, isToken, paint, mix, alpha, blend, blendNumeric, DATA } from '../engine/render/palette.js';
+import { LAYER, TOKENS, HUES, token, isToken, paint, mix, alpha, blend, blendNumeric, hsl, DATA } from '../engine/render/palette.js';
 
 suite('palette', ({ test }) => {
   test('declares its layer', () => assert.equal(LAYER, 1));
@@ -67,7 +67,9 @@ suite('palette', ({ test }) => {
 
   test('paint() looks inside palette functions: a literal wearing one is still a literal', () => {
     for (const v of ['color-mix(in srgb, red 50%, blue)', 'var(--x, #f00)', 'light-dark(#fff, #000)',
-                     'rgb(255, 0, 0)', 'rgb(var(--r) 0 0)', 'hsl(0 50% 50%)', 'oklch(0.5 0.1 20)',
+                     'rgb(255, 0, 0)', 'rgb(var(--r) 0 0)', 'oklch(0.5 0.1 20)',
+                     'hsl(0, 50%, 50%)', 'hsl(var(--h) 50% 50%)', 'hsl(red)',
+                     'url(https://example.com/x.svg#a)', 'url(#)', 'url("#a")',
                      'color-mix(in srgb, var(--a) 50%)', 'color-mix(in srgb, var(--a) var(--b), var(--c))',
                      'light-dark(var(--a))', 'var(--a) var(--b)', 'var(--a))'])
       assert.throws(() => paint(v), v);
@@ -75,7 +77,11 @@ suite('palette', ({ test }) => {
     // Nesting and hue methods that the engine's own functions can produce pass.
     for (const v of ['color-mix(in oklch longer hue, var(--a), 30% var(--b))',
                      'color-mix(in srgb, color-mix(in oklab, var(--a) 20%, var(--b)) 50%, transparent)',
-                     'rgb(175.5 119 99 / 50%)'])
+                     'rgb(175.5 119 99 / 50%)',
+                     // hsl()'s own output — an identity ramp is data, not a literal
+                     hsl(0, 50, 50), hsl(217.44, 62.5, 47.1), hsl(-30, 0, 100),
+                     // and a paint server this document defined
+                     'url(#uf-hatch-3)'])
       assert.equal(paint(v), v, v);
   });
 

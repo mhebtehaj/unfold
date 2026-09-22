@@ -13,6 +13,12 @@ import {
   reconcile, raise, raiseAll, lower, raiseTo, raw, esc, on, onAll, createTextMeasurer,
 } from '../engine/core/svg.js';
 
+/** What the kernel writes for a number, at whatever precision is set. The
+ *  default has moved twice (3 → 6 → 8) as a port measured it; a test that spelled
+ *  the digits out would have to move with it, and would be asserting the
+ *  constant rather than the rounding. */
+const rounded = v => { const k = 10 ** getPrecision(); return String(Math.round(v * k) / k); };
+
 register();
 
 function register() {
@@ -42,7 +48,7 @@ function register() {
       });
       assert.equal(n.namespaceURI, SVG_NS);
       assert.equal(n.tagName, 'circle');
-      assert.equal(n.getAttribute('cx'), '1.234568', 'rounded to PRECISION');
+      assert.equal(n.getAttribute('cx'), rounded(1.23456789), 'rounded to PRECISION');
       assert.equal(n.getAttribute('r'), '4', 'and trailing zeros dropped');
       assert.equal(n.getAttribute('class'), 'uf-mark');
       assert.equal(n.getAttribute('fill'), 'var(--violet)');
@@ -75,7 +81,7 @@ function register() {
     });
 
     test('a rounded negative zero is written as "0"', () => {
-      const n = el('circle', { cx: -0.0000004 });
+      const n = el('circle', { cx: -0.4 * 10 ** -getPrecision() });
       assert.equal(n.getAttribute('cx'), '0', 'not "-0"');
     });
 
@@ -100,7 +106,7 @@ function register() {
       } finally {
         setPrecision(before);
       }
-      assert.equal(getPrecision(), 6, 'restored');
+      assert.equal(getPrecision(), before, 'restored');
     });
 
     test('className is an alias for class', () => {
@@ -108,9 +114,10 @@ function register() {
     });
 
     test('setPrecision refuses a nonsense value', () => {
+      const before = getPrecision();
       assert.throws(() => setPrecision(-1));
       assert.throws(() => setPrecision(NaN));
-      assert.equal(getPrecision(), 6, 'and leaves the module unchanged');
+      assert.equal(getPrecision(), before, 'and leaves the module unchanged');
     });
 
     test('group() appends children and skips the nullish ones', () => {
@@ -381,7 +388,7 @@ function register() {
       const t = text('110', { x: 12.3456789, y: -4, data: { face: '110' } });
       assert.equal(t.tagName, 'text');
       assert.equal(t.textContent, '110');
-      assert.equal(t.getAttribute('x'), '12.345679');
+      assert.equal(t.getAttribute('x'), rounded(12.3456789));
       assert.equal(t.getAttribute('text-anchor'), 'middle');
       assert.equal(t.getAttribute('dominant-baseline'), 'middle');
       assert.ok(t.getAttribute('class').split(' ').includes('uf-halo'));

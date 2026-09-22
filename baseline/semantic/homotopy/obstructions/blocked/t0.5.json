@@ -1,9 +1,9 @@
 {
  "scenes": [
   {
-   "id": "source",
+   "id": "homotopy-panel-source",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Input space. Click or drag on a colored point to select it. Arrow keys move the selection; Escape clears it.",
    "size": [
     462.8,
@@ -18,1742 +18,2176 @@
    "counts": {
     "path": 144
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "source"
+   },
    "marks": [
     {
      "i": 0,
      "tag": "path",
-     "d": "M304.5,90L304.43052017547564,86.81578472233048",
+     "d": "M304.5,90L304.43052018,86.81578472",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 73, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e0"
      }
     },
     {
      "i": 1,
      "tag": "path",
-     "d": "M304.43052017547564,86.81578472233048L304.22221296069745,83.63763077942096",
+     "d": "M304.43052018,86.81578472L304.22221296,83.63763078",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 65, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e1"
      }
     },
     {
      "i": 2,
      "tag": "path",
-     "d": "M304.22221296069745,83.63763077942096L303.87547488028815,80.47158796793623",
+     "d": "M304.22221296,83.63763078L303.87547488,80.47158797",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 58, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e2"
      }
     },
     {
      "i": 3,
      "tag": "path",
-     "d": "M303.87547488028815,80.47158796793623L303.39096596989117,77.32368303031409",
+     "d": "M303.87547488,80.47158797L303.39096597,77.32368303",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 50, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e3"
      }
     },
     {
      "i": 4,
      "tag": "path",
-     "d": "M303.39096596989117,77.32368303031409L302.76960851975514,74.19990818251848",
+     "d": "M303.39096597,77.32368303L302.76960852,74.19990818",
      "paint": {
       "fill": "none",
       "stroke": "rgb(50, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e4"
      }
     },
     {
      "i": 5,
      "tag": "path",
-     "d": "M302.76960851975514,74.19990818251848L302.01258531910196,71.10620970751599",
+     "d": "M302.76960852,74.19990818L302.01258532,71.10620971",
      "paint": {
       "fill": "none",
       "stroke": "rgb(58, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e5"
      }
     },
     {
      "i": 6,
      "tag": "path",
-     "d": "M302.01258531910196,71.10620970751599L301.1213374046206,68.04847663618807",
+     "d": "M302.01258532,71.10620971L301.1213374,68.04847664",
      "paint": {
       "fill": "none",
       "stroke": "rgb(65, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e6"
      }
     },
     {
      "i": 7,
      "tag": "path",
-     "d": "M301.1213374046206,68.04847663618807L300.0975613173713,65.03252953722618",
+     "d": "M301.1213374,68.04847664L300.09756132,65.03252954",
      "paint": {
       "fill": "none",
       "stroke": "rgb(73, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e7"
      }
     },
     {
      "i": 8,
      "tag": "path",
-     "d": "M300.0975613173713,65.03252953722618L298.9432058733239,62.06410943734845",
+     "d": "M300.09756132,65.03252954L298.94320587,62.06410944",
      "paint": {
       "fill": "none",
       "stroke": "rgb(81, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e8"
      }
     },
     {
      "i": 9,
      "tag": "path",
-     "d": "M298.9432058733239,62.06410943734845L297.66046845367543,59.148866892928936",
+     "d": "M298.94320587,62.06410944L297.66046845,59.14886689",
      "paint": {
       "fill": "none",
       "stroke": "rgb(88, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e9"
      }
     },
     {
      "i": 10,
      "tag": "path",
-     "d": "M297.66046845367543,59.148866892928936L296.2517908220102,56.292351233842524",
+     "d": "M297.66046845,59.14886689L296.25179082,56.29235123",
      "paint": {
       "fill": "none",
       "stroke": "rgb(96, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e10"
      }
     },
     {
      "i": 11,
      "tag": "path",
-     "d": "M296.2517908220102,56.292351233842524L294.719854476264,53.50000000000001",
+     "d": "M296.25179082,56.29235123L294.71985448,53.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(103, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e11"
      }
     },
     {
      "i": 12,
      "tag": "path",
-     "d": "M294.719854476264,53.50000000000001L293.0675755443407,50.777128590681855",
+     "d": "M294.71985448,53.5L293.06757554,50.77712859",
      "paint": {
       "fill": "none",
       "stroke": "rgb(111, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e12"
      }
     },
     {
      "i": 13,
      "tag": "path",
-     "d": "M293.0675755443407,50.777128590681855L291.2980992330964,48.12892014637364",
+     "d": "M293.06757554,50.77712859L291.29809923,48.12892015",
      "paint": {
       "fill": "none",
       "stroke": "rgb(119, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e13"
      }
     },
     {
      "i": 14,
      "tag": "path",
-     "d": "M291.2980992330964,48.12892014637364L289.4147938412602,45.56041568236339",
+     "d": "M291.29809923,48.12892015L289.41479384,45.56041568",
      "paint": {
       "fill": "none",
       "stroke": "rgb(126, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e14"
      }
     },
     {
      "i": 15,
      "tag": "path",
-     "d": "M289.4147938412602,45.56041568236339L287.4212443476854,43.076504492882634",
+     "d": "M289.41479384,45.56041568L287.42124435,43.07650449",
      "paint": {
       "fill": "none",
       "stroke": "rgb(134, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e15"
      }
     },
     {
      "i": 16,
      "tag": "path",
-     "d": "M287.4212443476854,43.076504492882634L285.32124558713906,40.68191484405681",
+     "d": "M287.42124435,43.07650449L285.32124559,40.68191484",
      "paint": {
       "fill": "none",
       "stroke": "rgb(142, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e16"
      }
     },
     {
      "i": 17,
      "tag": "path",
-     "d": "M285.32124558713906,40.68191484405681L283.118795026618,38.38120497338203",
+     "d": "M285.32124559,40.68191484L283.11879503,38.38120497",
      "paint": {
       "fill": "none",
       "stroke": "rgb(149, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e17"
      }
     },
     {
      "i": 18,
      "tag": "path",
-     "d": "M283.118795026618,38.38120497338203L280.8180851559432,36.17875441286094",
+     "d": "M283.11879503,38.38120497L280.81808516,36.17875441",
      "paint": {
       "fill": "none",
       "stroke": "rgb(157, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e18"
      }
     },
     {
      "i": 19,
      "tag": "path",
-     "d": "M280.8180851559432,36.17875441286094L278.42349550711737,34.078755652314605",
+     "d": "M280.81808516,36.17875441L278.42349551,34.07875565",
      "paint": {
       "fill": "none",
       "stroke": "rgb(164, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e19"
      }
     },
     {
      "i": 20,
      "tag": "path",
-     "d": "M278.42349550711737,34.078755652314605L275.9395843176366,32.08520615873983",
+     "d": "M278.42349551,34.07875565L275.93958432,32.08520616",
      "paint": {
       "fill": "none",
       "stroke": "rgb(172, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e20"
      }
     },
     {
      "i": 21,
      "tag": "path",
-     "d": "M275.9395843176366,32.08520615873983L273.3710798536264,30.2019007669036",
+     "d": "M275.93958432,32.08520616L273.37107985,30.20190077",
      "paint": {
       "fill": "none",
       "stroke": "rgb(180, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e21"
      }
     },
     {
      "i": 22,
      "tag": "path",
-     "d": "M273.3710798536264,30.2019007669036L270.72287140931815,28.432424455659344",
+     "d": "M273.37107985,30.20190077L270.72287141,28.43242446",
      "paint": {
       "fill": "none",
       "stroke": "rgb(187, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e22"
      }
     },
     {
      "i": 23,
      "tag": "path",
-     "d": "M270.72287140931815,28.432424455659344L268,26.780145523735982",
+     "d": "M270.72287141,28.43242446L268,26.78014552",
      "paint": {
       "fill": "none",
       "stroke": "rgb(195, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e23"
      }
     },
     {
      "i": 24,
      "tag": "path",
-     "d": "M268,26.780145523735982L265.2076487661575,25.24820917798982",
+     "d": "M268,26.78014552L265.20764877,25.24820918",
      "paint": {
       "fill": "none",
       "stroke": "rgb(203, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e24"
      }
     },
     {
      "i": 25,
      "tag": "path",
-     "d": "M265.2076487661575,25.24820917798982L262.35113310707106,23.83953154632455",
+     "d": "M265.20764877,25.24820918L262.35113311,23.83953155",
      "paint": {
       "fill": "none",
       "stroke": "rgb(210, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e25"
      }
     },
     {
      "i": 26,
      "tag": "path",
-     "d": "M262.35113310707106,23.83953154632455L259.43589056265154,22.556794126676067",
+     "d": "M262.35113311,23.83953155L259.43589056,22.55679413",
      "paint": {
       "fill": "none",
       "stroke": "rgb(218, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e26"
      }
     },
     {
      "i": 27,
      "tag": "path",
-     "d": "M259.43589056265154,22.556794126676067L256.4674704627738,21.4024386826287",
+     "d": "M259.43589056,22.55679413L256.46747046,21.40243868",
      "paint": {
       "fill": "none",
       "stroke": "rgb(225, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e27"
      }
     },
     {
      "i": 28,
      "tag": "path",
-     "d": "M256.4674704627738,21.4024386826287L253.45152336381193,20.37866259537944",
+     "d": "M256.46747046,21.40243868L253.45152336,20.3786626",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 225)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e28"
      }
     },
     {
      "i": 29,
      "tag": "path",
-     "d": "M253.45152336381193,20.37866259537944L250.39379029248403,19.487414680898013",
+     "d": "M253.45152336,20.3786626L250.39379029,19.48741468",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 218)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e29"
      }
     },
     {
      "i": 30,
      "tag": "path",
-     "d": "M250.39379029248403,19.487414680898013L247.3000918174815,18.73039148024486",
+     "d": "M250.39379029,19.48741468L247.30009182,18.73039148",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 210)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e30"
      }
     },
     {
      "i": 31,
      "tag": "path",
-     "d": "M247.3000918174815,18.73039148024486L244.17631696968593,18.109034030108816",
+     "d": "M247.30009182,18.73039148L244.17631697,18.10903403",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 203)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e31"
      }
     },
     {
      "i": 32,
      "tag": "path",
-     "d": "M244.17631696968593,18.109034030108816L241.02841203206378,17.624525119711848",
+     "d": "M244.17631697,18.10903403L241.02841203,17.62452512",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 195)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e32"
      }
     },
     {
      "i": 33,
      "tag": "path",
-     "d": "M241.02841203206378,17.624525119711848L237.86236922057907,17.27778703930258",
+     "d": "M241.02841203,17.62452512L237.86236922,17.27778704",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 187)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e33"
      }
     },
     {
      "i": 34,
      "tag": "path",
-     "d": "M237.86236922057907,17.27778703930258L234.68421527766952,17.06947982452438",
+     "d": "M237.86236922,17.27778704L234.68421528,17.06947982",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 180)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e34"
      }
     },
     {
      "i": 35,
      "tag": "path",
-     "d": "M234.68421527766952,17.06947982452438L231.5,17",
+     "d": "M234.68421528,17.06947982L231.5,17",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 172)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e35"
      }
     },
     {
      "i": 36,
      "tag": "path",
-     "d": "M231.5,17L228.31578472233048,17.06947982452438",
+     "d": "M231.5,17L228.31578472,17.06947982",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 164)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e36"
      }
     },
     {
      "i": 37,
      "tag": "path",
-     "d": "M228.31578472233048,17.06947982452438L225.13763077942096,17.27778703930258",
+     "d": "M228.31578472,17.06947982L225.13763078,17.27778704",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 157)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e37"
      }
     },
     {
      "i": 38,
      "tag": "path",
-     "d": "M225.13763077942096,17.27778703930258L221.97158796793624,17.624525119711834",
+     "d": "M225.13763078,17.27778704L221.97158797,17.62452512",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 149)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e38"
      }
     },
     {
      "i": 39,
      "tag": "path",
-     "d": "M221.97158796793624,17.624525119711834L218.8236830303141,18.109034030108816",
+     "d": "M221.97158797,17.62452512L218.82368303,18.10903403",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 142)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e39"
      }
     },
     {
      "i": 40,
      "tag": "path",
-     "d": "M218.8236830303141,18.109034030108816L215.6999081825185,18.73039148024486",
+     "d": "M218.82368303,18.10903403L215.69990818,18.73039148",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 134)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e40"
      }
     },
     {
      "i": 41,
      "tag": "path",
-     "d": "M215.6999081825185,18.73039148024486L212.60620970751597,19.487414680898013",
+     "d": "M215.69990818,18.73039148L212.60620971,19.48741468",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 126)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e41"
      }
     },
     {
      "i": 42,
      "tag": "path",
-     "d": "M212.60620970751597,19.487414680898013L209.54847663618807,20.37866259537944",
+     "d": "M212.60620971,19.48741468L209.54847664,20.3786626",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 119)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e42"
      }
     },
     {
      "i": 43,
      "tag": "path",
-     "d": "M209.54847663618807,20.37866259537944L206.5325295372262,21.402438682628684",
+     "d": "M209.54847664,20.3786626L206.53252954,21.40243868",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 111)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e43"
      }
     },
     {
      "i": 44,
      "tag": "path",
-     "d": "M206.5325295372262,21.402438682628684L203.56410943734846,22.556794126676067",
+     "d": "M206.53252954,21.40243868L203.56410944,22.55679413",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 103)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e44"
      }
     },
     {
      "i": 45,
      "tag": "path",
-     "d": "M203.56410943734846,22.556794126676067L200.64886689292894,23.83953154632455",
+     "d": "M203.56410944,22.55679413L200.64886689,23.83953155",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 96)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e45"
      }
     },
     {
      "i": 46,
      "tag": "path",
-     "d": "M200.64886689292894,23.83953154632455L197.79235123384254,25.248209177989807",
+     "d": "M200.64886689,23.83953155L197.79235123,25.24820918",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 88)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e46"
      }
     },
     {
      "i": 47,
      "tag": "path",
-     "d": "M197.79235123384254,25.248209177989807L195,26.780145523735975",
+     "d": "M197.79235123,25.24820918L195,26.78014552",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 81)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e47"
      }
     },
     {
      "i": 48,
      "tag": "path",
-     "d": "M195,26.780145523735975L192.27712859068185,28.43242445565935",
+     "d": "M195,26.78014552L192.27712859,28.43242446",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 73)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e48"
      }
     },
     {
      "i": 49,
      "tag": "path",
-     "d": "M192.27712859068185,28.43242445565935L189.62892014637364,30.201900766903584",
+     "d": "M192.27712859,28.43242446L189.62892015,30.20190077",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 65)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e49"
      }
     },
     {
      "i": 50,
      "tag": "path",
-     "d": "M189.62892014637364,30.201900766903584L187.06041568236338,32.08520615873983",
+     "d": "M189.62892015,30.20190077L187.06041568,32.08520616",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 58)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e50"
      }
     },
     {
      "i": 51,
      "tag": "path",
-     "d": "M187.06041568236338,32.08520615873983L184.57650449288263,34.078755652314605",
+     "d": "M187.06041568,32.08520616L184.57650449,34.07875565",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 50)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e51"
      }
     },
     {
      "i": 52,
      "tag": "path",
-     "d": "M184.57650449288263,34.078755652314605L182.1819148440568,36.17875441286094",
+     "d": "M184.57650449,34.07875565L182.18191484,36.17875441",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 50, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e52"
      }
     },
     {
      "i": 53,
      "tag": "path",
-     "d": "M182.1819148440568,36.17875441286094L179.88120497338204,38.381204973382026",
+     "d": "M182.18191484,36.17875441L179.88120497,38.38120497",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 58, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e53"
      }
     },
     {
      "i": 54,
      "tag": "path",
-     "d": "M179.88120497338204,38.381204973382026L177.67875441286094,40.68191484405679",
+     "d": "M179.88120497,38.38120497L177.67875441,40.68191484",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 65, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e54"
      }
     },
     {
      "i": 55,
      "tag": "path",
-     "d": "M177.67875441286094,40.68191484405679L175.5787556523146,43.07650449288262",
+     "d": "M177.67875441,40.68191484L175.57875565,43.07650449",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 73, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e55"
      }
     },
     {
      "i": 56,
      "tag": "path",
-     "d": "M175.5787556523146,43.07650449288262L173.58520615873985,45.56041568236338",
+     "d": "M175.57875565,43.07650449L173.58520616,45.56041568",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 81, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e56"
      }
     },
     {
      "i": 57,
      "tag": "path",
-     "d": "M173.58520615873985,45.56041568236338L171.70190076690358,48.128920146373645",
+     "d": "M173.58520616,45.56041568L171.70190077,48.12892015",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 88, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e57"
      }
     },
     {
      "i": 58,
      "tag": "path",
-     "d": "M171.70190076690358,48.128920146373645L169.93242445565937,50.77712859068184",
+     "d": "M171.70190077,48.12892015L169.93242446,50.77712859",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 96, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e58"
      }
     },
     {
      "i": 59,
      "tag": "path",
-     "d": "M169.93242445565937,50.77712859068184L168.28014552373597,53.50000000000001",
+     "d": "M169.93242446,50.77712859L168.28014552,53.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 103, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e59"
      }
     },
     {
      "i": 60,
      "tag": "path",
-     "d": "M168.28014552373597,53.50000000000001L166.74820917798982,56.292351233842524",
+     "d": "M168.28014552,53.5L166.74820918,56.29235123",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 111, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e60"
      }
     },
     {
      "i": 61,
      "tag": "path",
-     "d": "M166.74820917798982,56.292351233842524L165.33953154632457,59.148866892928936",
+     "d": "M166.74820918,56.29235123L165.33953155,59.14886689",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 119, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e61"
      }
     },
     {
      "i": 62,
      "tag": "path",
-     "d": "M165.33953154632457,59.148866892928936L164.05679412667607,62.064109437348435",
+     "d": "M165.33953155,59.14886689L164.05679413,62.06410944",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 126, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e62"
      }
     },
     {
      "i": 63,
      "tag": "path",
-     "d": "M164.05679412667607,62.064109437348435L162.9024386826287,65.03252953722617",
+     "d": "M164.05679413,62.06410944L162.90243868,65.03252954",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 134, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e63"
      }
     },
     {
      "i": 64,
      "tag": "path",
-     "d": "M162.9024386826287,65.03252953722617L161.87866259537944,68.04847663618804",
+     "d": "M162.90243868,65.03252954L161.8786626,68.04847664",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 142, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e64"
      }
     },
     {
      "i": 65,
      "tag": "path",
-     "d": "M161.87866259537944,68.04847663618804L160.98741468089804,71.10620970751597",
+     "d": "M161.8786626,68.04847664L160.98741468,71.10620971",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 149, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e65"
      }
     },
     {
      "i": 66,
      "tag": "path",
-     "d": "M160.98741468089804,71.10620970751597L160.23039148024486,74.1999081825185",
+     "d": "M160.98741468,71.10620971L160.23039148,74.19990818",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 157, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e66"
      }
     },
     {
      "i": 67,
      "tag": "path",
-     "d": "M160.23039148024486,74.1999081825185L159.60903403010883,77.32368303031406",
+     "d": "M160.23039148,74.19990818L159.60903403,77.32368303",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 164, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e67"
      }
     },
     {
      "i": 68,
      "tag": "path",
-     "d": "M159.60903403010883,77.32368303031406L159.12452511971185,80.47158796793623",
+     "d": "M159.60903403,77.32368303L159.12452512,80.47158797",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 172, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e68"
      }
     },
     {
      "i": 69,
      "tag": "path",
-     "d": "M159.12452511971185,80.47158796793623L158.77778703930258,83.63763077942095",
+     "d": "M159.12452512,80.47158797L158.77778704,83.63763078",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 180, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e69"
      }
     },
     {
      "i": 70,
      "tag": "path",
-     "d": "M158.77778703930258,83.63763077942095L158.56947982452436,86.81578472233046",
+     "d": "M158.77778704,83.63763078L158.56947982,86.81578472",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 187, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e70"
      }
     },
     {
      "i": 71,
      "tag": "path",
-     "d": "M158.56947982452436,86.81578472233046L158.5,89.99999999999999",
+     "d": "M158.56947982,86.81578472L158.5,90",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 195, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e71"
      }
     },
     {
      "i": 72,
      "tag": "path",
-     "d": "M158.5,89.99999999999999L158.56947982452436,93.18421527766951",
+     "d": "M158.5,90L158.56947982,93.18421528",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 203, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e72"
      }
     },
     {
      "i": 73,
      "tag": "path",
-     "d": "M158.56947982452436,93.18421527766951L158.77778703930258,96.36236922057903",
+     "d": "M158.56947982,93.18421528L158.77778704,96.36236922",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 210, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e73"
      }
     },
     {
      "i": 74,
      "tag": "path",
-     "d": "M158.77778703930258,96.36236922057903L159.12452511971185,99.52841203206378",
+     "d": "M158.77778704,96.36236922L159.12452512,99.52841203",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 218, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e74"
      }
     },
     {
      "i": 75,
      "tag": "path",
-     "d": "M159.12452511971185,99.52841203206378L159.60903403010883,102.67631696968593",
+     "d": "M159.12452512,99.52841203L159.60903403,102.67631697",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 225, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e75"
      }
     },
     {
      "i": 76,
      "tag": "path",
-     "d": "M159.60903403010883,102.67631696968593L160.23039148024486,105.80009181748149",
+     "d": "M159.60903403,102.67631697L160.23039148,105.80009182",
      "paint": {
       "fill": "none",
       "stroke": "rgb(225, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e76"
      }
     },
     {
      "i": 77,
      "tag": "path",
-     "d": "M160.23039148024486,105.80009181748149L160.98741468089798,108.89379029248398",
+     "d": "M160.23039148,105.80009182L160.98741468,108.89379029",
      "paint": {
       "fill": "none",
       "stroke": "rgb(218, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e77"
      }
     },
     {
      "i": 78,
      "tag": "path",
-     "d": "M160.98741468089798,108.89379029248398L161.87866259537944,111.95152336381193",
+     "d": "M160.98741468,108.89379029L161.8786626,111.95152336",
      "paint": {
       "fill": "none",
       "stroke": "rgb(210, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e78"
      }
     },
     {
      "i": 79,
      "tag": "path",
-     "d": "M161.87866259537944,111.95152336381193L162.90243868262868,114.9674704627738",
+     "d": "M161.8786626,111.95152336L162.90243868,114.96747046",
      "paint": {
       "fill": "none",
       "stroke": "rgb(203, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e79"
      }
     },
     {
      "i": 80,
      "tag": "path",
-     "d": "M162.90243868262868,114.9674704627738L164.05679412667607,117.93589056265155",
+     "d": "M162.90243868,114.96747046L164.05679413,117.93589056",
      "paint": {
       "fill": "none",
       "stroke": "rgb(195, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e80"
      }
     },
     {
      "i": 81,
      "tag": "path",
-     "d": "M164.05679412667607,117.93589056265155L165.33953154632457,120.85113310707105",
+     "d": "M164.05679413,117.93589056L165.33953155,120.85113311",
      "paint": {
       "fill": "none",
       "stroke": "rgb(187, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e81"
      }
     },
     {
      "i": 82,
      "tag": "path",
-     "d": "M165.33953154632457,120.85113310707105L166.7482091779898,123.70764876615746",
+     "d": "M165.33953155,120.85113311L166.74820918,123.70764877",
      "paint": {
       "fill": "none",
       "stroke": "rgb(180, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e82"
      }
     },
     {
      "i": 83,
      "tag": "path",
-     "d": "M166.7482091779898,123.70764876615746L168.280145523736,126.5",
+     "d": "M166.74820918,123.70764877L168.28014552,126.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(172, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e83"
      }
     },
     {
      "i": 84,
      "tag": "path",
-     "d": "M168.280145523736,126.5L169.93242445565934,129.22287140931815",
+     "d": "M168.28014552,126.5L169.93242446,129.22287141",
      "paint": {
       "fill": "none",
       "stroke": "rgb(164, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e84"
      }
     },
     {
      "i": 85,
      "tag": "path",
-     "d": "M169.93242445565934,129.22287140931815L171.70190076690358,131.87107985362636",
+     "d": "M169.93242446,129.22287141L171.70190077,131.87107985",
      "paint": {
       "fill": "none",
       "stroke": "rgb(157, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e85"
      }
     },
     {
      "i": 86,
      "tag": "path",
-     "d": "M171.70190076690358,131.87107985362636L173.58520615873982,134.4395843176366",
+     "d": "M171.70190077,131.87107985L173.58520616,134.43958432",
      "paint": {
       "fill": "none",
       "stroke": "rgb(149, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e86"
      }
     },
     {
      "i": 87,
      "tag": "path",
-     "d": "M173.58520615873982,134.4395843176366L175.5787556523146,136.92349550711737",
+     "d": "M173.58520616,134.43958432L175.57875565,136.92349551",
      "paint": {
       "fill": "none",
       "stroke": "rgb(142, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e87"
      }
     },
     {
      "i": 88,
      "tag": "path",
-     "d": "M175.5787556523146,136.92349550711737L177.67875441286094,139.31808515594318",
+     "d": "M175.57875565,136.92349551L177.67875441,139.31808516",
      "paint": {
       "fill": "none",
       "stroke": "rgb(134, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e88"
      }
     },
     {
      "i": 89,
      "tag": "path",
-     "d": "M177.67875441286094,139.31808515594318L179.881204973382,141.61879502661796",
+     "d": "M177.67875441,139.31808516L179.88120497,141.61879503",
      "paint": {
       "fill": "none",
       "stroke": "rgb(126, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e89"
      }
     },
     {
      "i": 90,
      "tag": "path",
-     "d": "M179.881204973382,141.61879502661796L182.1819148440568,143.82124558713903",
+     "d": "M179.88120497,141.61879503L182.18191484,143.82124559",
      "paint": {
       "fill": "none",
       "stroke": "rgb(119, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e90"
      }
     },
     {
      "i": 91,
      "tag": "path",
-     "d": "M182.1819148440568,143.82124558713903L184.57650449288263,145.9212443476854",
+     "d": "M182.18191484,143.82124559L184.57650449,145.92124435",
      "paint": {
       "fill": "none",
       "stroke": "rgb(111, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e91"
      }
     },
     {
      "i": 92,
      "tag": "path",
-     "d": "M184.57650449288263,145.9212443476854L187.06041568236338,147.91479384126015",
+     "d": "M184.57650449,145.92124435L187.06041568,147.91479384",
      "paint": {
       "fill": "none",
       "stroke": "rgb(103, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e92"
      }
     },
     {
      "i": 93,
      "tag": "path",
-     "d": "M187.06041568236338,147.91479384126015L189.62892014637362,149.7980992330964",
+     "d": "M187.06041568,147.91479384L189.62892015,149.79809923",
      "paint": {
       "fill": "none",
       "stroke": "rgb(96, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e93"
      }
     },
     {
      "i": 94,
      "tag": "path",
-     "d": "M189.62892014637362,149.7980992330964L192.27712859068183,151.56757554434063",
+     "d": "M189.62892015,149.79809923L192.27712859,151.56757554",
      "paint": {
       "fill": "none",
       "stroke": "rgb(88, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e94"
      }
     },
     {
      "i": 95,
      "tag": "path",
-     "d": "M192.27712859068183,151.56757554434063L194.99999999999997,153.219854476264",
+     "d": "M192.27712859,151.56757554L195,153.21985448",
      "paint": {
       "fill": "none",
       "stroke": "rgb(81, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e95"
      }
     },
     {
      "i": 96,
      "tag": "path",
-     "d": "M194.99999999999997,153.219854476264L197.79235123384254,154.7517908220102",
+     "d": "M195,153.21985448L197.79235123,154.75179082",
      "paint": {
       "fill": "none",
       "stroke": "rgb(73, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e96"
      }
     },
     {
      "i": 97,
      "tag": "path",
-     "d": "M197.79235123384254,154.7517908220102L200.64886689292896,156.16046845367543",
+     "d": "M197.79235123,154.75179082L200.64886689,156.16046845",
      "paint": {
       "fill": "none",
       "stroke": "rgb(65, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e97"
      }
     },
     {
      "i": 98,
      "tag": "path",
-     "d": "M200.64886689292896,156.16046845367543L203.5641094373484,157.4432058733239",
+     "d": "M200.64886689,156.16046845L203.56410944,157.44320587",
      "paint": {
       "fill": "none",
       "stroke": "rgb(58, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e98"
      }
     },
     {
      "i": 99,
      "tag": "path",
-     "d": "M203.5641094373484,157.4432058733239L206.53252953722614,158.5975613173713",
+     "d": "M203.56410944,157.44320587L206.53252954,158.59756132",
      "paint": {
       "fill": "none",
       "stroke": "rgb(50, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e99"
      }
     },
     {
      "i": 100,
      "tag": "path",
-     "d": "M206.53252953722614,158.5975613173713L209.548476636188,159.62133740462053",
+     "d": "M206.53252954,158.59756132L209.54847664,159.6213374",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 50)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e100"
      }
     },
     {
      "i": 101,
      "tag": "path",
-     "d": "M209.548476636188,159.62133740462053L212.606209707516,160.512585319102",
+     "d": "M209.54847664,159.6213374L212.60620971,160.51258532",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 58)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e101"
      }
     },
     {
      "i": 102,
      "tag": "path",
-     "d": "M212.606209707516,160.512585319102L215.6999081825185,161.26960851975514",
+     "d": "M212.60620971,160.51258532L215.69990818,161.26960852",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 65)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e102"
      }
     },
     {
      "i": 103,
      "tag": "path",
-     "d": "M215.6999081825185,161.26960851975514L218.8236830303141,161.89096596989117",
+     "d": "M215.69990818,161.26960852L218.82368303,161.89096597",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 73)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e103"
      }
     },
     {
      "i": 104,
      "tag": "path",
-     "d": "M218.8236830303141,161.89096596989117L221.97158796793622,162.37547488028815",
+     "d": "M218.82368303,161.89096597L221.97158797,162.37547488",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 81)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e104"
      }
     },
     {
      "i": 105,
      "tag": "path",
-     "d": "M221.97158796793622,162.37547488028815L225.13763077942096,162.72221296069742",
+     "d": "M221.97158797,162.37547488L225.13763078,162.72221296",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 88)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e105"
      }
     },
     {
      "i": 106,
      "tag": "path",
-     "d": "M225.13763077942096,162.72221296069742L228.31578472233045,162.93052017547564",
+     "d": "M225.13763078,162.72221296L228.31578472,162.93052018",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 96)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e106"
      }
     },
     {
      "i": 107,
      "tag": "path",
-     "d": "M228.31578472233045,162.93052017547564L231.5,163",
+     "d": "M228.31578472,162.93052018L231.5,163",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 103)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e107"
      }
     },
     {
      "i": 108,
      "tag": "path",
-     "d": "M231.5,163L234.68421527766952,162.93052017547564",
+     "d": "M231.5,163L234.68421528,162.93052018",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 111)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e108"
      }
     },
     {
      "i": 109,
      "tag": "path",
-     "d": "M234.68421527766952,162.93052017547564L237.862369220579,162.72221296069742",
+     "d": "M234.68421528,162.93052018L237.86236922,162.72221296",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 119)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e109"
      }
     },
     {
      "i": 110,
      "tag": "path",
-     "d": "M237.862369220579,162.72221296069742L241.02841203206376,162.37547488028815",
+     "d": "M237.86236922,162.72221296L241.02841203,162.37547488",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 126)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e110"
      }
     },
     {
      "i": 111,
      "tag": "path",
-     "d": "M241.02841203206376,162.37547488028815L244.1763169696859,161.8909659698912",
+     "d": "M241.02841203,162.37547488L244.17631697,161.89096597",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 134)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e111"
      }
     },
     {
      "i": 112,
      "tag": "path",
-     "d": "M244.1763169696859,161.8909659698912L247.30009181748147,161.26960851975514",
+     "d": "M244.17631697,161.89096597L247.30009182,161.26960852",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 142)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e112"
      }
     },
     {
      "i": 113,
      "tag": "path",
-     "d": "M247.30009181748147,161.26960851975514L250.39379029248397,160.51258531910202",
+     "d": "M247.30009182,161.26960852L250.39379029,160.51258532",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 149)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e113"
      }
     },
     {
      "i": 114,
      "tag": "path",
-     "d": "M250.39379029248397,160.51258531910202L253.45152336381196,159.62133740462056",
+     "d": "M250.39379029,160.51258532L253.45152336,159.6213374",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 157)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e114"
      }
     },
     {
      "i": 115,
      "tag": "path",
-     "d": "M253.45152336381196,159.62133740462056L256.46747046277386,158.5975613173713",
+     "d": "M253.45152336,159.6213374L256.46747046,158.59756132",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 164)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e115"
      }
     },
     {
      "i": 116,
      "tag": "path",
-     "d": "M256.46747046277386,158.5975613173713L259.4358905626516,157.4432058733239",
+     "d": "M256.46747046,158.59756132L259.43589056,157.44320587",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 172)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e116"
      }
     },
     {
      "i": 117,
      "tag": "path",
-     "d": "M259.4358905626516,157.4432058733239L262.351133107071,156.16046845367546",
+     "d": "M259.43589056,157.44320587L262.35113311,156.16046845",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 180)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e117"
      }
     },
     {
      "i": 118,
      "tag": "path",
-     "d": "M262.351133107071,156.16046845367546L265.20764876615743,154.7517908220102",
+     "d": "M262.35113311,156.16046845L265.20764877,154.75179082",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 187)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e118"
      }
     },
     {
      "i": 119,
      "tag": "path",
-     "d": "M265.20764876615743,154.7517908220102L268,153.219854476264",
+     "d": "M265.20764877,154.75179082L268,153.21985448",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 195)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e119"
      }
     },
     {
      "i": 120,
      "tag": "path",
-     "d": "M268,153.219854476264L270.72287140931815,151.56757554434066",
+     "d": "M268,153.21985448L270.72287141,151.56757554",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 203)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e120"
      }
     },
     {
      "i": 121,
      "tag": "path",
-     "d": "M270.72287140931815,151.56757554434066L273.3710798536264,149.7980992330964",
+     "d": "M270.72287141,151.56757554L273.37107985,149.79809923",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 210)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e121"
      }
     },
     {
      "i": 122,
      "tag": "path",
-     "d": "M273.3710798536264,149.7980992330964L275.9395843176366,147.91479384126018",
+     "d": "M273.37107985,149.79809923L275.93958432,147.91479384",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 218)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e122"
      }
     },
     {
      "i": 123,
      "tag": "path",
-     "d": "M275.9395843176366,147.91479384126018L278.42349550711737,145.9212443476854",
+     "d": "M275.93958432,147.91479384L278.42349551,145.92124435",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 225)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e123"
      }
     },
     {
      "i": 124,
      "tag": "path",
-     "d": "M278.42349550711737,145.9212443476854L280.8180851559432,143.82124558713906",
+     "d": "M278.42349551,145.92124435L280.81808516,143.82124559",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 225, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e124"
      }
     },
     {
      "i": 125,
      "tag": "path",
-     "d": "M280.8180851559432,143.82124558713906L283.11879502661793,141.618795026618",
+     "d": "M280.81808516,143.82124559L283.11879503,141.61879503",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 218, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e125"
      }
     },
     {
      "i": 126,
      "tag": "path",
-     "d": "M283.11879502661793,141.618795026618L285.32124558713906,139.3180851559432",
+     "d": "M283.11879503,141.61879503L285.32124559,139.31808516",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 210, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e126"
      }
     },
     {
      "i": 127,
      "tag": "path",
-     "d": "M285.32124558713906,139.3180851559432L287.4212443476854,136.9234955071174",
+     "d": "M285.32124559,139.31808516L287.42124435,136.92349551",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 203, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e127"
      }
     },
     {
      "i": 128,
      "tag": "path",
-     "d": "M287.4212443476854,136.9234955071174L289.4147938412601,134.43958431763662",
+     "d": "M287.42124435,136.92349551L289.41479384,134.43958432",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 195, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e128"
      }
     },
     {
      "i": 129,
      "tag": "path",
-     "d": "M289.4147938412601,134.43958431763662L291.29809923309637,131.87107985362638",
+     "d": "M289.41479384,134.43958432L291.29809923,131.87107985",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 187, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e129"
      }
     },
     {
      "i": 130,
      "tag": "path",
-     "d": "M291.29809923309637,131.87107985362638L293.0675755443406,129.22287140931817",
+     "d": "M291.29809923,131.87107985L293.06757554,129.22287141",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 180, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e130"
      }
     },
     {
      "i": 131,
      "tag": "path",
-     "d": "M293.0675755443406,129.22287140931817L294.719854476264,126.50000000000003",
+     "d": "M293.06757554,129.22287141L294.71985448,126.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 172, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e131"
      }
     },
     {
      "i": 132,
      "tag": "path",
-     "d": "M294.719854476264,126.50000000000003L296.2517908220102,123.70764876615746",
+     "d": "M294.71985448,126.5L296.25179082,123.70764877",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 164, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e132"
      }
     },
     {
      "i": 133,
      "tag": "path",
-     "d": "M296.2517908220102,123.70764876615746L297.66046845367543,120.85113310707104",
+     "d": "M296.25179082,123.70764877L297.66046845,120.85113311",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 157, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e133"
      }
     },
     {
      "i": 134,
      "tag": "path",
-     "d": "M297.66046845367543,120.85113310707104L298.9432058733239,117.9358905626516",
+     "d": "M297.66046845,120.85113311L298.94320587,117.93589056",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 149, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e134"
      }
     },
     {
      "i": 135,
      "tag": "path",
-     "d": "M298.9432058733239,117.9358905626516L300.0975613173713,114.96747046277386",
+     "d": "M298.94320587,117.93589056L300.09756132,114.96747046",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 142, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e135"
      }
     },
     {
      "i": 136,
      "tag": "path",
-     "d": "M300.0975613173713,114.96747046277386L301.12133740462053,111.95152336381199",
+     "d": "M300.09756132,114.96747046L301.1213374,111.95152336",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 134, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e136"
      }
     },
     {
      "i": 137,
      "tag": "path",
-     "d": "M301.12133740462053,111.95152336381199L302.01258531910196,108.89379029248401",
+     "d": "M301.1213374,111.95152336L302.01258532,108.89379029",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 126, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e137"
      }
     },
     {
      "i": 138,
      "tag": "path",
-     "d": "M302.01258531910196,108.89379029248401L302.76960851975514,105.80009181748152",
+     "d": "M302.01258532,108.89379029L302.76960852,105.80009182",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 119, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e138"
      }
     },
     {
      "i": 139,
      "tag": "path",
-     "d": "M302.76960851975514,105.80009181748152L303.39096596989117,102.67631696968591",
+     "d": "M302.76960852,105.80009182L303.39096597,102.67631697",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 111, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e139"
      }
     },
     {
      "i": 140,
      "tag": "path",
-     "d": "M303.39096596989117,102.67631696968591L303.87547488028815,99.52841203206377",
+     "d": "M303.39096597,102.67631697L303.87547488,99.52841203",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 103, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e140"
      }
     },
     {
      "i": 141,
      "tag": "path",
-     "d": "M303.87547488028815,99.52841203206377L304.22221296069745,96.36236922057905",
+     "d": "M303.87547488,99.52841203L304.22221296,96.36236922",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 96, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e141"
      }
     },
     {
      "i": 142,
      "tag": "path",
-     "d": "M304.22221296069745,96.36236922057905L304.43052017547564,93.18421527766954",
+     "d": "M304.22221296,96.36236922L304.43052018,93.18421528",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 88, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e142"
      }
     },
     {
      "i": 143,
      "tag": "path",
-     "d": "M304.43052017547564,93.18421527766954L304.5,90.00000000000001",
+     "d": "M304.43052018,93.18421528L304.5,90",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 81, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e143"
      }
     }
    ]
   },
   {
-   "id": "start",
+   "id": "homotopy-panel-start",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Starting map, fixed at time zero. Click a colored point to select its input.",
    "size": [
     462.81,
@@ -1769,7 +2203,9 @@
     "circle": 2,
     "path": 144
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "start"
+   },
    "marks": [
     {
      "i": 0,
@@ -1781,1734 +2217,2169 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
      "i": 1,
      "tag": "path",
-     "d": "M304.5,90L304.43052017547564,86.81578472233048",
+     "d": "M304.5,90L304.43052018,86.81578472",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 73, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e1"
      }
     },
     {
      "i": 2,
      "tag": "path",
-     "d": "M304.43052017547564,86.81578472233048L304.22221296069745,83.63763077942096",
+     "d": "M304.43052018,86.81578472L304.22221296,83.63763078",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 65, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e2"
      }
     },
     {
      "i": 3,
      "tag": "path",
-     "d": "M304.22221296069745,83.63763077942096L303.87547488028815,80.47158796793623",
+     "d": "M304.22221296,83.63763078L303.87547488,80.47158797",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 58, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e3"
      }
     },
     {
      "i": 4,
      "tag": "path",
-     "d": "M303.87547488028815,80.47158796793623L303.39096596989117,77.32368303031409",
+     "d": "M303.87547488,80.47158797L303.39096597,77.32368303",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 50, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e4"
      }
     },
     {
      "i": 5,
      "tag": "path",
-     "d": "M303.39096596989117,77.32368303031409L302.76960851975514,74.19990818251848",
+     "d": "M303.39096597,77.32368303L302.76960852,74.19990818",
      "paint": {
       "fill": "none",
       "stroke": "rgb(50, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e5"
      }
     },
     {
      "i": 6,
      "tag": "path",
-     "d": "M302.76960851975514,74.19990818251848L302.01258531910196,71.10620970751599",
+     "d": "M302.76960852,74.19990818L302.01258532,71.10620971",
      "paint": {
       "fill": "none",
       "stroke": "rgb(58, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e6"
      }
     },
     {
      "i": 7,
      "tag": "path",
-     "d": "M302.01258531910196,71.10620970751599L301.1213374046206,68.04847663618807",
+     "d": "M302.01258532,71.10620971L301.1213374,68.04847664",
      "paint": {
       "fill": "none",
       "stroke": "rgb(65, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e7"
      }
     },
     {
      "i": 8,
      "tag": "path",
-     "d": "M301.1213374046206,68.04847663618807L300.0975613173713,65.03252953722618",
+     "d": "M301.1213374,68.04847664L300.09756132,65.03252954",
      "paint": {
       "fill": "none",
       "stroke": "rgb(73, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e8"
      }
     },
     {
      "i": 9,
      "tag": "path",
-     "d": "M300.0975613173713,65.03252953722618L298.9432058733239,62.06410943734845",
+     "d": "M300.09756132,65.03252954L298.94320587,62.06410944",
      "paint": {
       "fill": "none",
       "stroke": "rgb(81, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e9"
      }
     },
     {
      "i": 10,
      "tag": "path",
-     "d": "M298.9432058733239,62.06410943734845L297.66046845367543,59.148866892928936",
+     "d": "M298.94320587,62.06410944L297.66046845,59.14886689",
      "paint": {
       "fill": "none",
       "stroke": "rgb(88, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e10"
      }
     },
     {
      "i": 11,
      "tag": "path",
-     "d": "M297.66046845367543,59.148866892928936L296.2517908220102,56.292351233842524",
+     "d": "M297.66046845,59.14886689L296.25179082,56.29235123",
      "paint": {
       "fill": "none",
       "stroke": "rgb(96, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e11"
      }
     },
     {
      "i": 12,
      "tag": "path",
-     "d": "M296.2517908220102,56.292351233842524L294.719854476264,53.50000000000001",
+     "d": "M296.25179082,56.29235123L294.71985448,53.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(103, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e12"
      }
     },
     {
      "i": 13,
      "tag": "path",
-     "d": "M294.719854476264,53.50000000000001L293.0675755443407,50.777128590681855",
+     "d": "M294.71985448,53.5L293.06757554,50.77712859",
      "paint": {
       "fill": "none",
       "stroke": "rgb(111, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e13"
      }
     },
     {
      "i": 14,
      "tag": "path",
-     "d": "M293.0675755443407,50.777128590681855L291.2980992330964,48.12892014637364",
+     "d": "M293.06757554,50.77712859L291.29809923,48.12892015",
      "paint": {
       "fill": "none",
       "stroke": "rgb(119, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e14"
      }
     },
     {
      "i": 15,
      "tag": "path",
-     "d": "M291.2980992330964,48.12892014637364L289.4147938412602,45.56041568236339",
+     "d": "M291.29809923,48.12892015L289.41479384,45.56041568",
      "paint": {
       "fill": "none",
       "stroke": "rgb(126, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e15"
      }
     },
     {
      "i": 16,
      "tag": "path",
-     "d": "M289.4147938412602,45.56041568236339L287.4212443476854,43.076504492882634",
+     "d": "M289.41479384,45.56041568L287.42124435,43.07650449",
      "paint": {
       "fill": "none",
       "stroke": "rgb(134, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e16"
      }
     },
     {
      "i": 17,
      "tag": "path",
-     "d": "M287.4212443476854,43.076504492882634L285.32124558713906,40.68191484405681",
+     "d": "M287.42124435,43.07650449L285.32124559,40.68191484",
      "paint": {
       "fill": "none",
       "stroke": "rgb(142, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e17"
      }
     },
     {
      "i": 18,
      "tag": "path",
-     "d": "M285.32124558713906,40.68191484405681L283.118795026618,38.38120497338203",
+     "d": "M285.32124559,40.68191484L283.11879503,38.38120497",
      "paint": {
       "fill": "none",
       "stroke": "rgb(149, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e18"
      }
     },
     {
      "i": 19,
      "tag": "path",
-     "d": "M283.118795026618,38.38120497338203L280.8180851559432,36.17875441286094",
+     "d": "M283.11879503,38.38120497L280.81808516,36.17875441",
      "paint": {
       "fill": "none",
       "stroke": "rgb(157, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e19"
      }
     },
     {
      "i": 20,
      "tag": "path",
-     "d": "M280.8180851559432,36.17875441286094L278.42349550711737,34.078755652314605",
+     "d": "M280.81808516,36.17875441L278.42349551,34.07875565",
      "paint": {
       "fill": "none",
       "stroke": "rgb(164, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e20"
      }
     },
     {
      "i": 21,
      "tag": "path",
-     "d": "M278.42349550711737,34.078755652314605L275.9395843176366,32.08520615873983",
+     "d": "M278.42349551,34.07875565L275.93958432,32.08520616",
      "paint": {
       "fill": "none",
       "stroke": "rgb(172, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e21"
      }
     },
     {
      "i": 22,
      "tag": "path",
-     "d": "M275.9395843176366,32.08520615873983L273.3710798536264,30.2019007669036",
+     "d": "M275.93958432,32.08520616L273.37107985,30.20190077",
      "paint": {
       "fill": "none",
       "stroke": "rgb(180, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e22"
      }
     },
     {
      "i": 23,
      "tag": "path",
-     "d": "M273.3710798536264,30.2019007669036L270.72287140931815,28.432424455659344",
+     "d": "M273.37107985,30.20190077L270.72287141,28.43242446",
      "paint": {
       "fill": "none",
       "stroke": "rgb(187, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e23"
      }
     },
     {
      "i": 24,
      "tag": "path",
-     "d": "M270.72287140931815,28.432424455659344L268,26.780145523735982",
+     "d": "M270.72287141,28.43242446L268,26.78014552",
      "paint": {
       "fill": "none",
       "stroke": "rgb(195, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e24"
      }
     },
     {
      "i": 25,
      "tag": "path",
-     "d": "M268,26.780145523735982L265.2076487661575,25.24820917798982",
+     "d": "M268,26.78014552L265.20764877,25.24820918",
      "paint": {
       "fill": "none",
       "stroke": "rgb(203, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e25"
      }
     },
     {
      "i": 26,
      "tag": "path",
-     "d": "M265.2076487661575,25.24820917798982L262.35113310707106,23.83953154632455",
+     "d": "M265.20764877,25.24820918L262.35113311,23.83953155",
      "paint": {
       "fill": "none",
       "stroke": "rgb(210, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e26"
      }
     },
     {
      "i": 27,
      "tag": "path",
-     "d": "M262.35113310707106,23.83953154632455L259.43589056265154,22.556794126676067",
+     "d": "M262.35113311,23.83953155L259.43589056,22.55679413",
      "paint": {
       "fill": "none",
       "stroke": "rgb(218, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e27"
      }
     },
     {
      "i": 28,
      "tag": "path",
-     "d": "M259.43589056265154,22.556794126676067L256.4674704627738,21.4024386826287",
+     "d": "M259.43589056,22.55679413L256.46747046,21.40243868",
      "paint": {
       "fill": "none",
       "stroke": "rgb(225, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e28"
      }
     },
     {
      "i": 29,
      "tag": "path",
-     "d": "M256.4674704627738,21.4024386826287L253.45152336381193,20.37866259537944",
+     "d": "M256.46747046,21.40243868L253.45152336,20.3786626",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 225)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e29"
      }
     },
     {
      "i": 30,
      "tag": "path",
-     "d": "M253.45152336381193,20.37866259537944L250.39379029248403,19.487414680898013",
+     "d": "M253.45152336,20.3786626L250.39379029,19.48741468",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 218)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e30"
      }
     },
     {
      "i": 31,
      "tag": "path",
-     "d": "M250.39379029248403,19.487414680898013L247.3000918174815,18.73039148024486",
+     "d": "M250.39379029,19.48741468L247.30009182,18.73039148",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 210)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e31"
      }
     },
     {
      "i": 32,
      "tag": "path",
-     "d": "M247.3000918174815,18.73039148024486L244.17631696968593,18.109034030108816",
+     "d": "M247.30009182,18.73039148L244.17631697,18.10903403",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 203)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e32"
      }
     },
     {
      "i": 33,
      "tag": "path",
-     "d": "M244.17631696968593,18.109034030108816L241.02841203206378,17.624525119711848",
+     "d": "M244.17631697,18.10903403L241.02841203,17.62452512",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 195)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e33"
      }
     },
     {
      "i": 34,
      "tag": "path",
-     "d": "M241.02841203206378,17.624525119711848L237.86236922057907,17.27778703930258",
+     "d": "M241.02841203,17.62452512L237.86236922,17.27778704",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 187)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e34"
      }
     },
     {
      "i": 35,
      "tag": "path",
-     "d": "M237.86236922057907,17.27778703930258L234.68421527766952,17.06947982452438",
+     "d": "M237.86236922,17.27778704L234.68421528,17.06947982",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 180)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e35"
      }
     },
     {
      "i": 36,
      "tag": "path",
-     "d": "M234.68421527766952,17.06947982452438L231.5,17",
+     "d": "M234.68421528,17.06947982L231.5,17",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 172)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e36"
      }
     },
     {
      "i": 37,
      "tag": "path",
-     "d": "M231.5,17L228.31578472233048,17.06947982452438",
+     "d": "M231.5,17L228.31578472,17.06947982",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 164)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e37"
      }
     },
     {
      "i": 38,
      "tag": "path",
-     "d": "M228.31578472233048,17.06947982452438L225.13763077942096,17.27778703930258",
+     "d": "M228.31578472,17.06947982L225.13763078,17.27778704",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 157)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e38"
      }
     },
     {
      "i": 39,
      "tag": "path",
-     "d": "M225.13763077942096,17.27778703930258L221.97158796793624,17.624525119711834",
+     "d": "M225.13763078,17.27778704L221.97158797,17.62452512",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 149)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e39"
      }
     },
     {
      "i": 40,
      "tag": "path",
-     "d": "M221.97158796793624,17.624525119711834L218.8236830303141,18.109034030108816",
+     "d": "M221.97158797,17.62452512L218.82368303,18.10903403",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 142)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e40"
      }
     },
     {
      "i": 41,
      "tag": "path",
-     "d": "M218.8236830303141,18.109034030108816L215.6999081825185,18.73039148024486",
+     "d": "M218.82368303,18.10903403L215.69990818,18.73039148",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 134)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e41"
      }
     },
     {
      "i": 42,
      "tag": "path",
-     "d": "M215.6999081825185,18.73039148024486L212.60620970751597,19.487414680898013",
+     "d": "M215.69990818,18.73039148L212.60620971,19.48741468",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 126)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e42"
      }
     },
     {
      "i": 43,
      "tag": "path",
-     "d": "M212.60620970751597,19.487414680898013L209.54847663618807,20.37866259537944",
+     "d": "M212.60620971,19.48741468L209.54847664,20.3786626",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 119)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e43"
      }
     },
     {
      "i": 44,
      "tag": "path",
-     "d": "M209.54847663618807,20.37866259537944L206.5325295372262,21.402438682628684",
+     "d": "M209.54847664,20.3786626L206.53252954,21.40243868",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 111)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e44"
      }
     },
     {
      "i": 45,
      "tag": "path",
-     "d": "M206.5325295372262,21.402438682628684L203.56410943734846,22.556794126676067",
+     "d": "M206.53252954,21.40243868L203.56410944,22.55679413",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 103)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e45"
      }
     },
     {
      "i": 46,
      "tag": "path",
-     "d": "M203.56410943734846,22.556794126676067L200.64886689292894,23.83953154632455",
+     "d": "M203.56410944,22.55679413L200.64886689,23.83953155",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 96)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e46"
      }
     },
     {
      "i": 47,
      "tag": "path",
-     "d": "M200.64886689292894,23.83953154632455L197.79235123384254,25.248209177989807",
+     "d": "M200.64886689,23.83953155L197.79235123,25.24820918",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 88)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e47"
      }
     },
     {
      "i": 48,
      "tag": "path",
-     "d": "M197.79235123384254,25.248209177989807L195,26.780145523735975",
+     "d": "M197.79235123,25.24820918L195,26.78014552",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 81)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e48"
      }
     },
     {
      "i": 49,
      "tag": "path",
-     "d": "M195,26.780145523735975L192.27712859068185,28.43242445565935",
+     "d": "M195,26.78014552L192.27712859,28.43242446",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 73)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e49"
      }
     },
     {
      "i": 50,
      "tag": "path",
-     "d": "M192.27712859068185,28.43242445565935L189.62892014637364,30.201900766903584",
+     "d": "M192.27712859,28.43242446L189.62892015,30.20190077",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 65)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e50"
      }
     },
     {
      "i": 51,
      "tag": "path",
-     "d": "M189.62892014637364,30.201900766903584L187.06041568236338,32.08520615873983",
+     "d": "M189.62892015,30.20190077L187.06041568,32.08520616",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 58)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e51"
      }
     },
     {
      "i": 52,
      "tag": "path",
-     "d": "M187.06041568236338,32.08520615873983L184.57650449288263,34.078755652314605",
+     "d": "M187.06041568,32.08520616L184.57650449,34.07875565",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 50)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e52"
      }
     },
     {
      "i": 53,
      "tag": "path",
-     "d": "M184.57650449288263,34.078755652314605L182.1819148440568,36.17875441286094",
+     "d": "M184.57650449,34.07875565L182.18191484,36.17875441",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 50, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e53"
      }
     },
     {
      "i": 54,
      "tag": "path",
-     "d": "M182.1819148440568,36.17875441286094L179.88120497338204,38.381204973382026",
+     "d": "M182.18191484,36.17875441L179.88120497,38.38120497",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 58, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e54"
      }
     },
     {
      "i": 55,
      "tag": "path",
-     "d": "M179.88120497338204,38.381204973382026L177.67875441286094,40.68191484405679",
+     "d": "M179.88120497,38.38120497L177.67875441,40.68191484",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 65, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e55"
      }
     },
     {
      "i": 56,
      "tag": "path",
-     "d": "M177.67875441286094,40.68191484405679L175.5787556523146,43.07650449288262",
+     "d": "M177.67875441,40.68191484L175.57875565,43.07650449",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 73, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e56"
      }
     },
     {
      "i": 57,
      "tag": "path",
-     "d": "M175.5787556523146,43.07650449288262L173.58520615873985,45.56041568236338",
+     "d": "M175.57875565,43.07650449L173.58520616,45.56041568",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 81, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e57"
      }
     },
     {
      "i": 58,
      "tag": "path",
-     "d": "M173.58520615873985,45.56041568236338L171.70190076690358,48.128920146373645",
+     "d": "M173.58520616,45.56041568L171.70190077,48.12892015",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 88, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e58"
      }
     },
     {
      "i": 59,
      "tag": "path",
-     "d": "M171.70190076690358,48.128920146373645L169.93242445565937,50.77712859068184",
+     "d": "M171.70190077,48.12892015L169.93242446,50.77712859",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 96, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e59"
      }
     },
     {
      "i": 60,
      "tag": "path",
-     "d": "M169.93242445565937,50.77712859068184L168.28014552373597,53.50000000000001",
+     "d": "M169.93242446,50.77712859L168.28014552,53.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 103, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e60"
      }
     },
     {
      "i": 61,
      "tag": "path",
-     "d": "M168.28014552373597,53.50000000000001L166.74820917798982,56.292351233842524",
+     "d": "M168.28014552,53.5L166.74820918,56.29235123",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 111, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e61"
      }
     },
     {
      "i": 62,
      "tag": "path",
-     "d": "M166.74820917798982,56.292351233842524L165.33953154632457,59.148866892928936",
+     "d": "M166.74820918,56.29235123L165.33953155,59.14886689",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 119, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e62"
      }
     },
     {
      "i": 63,
      "tag": "path",
-     "d": "M165.33953154632457,59.148866892928936L164.05679412667607,62.064109437348435",
+     "d": "M165.33953155,59.14886689L164.05679413,62.06410944",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 126, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e63"
      }
     },
     {
      "i": 64,
      "tag": "path",
-     "d": "M164.05679412667607,62.064109437348435L162.9024386826287,65.03252953722617",
+     "d": "M164.05679413,62.06410944L162.90243868,65.03252954",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 134, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e64"
      }
     },
     {
      "i": 65,
      "tag": "path",
-     "d": "M162.9024386826287,65.03252953722617L161.87866259537944,68.04847663618804",
+     "d": "M162.90243868,65.03252954L161.8786626,68.04847664",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 142, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e65"
      }
     },
     {
      "i": 66,
      "tag": "path",
-     "d": "M161.87866259537944,68.04847663618804L160.98741468089804,71.10620970751597",
+     "d": "M161.8786626,68.04847664L160.98741468,71.10620971",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 149, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e66"
      }
     },
     {
      "i": 67,
      "tag": "path",
-     "d": "M160.98741468089804,71.10620970751597L160.23039148024486,74.1999081825185",
+     "d": "M160.98741468,71.10620971L160.23039148,74.19990818",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 157, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e67"
      }
     },
     {
      "i": 68,
      "tag": "path",
-     "d": "M160.23039148024486,74.1999081825185L159.60903403010883,77.32368303031406",
+     "d": "M160.23039148,74.19990818L159.60903403,77.32368303",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 164, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e68"
      }
     },
     {
      "i": 69,
      "tag": "path",
-     "d": "M159.60903403010883,77.32368303031406L159.12452511971185,80.47158796793623",
+     "d": "M159.60903403,77.32368303L159.12452512,80.47158797",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 172, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e69"
      }
     },
     {
      "i": 70,
      "tag": "path",
-     "d": "M159.12452511971185,80.47158796793623L158.77778703930258,83.63763077942095",
+     "d": "M159.12452512,80.47158797L158.77778704,83.63763078",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 180, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e70"
      }
     },
     {
      "i": 71,
      "tag": "path",
-     "d": "M158.77778703930258,83.63763077942095L158.56947982452436,86.81578472233046",
+     "d": "M158.77778704,83.63763078L158.56947982,86.81578472",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 187, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e71"
      }
     },
     {
      "i": 72,
      "tag": "path",
-     "d": "M158.56947982452436,86.81578472233046L158.5,89.99999999999999",
+     "d": "M158.56947982,86.81578472L158.5,90",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 195, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e72"
      }
     },
     {
      "i": 73,
      "tag": "path",
-     "d": "M158.5,89.99999999999999L158.56947982452436,93.18421527766951",
+     "d": "M158.5,90L158.56947982,93.18421528",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 203, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e73"
      }
     },
     {
      "i": 74,
      "tag": "path",
-     "d": "M158.56947982452436,93.18421527766951L158.77778703930258,96.36236922057903",
+     "d": "M158.56947982,93.18421528L158.77778704,96.36236922",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 210, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e74"
      }
     },
     {
      "i": 75,
      "tag": "path",
-     "d": "M158.77778703930258,96.36236922057903L159.12452511971185,99.52841203206378",
+     "d": "M158.77778704,96.36236922L159.12452512,99.52841203",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 218, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e75"
      }
     },
     {
      "i": 76,
      "tag": "path",
-     "d": "M159.12452511971185,99.52841203206378L159.60903403010883,102.67631696968593",
+     "d": "M159.12452512,99.52841203L159.60903403,102.67631697",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 225, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e76"
      }
     },
     {
      "i": 77,
      "tag": "path",
-     "d": "M159.60903403010883,102.67631696968593L160.23039148024486,105.80009181748149",
+     "d": "M159.60903403,102.67631697L160.23039148,105.80009182",
      "paint": {
       "fill": "none",
       "stroke": "rgb(225, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e77"
      }
     },
     {
      "i": 78,
      "tag": "path",
-     "d": "M160.23039148024486,105.80009181748149L160.98741468089798,108.89379029248398",
+     "d": "M160.23039148,105.80009182L160.98741468,108.89379029",
      "paint": {
       "fill": "none",
       "stroke": "rgb(218, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e78"
      }
     },
     {
      "i": 79,
      "tag": "path",
-     "d": "M160.98741468089798,108.89379029248398L161.87866259537944,111.95152336381193",
+     "d": "M160.98741468,108.89379029L161.8786626,111.95152336",
      "paint": {
       "fill": "none",
       "stroke": "rgb(210, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e79"
      }
     },
     {
      "i": 80,
      "tag": "path",
-     "d": "M161.87866259537944,111.95152336381193L162.90243868262868,114.9674704627738",
+     "d": "M161.8786626,111.95152336L162.90243868,114.96747046",
      "paint": {
       "fill": "none",
       "stroke": "rgb(203, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e80"
      }
     },
     {
      "i": 81,
      "tag": "path",
-     "d": "M162.90243868262868,114.9674704627738L164.05679412667607,117.93589056265155",
+     "d": "M162.90243868,114.96747046L164.05679413,117.93589056",
      "paint": {
       "fill": "none",
       "stroke": "rgb(195, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e81"
      }
     },
     {
      "i": 82,
      "tag": "path",
-     "d": "M164.05679412667607,117.93589056265155L165.33953154632457,120.85113310707105",
+     "d": "M164.05679413,117.93589056L165.33953155,120.85113311",
      "paint": {
       "fill": "none",
       "stroke": "rgb(187, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e82"
      }
     },
     {
      "i": 83,
      "tag": "path",
-     "d": "M165.33953154632457,120.85113310707105L166.7482091779898,123.70764876615746",
+     "d": "M165.33953155,120.85113311L166.74820918,123.70764877",
      "paint": {
       "fill": "none",
       "stroke": "rgb(180, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e83"
      }
     },
     {
      "i": 84,
      "tag": "path",
-     "d": "M166.7482091779898,123.70764876615746L168.280145523736,126.5",
+     "d": "M166.74820918,123.70764877L168.28014552,126.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(172, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e84"
      }
     },
     {
      "i": 85,
      "tag": "path",
-     "d": "M168.280145523736,126.5L169.93242445565934,129.22287140931815",
+     "d": "M168.28014552,126.5L169.93242446,129.22287141",
      "paint": {
       "fill": "none",
       "stroke": "rgb(164, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e85"
      }
     },
     {
      "i": 86,
      "tag": "path",
-     "d": "M169.93242445565934,129.22287140931815L171.70190076690358,131.87107985362636",
+     "d": "M169.93242446,129.22287141L171.70190077,131.87107985",
      "paint": {
       "fill": "none",
       "stroke": "rgb(157, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e86"
      }
     },
     {
      "i": 87,
      "tag": "path",
-     "d": "M171.70190076690358,131.87107985362636L173.58520615873982,134.4395843176366",
+     "d": "M171.70190077,131.87107985L173.58520616,134.43958432",
      "paint": {
       "fill": "none",
       "stroke": "rgb(149, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e87"
      }
     },
     {
      "i": 88,
      "tag": "path",
-     "d": "M173.58520615873982,134.4395843176366L175.5787556523146,136.92349550711737",
+     "d": "M173.58520616,134.43958432L175.57875565,136.92349551",
      "paint": {
       "fill": "none",
       "stroke": "rgb(142, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e88"
      }
     },
     {
      "i": 89,
      "tag": "path",
-     "d": "M175.5787556523146,136.92349550711737L177.67875441286094,139.31808515594318",
+     "d": "M175.57875565,136.92349551L177.67875441,139.31808516",
      "paint": {
       "fill": "none",
       "stroke": "rgb(134, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e89"
      }
     },
     {
      "i": 90,
      "tag": "path",
-     "d": "M177.67875441286094,139.31808515594318L179.881204973382,141.61879502661796",
+     "d": "M177.67875441,139.31808516L179.88120497,141.61879503",
      "paint": {
       "fill": "none",
       "stroke": "rgb(126, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e90"
      }
     },
     {
      "i": 91,
      "tag": "path",
-     "d": "M179.881204973382,141.61879502661796L182.1819148440568,143.82124558713903",
+     "d": "M179.88120497,141.61879503L182.18191484,143.82124559",
      "paint": {
       "fill": "none",
       "stroke": "rgb(119, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e91"
      }
     },
     {
      "i": 92,
      "tag": "path",
-     "d": "M182.1819148440568,143.82124558713903L184.57650449288263,145.9212443476854",
+     "d": "M182.18191484,143.82124559L184.57650449,145.92124435",
      "paint": {
       "fill": "none",
       "stroke": "rgb(111, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e92"
      }
     },
     {
      "i": 93,
      "tag": "path",
-     "d": "M184.57650449288263,145.9212443476854L187.06041568236338,147.91479384126015",
+     "d": "M184.57650449,145.92124435L187.06041568,147.91479384",
      "paint": {
       "fill": "none",
       "stroke": "rgb(103, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e93"
      }
     },
     {
      "i": 94,
      "tag": "path",
-     "d": "M187.06041568236338,147.91479384126015L189.62892014637362,149.7980992330964",
+     "d": "M187.06041568,147.91479384L189.62892015,149.79809923",
      "paint": {
       "fill": "none",
       "stroke": "rgb(96, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e94"
      }
     },
     {
      "i": 95,
      "tag": "path",
-     "d": "M189.62892014637362,149.7980992330964L192.27712859068183,151.56757554434063",
+     "d": "M189.62892015,149.79809923L192.27712859,151.56757554",
      "paint": {
       "fill": "none",
       "stroke": "rgb(88, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e95"
      }
     },
     {
      "i": 96,
      "tag": "path",
-     "d": "M192.27712859068183,151.56757554434063L194.99999999999997,153.219854476264",
+     "d": "M192.27712859,151.56757554L195,153.21985448",
      "paint": {
       "fill": "none",
       "stroke": "rgb(81, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e96"
      }
     },
     {
      "i": 97,
      "tag": "path",
-     "d": "M194.99999999999997,153.219854476264L197.79235123384254,154.7517908220102",
+     "d": "M195,153.21985448L197.79235123,154.75179082",
      "paint": {
       "fill": "none",
       "stroke": "rgb(73, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e97"
      }
     },
     {
      "i": 98,
      "tag": "path",
-     "d": "M197.79235123384254,154.7517908220102L200.64886689292896,156.16046845367543",
+     "d": "M197.79235123,154.75179082L200.64886689,156.16046845",
      "paint": {
       "fill": "none",
       "stroke": "rgb(65, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e98"
      }
     },
     {
      "i": 99,
      "tag": "path",
-     "d": "M200.64886689292896,156.16046845367543L203.5641094373484,157.4432058733239",
+     "d": "M200.64886689,156.16046845L203.56410944,157.44320587",
      "paint": {
       "fill": "none",
       "stroke": "rgb(58, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e99"
      }
     },
     {
      "i": 100,
      "tag": "path",
-     "d": "M203.5641094373484,157.4432058733239L206.53252953722614,158.5975613173713",
+     "d": "M203.56410944,157.44320587L206.53252954,158.59756132",
      "paint": {
       "fill": "none",
       "stroke": "rgb(50, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e100"
      }
     },
     {
      "i": 101,
      "tag": "path",
-     "d": "M206.53252953722614,158.5975613173713L209.548476636188,159.62133740462053",
+     "d": "M206.53252954,158.59756132L209.54847664,159.6213374",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 50)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e101"
      }
     },
     {
      "i": 102,
      "tag": "path",
-     "d": "M209.548476636188,159.62133740462053L212.606209707516,160.512585319102",
+     "d": "M209.54847664,159.6213374L212.60620971,160.51258532",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 58)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e102"
      }
     },
     {
      "i": 103,
      "tag": "path",
-     "d": "M212.606209707516,160.512585319102L215.6999081825185,161.26960851975514",
+     "d": "M212.60620971,160.51258532L215.69990818,161.26960852",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 65)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e103"
      }
     },
     {
      "i": 104,
      "tag": "path",
-     "d": "M215.6999081825185,161.26960851975514L218.8236830303141,161.89096596989117",
+     "d": "M215.69990818,161.26960852L218.82368303,161.89096597",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 73)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e104"
      }
     },
     {
      "i": 105,
      "tag": "path",
-     "d": "M218.8236830303141,161.89096596989117L221.97158796793622,162.37547488028815",
+     "d": "M218.82368303,161.89096597L221.97158797,162.37547488",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 81)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e105"
      }
     },
     {
      "i": 106,
      "tag": "path",
-     "d": "M221.97158796793622,162.37547488028815L225.13763077942096,162.72221296069742",
+     "d": "M221.97158797,162.37547488L225.13763078,162.72221296",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 88)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e106"
      }
     },
     {
      "i": 107,
      "tag": "path",
-     "d": "M225.13763077942096,162.72221296069742L228.31578472233045,162.93052017547564",
+     "d": "M225.13763078,162.72221296L228.31578472,162.93052018",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 96)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e107"
      }
     },
     {
      "i": 108,
      "tag": "path",
-     "d": "M228.31578472233045,162.93052017547564L231.5,163",
+     "d": "M228.31578472,162.93052018L231.5,163",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 103)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e108"
      }
     },
     {
      "i": 109,
      "tag": "path",
-     "d": "M231.5,163L234.68421527766952,162.93052017547564",
+     "d": "M231.5,163L234.68421528,162.93052018",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 111)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e109"
      }
     },
     {
      "i": 110,
      "tag": "path",
-     "d": "M234.68421527766952,162.93052017547564L237.862369220579,162.72221296069742",
+     "d": "M234.68421528,162.93052018L237.86236922,162.72221296",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 119)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e110"
      }
     },
     {
      "i": 111,
      "tag": "path",
-     "d": "M237.862369220579,162.72221296069742L241.02841203206376,162.37547488028815",
+     "d": "M237.86236922,162.72221296L241.02841203,162.37547488",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 126)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e111"
      }
     },
     {
      "i": 112,
      "tag": "path",
-     "d": "M241.02841203206376,162.37547488028815L244.1763169696859,161.8909659698912",
+     "d": "M241.02841203,162.37547488L244.17631697,161.89096597",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 134)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e112"
      }
     },
     {
      "i": 113,
      "tag": "path",
-     "d": "M244.1763169696859,161.8909659698912L247.30009181748147,161.26960851975514",
+     "d": "M244.17631697,161.89096597L247.30009182,161.26960852",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 142)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e113"
      }
     },
     {
      "i": 114,
      "tag": "path",
-     "d": "M247.30009181748147,161.26960851975514L250.39379029248397,160.51258531910202",
+     "d": "M247.30009182,161.26960852L250.39379029,160.51258532",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 149)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e114"
      }
     },
     {
      "i": 115,
      "tag": "path",
-     "d": "M250.39379029248397,160.51258531910202L253.45152336381196,159.62133740462056",
+     "d": "M250.39379029,160.51258532L253.45152336,159.6213374",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 157)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e115"
      }
     },
     {
      "i": 116,
      "tag": "path",
-     "d": "M253.45152336381196,159.62133740462056L256.46747046277386,158.5975613173713",
+     "d": "M253.45152336,159.6213374L256.46747046,158.59756132",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 164)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e116"
      }
     },
     {
      "i": 117,
      "tag": "path",
-     "d": "M256.46747046277386,158.5975613173713L259.4358905626516,157.4432058733239",
+     "d": "M256.46747046,158.59756132L259.43589056,157.44320587",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 172)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e117"
      }
     },
     {
      "i": 118,
      "tag": "path",
-     "d": "M259.4358905626516,157.4432058733239L262.351133107071,156.16046845367546",
+     "d": "M259.43589056,157.44320587L262.35113311,156.16046845",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 180)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e118"
      }
     },
     {
      "i": 119,
      "tag": "path",
-     "d": "M262.351133107071,156.16046845367546L265.20764876615743,154.7517908220102",
+     "d": "M262.35113311,156.16046845L265.20764877,154.75179082",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 187)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e119"
      }
     },
     {
      "i": 120,
      "tag": "path",
-     "d": "M265.20764876615743,154.7517908220102L268,153.219854476264",
+     "d": "M265.20764877,154.75179082L268,153.21985448",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 195)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e120"
      }
     },
     {
      "i": 121,
      "tag": "path",
-     "d": "M268,153.219854476264L270.72287140931815,151.56757554434066",
+     "d": "M268,153.21985448L270.72287141,151.56757554",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 203)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e121"
      }
     },
     {
      "i": 122,
      "tag": "path",
-     "d": "M270.72287140931815,151.56757554434066L273.3710798536264,149.7980992330964",
+     "d": "M270.72287141,151.56757554L273.37107985,149.79809923",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 210)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e122"
      }
     },
     {
      "i": 123,
      "tag": "path",
-     "d": "M273.3710798536264,149.7980992330964L275.9395843176366,147.91479384126018",
+     "d": "M273.37107985,149.79809923L275.93958432,147.91479384",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 218)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e123"
      }
     },
     {
      "i": 124,
      "tag": "path",
-     "d": "M275.9395843176366,147.91479384126018L278.42349550711737,145.9212443476854",
+     "d": "M275.93958432,147.91479384L278.42349551,145.92124435",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 225)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e124"
      }
     },
     {
      "i": 125,
      "tag": "path",
-     "d": "M278.42349550711737,145.9212443476854L280.8180851559432,143.82124558713906",
+     "d": "M278.42349551,145.92124435L280.81808516,143.82124559",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 225, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e125"
      }
     },
     {
      "i": 126,
      "tag": "path",
-     "d": "M280.8180851559432,143.82124558713906L283.11879502661793,141.618795026618",
+     "d": "M280.81808516,143.82124559L283.11879503,141.61879503",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 218, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e126"
      }
     },
     {
      "i": 127,
      "tag": "path",
-     "d": "M283.11879502661793,141.618795026618L285.32124558713906,139.3180851559432",
+     "d": "M283.11879503,141.61879503L285.32124559,139.31808516",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 210, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e127"
      }
     },
     {
      "i": 128,
      "tag": "path",
-     "d": "M285.32124558713906,139.3180851559432L287.4212443476854,136.9234955071174",
+     "d": "M285.32124559,139.31808516L287.42124435,136.92349551",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 203, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e128"
      }
     },
     {
      "i": 129,
      "tag": "path",
-     "d": "M287.4212443476854,136.9234955071174L289.4147938412601,134.43958431763662",
+     "d": "M287.42124435,136.92349551L289.41479384,134.43958432",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 195, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e129"
      }
     },
     {
      "i": 130,
      "tag": "path",
-     "d": "M289.4147938412601,134.43958431763662L291.29809923309637,131.87107985362638",
+     "d": "M289.41479384,134.43958432L291.29809923,131.87107985",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 187, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e130"
      }
     },
     {
      "i": 131,
      "tag": "path",
-     "d": "M291.29809923309637,131.87107985362638L293.0675755443406,129.22287140931817",
+     "d": "M291.29809923,131.87107985L293.06757554,129.22287141",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 180, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e131"
      }
     },
     {
      "i": 132,
      "tag": "path",
-     "d": "M293.0675755443406,129.22287140931817L294.719854476264,126.50000000000003",
+     "d": "M293.06757554,129.22287141L294.71985448,126.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 172, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e132"
      }
     },
     {
      "i": 133,
      "tag": "path",
-     "d": "M294.719854476264,126.50000000000003L296.2517908220102,123.70764876615746",
+     "d": "M294.71985448,126.5L296.25179082,123.70764877",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 164, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e133"
      }
     },
     {
      "i": 134,
      "tag": "path",
-     "d": "M296.2517908220102,123.70764876615746L297.66046845367543,120.85113310707104",
+     "d": "M296.25179082,123.70764877L297.66046845,120.85113311",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 157, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e134"
      }
     },
     {
      "i": 135,
      "tag": "path",
-     "d": "M297.66046845367543,120.85113310707104L298.9432058733239,117.9358905626516",
+     "d": "M297.66046845,120.85113311L298.94320587,117.93589056",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 149, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e135"
      }
     },
     {
      "i": 136,
      "tag": "path",
-     "d": "M298.9432058733239,117.9358905626516L300.0975613173713,114.96747046277386",
+     "d": "M298.94320587,117.93589056L300.09756132,114.96747046",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 142, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e136"
      }
     },
     {
      "i": 137,
      "tag": "path",
-     "d": "M300.0975613173713,114.96747046277386L301.12133740462053,111.95152336381199",
+     "d": "M300.09756132,114.96747046L301.1213374,111.95152336",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 134, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e137"
      }
     },
     {
      "i": 138,
      "tag": "path",
-     "d": "M301.12133740462053,111.95152336381199L302.01258531910196,108.89379029248401",
+     "d": "M301.1213374,111.95152336L302.01258532,108.89379029",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 126, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e138"
      }
     },
     {
      "i": 139,
      "tag": "path",
-     "d": "M302.01258531910196,108.89379029248401L302.76960851975514,105.80009181748152",
+     "d": "M302.01258532,108.89379029L302.76960852,105.80009182",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 119, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e139"
      }
     },
     {
      "i": 140,
      "tag": "path",
-     "d": "M302.76960851975514,105.80009181748152L303.39096596989117,102.67631696968591",
+     "d": "M302.76960852,105.80009182L303.39096597,102.67631697",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 111, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e140"
      }
     },
     {
      "i": 141,
      "tag": "path",
-     "d": "M303.39096596989117,102.67631696968591L303.87547488028815,99.52841203206377",
+     "d": "M303.39096597,102.67631697L303.87547488,99.52841203",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 103, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e141"
      }
     },
     {
      "i": 142,
      "tag": "path",
-     "d": "M303.87547488028815,99.52841203206377L304.22221296069745,96.36236922057905",
+     "d": "M303.87547488,99.52841203L304.22221296,96.36236922",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 96, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e142"
      }
     },
     {
      "i": 143,
      "tag": "path",
-     "d": "M304.22221296069745,96.36236922057905L304.43052017547564,93.18421527766954",
+     "d": "M304.22221296,96.36236922L304.43052018,93.18421528",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 88, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e143"
      }
     },
     {
      "i": 144,
      "tag": "path",
-     "d": "M304.43052017547564,93.18421527766954L304.5,90.00000000000001",
+     "d": "M304.43052018,93.18421528L304.5,90",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 81, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e144"
      }
     },
     {
@@ -3522,14 +4393,17 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r145"
      }
     }
    ]
   },
   {
-   "id": "now",
+   "id": "homotopy-panel-now",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Current map. Click or drag on a colored point to select its input.",
    "size": [
     462.81,
@@ -3545,7 +4419,9 @@
     "circle": 3,
     "path": 144
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "now"
+   },
    "marks": [
     {
      "i": 0,
@@ -3557,1734 +4433,2169 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
      "i": 1,
      "tag": "path",
-     "d": "M304.5,90L304.4652600877378,88.40789236116524",
+     "d": "M304.5,90L304.46526009,88.40789236",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 73, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e1"
      }
     },
     {
      "i": 2,
      "tag": "path",
-     "d": "M304.4652600877378,88.40789236116524L304.3611064803487,86.81881538971048",
+     "d": "M304.46526009,88.40789236L304.36110648,86.81881539",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 65, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e2"
      }
     },
     {
      "i": 3,
      "tag": "path",
-     "d": "M304.3611064803487,86.81881538971048L304.1877374401441,85.23579398396812",
+     "d": "M304.36110648,86.81881539L304.18773744,85.23579398",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 58, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e3"
      }
     },
     {
      "i": 4,
      "tag": "path",
-     "d": "M304.1877374401441,85.23579398396812L303.9454829849456,83.66184151515705",
+     "d": "M304.18773744,85.23579398L303.94548298,83.66184152",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 50, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e4"
      }
     },
     {
      "i": 5,
      "tag": "path",
-     "d": "M303.9454829849456,83.66184151515705L303.63480425987757,82.09995409125925",
+     "d": "M303.94548298,83.66184152L303.63480426,82.09995409",
      "paint": {
       "fill": "none",
       "stroke": "rgb(50, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e5"
      }
     },
     {
      "i": 6,
      "tag": "path",
-     "d": "M303.63480425987757,82.09995409125925L303.256292659551,80.55310485375799",
+     "d": "M303.63480426,82.09995409L303.25629266,80.55310485",
      "paint": {
       "fill": "none",
       "stroke": "rgb(58, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e6"
      }
     },
     {
      "i": 7,
      "tag": "path",
-     "d": "M303.256292659551,80.55310485375799L302.8106687023103,79.02423831809404",
+     "d": "M303.25629266,80.55310485L302.8106687,79.02423832",
      "paint": {
       "fill": "none",
       "stroke": "rgb(65, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e7"
      }
     },
     {
      "i": 8,
      "tag": "path",
-     "d": "M302.8106687023103,79.02423831809404L302.29878065868564,77.5162647686131",
+     "d": "M302.8106687,79.02423832L302.29878066,77.51626477",
      "paint": {
       "fill": "none",
       "stroke": "rgb(73, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e8"
      }
     },
     {
      "i": 9,
      "tag": "path",
-     "d": "M302.29878065868564,77.5162647686131L301.72160293666195,76.03205471867422",
+     "d": "M302.29878066,77.51626477L301.72160294,76.03205472",
      "paint": {
       "fill": "none",
       "stroke": "rgb(81, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e9"
      }
     },
     {
      "i": 10,
      "tag": "path",
-     "d": "M301.72160293666195,76.03205471867422L301.0802342268377,74.57443344646447",
+     "d": "M301.72160294,76.03205472L301.08023423,74.57443345",
      "paint": {
       "fill": "none",
       "stroke": "rgb(88, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e10"
      }
     },
     {
      "i": 11,
      "tag": "path",
-     "d": "M301.0802342268377,74.57443344646447L300.3758954110051,73.14617561692125",
+     "d": "M301.08023423,74.57443345L300.37589541,73.14617562",
      "paint": {
       "fill": "none",
       "stroke": "rgb(96, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e11"
      }
     },
     {
      "i": 12,
      "tag": "path",
-     "d": "M300.3758954110051,73.14617561692125L299.609927238132,71.75",
+     "d": "M300.37589541,73.14617562L299.60992724,71.75",
      "paint": {
       "fill": "none",
       "stroke": "rgb(103, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e12"
      }
     },
     {
      "i": 13,
      "tag": "path",
-     "d": "M299.609927238132,71.75L298.78378777217034,70.38856429534093",
+     "d": "M299.60992724,71.75L298.78378777,70.3885643",
      "paint": {
       "fill": "none",
       "stroke": "rgb(111, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e13"
      }
     },
     {
      "i": 14,
      "tag": "path",
-     "d": "M298.78378777217034,70.38856429534093L297.8990496165482,69.06446007318682",
+     "d": "M298.78378777,70.3885643L297.89904962,69.06446007",
      "paint": {
       "fill": "none",
       "stroke": "rgb(119, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e14"
      }
     },
     {
      "i": 15,
      "tag": "path",
-     "d": "M297.8990496165482,69.06446007318682L296.9573969206301,67.78020784118169",
+     "d": "M297.89904962,69.06446007L296.95739692,67.78020784",
      "paint": {
       "fill": "none",
       "stroke": "rgb(126, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e15"
      }
     },
     {
      "i": 16,
      "tag": "path",
-     "d": "M296.9573969206301,67.78020784118169L295.9606221738427,66.53825224644132",
+     "d": "M296.95739692,67.78020784L295.96062217,66.53825225",
      "paint": {
       "fill": "none",
       "stroke": "rgb(134, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e16"
      }
     },
     {
      "i": 17,
      "tag": "path",
-     "d": "M295.9606221738427,66.53825224644132L294.91062279356953,65.34095742202841",
+     "d": "M295.96062217,66.53825225L294.91062279,65.34095742",
      "paint": {
       "fill": "none",
       "stroke": "rgb(142, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e17"
      }
     },
     {
      "i": 18,
      "tag": "path",
-     "d": "M294.91062279356953,65.34095742202841L293.80939751330897,64.19060248669102",
+     "d": "M294.91062279,65.34095742L293.80939751,64.19060249",
      "paint": {
       "fill": "none",
       "stroke": "rgb(149, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e18"
      }
     },
     {
      "i": 19,
      "tag": "path",
-     "d": "M293.80939751330897,64.19060248669102L292.6590425779716,63.08937720643047",
+     "d": "M293.80939751,64.19060249L292.65904258,63.08937721",
      "paint": {
       "fill": "none",
       "stroke": "rgb(157, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e19"
      }
     },
     {
      "i": 20,
      "tag": "path",
-     "d": "M292.6590425779716,63.08937720643047L291.4617477535587,62.039377826157306",
+     "d": "M292.65904258,63.08937721L291.46174775,62.03937783",
      "paint": {
       "fill": "none",
       "stroke": "rgb(164, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e20"
      }
     },
     {
      "i": 21,
      "tag": "path",
-     "d": "M291.4617477535587,62.039377826157306L290.2197921588183,61.04260307936991",
+     "d": "M291.46174775,62.03937783L290.21979216,61.04260308",
      "paint": {
       "fill": "none",
       "stroke": "rgb(172, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e21"
      }
     },
     {
      "i": 22,
      "tag": "path",
-     "d": "M290.2197921588183,61.04260307936991L288.9355399268132,60.1009503834518",
+     "d": "M290.21979216,61.04260308L288.93553993,60.10095038",
      "paint": {
       "fill": "none",
       "stroke": "rgb(180, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e22"
      }
     },
     {
      "i": 23,
      "tag": "path",
-     "d": "M288.9355399268132,60.1009503834518L287.6114357046591,59.21621222782967",
+     "d": "M288.93553993,60.10095038L287.6114357,59.21621223",
      "paint": {
       "fill": "none",
       "stroke": "rgb(187, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e23"
      }
     },
     {
      "i": 24,
      "tag": "path",
-     "d": "M287.6114357046591,59.21621222782967L286.25,58.39007276186799",
+     "d": "M287.6114357,59.21621223L286.25,58.39007276",
      "paint": {
       "fill": "none",
       "stroke": "rgb(195, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e24"
      }
     },
     {
      "i": 25,
      "tag": "path",
-     "d": "M286.25,58.39007276186799L284.85382438307875,57.62410458899491",
+     "d": "M286.25,58.39007276L284.85382438,57.62410459",
      "paint": {
       "fill": "none",
       "stroke": "rgb(203, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e25"
      }
     },
     {
      "i": 26,
      "tag": "path",
-     "d": "M284.85382438307875,57.62410458899491L283.42556655353553,56.919765773162275",
+     "d": "M284.85382438,57.62410459L283.42556655,56.91976577",
      "paint": {
       "fill": "none",
       "stroke": "rgb(210, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e26"
      }
     },
     {
      "i": 27,
      "tag": "path",
-     "d": "M283.42556655353553,56.919765773162275L281.9679452813258,56.27839706333803",
+     "d": "M283.42556655,56.91976577L281.96794528,56.27839706",
      "paint": {
       "fill": "none",
       "stroke": "rgb(218, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e27"
      }
     },
     {
      "i": 28,
      "tag": "path",
-     "d": "M281.9679452813258,56.27839706333803L280.4837352313869,55.70121934131435",
+     "d": "M281.96794528,56.27839706L280.48373523,55.70121934",
      "paint": {
       "fill": "none",
       "stroke": "rgb(225, 46, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e28"
      }
     },
     {
      "i": 29,
      "tag": "path",
-     "d": "M280.4837352313869,55.70121934131435L278.97576168190596,55.18933129768972",
+     "d": "M280.48373523,55.70121934L278.97576168,55.1893313",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 225)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e29"
      }
     },
     {
      "i": 30,
      "tag": "path",
-     "d": "M278.97576168190596,55.18933129768972L277.446895146242,54.743707340449006",
+     "d": "M278.97576168,55.1893313L277.44689515,54.74370734",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 218)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e30"
      }
     },
     {
      "i": 31,
      "tag": "path",
-     "d": "M277.446895146242,54.743707340449006L275.90004590874076,54.36519574012243",
+     "d": "M277.44689515,54.74370734L275.90004591,54.36519574",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 210)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e31"
      }
     },
     {
      "i": 32,
      "tag": "path",
-     "d": "M275.90004590874076,54.36519574012243L274.33815848484295,54.05451701505441",
+     "d": "M275.90004591,54.36519574L274.33815848,54.05451702",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 203)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e32"
      }
     },
     {
      "i": 33,
      "tag": "path",
-     "d": "M274.33815848484295,54.05451701505441L272.7642060160319,53.812262559855924",
+     "d": "M274.33815848,54.05451702L272.76420602,53.81226256",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 195)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e33"
      }
     },
     {
      "i": 34,
      "tag": "path",
-     "d": "M272.7642060160319,53.812262559855924L271.1811846102895,53.63889351965129",
+     "d": "M272.76420602,53.81226256L271.18118461,53.63889352",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 187)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e34"
      }
     },
     {
      "i": 35,
      "tag": "path",
-     "d": "M271.1811846102895,53.63889351965129L269.59210763883476,53.53473991226219",
+     "d": "M271.18118461,53.63889352L269.59210764,53.53473991",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 180)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e35"
      }
     },
     {
      "i": 36,
      "tag": "path",
-     "d": "M269.59210763883476,53.53473991226219L268,53.5",
+     "d": "M269.59210764,53.53473991L268,53.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 172)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e36"
      }
     },
     {
      "i": 37,
      "tag": "path",
-     "d": "M268,53.5L266.40789236116524,53.53473991226219",
+     "d": "M268,53.5L266.40789236,53.53473991",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 164)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e37"
      }
     },
     {
      "i": 38,
      "tag": "path",
-     "d": "M266.40789236116524,53.53473991226219L264.8188153897105,53.63889351965129",
+     "d": "M266.40789236,53.53473991L264.81881539,53.63889352",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 157)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e38"
      }
     },
     {
      "i": 39,
      "tag": "path",
-     "d": "M264.8188153897105,53.63889351965129L263.2357939839681,53.81226255985592",
+     "d": "M264.81881539,53.63889352L263.23579398,53.81226256",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 149)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e39"
      }
     },
     {
      "i": 40,
      "tag": "path",
-     "d": "M263.2357939839681,53.81226255985592L261.66184151515705,54.05451701505441",
+     "d": "M263.23579398,53.81226256L261.66184152,54.05451702",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 142)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e40"
      }
     },
     {
      "i": 41,
      "tag": "path",
-     "d": "M261.66184151515705,54.05451701505441L260.09995409125924,54.36519574012243",
+     "d": "M261.66184152,54.05451702L260.09995409,54.36519574",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 134)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e41"
      }
     },
     {
      "i": 42,
      "tag": "path",
-     "d": "M260.09995409125924,54.36519574012243L258.553104853758,54.743707340449006",
+     "d": "M260.09995409,54.36519574L258.55310485,54.74370734",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 126)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e42"
      }
     },
     {
      "i": 43,
      "tag": "path",
-     "d": "M258.553104853758,54.743707340449006L257.02423831809404,55.18933129768972",
+     "d": "M258.55310485,54.74370734L257.02423832,55.1893313",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 119)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e43"
      }
     },
     {
      "i": 44,
      "tag": "path",
-     "d": "M257.02423831809404,55.18933129768972L255.5162647686131,55.70121934131434",
+     "d": "M257.02423832,55.1893313L255.51626477,55.70121934",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 111)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e44"
      }
     },
     {
      "i": 45,
      "tag": "path",
-     "d": "M255.5162647686131,55.70121934131434L254.03205471867423,56.27839706333803",
+     "d": "M255.51626477,55.70121934L254.03205472,56.27839706",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 103)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e45"
      }
     },
     {
      "i": 46,
      "tag": "path",
-     "d": "M254.03205471867423,56.27839706333803L252.57443344646447,56.919765773162275",
+     "d": "M254.03205472,56.27839706L252.57443345,56.91976577",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 96)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e46"
      }
     },
     {
      "i": 47,
      "tag": "path",
-     "d": "M252.57443344646447,56.919765773162275L251.14617561692125,57.6241045889949",
+     "d": "M252.57443345,56.91976577L251.14617562,57.62410459",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 88)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e47"
      }
     },
     {
      "i": 48,
      "tag": "path",
-     "d": "M251.14617561692125,57.6241045889949L249.75,58.390072761867984",
+     "d": "M251.14617562,57.62410459L249.75,58.39007276",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 81)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e48"
      }
     },
     {
      "i": 49,
      "tag": "path",
-     "d": "M249.75,58.390072761867984L248.38856429534093,59.21621222782967",
+     "d": "M249.75,58.39007276L248.3885643,59.21621223",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 73)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e49"
      }
     },
     {
      "i": 50,
      "tag": "path",
-     "d": "M248.38856429534093,59.21621222782967L247.06446007318684,60.10095038345179",
+     "d": "M248.3885643,59.21621223L247.06446007,60.10095038",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 65)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e50"
      }
     },
     {
      "i": 51,
      "tag": "path",
-     "d": "M247.06446007318684,60.10095038345179L245.7802078411817,61.04260307936991",
+     "d": "M247.06446007,60.10095038L245.78020784,61.04260308",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 58)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e51"
      }
     },
     {
      "i": 52,
      "tag": "path",
-     "d": "M245.7802078411817,61.04260307936991L244.53825224644132,62.039377826157306",
+     "d": "M245.78020784,61.04260308L244.53825225,62.03937783",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 46, 50)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e52"
      }
     },
     {
      "i": 53,
      "tag": "path",
-     "d": "M244.53825224644132,62.039377826157306L243.3409574220284,63.08937720643047",
+     "d": "M244.53825225,62.03937783L243.34095742,63.08937721",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 50, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e53"
      }
     },
     {
      "i": 54,
      "tag": "path",
-     "d": "M243.3409574220284,63.08937720643047L242.190602486691,64.190602486691",
+     "d": "M243.34095742,63.08937721L242.19060249,64.19060249",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 58, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e54"
      }
     },
     {
      "i": 55,
      "tag": "path",
-     "d": "M242.190602486691,64.190602486691L241.08937720643047,65.3409574220284",
+     "d": "M242.19060249,64.19060249L241.08937721,65.34095742",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 65, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e55"
      }
     },
     {
      "i": 56,
      "tag": "path",
-     "d": "M241.08937720643047,65.3409574220284L240.0393778261573,66.53825224644132",
+     "d": "M241.08937721,65.34095742L240.03937783,66.53825225",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 73, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e56"
      }
     },
     {
      "i": 57,
      "tag": "path",
-     "d": "M240.0393778261573,66.53825224644132L239.0426030793699,67.78020784118169",
+     "d": "M240.03937783,66.53825225L239.04260308,67.78020784",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 81, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e57"
      }
     },
     {
      "i": 58,
      "tag": "path",
-     "d": "M239.0426030793699,67.78020784118169L238.1009503834518,69.06446007318682",
+     "d": "M239.04260308,67.78020784L238.10095038,69.06446007",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 88, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e58"
      }
     },
     {
      "i": 59,
      "tag": "path",
-     "d": "M238.1009503834518,69.06446007318682L237.2162122278297,70.38856429534093",
+     "d": "M238.10095038,69.06446007L237.21621223,70.3885643",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 96, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e59"
      }
     },
     {
      "i": 60,
      "tag": "path",
-     "d": "M237.2162122278297,70.38856429534093L236.390072761868,71.75",
+     "d": "M237.21621223,70.3885643L236.39007276,71.75",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 103, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e60"
      }
     },
     {
      "i": 61,
      "tag": "path",
-     "d": "M236.390072761868,71.75L235.6241045889949,73.14617561692125",
+     "d": "M236.39007276,71.75L235.62410459,73.14617562",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 111, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e61"
      }
     },
     {
      "i": 62,
      "tag": "path",
-     "d": "M235.6241045889949,73.14617561692125L234.91976577316228,74.57443344646447",
+     "d": "M235.62410459,73.14617562L234.91976577,74.57443345",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 119, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e62"
      }
     },
     {
      "i": 63,
      "tag": "path",
-     "d": "M234.91976577316228,74.57443344646447L234.27839706333805,76.03205471867422",
+     "d": "M234.91976577,74.57443345L234.27839706,76.03205472",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 126, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e63"
      }
     },
     {
      "i": 64,
      "tag": "path",
-     "d": "M234.27839706333805,76.03205471867422L233.70121934131436,77.51626476861308",
+     "d": "M234.27839706,76.03205472L233.70121934,77.51626477",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 134, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e64"
      }
     },
     {
      "i": 65,
      "tag": "path",
-     "d": "M233.70121934131436,77.51626476861308L233.18933129768973,79.02423831809402",
+     "d": "M233.70121934,77.51626477L233.1893313,79.02423832",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 142, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e65"
      }
     },
     {
      "i": 66,
      "tag": "path",
-     "d": "M233.18933129768973,79.02423831809402L232.74370734044902,80.55310485375799",
+     "d": "M233.1893313,79.02423832L232.74370734,80.55310485",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 149, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e66"
      }
     },
     {
      "i": 67,
      "tag": "path",
-     "d": "M232.74370734044902,80.55310485375799L232.36519574012243,82.09995409125925",
+     "d": "M232.74370734,80.55310485L232.36519574,82.09995409",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 157, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e67"
      }
     },
     {
      "i": 68,
      "tag": "path",
-     "d": "M232.36519574012243,82.09995409125925L232.05451701505442,83.66184151515704",
+     "d": "M232.36519574,82.09995409L232.05451702,83.66184152",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 164, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e68"
      }
     },
     {
      "i": 69,
      "tag": "path",
-     "d": "M232.05451701505442,83.66184151515704L231.81226255985592,85.23579398396812",
+     "d": "M232.05451702,83.66184152L231.81226256,85.23579398",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 172, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e69"
      }
     },
     {
      "i": 70,
      "tag": "path",
-     "d": "M231.81226255985592,85.23579398396812L231.63889351965128,86.81881538971048",
+     "d": "M231.81226256,85.23579398L231.63889352,86.81881539",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 180, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e70"
      }
     },
     {
      "i": 71,
      "tag": "path",
-     "d": "M231.63889351965128,86.81881538971048L231.53473991226218,88.40789236116524",
+     "d": "M231.63889352,86.81881539L231.53473991,88.40789236",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 187, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e71"
      }
     },
     {
      "i": 72,
      "tag": "path",
-     "d": "M231.53473991226218,88.40789236116524L231.5,90",
+     "d": "M231.53473991,88.40789236L231.5,90",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 195, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e72"
      }
     },
     {
      "i": 73,
      "tag": "path",
-     "d": "M231.5,90L231.53473991226218,91.59210763883476",
+     "d": "M231.5,90L231.53473991,91.59210764",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 203, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e73"
      }
     },
     {
      "i": 74,
      "tag": "path",
-     "d": "M231.53473991226218,91.59210763883476L231.63889351965128,93.18118461028952",
+     "d": "M231.53473991,91.59210764L231.63889352,93.18118461",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 210, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e74"
      }
     },
     {
      "i": 75,
      "tag": "path",
-     "d": "M231.63889351965128,93.18118461028952L231.81226255985592,94.76420601603189",
+     "d": "M231.63889352,93.18118461L231.81226256,94.76420602",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 218, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e75"
      }
     },
     {
      "i": 76,
      "tag": "path",
-     "d": "M231.81226255985592,94.76420601603189L232.05451701505442,96.33815848484296",
+     "d": "M231.81226256,94.76420602L232.05451702,96.33815848",
      "paint": {
       "fill": "none",
       "stroke": "rgb(229, 225, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e76"
      }
     },
     {
      "i": 77,
      "tag": "path",
-     "d": "M232.05451701505442,96.33815848484296L232.36519574012243,97.90004590874074",
+     "d": "M232.05451702,96.33815848L232.36519574,97.90004591",
      "paint": {
       "fill": "none",
       "stroke": "rgb(225, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e77"
      }
     },
     {
      "i": 78,
      "tag": "path",
-     "d": "M232.36519574012243,97.90004590874074L232.743707340449,99.44689514624199",
+     "d": "M232.36519574,97.90004591L232.74370734,99.44689515",
      "paint": {
       "fill": "none",
       "stroke": "rgb(218, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e78"
      }
     },
     {
      "i": 79,
      "tag": "path",
-     "d": "M232.743707340449,99.44689514624199L233.1893312976897,100.97576168190596",
+     "d": "M232.74370734,99.44689515L233.1893313,100.97576168",
      "paint": {
       "fill": "none",
       "stroke": "rgb(210, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e79"
      }
     },
     {
      "i": 80,
      "tag": "path",
-     "d": "M233.1893312976897,100.97576168190596L233.70121934131436,102.4837352313869",
+     "d": "M233.1893313,100.97576168L233.70121934,102.48373523",
      "paint": {
       "fill": "none",
       "stroke": "rgb(203, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e80"
      }
     },
     {
      "i": 81,
      "tag": "path",
-     "d": "M233.70121934131436,102.4837352313869L234.27839706333802,103.96794528132577",
+     "d": "M233.70121934,102.48373523L234.27839706,103.96794528",
      "paint": {
       "fill": "none",
       "stroke": "rgb(195, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e81"
      }
     },
     {
      "i": 82,
      "tag": "path",
-     "d": "M234.27839706333802,103.96794528132577L234.91976577316228,105.42556655353552",
+     "d": "M234.27839706,103.96794528L234.91976577,105.42556655",
      "paint": {
       "fill": "none",
       "stroke": "rgb(187, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e82"
      }
     },
     {
      "i": 83,
      "tag": "path",
-     "d": "M234.91976577316228,105.42556655353552L235.6241045889949,106.85382438307873",
+     "d": "M234.91976577,105.42556655L235.62410459,106.85382438",
      "paint": {
       "fill": "none",
       "stroke": "rgb(180, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e83"
      }
     },
     {
      "i": 84,
      "tag": "path",
-     "d": "M235.6241045889949,106.85382438307873L236.390072761868,108.25",
+     "d": "M235.62410459,106.85382438L236.39007276,108.25",
      "paint": {
       "fill": "none",
       "stroke": "rgb(172, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e84"
      }
     },
     {
      "i": 85,
      "tag": "path",
-     "d": "M236.390072761868,108.25L237.2162122278297,109.61143570465907",
+     "d": "M236.39007276,108.25L237.21621223,109.6114357",
      "paint": {
       "fill": "none",
       "stroke": "rgb(164, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e85"
      }
     },
     {
      "i": 86,
      "tag": "path",
-     "d": "M237.2162122278297,109.61143570465907L238.1009503834518,110.93553992681318",
+     "d": "M237.21621223,109.6114357L238.10095038,110.93553993",
      "paint": {
       "fill": "none",
       "stroke": "rgb(157, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e86"
      }
     },
     {
      "i": 87,
      "tag": "path",
-     "d": "M238.1009503834518,110.93553992681318L239.0426030793699,112.2197921588183",
+     "d": "M238.10095038,110.93553993L239.04260308,112.21979216",
      "paint": {
       "fill": "none",
       "stroke": "rgb(149, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e87"
      }
     },
     {
      "i": 88,
      "tag": "path",
-     "d": "M239.0426030793699,112.2197921588183L240.0393778261573,113.46174775355868",
+     "d": "M239.04260308,112.21979216L240.03937783,113.46174775",
      "paint": {
       "fill": "none",
       "stroke": "rgb(142, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e88"
      }
     },
     {
      "i": 89,
      "tag": "path",
-     "d": "M240.0393778261573,113.46174775355868L241.08937720643047,114.65904257797159",
+     "d": "M240.03937783,113.46174775L241.08937721,114.65904258",
      "paint": {
       "fill": "none",
       "stroke": "rgb(134, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e89"
      }
     },
     {
      "i": 90,
      "tag": "path",
-     "d": "M241.08937720643047,114.65904257797159L242.190602486691,115.80939751330898",
+     "d": "M241.08937721,114.65904258L242.19060249,115.80939751",
      "paint": {
       "fill": "none",
       "stroke": "rgb(126, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e90"
      }
     },
     {
      "i": 91,
      "tag": "path",
-     "d": "M242.190602486691,115.80939751330898L243.3409574220284,116.91062279356952",
+     "d": "M242.19060249,115.80939751L243.34095742,116.91062279",
      "paint": {
       "fill": "none",
       "stroke": "rgb(119, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e91"
      }
     },
     {
      "i": 92,
      "tag": "path",
-     "d": "M243.3409574220284,116.91062279356952L244.53825224644132,117.9606221738427",
+     "d": "M243.34095742,116.91062279L244.53825225,117.96062217",
      "paint": {
       "fill": "none",
       "stroke": "rgb(111, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e92"
      }
     },
     {
      "i": 93,
      "tag": "path",
-     "d": "M244.53825224644132,117.9606221738427L245.7802078411817,118.95739692063007",
+     "d": "M244.53825225,117.96062217L245.78020784,118.95739692",
      "paint": {
       "fill": "none",
       "stroke": "rgb(103, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e93"
      }
     },
     {
      "i": 94,
      "tag": "path",
-     "d": "M245.7802078411817,118.95739692063007L247.0644600731868,119.8990496165482",
+     "d": "M245.78020784,118.95739692L247.06446007,119.89904962",
      "paint": {
       "fill": "none",
       "stroke": "rgb(96, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e94"
      }
     },
     {
      "i": 95,
      "tag": "path",
-     "d": "M247.0644600731868,119.8990496165482L248.38856429534093,120.78378777217031",
+     "d": "M247.06446007,119.89904962L248.3885643,120.78378777",
      "paint": {
       "fill": "none",
       "stroke": "rgb(88, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e95"
      }
     },
     {
      "i": 96,
      "tag": "path",
-     "d": "M248.38856429534093,120.78378777217031L249.74999999999997,121.609927238132",
+     "d": "M248.3885643,120.78378777L249.75,121.60992724",
      "paint": {
       "fill": "none",
       "stroke": "rgb(81, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e96"
      }
     },
     {
      "i": 97,
      "tag": "path",
-     "d": "M249.74999999999997,121.609927238132L251.14617561692128,122.3758954110051",
+     "d": "M249.75,121.60992724L251.14617562,122.37589541",
      "paint": {
       "fill": "none",
       "stroke": "rgb(73, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e97"
      }
     },
     {
      "i": 98,
      "tag": "path",
-     "d": "M251.14617561692128,122.3758954110051L252.57443344646447,123.08023422683772",
+     "d": "M251.14617562,122.37589541L252.57443345,123.08023423",
      "paint": {
       "fill": "none",
       "stroke": "rgb(65, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e98"
      }
     },
     {
      "i": 99,
      "tag": "path",
-     "d": "M252.57443344646447,123.08023422683772L254.0320547186742,123.72160293666195",
+     "d": "M252.57443345,123.08023423L254.03205472,123.72160294",
      "paint": {
       "fill": "none",
       "stroke": "rgb(58, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e99"
      }
     },
     {
      "i": 100,
      "tag": "path",
-     "d": "M254.0320547186742,123.72160293666195L255.51626476861307,124.29878065868564",
+     "d": "M254.03205472,123.72160294L255.51626477,124.29878066",
      "paint": {
       "fill": "none",
       "stroke": "rgb(50, 229, 46)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e100"
      }
     },
     {
      "i": 101,
      "tag": "path",
-     "d": "M255.51626476861307,124.29878065868564L257.02423831809404,124.81066870231027",
+     "d": "M255.51626477,124.29878066L257.02423832,124.8106687",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 50)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e101"
      }
     },
     {
      "i": 102,
      "tag": "path",
-     "d": "M257.02423831809404,124.81066870231027L258.553104853758,125.256292659551",
+     "d": "M257.02423832,124.8106687L258.55310485,125.25629266",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 58)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e102"
      }
     },
     {
      "i": 103,
      "tag": "path",
-     "d": "M258.553104853758,125.256292659551L260.09995409125924,125.63480425987757",
+     "d": "M258.55310485,125.25629266L260.09995409,125.63480426",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 65)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e103"
      }
     },
     {
      "i": 104,
      "tag": "path",
-     "d": "M260.09995409125924,125.63480425987757L261.66184151515705,125.94548298494558",
+     "d": "M260.09995409,125.63480426L261.66184152,125.94548298",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 73)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e104"
      }
     },
     {
      "i": 105,
      "tag": "path",
-     "d": "M261.66184151515705,125.94548298494558L263.2357939839681,126.18773744014408",
+     "d": "M261.66184152,125.94548298L263.23579398,126.18773744",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 81)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e105"
      }
     },
     {
      "i": 106,
      "tag": "path",
-     "d": "M263.2357939839681,126.18773744014408L264.8188153897105,126.36110648034871",
+     "d": "M263.23579398,126.18773744L264.81881539,126.36110648",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 88)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e106"
      }
     },
     {
      "i": 107,
      "tag": "path",
-     "d": "M264.8188153897105,126.36110648034871L266.40789236116524,126.46526008773782",
+     "d": "M264.81881539,126.36110648L266.40789236,126.46526009",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 96)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e107"
      }
     },
     {
      "i": 108,
      "tag": "path",
-     "d": "M266.40789236116524,126.46526008773782L268,126.5",
+     "d": "M266.40789236,126.46526009L268,126.5",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 103)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e108"
      }
     },
     {
      "i": 109,
      "tag": "path",
-     "d": "M268,126.5L269.59210763883476,126.46526008773782",
+     "d": "M268,126.5L269.59210764,126.46526009",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 111)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e109"
      }
     },
     {
      "i": 110,
      "tag": "path",
-     "d": "M269.59210763883476,126.46526008773782L271.1811846102895,126.36110648034871",
+     "d": "M269.59210764,126.46526009L271.18118461,126.36110648",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 119)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e110"
      }
     },
     {
      "i": 111,
      "tag": "path",
-     "d": "M271.1811846102895,126.36110648034871L272.7642060160319,126.18773744014408",
+     "d": "M271.18118461,126.36110648L272.76420602,126.18773744",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 126)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e111"
      }
     },
     {
      "i": 112,
      "tag": "path",
-     "d": "M272.7642060160319,126.18773744014408L274.33815848484295,125.9454829849456",
+     "d": "M272.76420602,126.18773744L274.33815848,125.94548298",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 134)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e112"
      }
     },
     {
      "i": 113,
      "tag": "path",
-     "d": "M274.33815848484295,125.9454829849456L275.9000459087407,125.63480425987757",
+     "d": "M274.33815848,125.94548298L275.90004591,125.63480426",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 142)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e113"
      }
     },
     {
      "i": 114,
      "tag": "path",
-     "d": "M275.9000459087407,125.63480425987757L277.446895146242,125.25629265955101",
+     "d": "M275.90004591,125.63480426L277.44689515,125.25629266",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 149)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e114"
      }
     },
     {
      "i": 115,
      "tag": "path",
-     "d": "M277.446895146242,125.25629265955101L278.97576168190596,124.81066870231028",
+     "d": "M277.44689515,125.25629266L278.97576168,124.8106687",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 157)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e115"
      }
     },
     {
      "i": 116,
      "tag": "path",
-     "d": "M278.97576168190596,124.81066870231028L280.4837352313869,124.29878065868564",
+     "d": "M278.97576168,124.8106687L280.48373523,124.29878066",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 164)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e116"
      }
     },
     {
      "i": 117,
      "tag": "path",
-     "d": "M280.4837352313869,124.29878065868564L281.9679452813258,123.72160293666195",
+     "d": "M280.48373523,124.29878066L281.96794528,123.72160294",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 172)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e117"
      }
     },
     {
      "i": 118,
      "tag": "path",
-     "d": "M281.9679452813258,123.72160293666195L283.42556655353553,123.08023422683773",
+     "d": "M281.96794528,123.72160294L283.42556655,123.08023423",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 180)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e118"
      }
     },
     {
      "i": 119,
      "tag": "path",
-     "d": "M283.42556655353553,123.08023422683773L284.85382438307875,122.3758954110051",
+     "d": "M283.42556655,123.08023423L284.85382438,122.37589541",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 187)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e119"
      }
     },
     {
      "i": 120,
      "tag": "path",
-     "d": "M284.85382438307875,122.3758954110051L286.25,121.609927238132",
+     "d": "M284.85382438,122.37589541L286.25,121.60992724",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 195)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e120"
      }
     },
     {
      "i": 121,
      "tag": "path",
-     "d": "M286.25,121.609927238132L287.6114357046591,120.78378777217033",
+     "d": "M286.25,121.60992724L287.6114357,120.78378777",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 203)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e121"
      }
     },
     {
      "i": 122,
      "tag": "path",
-     "d": "M287.6114357046591,120.78378777217033L288.9355399268132,119.8990496165482",
+     "d": "M287.6114357,120.78378777L288.93553993,119.89904962",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 210)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e122"
      }
     },
     {
      "i": 123,
      "tag": "path",
-     "d": "M288.9355399268132,119.8990496165482L290.2197921588183,118.95739692063009",
+     "d": "M288.93553993,119.89904962L290.21979216,118.95739692",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 218)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e123"
      }
     },
     {
      "i": 124,
      "tag": "path",
-     "d": "M290.2197921588183,118.95739692063009L291.4617477535587,117.9606221738427",
+     "d": "M290.21979216,118.95739692L291.46174775,117.96062217",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 229, 225)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e124"
      }
     },
     {
      "i": 125,
      "tag": "path",
-     "d": "M291.4617477535587,117.9606221738427L292.6590425779716,116.91062279356953",
+     "d": "M291.46174775,117.96062217L292.65904258,116.91062279",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 225, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e125"
      }
     },
     {
      "i": 126,
      "tag": "path",
-     "d": "M292.6590425779716,116.91062279356953L293.80939751330897,115.809397513309",
+     "d": "M292.65904258,116.91062279L293.80939751,115.80939751",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 218, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e126"
      }
     },
     {
      "i": 127,
      "tag": "path",
-     "d": "M293.80939751330897,115.809397513309L294.91062279356953,114.6590425779716",
+     "d": "M293.80939751,115.80939751L294.91062279,114.65904258",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 210, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e127"
      }
     },
     {
      "i": 128,
      "tag": "path",
-     "d": "M294.91062279356953,114.6590425779716L295.9606221738427,113.4617477535587",
+     "d": "M294.91062279,114.65904258L295.96062217,113.46174775",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 203, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e128"
      }
     },
     {
      "i": 129,
      "tag": "path",
-     "d": "M295.9606221738427,113.4617477535587L296.95739692063006,112.21979215881831",
+     "d": "M295.96062217,113.46174775L296.95739692,112.21979216",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 195, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e129"
      }
     },
     {
      "i": 130,
      "tag": "path",
-     "d": "M296.95739692063006,112.21979215881831L297.89904961654815,110.93553992681319",
+     "d": "M296.95739692,112.21979216L297.89904962,110.93553993",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 187, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e130"
      }
     },
     {
      "i": 131,
      "tag": "path",
-     "d": "M297.89904961654815,110.93553992681319L298.7837877721703,109.61143570465909",
+     "d": "M297.89904962,110.93553993L298.78378777,109.6114357",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 180, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e131"
      }
     },
     {
      "i": 132,
      "tag": "path",
-     "d": "M298.7837877721703,109.61143570465909L299.609927238132,108.25000000000001",
+     "d": "M298.78378777,109.6114357L299.60992724,108.25",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 172, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e132"
      }
     },
     {
      "i": 133,
      "tag": "path",
-     "d": "M299.609927238132,108.25000000000001L300.3758954110051,106.85382438307873",
+     "d": "M299.60992724,108.25L300.37589541,106.85382438",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 164, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e133"
      }
     },
     {
      "i": 134,
      "tag": "path",
-     "d": "M300.3758954110051,106.85382438307873L301.0802342268377,105.42556655353552",
+     "d": "M300.37589541,106.85382438L301.08023423,105.42556655",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 157, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e134"
      }
     },
     {
      "i": 135,
      "tag": "path",
-     "d": "M301.0802342268377,105.42556655353552L301.72160293666195,103.9679452813258",
+     "d": "M301.08023423,105.42556655L301.72160294,103.96794528",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 149, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e135"
      }
     },
     {
      "i": 136,
      "tag": "path",
-     "d": "M301.72160293666195,103.9679452813258L302.29878065868564,102.48373523138693",
+     "d": "M301.72160294,103.96794528L302.29878066,102.48373523",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 142, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e136"
      }
     },
     {
      "i": 137,
      "tag": "path",
-     "d": "M302.29878065868564,102.48373523138693L302.8106687023103,100.975761681906",
+     "d": "M302.29878066,102.48373523L302.8106687,100.97576168",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 134, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e137"
      }
     },
     {
      "i": 138,
      "tag": "path",
-     "d": "M302.8106687023103,100.975761681906L303.256292659551,99.446895146242",
+     "d": "M302.8106687,100.97576168L303.25629266,99.44689515",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 126, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e138"
      }
     },
     {
      "i": 139,
      "tag": "path",
-     "d": "M303.256292659551,99.446895146242L303.63480425987757,97.90004590874075",
+     "d": "M303.25629266,99.44689515L303.63480426,97.90004591",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 119, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e139"
      }
     },
     {
      "i": 140,
      "tag": "path",
-     "d": "M303.63480425987757,97.90004590874075L303.9454829849456,96.33815848484296",
+     "d": "M303.63480426,97.90004591L303.94548298,96.33815848",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 111, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e140"
      }
     },
     {
      "i": 141,
      "tag": "path",
-     "d": "M303.9454829849456,96.33815848484296L304.1877374401441,94.76420601603189",
+     "d": "M303.94548298,96.33815848L304.18773744,94.76420602",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 103, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e141"
      }
     },
     {
      "i": 142,
      "tag": "path",
-     "d": "M304.1877374401441,94.76420601603189L304.3611064803487,93.18118461028953",
+     "d": "M304.18773744,94.76420602L304.36110648,93.18118461",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 96, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e142"
      }
     },
     {
      "i": 143,
      "tag": "path",
-     "d": "M304.3611064803487,93.18118461028953L304.4652600877378,91.59210763883478",
+     "d": "M304.36110648,93.18118461L304.46526009,91.59210764",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 88, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e143"
      }
     },
     {
      "i": 144,
      "tag": "path",
-     "d": "M304.4652600877378,91.59210763883478L304.5,90.00000000000001",
+     "d": "M304.46526009,91.59210764L304.5,90",
      "paint": {
       "fill": "none",
       "stroke": "rgb(46, 81, 229)",
       "stroke-width": "6px",
       "stroke-dasharray": "none",
       "stroke-linecap": "round"
+     },
+     "data": {
+      "data-k": "panel/e144"
      }
     },
     {
@@ -5298,6 +6609,9 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r145"
      }
     },
     {
@@ -5311,14 +6625,17 @@
       "stroke": "rgb(163, 41, 36)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "3px, 4px"
+     },
+     "data": {
+      "data-k": "panel/r146"
      }
     }
    ]
   },
   {
-   "id": "end",
+   "id": "homotopy-panel-end",
    "viewBox": "0 0 463 190",
-   "role": "img",
+   "role": "group",
    "ariaLabel": "Final map, fixed at time one. Click a colored point to select its input.",
    "size": [
     462.81,
@@ -5334,7 +6651,9 @@
     "circle": 3,
     "text": 1
    },
-   "probe": {},
+   "probe": {
+    "data-panel": "end"
+   },
    "marks": [
     {
      "i": 0,
@@ -5346,6 +6665,9 @@
       "fill": "none",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r0"
      }
     },
     {
@@ -5358,6 +6680,9 @@
       "fill": "rgb(37, 40, 45)",
       "stroke": "none",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/p1"
      }
     },
     {
@@ -5373,6 +6698,9 @@
       "stroke-dasharray": "none",
       "font-size": "12px",
       "display": "block"
+     },
+     "data": {
+      "data-k": "panel/t2"
      }
     },
     {
@@ -5386,6 +6714,9 @@
       "stroke": "rgb(174, 182, 193)",
       "stroke-width": "1.5px",
       "stroke-dasharray": "none"
+     },
+     "data": {
+      "data-k": "panel/r3"
      }
     }
    ]
@@ -5408,23 +6739,33 @@
    "text": "Category"
   },
   {
+   "tag": "select",
+   "id": "choose-category",
+   "text": "HomotopiesCan / cannotHomotopy classes (maps)Homotopy types (spaces)"
+  },
+  {
    "tag": "label",
    "id": null,
    "text": "Example"
   },
   {
+   "tag": "select",
+   "id": "choose-example",
+   "text": "Circle: open the loop? — failsAnnulus: go around the hole? — failsAnnulus: straight to a point — failsAnnulus → its inner circle — worksAround the hole once → twice — impossibleA loop beside the hole → a point — worksCircle → circle: straight shrink — fails"
+  },
+  {
    "tag": "button",
-   "id": "play",
+   "id": null,
    "text": "▶ Play"
   },
   {
    "tag": "output",
-   "id": "time-value",
+   "id": null,
    "text": "0.50"
   },
   {
    "tag": "button",
-   "id": "connect",
+   "id": "homotopy-connections",
    "text": "Connect points"
   },
   {
@@ -5464,42 +6805,42 @@
   },
   {
    "tag": "p",
-   "id": "warning",
+   "id": null,
    "text": "The interior is outside the target circle."
   },
   {
    "tag": "span",
-   "id": "selection-note",
+   "id": null,
    "text": "Only the gray circumference belongs to Y."
   }
  ],
  "controls": [
   {
-   "k": "category",
+   "k": "choose-category",
    "type": "select-one",
    "v": "obstructions"
   },
   {
-   "k": "example",
+   "k": "choose-example",
    "type": "select-one",
    "v": "blocked"
   },
   {
-   "k": "time",
+   "k": "homotopy-t",
    "type": "range",
    "v": "0.5"
   },
   {
-   "k": "connect",
+   "k": "homotopy-connections",
    "type": "button",
    "v": "false"
   }
  ],
  "a11y": {
-  "liveRegions": 2,
+  "liveRegions": 4,
   "tablists": 0,
   "tabs": 0,
-  "focusable": 25,
+  "focusable": 26,
   "headings": [
    "H1:Homotopy explorer",
    "H2:Input x",
@@ -5508,11 +6849,11 @@
    "H2:End f₁(x)",
    "H2:x · t = 0",
    "H2:f(x)",
-   "H2:Hₜ(x)",
+   "H2:Homotopy Hₜ(x)",
    "H2:g(f(x)) · t = 1",
    "H2:f(x) · copy"
   ],
-  "imgRoleOnInteractive": 9
+  "imgRoleOnInteractive": 0
  },
  "title": "Homotopy explorer · Unfold"
 }

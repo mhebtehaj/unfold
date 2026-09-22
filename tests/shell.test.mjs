@@ -152,12 +152,8 @@ const EXPLORERS = SITE.pages.map(p => p.href);
 // that clears an item must delete its line here, and a change that adds one
 // fails. The known test below keeps the total visible in every run.
 const EXPLORER_AUDIT = {
-  'homotopy-explorer.html': [
-    '<head> is missing <meta name="color-scheme">',
-    '<head> is missing <link rel="stylesheet" href="engine/unfold.css">',
-    '2 inline <style> block(s)',
-    '1 element(s) carry a style attribute',
-  ],
+  // homotopy-explorer.html cleared every item in Phase 4. Its line is gone
+  // rather than emptied: a page that is clean has nothing to say here.
   'realization-carrier-explorer.html': [
     '<head> is missing <meta name="description">',
     '<head> is missing <meta name="color-scheme">',
@@ -261,16 +257,16 @@ if (DOM) suite('shell/pages', ({ test, known }) => {
   test("audit() still says exactly what it said about each explorer (a ratchet)", async () => {
     for (const href of EXPLORERS) {
       const entry = SITE.pages.find(p => p.href === href);
-      assert.equal(shell.audit(await page(href), entry), EXPLORER_AUDIT[href], href);
+      assert.equal(shell.audit(await page(href), entry), EXPLORER_AUDIT[href] ?? [], href);
     }
   });
 
   known('the explorers follow the head convention',
-        'None of the three explorers links engine/unfold.css or carries ' +
-        '<meta name="color-scheme"> yet, all three style themselves inline, the ' +
-        'realization and ambiguity pages have no description, and the ambiguity ' +
-        'page has no favicon. Each clears as its page is ported (Phases 4–6); the ' +
-        'ratchet above holds the list exact until then.',
+        'The homotopy explorer cleared in Phase 4. The other two still do not link ' +
+        'engine/unfold.css or carry <meta name="color-scheme">, both style themselves ' +
+        'inline, neither has a description, and the ambiguity page has no favicon. ' +
+        'Each clears as its page is ported (Phases 5–6); the ratchet above holds ' +
+        'the list exact until then.',
         async () => {
     const problems = Object.values(EXPLORER_AUDIT).flat();
     assert.equal(problems, [], `${problems.length} problem(s)`);

@@ -177,6 +177,24 @@ function zeroBox(e) {
   return !r || (r.width === 0 && r.height === 0);
 }
 
+/**
+ * The one layout read outside a Viewport (I4 exempts this file, not the
+ * method): the box of an element that is not a drawing — the stage a
+ * correspondence overlay spans, whose viewBox is its measured size.
+ *
+ * Its width and height are the FRACTIONAL ones, not clientWidth's integers,
+ * because the overlay is scaled to that box and a rounded viewBox would land
+ * its curves half a pixel away from the points they join.
+ * @param {Element} el
+ * @returns {{width:number, height:number, left:number, top:number}}
+ */
+export function measureBox(el) {
+  if (!el || typeof el.getBoundingClientRect !== 'function')
+    throw new TypeError('measureBox: pass an element');
+  const r = el.getBoundingClientRect();
+  return { width: r.width, height: r.height, left: r.left, top: r.top };
+}
+
 export class Viewport {
   #el;
   #target;
@@ -412,6 +430,33 @@ export class Viewport {
     out[0] = s.dx + out[0] * s.kx;
     out[1] = s.dy + out[1] * s.ky;
     return out;
+  }
+
+  /**
+   * The child-to-stage transform, taken once and frozen: two rect reads, then
+   * `toStage(p)` costs nothing. Use it for an overlay that draws many points
+   * across several panels — the shipped `drawConnections` reads two rects per
+   * POINT, which is where its forced layouts came from.
+   *
+   * `kx`/`ky` are the client→viewBox scale. The second shipped homotopy widget
+   * drops them (homotopy.md §15.3) and gets away with it only while the
+   * measured box happens to be a whole number of pixels; at phone width it is
+   * not, and its connectors land up to half a pixel off their points.
+   * @param {Element} parentEl
+   */
+  stageFrame(parentEl) {
+    const s = this.#stage(parentEl);
+    const cx = this.#cx, cy = this.#cy, r = this.#r, center = this.#center;
+    const { dx, dy, kx, ky } = s;
+    return Object.freeze({
+      dx, dy, kx, ky,
+      toStage(p, out = [0, 0]) {
+        toScreenInto(p, out, cx, cy, r, center);
+        out[0] = dx + out[0] * kx;
+        out[1] = dy + out[1] * ky;
+        return out;
+      },
+    });
   }
 
   /** Both rects, read once, plus this element's viewBox→px scale. */

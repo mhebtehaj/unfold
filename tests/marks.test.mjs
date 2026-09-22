@@ -13,6 +13,7 @@
 
 import { suite, assert } from './harness.mjs';
 import * as marks from '../engine/render/marks.js';
+import { getPrecision } from '../engine/core/svg.js';
 
 const DOM = typeof document !== 'undefined';
 
@@ -87,7 +88,9 @@ if (DOM) suite('marks — paths', ({ test }) => {
   });
 
   test('path numbers follow the kernel precision, and -0 is written 0', () => {
-    assert.equal(marks.linePath([[1.23456789, -0.0000004]]), 'M1.234568,0');
+    const k = 10 ** getPrecision();
+    assert.equal(marks.linePath([[1.23456789, -0.4 / k]]),
+      `M${Math.round(1.23456789 * k) / k},0`);
   });
 
   test('smoothPath is Catmull-Rom at 0.5: thirds of the neighbour chord', () => {
@@ -359,7 +362,10 @@ if (DOM) suite('marks — arrows, regions, text', ({ test }) => {
 });
 
 if (DOM) suite('marks — no literal colour reaches the DOM', ({ test }) => {
-  const LITERALS = ['#ff0000', 'red', 'tomato', 'hsl(0 50% 50%)', 'oklch(0.5 0.1 20)', 'black', 'white'];
+  // hsl()'s numeric form is palette.hsl()'s output, not a literal, so the
+  // literal that stands for it here is the comma spelling no palette function
+  // can produce.
+  const LITERALS = ['#ff0000', 'red', 'tomato', 'hsl(0, 50%, 50%)', 'oklch(0.5 0.1 20)', 'black', 'white'];
 
   test('a literal is refused wherever a colour goes', () => {
     for (const c of LITERALS) {

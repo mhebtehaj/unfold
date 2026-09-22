@@ -1,0 +1,94 @@
+/* homotopy-explorer — what is this page's, and nothing else.
+ *
+ * Three kinds of thing live here and nowhere else:
+ *
+ * 1. THE PALETTE. The shipped page's colours predate the design system's
+ *    unification and differ from it in five tokens. Every one of them passes
+ *    WCAG AA as shipped (the smallest margin is 4.80:1, the accent on its own
+ *    pressed fill), so the fidelity rule keeps them: only a failure earns a
+ *    change in appearance. Scoped to the explorer, so the back-navigation bar
+ *    above it still shows the site's unified values — which is also the
+ *    cheapest possible diff when the owner decides to unify these too.
+ *
+ * 2. THE TWO WIDGETS' DRAWING HEIGHTS. Both are viewport-relative clamps with
+ *    different constants; they are a layout decision, not an engine one.
+ *
+ * 3. THE ROUND-TRIP DIAGRAM. Five pictures on a three-column grid with the
+ *    maps written in the gutters, mirrored by one attribute. A generic
+ *    panel-grid API that could express this would be worse than the CSS, so
+ *    panels.custom() adopts the markup and this file places it.
+ */
+
+[data-palette=homotopy]{
+  --muted:light-dark(#626873,#a9adb6);
+  --line:light-dark(#dfe2e7,#3b3e43);
+  --accent:light-dark(#356acb,#83afff);
+  --accent-soft:light-dark(#f4f7fd,#202938);
+  --bad:light-dark(#a32924,#ffac9f);
+}
+
+/* ---- widget one: maps ---------------------------------------------------- */
+#homotopy{--uf-drawing-h:clamp(142px,calc((100svh - 310px)/3),190px)}
+/* The target picker is the only right-aligned control on the page: it belongs
+   to the picture below it, not to the sentence above it. */
+/* Both classes named: the phone rule that stretches a field's select is
+   `.uf-field:not(.uf-field--inline) select`, and a single-class selector here
+   would lose to it. */
+.uf-field.target-control{justify-content:flex-end;margin-bottom:14px}
+.uf-field.target-control select{flex:0 1 auto}
+.class-controls{gap:15px;margin-bottom:14px;font-size:var(--fs-base)}
+.class-controls select{min-width:76px}
+
+/* ---- widget two: homotopy types ------------------------------------------
+ * The two spaces stay in fixed columns; switching the round trip mirrors the
+ * five pictures and moves only the homotopy to the other side.
+ */
+#equivalence{--uf-drawing-h:clamp(96px,calc((100svh - 420px)/3),160px)}
+/* The definition sits closer to the row it defines than a note does to its
+   picture: 12, not the 14 every other note uses. */
+.type-definition{margin-bottom:12px}
+.eq-spaces{position:relative;display:grid;
+  grid-template-columns:minmax(0,1fr) 28px minmax(0,1fr);
+  grid-template-rows:auto repeat(3,auto);
+  column-gap:8px;row-gap:10px;align-items:center}
+.eq-axis-x{grid-column:1;grid-row:1}
+.eq-axis-y{grid-column:3;grid-row:1}
+.eq-spaces .uf-space-label{font-size:var(--fs-base);line-height:20px;white-space:normal}
+.eq-spaces [data-cell=source]{grid-column:1;grid-row:2}
+.eq-spaces [data-cell=middle]{grid-column:3;grid-row:2}
+.eq-spaces [data-cell=now]{grid-column:1;grid-row:3}
+.eq-spaces [data-cell=compose]{grid-column:1;grid-row:4}
+.eq-spaces [data-cell=copy]{grid-column:3;grid-row:4}
+.eq-spaces[data-side=y] [data-cell=source],
+.eq-spaces[data-side=y] [data-cell=now],
+.eq-spaces[data-side=y] [data-cell=compose]{grid-column:3}
+.eq-spaces[data-side=y] [data-cell=middle],
+.eq-spaces[data-side=y] [data-cell=copy],
+.eq-spaces[data-side=y] .eq-copy-arrow{grid-column:1}
+/* A map's name sits ON the line it labels, so it needs the page's background
+   behind it and a layer above the connectors. */
+.eq-leg{grid-column:2;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  font:18px Cambria,Georgia,serif;z-index:4;pointer-events:none}
+.eq-leg span{background:var(--bg);padding:0 2px}
+.eq-leg span+span{font-size:27px;line-height:28px}
+.eq-leg-top{grid-row:2}
+.eq-leg-bottom{grid-row:4}
+.eq-copy-arrow{grid-column:3;grid-row:3;display:flex;align-items:center;justify-content:center;
+  flex-direction:column;color:var(--muted);font-size:var(--fs-xs);pointer-events:none;z-index:4}
+.eq-copy-arrow>span{background:var(--bg);padding:0 5px}
+.eq-copy-arrow>span:first-child{font-size:34px;line-height:40px}
+.eq-spaces .uf-frame h2{font:15px Cambria,Georgia,serif;white-space:normal;margin:7px 3px 0;line-height:21px}
+.eq-spaces .uf-drawing text{font-size:11px}
+.eq-spaces .uf-caption{font-size:10px!important}
+.eq-note{margin-top:12px}
+
+@media(max-width:600px){
+  .type-definition{font-size:var(--fs-sm)}
+  #homotopy .uf-column{grid-template-rows:30px minmax(0,1fr)}
+  .eq-spaces{column-gap:5px;grid-template-columns:minmax(0,1fr) 23px minmax(0,1fr);row-gap:9px}
+  .eq-spaces .uf-frame{border-radius:6px}
+  .eq-spaces .uf-frame h2{font-size:var(--fs-sm)}
+  #equivalence{--uf-drawing-h:121px}
+  .eq-spaces .uf-space-label{font-size:var(--fs-sm)}
+  .eq-leg{font-size:16px}
+}

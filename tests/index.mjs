@@ -23,9 +23,16 @@ import './marks.test.mjs';
 import './scene.test.mjs';
 import './realize.test.mjs';
 
+// Layer 2 — geometry (tests/geom.test.mjs registers one suite per module)
+import './geom.test.mjs';
+
 // The stylesheet, and Layer 4 — page
 import './unfold-css.test.mjs';
 import './shell.test.mjs';
 import './home.test.mjs';
+import './prose.test.mjs';
+import './controls-ui.test.mjs';
+import './panels.test.mjs';
+import './explorable.test.mjs';
 
 export { runAll, format, suites } from './harness.mjs';

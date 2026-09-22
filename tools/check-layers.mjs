@@ -41,7 +41,7 @@ import { join, relative, resolve, dirname, normalize } from 'node:path';
 export const LAYERS = [
   { n: 0, dir: 'core',   order: ['vec', 'svg', 'a11y', 'viewport', 'labels', 'anim', 'state', 'controls', 'probe', 'index'] },
   { n: 1, dir: 'render', order: ['palette', 'camera', 'project', 'depth', 'occlude', 'marks', 'scene', 'index'] },
-  { n: 2, dir: 'geom',   order: ['tolerance', 'claim', 'simplicial', 'cone', 'parametric', 'polytope', 'graph', 'grid', 'map', 'region'] },
+  { n: 2, dir: 'geom',   order: ['tolerance', 'claim', 'simplicial', 'cone', 'parametric', 'polytope', 'graph', 'grid', 'map', 'region', 'index'] },
   { n: 3, dir: 'domain', order: [] },   // subdirectories; order not constrained
   { n: 4, dir: 'page',   order: ['shell', 'prose', 'legend', 'references', 'controls-ui', 'panels', 'explorable', 'index'] },
 ];
@@ -57,6 +57,10 @@ export const LAYERS = [
 export const PURE = new Set([
   'core/vec', 'core/labels', 'core/state',
   'render/palette', 'render/camera', 'render/project', 'render/depth', 'render/occlude',
+  // Layer 2 is DOM-free by contract (the Layer 2 spec's R1 and R2): it returns
+  // numbers and descriptors, never nodes or markup.
+  'geom/tolerance', 'geom/claim', 'geom/simplicial', 'geom/cone', 'geom/parametric',
+  'geom/polytope', 'geom/graph', 'geom/grid', 'geom/map', 'geom/region', 'geom/index',
 ]);
 
 const DOM_TOKENS = [

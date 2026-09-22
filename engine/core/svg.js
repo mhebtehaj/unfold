@@ -29,13 +29,20 @@ const isDev = () => globalThis.UNFOLD_DEV !== false;
 // of diff in every golden file and a semantic baseline that never settles.
 // Round once, on the way out, here.
 //
-// Six decimals, not three. Phase 3 measured three against the realization
-// explorer's own drawing: its 324-cell barycentric triangle, redrawn with
-// coordinates rounded to 1/1000 px, moved the antialiasing of 115 pixels by up
-// to 4 levels, because a cell edge shifted by 0.0005 px changes which fraction
-// of a pixel it covers. At six the redraw is identical to the pixel in every
-// width and scheme tried, and the 1e-14 float noise is still gone.
-const DEFAULT_PRECISION = 6;
+// Eight decimals, not three and not six. Phase 3 measured three against the
+// realization explorer's own drawing: its 324-cell barycentric triangle,
+// redrawn with coordinates rounded to 1/1000 px, moved the antialiasing of 115
+// pixels by up to 4 levels, because a cell edge shifted by 0.0005 px changes
+// which fraction of a pixel it covers. Six cleared that page.
+//
+// Phase 4 measured again against the homotopy explorer, whose drawings carry
+// far more edges — 1 152 mesh cells, a 144-segment curve — and where a pixel
+// can be covered by several of them at once, so the error compounds instead of
+// cancelling. At six, the winding example differed by up to 28 levels across
+// 420 pixels; at seven, 5 levels across 29; at eight, nothing, at every width
+// and in both schemes. The 1e-14 float noise the rounding exists to remove is
+// still gone: it lives at the fourteenth decimal, not the ninth.
+const DEFAULT_PRECISION = 8;
 let PRECISION = DEFAULT_PRECISION;
 
 export function setPrecision(digits = DEFAULT_PRECISION) {
