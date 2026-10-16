@@ -10,6 +10,7 @@ Interactive mathematics: homotopies, geometric realizations, carriers, and ambig
 - `homotopy-explorer.html` — homotopies, obstructions, map classes, and homotopy types
 - `realization-carrier-explorer.html` — realizations, carriers, building maps, prisms, and cones
 - `ambiguity-explorer.html` — ambiguity complexes and query geometry
+- `contraction-explorer.html` — selector edge contractions preserving both output regions and their intersection; pure model in `contraction-model.js`, drawing in `contraction-explorer.js`
 
 Each explorer is a standalone HTML file. No installation or build step is required.
 The mathematical references are linked inside the explorers.
@@ -43,3 +44,5 @@ resolved mark geometry, screenshots in both colour schemes, and every design tok
 resolved to sRGB. It is the fidelity gate for the rebuild.
 
 See `docs/` for the engine plan and phase notes.
+
+Contraction checks: `node tests/contraction/verify.mjs` checks all 384 eligible local contractions across the 254 nonconstant three-variable functions, exact intersection preservation, inverse stellar subdivisions, and animation geometry.
