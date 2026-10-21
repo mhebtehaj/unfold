@@ -1,0 +1,32 @@
+<div id="compatible-pairs-lesson">
+  <h3>Possible pairings become new vertices</h3>
+  <div class="viz-row"><button class="btn" type="button" data-pair="A" aria-pressed="true">A: a ↔ ab</button><button class="btn" type="button" data-pair="B" aria-pressed="true">B: b ↔ bc</button><button class="btn" type="button" data-pair="C" aria-pressed="false">C: c ↔ ca</button></div>
+  <svg class="cp-plot" role="img" aria-label="Compatibility complex: three vertices and three edges, without a filled triangle"></svg>
+  <div id="cp-status" class="text-small" aria-live="polite"></div>
+</div>
+<style>
+#compatible-pairs-lesson .cp-plot{display:block;width:100%;height:245px;}
+#compatible-pairs-lesson .cp-plot text{fill:var(--foreground);font-size:var(--font-size-base);}
+</style>
+<script>
+(()=>{
+  const root=document.getElementById('compatible-pairs-lesson'),svg=root.querySelector('svg'),status=root.querySelector('#cp-status');
+  const ns='http://www.w3.org/2000/svg';let chosen=['A','B'];
+  const add=(tag,attrs,text)=>{const el=document.createElementNS(ns,tag);for(const[k,v]of Object.entries(attrs))el.setAttribute(k,v);if(text!==undefined)el.textContent=text;svg.appendChild(el);return el;};
+  function restore(s){const v=s?.modelContent?.selectedPairs;if(Array.isArray(v)&&v.every(k=>['A','B','C'].includes(k)))chosen=[...new Set(v)];}
+  function save(){window.openai?.setWidgetState({modelContent:{selectedPairs:chosen},privateContent:null}).catch(()=>{});}
+  function draw(){
+    root.querySelectorAll('[data-pair]').forEach(b=>b.setAttribute('aria-pressed',String(chosen.includes(b.dataset.pair))));
+    const w=root.clientWidth||600,span=Math.min(w-100,340),p={A:[w/2,35],B:[(w-span)/2,205],C:[(w+span)/2,205]};
+    svg.setAttribute('viewBox',`0 0 ${w} 245`);svg.replaceChildren();
+    for(const [a,b]of [['A','B'],['B','C'],['C','A']]){const active=chosen.length===2&&chosen.includes(a)&&chosen.includes(b);add('line',{x1:p[a][0],y1:p[a][1],x2:p[b][0],y2:p[b][1],stroke:active?'var(--viz-series-1)':'var(--border)','stroke-width':active?4:1.7});}
+    add('text',{x:w/2,y:139,'text-anchor':'middle'},'no filled triangle');
+    for(const[k,[x,y]]of Object.entries(p)){if(chosen.includes(k))add('circle',{cx:x,cy:y,r:23,fill:'var(--viz-series-1)','fill-opacity':0.2});add('circle',{cx:x,cy:y,r:17,fill:'var(--background)',stroke:'var(--foreground)','stroke-width':1.2});add('text',{x,y,'text-anchor':'middle','dominant-baseline':'central'},k);}
+    status.textContent=chosen.length===3?'A, B, C together: directed cycle, so this triple is not a face.':chosen.length===2?`${chosen.join(' and ')}: compatible pair, represented by an edge.`:chosen.length===1?`${chosen[0]}: one legal operation, represented by a vertex.`:'Empty selection: no operations.';
+    root.dataset.count=String(chosen.length);
+  }
+  restore(window.openai?.widgetState);
+  root.querySelectorAll('[data-pair]').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.pair;chosen=chosen.includes(k)?chosen.filter(x=>x!==k):[...chosen,k];draw();save();}));
+  window.addEventListener('openai:set_globals',e=>{restore(e.detail?.globals?.widgetState);draw();});new ResizeObserver(draw).observe(root);draw();
+})();
+</script>

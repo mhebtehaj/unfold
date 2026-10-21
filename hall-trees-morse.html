@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="From choosing distinct representatives to a space of compatible choices.">
+  <title>Hall, trees, and Morse matchings · Unfold</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 8l8-4 8 8 8-4v16l-8 4-8-8-8 4z' fill='%237968bf'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/explainer.css">
+  <script src="assets/explainer.js" defer></script>
+</head>
+<body>
+<main>
+  <nav aria-label="Site"><a href="index.html">← Unfold</a></nav>
+  <header><h1>Hall, trees, and Morse matchings</h1><p class="intro">From choosing distinct representatives to a space of compatible choices.</p></header>
+  <p>The common question is: <strong>can local choices fit together into one global object?</strong> Start with ordinary matching, add a condition that prevents cycles, then make a space whose faces record the choices that work together.</p>
+
+  <section id="hall">
+    <span class="step">1 · Choosing representatives</span>
+    <h2>Hall’s condition measures room to choose.</h2>
+    <p>Suppose each set S<sub>i</sub> lists the representatives allowed for request i. We want one representative from each set, with no repetitions. Hall’s theorem says this is possible exactly when every collection I of requests has at least |I| available representatives altogether:</p>
+    <div class="equation">|⋃<sub>i∈I</sub> S<sub>i</sub>| ≥ |I|.</div>
+    <p>For example, three requests all restricted to {a,b} cannot be satisfied. The obstruction is visible before choosing anything: three requests have only two possible answers.</p>
+  </section>
+
+  <section id="trees">
+    <span class="step">2 · Choosing edges</span>
+    <h2>One extra vertex turns the condition into a tree theorem.</h2>
+    <p>Now take n sets on n+1 vertices. Each S<sub>i</sub> specifies a complete graph: you may choose any pair of its vertices as an edge. Can you choose one edge per set so that the chosen edges form a spanning tree?</p>
+    <div class="equation">|⋃<sub>i∈I</sub> S<sub>i</sub>| ≥ |I| + 1 &nbsp; for every nonempty I.</div>
+    <p>This condition is necessary and sufficient. It is the <strong>dragon marriage theorem</strong>, a plausible match for the remembered theorem about selecting edges from complete graphs.</p>
+    <p class="source">Source: <a href="https://math.mit.edu/~apost/papers/permutohedron.pdf#page=4">Postnikov, <cite>Permutohedra, associahedra, and beyond</cite>, Remark 3.2 and Proposition 3.3</a>.</p>
+    <p>Here the three sets are {a,b,c}, {b,c,d}, and {a,c,d}. A single set has three vertices; any two, or all three, cover four vertices. The condition holds. Try choosing ab, bc, cd, then compare with ab, bc, ac.</p>
+    <div class="example">
+      <iframe data-demo src="explainers/choose-a-rainbow-tree.html" title="Choose one edge from each of three cliques"></iframe>
+      <p class="caption"><a href="explainers/choose-a-rainbow-tree.html">Open this example separately</a></p>
+    </div>
+    <p>In the second choice, the edges close a triangle and leave d isolated. The theorem guarantees that a good selection exists; it does not say every selection works.</p>
+  </section>
+
+  <section id="morse">
+    <span class="step">3 · Giving a forest a direction</span>
+    <h2>A rooted forest is a Morse matching on a graph.</h2>
+    <p>Choose a root in each tree. Pair every other vertex with the first edge on its path toward the root. No vertex or edge occurs in two pairs.</p>
+    <p>To check the Morse condition, draw the <strong>incidence diagram</strong>: its nodes are the graph’s vertices and edges. Direct incidences from edges down to vertices, then reverse the paired ones. A Morse matching requires this directed diagram to have no directed cycle. On a graph, these matchings correspond exactly to rooted forests.</p>
+    <p class="source">Source: <a href="https://arxiv.org/pdf/math/0011234#page=3">Chari and Joswig, <cite>Discrete Morse Complexes</cite>, Proposition 3.1</a>. “Morse functions” here are identified when they induce the same matching.</p>
+    <p>Use the triangle boundary as the original graph. Pair a with ab and b with bc. Following arrows gives a → ab → b → bc → c. Add the third pair, c with ca, and the route closes back at a.</p>
+    <div class="example">
+      <iframe data-demo src="explainers/forest-to-morse-matching.html" title="Follow arrows in a rooted forest or a cyclic matching"></iframe>
+      <p class="caption"><a href="explainers/forest-to-morse-matching.html">Open this example separately</a></p>
+    </div>
+    <p>With just the first two pairs, c and the unused edge ca are <strong>critical</strong>, meaning unpaired. This is consistent with the original graph having one loop: the chosen tree contracts, but the extra edge remains.</p>
+  </section>
+
+  <section id="complex">
+    <span class="step">4 · Making a space of choices</span>
+    <h2>The matchings themselves form a topological object.</h2>
+    <p>Make each possible vertex–edge pairing a new vertex. Declare a collection to be a face when its pairings together form a Morse matching. Removing pairs preserves validity, so this is a simplicial complex: the <strong>discrete Morse complex</strong>.</p>
+    <p class="source">Source: <a href="https://arxiv.org/pdf/math/0011234#page=2">Chari and Joswig, Section 2</a>.</p>
+    <p>Restrict attention to A=(a,ab), B=(b,bc), and C=(c,ca). Each pair of choices works. All three together create the directed cycle above. Therefore the new space has three vertices and three edges, but no filled triangle.</p>
+    <div class="example">
+      <iframe data-demo src="explainers/complex-of-compatible-pairs.html" title="A triangle boundary recording compatible Morse pairings"></iframe>
+      <p class="caption"><a href="explainers/complex-of-compatible-pairs.html">Open this example separately</a></p>
+    </div>
+    <p>This circle is the subcomplex on those three chosen pairings. The full discrete Morse complex also includes the other possible vertex–edge pairings.</p>
+  </section>
+
+  <section id="ambiguity">
+    <span class="step">5 · Returning to decision trees</span>
+    <h2>Where this meets the ambiguity complex.</h2>
+    <p>For a Boolean function f, an ambiguous partial assignment has completions giving both outputs. Its known literals form a face of the ambiguity complex X<sub>f</sub>. Forgetting a literal preserves ambiguity, which explains the downward closure.</p>
+    <p>Take f(x)=x₁∨x₂∨x₃. Each single zero, and each pair of zeros, leaves the output undecided. Three zeros force output 0; any revealed one forces output 1. Thus X<sub>f</sub> is a triangle boundary on the three zero literals.</p>
+    <p>A decision tree starts at the empty assignment. Each query offers two answer extensions. A branch stays inside X<sub>f</sub> while uncertainty remains and leaves it when the output becomes determined. The all-zero branch grows from the empty face to a vertex, then an edge, then exits through the missing triangle.</p>
+    <p class="next"><strong>The connection is real, but a correspondence still needs work.</strong> Morse paths alternate adding and removing faces. Query histories only add information, retain query labels, and must support both answers. A space of compatible local choices is a natural construction to investigate; identifying its faces with valid decision trees requires additional conditions. Its topology alone does not yet give a decision-tree cost bound.</p>
+    <p><a href="ambiguity-explorer.html">Explore the ambiguity complex →</a></p>
+  </section>
+  <footer><a href="index.html">More explorations</a> · <a href="https://github.com/mhebtehaj/unfold">Source on GitHub</a></footer>
+</main>
+</body>
+</html>

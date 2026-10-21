@@ -1,0 +1,68 @@
+<div id="rainbow-tree-lesson">
+  <h3>One edge from each clique</h3>
+  <div class="viz-controls" id="rt-controls">
+    <label class="form-label">Clique 1: {a, b, c}<select class="form-select" data-color="0" aria-label="Edge from clique 1"><option>ab</option><option>ac</option><option>bc</option></select></label>
+    <label class="form-label">Clique 2: {b, c, d}<select class="form-select" data-color="1" aria-label="Edge from clique 2"><option>bc</option><option>bd</option><option>cd</option></select></label>
+    <label class="form-label">Clique 3: {a, c, d}<select class="form-select" data-color="2" aria-label="Edge from clique 3"><option>ac</option><option>ad</option><option selected>cd</option></select></label>
+  </div>
+  <div class="viz-row"><button class="btn" type="button" data-preset="tree">Tree example</button><button class="btn" type="button" data-preset="cycle">Cycle example</button></div>
+  <svg class="rt-plot" role="img" aria-label="Four vertices and three chosen edges, colored by their source clique"></svg>
+  <div class="text-small" id="rt-status" aria-live="polite"></div>
+</div>
+<style>
+#rainbow-tree-lesson .rt-plot { display:block; width:100%; height:270px; }
+#rainbow-tree-lesson .rt-plot text { fill:var(--foreground); font-size:var(--font-size-base); }
+</style>
+<script>
+(() => {
+  const root = document.getElementById('rainbow-tree-lesson');
+  const svg = root.querySelector('svg');
+  const status = root.querySelector('#rt-status');
+  const selects = [...root.querySelectorAll('select')];
+  const options = [['ab','ac','bc'],['bc','bd','cd'],['ac','ad','cd']];
+  let chosen = ['ab','bc','cd'];
+  const ns = 'http://www.w3.org/2000/svg';
+  const add = (tag, attrs, text) => { const el=document.createElementNS(ns,tag); for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v); if(text!==undefined)el.textContent=text;svg.appendChild(el);return el; };
+  function restore(state) {
+    const vals=state?.modelContent?.rainbowEdges;
+    if(Array.isArray(vals)&&vals.length===3&&vals.every((e,i)=>options[i].includes(e)))chosen=[...vals];
+  }
+  function save(){window.openai?.setWidgetState({modelContent:{rainbowEdges:chosen},privateContent:null}).catch(()=>{});}
+  function draw(){
+    selects.forEach((el,i)=>el.value=chosen[i]);
+    const w=root.clientWidth||600, h=270;
+    svg.setAttribute('viewBox',`0 0 ${w} ${h}`);svg.replaceChildren();
+    const span=Math.min(w-100,330), left=(w-span)/2, right=left+span;
+    const p={a:[left,55],b:[right,55],c:[right,205],d:[left,205]};
+    const all=['ab','ac','ad','bc','bd','cd'];
+    for(const e of all){const a=p[e[0]],b=p[e[1]];add('line',{x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'var(--border)','stroke-width':1.3});}
+    chosen.forEach((e,i)=>{
+      const a=p[e[0]],b=p[e[1]],dx=b[0]-a[0],dy=b[1]-a[1],length=Math.hypot(dx,dy);
+      const duplicates=chosen.map((q,j)=>q===e?j:-1).filter(j=>j>=0);
+      const offset=(duplicates.indexOf(i)-(duplicates.length-1)/2)*8;
+      const ox=-dy/length*offset,oy=dx/length*offset;
+      add('line',{x1:a[0]+ox,y1:a[1]+oy,x2:b[0]+ox,y2:b[1]+oy,stroke:`var(--viz-series-${i+1})`,'stroke-width':4,'stroke-linecap':'round'});
+      const labelX=(a[0]+b[0])/2+ox,labelY=(a[1]+b[1])/2+oy;
+      add('circle',{cx:labelX,cy:labelY,r:12,fill:'var(--background)'});
+      add('text',{x:labelX,y:labelY,'text-anchor':'middle','dominant-baseline':'central'},String(i+1));
+    });
+    for(const [v,[x,y]] of Object.entries(p)){
+      add('circle',{cx:x,cy:y,r:17,fill:'var(--background)',stroke:'var(--foreground)','stroke-width':1.3});
+      add('text',{x,y,'text-anchor':'middle','dominant-baseline':'central'},v);
+    }
+    const parents={a:'a',b:'b',c:'c',d:'d'};
+    const find=x=>parents[x]===x?x:(parents[x]=find(parents[x]));
+    let cycle=false; for(const e of chosen){const a=find(e[0]),b=find(e[1]);if(a===b)cycle=true;else parents[a]=b;}
+    const components=new Set(Object.keys(parents).map(find)).size;
+    const duplicate=new Set(chosen).size<3;
+    const isolated=Object.keys(parents).filter(v=>!chosen.some(e=>e.includes(v)));
+    status.textContent=duplicate?'Repeated edge: the three representatives are not distinct.':cycle?`Cycle: ${components} components; ${isolated.join(', ')} is isolated.`:'Spanning tree: three distinct edges, connected, no cycle.';
+    root.dataset.result=duplicate?'duplicate':cycle?'cycle':'tree';
+  }
+  restore(window.openai?.widgetState);
+  selects.forEach((el,i)=>el.addEventListener('change',()=>{chosen[i]=el.value;draw();save();}));
+  root.querySelectorAll('[data-preset]').forEach(btn=>btn.addEventListener('click',()=>{chosen=btn.dataset.preset==='tree'?['ab','bc','cd']:['ab','bc','ac'];draw();save();}));
+  window.addEventListener('openai:set_globals',event=>{restore(event.detail?.globals?.widgetState);draw();});
+  new ResizeObserver(draw).observe(root);draw();
+})();
+</script>

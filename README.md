@@ -46,3 +46,7 @@ resolved to sRGB. It is the fidelity gate for the rebuild.
 See `docs/` for the engine plan and phase notes.
 
 Contraction checks: `node tests/contraction/verify.mjs` checks all 384 eligible local contractions across the 254 nonconstant three-variable functions, exact intersection preservation, inverse stellar subdivisions, and animation geometry.
+
+## Adding short explanations
+
+Use `python3 tools/new-explainer.py topic-name "Topic name" --description "What the example shows."` to create a lesson and add its homepage link. See [the quick publishing workflow](docs/quick-explainers.md). No build step is needed for these pages.
