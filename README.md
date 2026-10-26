@@ -10,6 +10,7 @@ Interactive mathematics: homotopies, geometric realizations, carriers, and ambig
 - `homotopy-explorer.html` — homotopies, obstructions, map classes, and homotopy types
 - `realization-carrier-explorer.html` — realizations, carriers, building maps, prisms, and cones
 - `ambiguity-explorer.html` — ambiguity complexes and query geometry
+- `blocker-explorer.html` — trees, blockers, and independence complexes on the six exits of two-bit OR
 - `contraction-explorer.html` — selector edge contractions preserving both output regions and their intersection; pure model in `contraction-model.js`, drawing in `contraction-explorer.js`
 
 Each explorer is a standalone HTML file. No installation or build step is required.
@@ -38,6 +39,7 @@ directly, because ES modules do not load over `file://`.
     npm run layers       # engine layering invariants
     npm run baseline     # compare the pages against the captured baseline
     npm run probe        # dump every page's live control surface
+    node --test tests/blocker-model.test.mjs  # exact OR example and homology checks
 
 `baseline/` records what the site looked like and did before the engine work began —
 resolved mark geometry, screenshots in both colour schemes, and every design token

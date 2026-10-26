@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en" data-ground="paper" data-hue="violet">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="See whole query trees, blocker adversaries, and a three-dimensional complex on the same six ordered exits of OR on two bits.">
+  <meta name="color-scheme" content="light dark">
+  <title>Trees &amp; blockers · Unfold</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 25L16 4L28 25Z M4 25L17 18L16 4 M17 18L28 25' fill='none' stroke='%237360b5' stroke-width='2'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="engine/unfold.css">
+  <link rel="stylesheet" href="pages/blocker-explorer.css">
+</head>
+<body>
+<nav class="uf-nav" aria-label="Back to all explorers"><a href="index.html"><span aria-hidden="true">←</span> Unfold</a></nav>
+<main class="blocker-page">
+  <header class="intro">
+    <p class="eyebrow">One function · six exits · four complexes</p>
+    <h1>Whole trees. Whole adversaries.<br>Different meanings of a face.</h1>
+    <p>Take <span class="math">f(x,y) = x OR y</span>. A vertex records an entire execution, ending at the first query that determines the answer. Keep those six vertices fixed and change which sets are faces.</p>
+  </header>
+
+  <section class="exit-key" aria-labelledby="exit-title">
+    <div class="section-heading"><h2 id="exit-title">The six ordered exits</h2><span>Blue: query x first · Orange: query y first</span></div>
+    <p class="small">An ordered transcript is <span class="math">τ = ((i₁,b₁), …, (iₖ,bₖ))</span>, with no repeated query and length <span class="math">ℓ(τ) = k</span>. Write <span class="math">f|<sub>τ</sub></span> for the restriction along it. An exit first determines the output at its final query. Here the exit set is <span class="math">ℰ<sub>f</sub> = {a,b,c,d,e,f}</span>.</p>
+    <div id="exit-key" class="exit-cards"></div>
+    <p class="small">The two complete trees have exit sets <span class="math">{a,b,c}</span> and <span class="math">{d,e,f}</span>. A whole tree is a triangle, not a vertex.</p>
+  </section>
+
+  <section class="explorer" aria-labelledby="explorer-title">
+    <div class="section-heading"><h2 id="explorer-title">Choose what a face means</h2><button id="reset" type="button">Reset</button></div>
+    <div class="mode-buttons" role="group" aria-label="Complex">
+      <button type="button" data-mode="trees" aria-pressed="false">𝒯<sub>f</sub> · partial trees</button>
+      <button type="button" data-mode="adversaries" aria-pressed="false">𝒜<sub>f</sub> · partial adversaries</button>
+      <button type="button" data-mode="noTree" aria-pressed="true">I(𝒯<sub>f</sub><sup>max</sup>) · no whole tree</button>
+      <button type="button" data-mode="noAdversary" aria-pressed="false">I(𝒜<sub>f</sub><sup>max</sup>) · no whole adversary</button>
+      <button type="button" data-mode="trimmed" aria-pressed="false">Only remove the top faces</button>
+    </div>
+    <div class="mode-intro" aria-live="polite"><h3 id="mode-title"></h3><p id="mode-meaning"></p></div>
+    <div class="metrics" id="metrics"></div>
+    <div class="drawing-grid">
+      <figure>
+        <figcaption>All vertices · selected maximal face highlighted</figcaption>
+        <svg id="incidence" viewBox="0 0 420 275" role="img" aria-label="The six exits, with the selected maximal face highlighted"></svg>
+        <p class="small">Lines show the 1-skeleton. Crossings in this drawing do not create vertices. Filled triangles are drawn only for the selected face.</p>
+      </figure>
+      <figure>
+        <figcaption id="facet-heading">One maximal face</figcaption>
+        <svg id="solid" viewBox="0 0 420 275" role="img" aria-label="Rotatable geometric realization of one maximal face"></svg>
+        <div class="rotation-controls"><label>Turn <input id="yaw" type="range" min="-180" max="180" value="24"></label><label>Tilt <input id="pitch" type="range" min="-70" max="70" value="-12"></label></div>
+        <p class="small" id="solid-note"></p>
+      </figure>
+    </div>
+    <div class="facet-picker"><span>Inspect a maximal face:</span><div id="facets" role="group" aria-label="Maximal faces"></div></div>
+    <p id="geometry"></p><p class="topology" id="topology"></p>
+  </section>
+
+  <section class="selection" aria-labelledby="selection-title">
+    <div class="section-heading"><h2 id="selection-title">Does this set belong?</h2><span>Keep the set and switch complexes above.</span></div>
+    <div id="exit-selection" class="exit-selection" role="group" aria-label="Select exits"></div>
+    <div class="presets"><button type="button" data-preset="27">Mixed tetrahedron {a,b,d,e}</button><button type="button" data-preset="7">Whole tree {a,b,c}</button><button type="button" data-preset="36">Short exits {c,f}</button><button type="button" data-preset="63">All six</button><button type="button" data-preset="0">Empty set</button></div>
+    <div id="membership" class="membership" role="status"><p id="membership-title"></p><p id="membership-reason"></p></div>
+  </section>
+
+  <section class="explanation" aria-labelledby="remove-title">
+    <p class="eyebrow">What does I remove?</p>
+    <h2 id="remove-title">Start with every subset. Forbid a whole tree and every set containing it.</h2>
+    <p>Write 𝒯<sub>f</sub><sup>max</sup> = {{a,b,c}, {d,e,f}}. The independence complex is</p>
+    <p class="formula">I(𝒯<sub>f</sub><sup>max</sup>) = {U ⊆ ℰ<sub>f</sub> : {a,b,c} ⊈ U and {d,e,f} ⊈ U}.</p>
+    <p>The tree sets are <strong>maximal allowed faces</strong> in 𝒯<sub>f</sub>. They become <strong>minimal forbidden faces</strong> in I(𝒯<sub>f</sub><sup>max</sup>): each is excluded, but all its proper subsets are allowed.</p>
+    <p>There are 64 subsets to start with, including the empty set. Exclude the 8 sets containing {a,b,c} and the 8 containing {d,e,f}; their overlap is the full six-element set. This leaves <strong>49 faces including the empty face</strong>.</p>
+    <div class="comparison">
+      <article><h3>Remove the facets from 𝒯<sub>f</sub></h3><p>The two filled triangles lose their interiors. Only their edges and vertices remain. Mixed edges and triangles are still absent.</p><p class="answer">Dimension 1 · two circles</p></article>
+      <article><h3>Form I(𝒯<sub>f</sub><sup>max</sup>)</h3><p>Mixed sets are allowed. A maximal set has two vertices from each triple: four vertices form a tetrahedron. There are 3 × 3 = 9 choices.</p><p class="answer">Dimension 3 · a triangulated S³</p></article>
+    </div>
+    <p>The nine tetrahedra are glued according to their shared vertex sets. Together they form the join of two triangle boundaries, ∂Δ{a,b,c} * ∂Δ{d,e,f}. This is a 3-sphere. The explorer shows each tetrahedron in ordinary 3D; it does not claim to embed the whole 3-sphere in 3D.</p>
+  </section>
+
+  <section class="dictionary" aria-labelledby="dictionary-title">
+    <h2 id="dictionary-title">The same exits, four different questions</h2>
+    <p>𝒯<sub>f</sub> is the complex of partial trees; 𝒜<sub>f</sub> is the complex of partial adversary strategies. A partial tree <span class="math">S ∈ 𝒯<sub>f</sub></span> is represented by its selected exits.</p>
+    <p class="formula">𝒯<sub>f</sub><sup>max</sup> := Facets(𝒯<sub>f</sub>), &nbsp; 𝒜<sub>f</sub><sup>max</sup> := Facets(𝒜<sub>f</sub>).</p>
+    <p>Here “max” means <strong>inclusion-maximal</strong>. Write <span class="math">T ∈ 𝒯<sub>f</sub><sup>max</sup></span> for a complete tree and <span class="math">A ∈ 𝒜<sub>f</sub><sup>max</sup></span> for a complete adversary.</p>
+    <div class="table-wrap"><table><thead><tr><th>Complex</th><th>A face U means…</th><th>Maximal faces</th></tr></thead><tbody>
+      <tr><td>𝒯<sub>f</sub></td><td>These executions fit together in one algorithm.</td><td>Complete trees T</td></tr>
+      <tr><td>𝒜<sub>f</sub></td><td>These executions fit together in one adaptive adversary.</td><td>Complete adversaries A</td></tr>
+      <tr><td>I(𝒯<sub>f</sub><sup>max</sup>)</td><td>U contains no complete tree; one adversary avoids every exit in U.</td><td>ℰ<sub>f</sub> ∖ A</td></tr>
+      <tr><td>I(𝒜<sub>f</sub><sup>max</sup>)</td><td>U contains no complete adversary; one algorithm avoids every exit in U.</td><td>ℰ<sub>f</sub> ∖ T</td></tr>
+    </tbody></table></div>
+    <p class="formula">b(𝒯<sub>f</sub><sup>max</sup>) = 𝒜<sub>f</sub><sup>max</sup>, &nbsp; b(𝒜<sub>f</sub><sup>max</sup>) = 𝒯<sub>f</sub><sup>max</sup>, &nbsp; T ∩ A = {τ(T,A)}.</p>
+    <p>𝒯<sub>f</sub><sup>max</sup> and 𝒜<sub>f</sub><sup>max</sup> are a clutter and its blocker. The two independence complexes are Alexander dual on the exit set ℰ<sub>f</sub>. 𝒯<sub>f</sub> and 𝒜<sub>f</sub> are not, in general, that Alexander-dual pair.</p>
+    <p>For a budget k, let L<sub>k</sub> = {τ ∈ ℰ<sub>f</sub> : ℓ(τ) ≤ k} be the exits of length at most k. Then D(f) &gt; k exactly when L<sub>k</sub> is a face of I(𝒯<sub>f</sub><sup>max</sup>). For OR on two bits, L<sub>1</sub> = {c,f}; adversary {a,d} avoids both, forcing two queries.</p>
+    <p class="small">The example is an exact finite illustration. It does not establish a new general query-complexity lower bound.</p>
+    <details><summary>Mathematical references</summary><p><a href="https://dimacs.rutgers.edu/archive/TechnicalReports/TechReports/2006/2006-16.pdf#page=4">Andrade–Boros–Gurvich, Proposition 1 and Remark 1</a>: cographs, blocker duality, and perfect-information games. <a href="https://arxiv.org/abs/0710.1172">Björner–Tancer</a>: combinatorial Alexander duality.</p></details>
+  </section>
+  <footer class="page-footer"><a href="index.html">← All Unfold explorers</a><span>OR on two bits · all 64 exit subsets</span></footer>
+</main>
+<noscript><p>This explorer needs JavaScript for the drawings and controls. The definitions and comparison on this page remain readable.</p></noscript>
+<script type="module" src="pages/blocker-explorer.js"></script>
+</body>
+</html>

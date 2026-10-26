@@ -1,0 +1,402 @@
+/* unfold.css — the one stylesheet.
+ *
+ * Tokens first, then components, then breakpoints. Every colour is defined
+ * once, as a light-dark() pair, in a custom property below; a component rule
+ * never names a colour, only a token (tools/check-layers.mjs enforces this the
+ * same way it keeps colour literals out of the JS).
+ *
+ * A rule enters this file with the first page that can verify it. Phase 2
+ * ported the homepage, so what is here is the token layer, the page chrome and
+ * the homepage's own components, each held to the captured baseline, plus the
+ * explorers' back-link bar, held to the three copies it replaces by a fixture
+ * test. Explorer components arrive with the ports that exercise them.
+ */
+
+/* ---- tokens ------------------------------------------------------------- */
+:root{
+  color-scheme:light dark;
+
+  /* surfaces — the white "work" ground of the explorers */
+  --bg:light-dark(#fff,#181818);
+  --surface:light-dark(#fff,#202126);          /* raised: a tile, a card */
+  --surface-soft:light-dark(#f3f4f7,#272a32);  /* inset or hover fill */
+  --inert:light-dark(#f0f2f5,#292d34);         /* "given" geometry in a drawing */
+  --line:light-dark(#dfe2e7,#393d45);          /* hairline border, 1.2-1.6:1 on purpose */
+  --line-strong:light-dark(#aeb6c1,#727b8b);   /* drawn boundary of inert geometry */
+  --gray:light-dark(#cbd0d9,#606773);          /* neutral geometry stroke */
+
+  /* text */
+  --fg:light-dark(#25282d,#f1f1f2);
+  --muted:light-dark(#626873,#a8adb6);
+  --on-accent:light-dark(#fff,#0d0d0d);
+
+  /* interaction — data-hue (below) repoints --accent at a page hue */
+  --accent:light-dark(#386acf,#96b5ff);
+  --accent-soft:light-dark(#f3f6fd,#242f45);
+
+  /* The selection ring, deliberately NOT a light-dark() pair: a wide light
+     halo under a narrow dark ring is self-contrasting, so the same two values
+     read on white, on #181818, and on a fully saturated data colour. A pair
+     that followed the scheme would vanish against one fill or the other. */
+  --halo:#fff; --ink:#161a21;
+
+  /* semantic: failure red is deliberately heavier than the accents */
+  --good:light-dark(#2a745d,#8fceae);
+  --bad:light-dark(#b23329,#ff9e92);
+
+  /* page hues, weight-matched: every light value sits at 5.1 +/- 0.1 to 1 on
+     white. --orange was #b46942 (4.17:1, the homepage's one AA failure); the
+     fix keeps its hue and chroma and lowers only its lightness. */
+  --violet:light-dark(#7360b5,#b6a3ef);
+  --teal:light-dark(#287a76,#7bc6b9);
+  --orange:light-dark(#a35c37,#e3a07b);
+  --pink:light-dark(#d52b91,#ff8bd1);
+
+  /* data encoding */
+  --zone:light-dark(#a890df33,#a88bea30);      /* translucent region fill */
+  --data-1:light-dark(#3a70e1,#7fa8f2);
+  --data-2:light-dark(#e66b43,#f09a76);
+  --data-3:light-dark(#1f9078,#6fd0ae);
+  --data-4:light-dark(#9e5fd6,#bd93ea);
+  --face-1:light-dark(#3979df,#7fa8f2);
+  --face-2:light-dark(#c4761f,#e9a253);
+  --face-3:light-dark(#239b86,#5cc0ad);
+
+  /* Every colour token above is measured by tests/unfold-css.test.mjs. The
+     scales below carry only the steps a verified rule uses; the rest of each
+     scale arrives with the component that needs it. */
+
+  /* type: 14 for "read this", 13 for chrome, 12 for footnotes */
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --fs-xs:12px; --fs-sm:13px; --fs-base:14px; --fs-md:15px; --fs-lg:17px;
+  --fs-display:clamp(30px,4.5vw,47px);
+  --fw-semi:600; --fw-head:650;                /* never 700, never bold */
+  --lh-body:1.5; --lh-head:1.3; --lh-tight:1.14;
+
+  /* geometry */
+  --r-xs:2px; --r-lg:14px;
+  --shell:1100px; --shell-pad-x:24px;          /* the explorers' column, as the back link sees it */
+
+  /* motion and focus: one transition on the whole site */
+  --dur:.18s; --lift:-4px; --focus-w:3px;
+}
+
+/* ---- grounds -------------------------------------------------------------
+ * Two, deliberately. The explorers work on white; the homepage is paper, the
+ * single strongest cue that it is a place to look and the explorers are places
+ * to work. Paper brings its own ink — the homepage's neutrals were tuned
+ * against it — so a ground swaps the neutral set as a unit, not one background
+ * token. It follows :root at equal specificity, so it wins wherever it applies.
+ */
+[data-ground=paper]{
+  --bg:light-dark(#faf9f6,#191a1d);
+  --fg:light-dark(#24252a,#eeeef2);
+  --muted:light-dark(#6c6d77,#acadb8);
+  --line:light-dark(#dedee4,#393a43);
+  --lh-body:1.55;
+}
+/* A ground paints and sets type itself, so it works at any depth. */
+:root,[data-ground]{font:16px/var(--lh-body) var(--font);background:var(--bg);color:var(--fg)}
+
+/* ---- the page hue --------------------------------------------------------
+ * data-hue promotes one hue to --accent: on <html> for a whole page, on any
+ * element for part of one — each homepage tile carries its explorer's hue this
+ * way, and its border, focus ring, call to action and currentColor drawing all
+ * follow. Unscoped, so it works at any depth, and it needs no inline style.
+ * Pink is a data colour, not a page hue: at 4.58:1 it is outside the band.
+ */
+[data-hue=violet]{--accent:var(--violet)}
+[data-hue=teal]{--accent:var(--teal)}
+[data-hue=orange]{--accent:var(--orange)}
+
+/* ---- reset -------------------------------------------------------------- */
+*{box-sizing:border-box}
+body{margin:0}
+a{color:inherit}
+
+/* ---- homepage column ---------------------------------------------------- */
+/* The explorers' column arrives with their ports: homotopy's is 1080px wide
+   with 22px/24px padding and realization's 1100px with 21px/24px, and which
+   one wins is that phase's decision to verify, not this file's to guess. */
+.uf-home{max-width:1080px;margin:auto;padding:38px 32px 24px}
+
+/* ---- back-navigation bar -------------------------------------------------
+ * The explorers' back link, until now three byte-identical <style> blocks
+ * with hardcoded colours. On the work ground and the default accent, --muted
+ * and --accent resolve to exactly the literals those copies use. A page that
+ * takes a data-hue gets its hover and focus in that hue — one accent per page —
+ * which makes adopting a hue a visible change, decided at that page's port.
+ */
+.uf-nav{max-width:var(--shell);margin:0 auto;padding:14px var(--shell-pad-x) 0;font:var(--fs-sm)/1.5 var(--font)}
+/* Full bleed, for an explorer whose figure is the width of the window rather
+   than of a column. The bar keeps its own left edge in line with the content
+   below it, which is the whole job of the variant.
+   Its own metrics are the bar's, unchanged: a page that needs what FOLLOWS it
+   to start on a whole pixel says so itself (see pages/ambiguity.css), rather
+   than having this bar quietly re-set its line height for everyone. */
+.uf-nav--bleed{max-width:none;margin:0;padding:16px 16px 12px}
+.uf-nav a{color:var(--muted);text-decoration:none;display:inline-flex;align-items:center;gap:7px;padding:3px 0}
+.uf-nav a:hover{color:var(--accent)}
+.uf-nav a:focus-visible{outline:2px solid var(--accent);outline-offset:4px;border-radius:var(--r-xs)}
+
+/* ---- brand -------------------------------------------------------------- */
+.uf-brand{display:flex;align-items:center;gap:10px;font-size:22px;font-weight:var(--fw-head);letter-spacing:-.7px}
+.uf-brand svg{width:30px;height:30px;color:var(--violet)}
+
+/* ---- homepage intro: the only display type on the site ------------------ */
+.uf-intro{margin:70px 0 38px}
+.uf-intro h1{font-size:var(--fs-display);line-height:var(--lh-tight);letter-spacing:-1.6px;font-weight:var(--fw-semi);margin:0 0 16px}
+.uf-intro p{font-size:var(--fs-lg);color:var(--muted);margin:0}
+
+/* ---- homepage tiles ------------------------------------------------------
+ * The whole tile is one link. Its illustration is painted in currentColor, so
+ * the tile's data-hue recolours border, ring, drawing and call to action at
+ * once and nothing else on it is coloured. margin-top:auto on the call to
+ * action keeps the three tiles' last lines level whatever their copy.
+ */
+.uf-tiles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.uf-tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);text-decoration:none;overflow:hidden;display:flex;flex-direction:column;transition:transform var(--dur),border-color var(--dur)}
+.uf-tile:hover{transform:translateY(var(--lift));border-color:var(--accent)}
+.uf-tile:focus-visible{outline:var(--focus-w) solid var(--accent);outline-offset:5px}
+.uf-tile__art{height:170px;margin:12px 18px 0;border-bottom:1px solid var(--line);color:var(--accent)}
+.uf-tile__art svg{width:100%;height:100%;display:block}
+.uf-tile__copy{padding:23px 24px 22px;display:flex;flex-direction:column;flex:1}
+.uf-tile h2{font-size:20px;line-height:var(--lh-head);letter-spacing:-.4px;font-weight:var(--fw-semi);margin:0 0 10px}
+.uf-tile__copy p{font-size:var(--fs-base);color:var(--muted);margin:0 0 22px}
+.uf-tile__cta{font-size:var(--fs-sm);font-weight:var(--fw-semi);margin-top:auto;color:var(--accent);display:flex;justify-content:space-between}
+.uf-tile__cta>span{font-size:19px;line-height:1}
+
+/* ---- footer ------------------------------------------------------------- */
+.uf-footer{margin-top:34px;padding:20px 0 8px;border-top:1px solid var(--line);color:var(--muted);font-size:var(--fs-xs);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.uf-footer a{text-decoration:none}
+.uf-footer a:hover{text-decoration:underline}
+
+/* ---- motion ------------------------------------------------------------- */
+@media(prefers-reduced-motion:reduce){
+  .uf-tile{transition:none}
+  .uf-tile:hover{transform:none}
+}
+
+/* ---- breakpoints ---------------------------------------------------------
+ * 760px turns each homepage tile from a card into a row: the drawing becomes a
+ * narrow rail and loses its rule, because it no longer separates anything.
+ * 370px narrows that rail again. (The explorers break at 600 and 380; the
+ * homepage keeps its own two, which is what it has always done.)
+ */
+@media(max-width:760px){
+  .uf-home{padding:25px 20px}
+  .uf-intro{margin:44px 0 28px}
+  .uf-intro h1{letter-spacing:-1px}
+  .uf-intro p{font-size:var(--fs-md)}
+  .uf-tiles{grid-template-columns:1fr;gap:14px}
+  .uf-tile{display:grid;grid-template-columns:108px 1fr}
+  .uf-tile__art{height:100%;min-height:145px;margin:0 0 0 8px;border:0}
+  .uf-tile__copy{padding:23px 20px 21px 12px}
+  .uf-tile__copy p{margin-bottom:15px}
+  .uf-tile h2{font-size:19px}
+  .uf-footer{margin-top:25px}
+}
+@media(max-width:600px){
+  :root{--shell-pad-x:12px}
+  .uf-nav{padding-top:12px}
+}
+@media(max-width:370px){
+  .uf-home{padding:22px 15px}
+  .uf-tile{grid-template-columns:87px 1fr}
+  .uf-tile__copy{padding-right:14px}
+  .uf-tile h2{font-size:18px}
+}
+
+/* ---- the explorer shell --------------------------------------------------
+ * From here down is the machinery the explorers are made of: the column, the
+ * toolbar, the six controls, the stage and its frames, and the six classes a
+ * drawing paints with. Everything in this section is named for what it IS, so
+ * the same rule serves every explorer — the shipped pages spell each of these
+ * two or three times, once per file, and the copies have drifted.
+ *
+ * Two things are deliberately NOT here: a widget's own grid (the round-trip
+ * diagram's five placed cells) and a widget's own drifted constants. Those
+ * live in the page's stylesheet, where they are one file to read.
+ */
+.uf-shell{max-width:1080px;margin:auto;padding:22px var(--shell-pad-x)}
+.uf-shell h1{font-size:21px;font-weight:var(--fw-head);letter-spacing:-.35px;margin:0}
+
+/* ---- form furniture ------------------------------------------------------
+ * One rule for every button, select and input on the site, rather than the
+ * per-page resets that let two pages' buttons end up 1px apart. 38px is the
+ * comfortable minimum target; the controls that opt out (a Clear beside a
+ * status line) say so once, below.
+ */
+button,select,input{font:inherit}
+button,select{color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:6px;min-height:38px}
+button{padding:6px 13px;cursor:pointer}
+button:hover{background:var(--inert)}
+select{padding:6px 30px 6px 10px;max-width:100%;cursor:pointer}
+button:focus-visible,select:focus-visible,input:focus-visible,svg:focus-visible{outline:var(--focus-w) solid var(--accent);outline-offset:3px}
+[hidden]{display:none!important}
+
+/* ---- toolbar ------------------------------------------------------------- */
+.uf-toolbar{margin-bottom:15px}
+.uf-picker{display:grid;grid-template-columns:minmax(180px,.85fr) minmax(240px,1.3fr);gap:10px 18px;margin-top:12px}
+.uf-picker .uf-field{min-width:0}
+.uf-picker select{width:100%;min-width:0}
+
+/* ---- the six controls ----------------------------------------------------
+ * A field is a label and its input on one line; `--inline` is the shape that
+ * reads as a sentence ("Start winding [ 1 ]"), where the label OWNS the input
+ * and there is no for/id pair to keep in sync.
+ */
+.uf-field{display:flex;align-items:center;gap:9px;font-size:var(--fs-base)}
+.uf-field--inline{gap:8px}
+.uf-controls{display:flex;align-items:center;gap:16px;margin:0 0 18px;flex-wrap:wrap}
+.uf-play{min-width:96px}
+.uf-slider{flex:1;display:flex;align-items:center;gap:12px;min-width:130px}
+/* The glyph is the mathematics, so it is set in the mathematics face. */
+.uf-slider label{font-family:Cambria,Georgia,serif;font-size:19px}
+.uf-slider input{width:100%;min-width:30px;margin:0;accent-color:var(--accent);cursor:pointer;min-height:24px}
+/* tabular + a reserved width: the row cannot jitter as the digits change. */
+.uf-slider output{font-variant-numeric:tabular-nums;font-size:var(--fs-md);min-width:38px}
+.uf-toggle{font-size:var(--fs-base)}
+/* One rule for every pressed control on the site — a toggle and a segment look
+   pressed the same way, which is why neither needs a class for it. The element
+   is named so this outranks `button:hover`: pressed is a state the control is
+   IN, and hovering it must not paint over the answer. */
+button[aria-pressed=true]{border-color:var(--accent);background:var(--accent-soft);color:var(--accent)}
+.uf-segmented{display:flex;gap:8px;margin-bottom:12px}
+.uf-segmented button{font-size:var(--fs-base);flex:1}
+.uf-check{display:flex;align-items:center;gap:8px;font-size:var(--fs-base)}
+.uf-check input{accent-color:var(--accent)}
+
+/* ---- the stage ----------------------------------------------------------- */
+.uf-stage{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,8vw,110px);align-items:stretch}
+/* A fixed label row, so the drawings start on the same line however the
+   labels wrap — the alternative is two columns that disagree by a line. */
+.uf-column{min-width:0;display:grid;grid-template-rows:32px minmax(0,1fr)}
+.uf-column>.uf-frame{align-self:center;width:100%}
+.uf-stack{display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:repeat(3,minmax(0,1fr));gap:10px}
+.uf-space-label{font-size:var(--fs-base);color:var(--muted);margin:0;text-align:center;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.uf-space-label strong{color:var(--fg);font-weight:var(--fw-semi)}
+
+/* ---- a frame ------------------------------------------------------------- */
+.uf-frame{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:transparent}
+.uf-frame--current{border-color:var(--accent)}
+.uf-frame--seamless{border-color:transparent}
+.uf-frame h2{font-size:var(--fs-base);font-weight:550;text-align:center;margin:9px 5px 0;line-height:22px;white-space:nowrap}
+/* The heading's two halves: a sans name and a serif symbol. Both are spans,
+   always, so no page needs a `.plain-label` rule to undo the other spelling. */
+.uf-frame__title{font:inherit;margin:0}
+.uf-sym{font-family:Cambria,Georgia,serif;font-size:18px;margin-left:5px}
+.uf-drawing{position:relative;display:block;width:100%;height:var(--uf-drawing-h,170px);touch-action:none;cursor:crosshair}
+.uf-overlay{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none;z-index:3}
+
+/* ---- what a drawing paints with ------------------------------------------
+ * Six classes, and every mark on every explorer is one of them: inert given
+ * geometry and its drawn boundary, a caption under a rim, a label on a point,
+ * and the quiet marks that are there to be looked past.
+ */
+.uf-drawing text{font-family:inherit;font-size:var(--fs-sm);fill:var(--muted)}
+.uf-inert{fill:var(--inert);stroke:none}
+.uf-inert--hollow{fill:none}
+.uf-inert-edge{fill:none;stroke:var(--line-strong);stroke-width:1.5;pointer-events:none}
+/* Scoped under .uf-drawing so they outrank the `text` default above — a bare
+   .uf-caption loses to `.uf-drawing text` on specificity, silently. */
+.uf-drawing .uf-caption{font-size:var(--fs-xs)!important;fill:var(--muted)}
+.uf-drawing .uf-mark{font-size:var(--fs-xs);fill:var(--fg)}
+/* A placed label knocks itself out of whatever it landed on: the ground is
+   painted around the glyphs before they are, so a label over a drawn edge
+   stays legible without a box behind it.
+
+   Asked for, not assumed. render/marks.js puts `uf-halo` on every placed
+   label, because a label that lands on a line is the common case — but
+   WHETHER a figure knocks its labels out is a fact about that figure, and the
+   explorers disagree about it: the ambiguity explorer's octahedron does
+   (ambiguity.md §7, where this rule comes from verbatim), the homotopy
+   explorer's diagrams do not. So a drawing that wants it says so with
+   `labels: { halo: true }`, which puts data-halo on its <svg>, and a page
+   that says nothing keeps the labels it already had. Unscoping this rule
+   silently repaints every label on every ported page — it did, and 148
+   screenshots at phone width said so. */
+.uf-drawing[data-halo] .uf-halo{paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
+.uf-quiet{pointer-events:none}
+
+/* ---- the legend ----------------------------------------------------------
+ * A row of samples and their labels. The sample is decoration — it carries
+ * aria-hidden and the label says the whole thing — so the row is spans rather
+ * than a list, which keeps a legend one line of prose per item in a screen
+ * reader and in every capture.
+ *
+ * Each shape is one rule, and each takes its colour from --legend-colour,
+ * which page/legend.js sets per item. So a page chooses WHICH colour and this
+ * file decides HOW the sample is drawn, exactly as a mark takes a token and
+ * render/marks.js decides the geometry.
+ */
+.uf-legend{display:flex;align-items:center;flex-wrap:wrap;gap:14px;margin:4px 0 10px;font-size:var(--fs-xs)}
+.uf-legend__item{display:inline-flex;align-items:center;gap:5px}
+.uf-legend__mark{display:inline-block;flex:none;background:var(--legend-colour,var(--fg))}
+.uf-legend__swatch{width:16px;height:10px}
+/* A bar, not a block: the ambiguity complex is an EDGE in the drawing, and a
+   legend that showed it as an area would be describing a different object. */
+.uf-legend__bar{width:16px;height:4px}
+.uf-legend__line{width:19px;height:0;background:none;border-top:2px solid var(--legend-colour,var(--fg))}
+.uf-legend__dash{width:19px;height:0;background:none;border-top:2px dashed var(--legend-colour,var(--fg))}
+.uf-legend__dot{width:8px;height:8px;border-radius:50%}
+.uf-legend__hatch{width:16px;height:10px;background:
+  repeating-linear-gradient(45deg,transparent 0 2px,var(--legend-colour,var(--line-strong)) 2px 2.6px)}
+
+/* ---- prose beside a drawing ---------------------------------------------- */
+.uf-note{font-size:var(--fs-base);color:var(--muted);margin:0 0 14px;max-width:850px}
+.uf-note strong{font-weight:550;color:var(--fg)}
+/* A hint runs the width of the column: it is one line of guidance under a
+   picture, not a paragraph to read, so the measure that keeps prose readable
+   would only make it two lines. */
+.uf-note.hint{margin:14px 0 0;max-width:none}
+.uf-note.failure{color:var(--bad)}
+.uf-warning{color:var(--bad);font-size:var(--fs-base);margin:8px 0 0}
+/* A reserved row: the status line may say nothing, and the Clear button must
+   not move under the reader's cursor when it does. Both classes are named, so
+   this outranks .uf-controls wherever that is restated — including inside a
+   breakpoint, where a later single-class rule would otherwise win and put an
+   18 px gap back under the row. */
+/* nowrap, unlike the control rows above: when the line is long the button's
+   own label wraps and the two stay side by side, which keeps the row one row
+   at phone width instead of two. */
+.uf-controls.uf-status-row{display:flex;flex-wrap:nowrap;align-items:center;gap:12px;min-height:32px;margin:7px 0 0;color:var(--muted);font-size:var(--fs-sm)}
+.uf-controls.uf-status-row button{font-size:var(--fs-sm);min-height:29px;padding:3px 9px}
+.uf-why{margin-top:10px;font-size:var(--fs-base);max-width:800px}
+.uf-why summary{cursor:pointer;color:var(--muted)}
+.uf-why p{margin:9px 0}
+.uf-why a{color:var(--accent)}
+.uf-math{font:var(--fs-base)/1.5 Cambria,Georgia,serif;white-space:normal}
+.uf-source{color:var(--muted);font-size:var(--fs-xs);line-height:1.5}
+
+/* ---- explorer breakpoints ------------------------------------------------ */
+@media(max-width:600px){
+  .uf-shell{padding:16px 12px}
+  .uf-shell h1{font-size:19px}
+  .uf-toolbar{margin-bottom:12px}
+  .uf-picker{grid-template-columns:1fr;gap:8px;margin-top:10px}
+  .uf-picker label{width:65px;flex-shrink:0}
+  /* A field that stands on its own line goes full width; an INLINE field is a
+     sentence with a control in it ("Start winding [ 1 ]") and two of them share
+     a row, so it keeps its content width. */
+  .uf-field:not(.uf-field--inline){width:100%}
+  .uf-field:not(.uf-field--inline) select{flex:1;min-width:0}
+  .uf-stage{grid-template-columns:minmax(0,1fr) minmax(0,1.18fr);gap:26px}
+  .uf-column{grid-template-rows:30px minmax(0,1fr)}
+  .uf-controls{gap:10px;margin-bottom:15px}
+  .uf-play{min-width:79px;padding:6px 10px}
+  .uf-toggle{font-size:var(--fs-sm);padding:6px 9px}
+  .uf-slider{gap:7px}
+  .uf-frame h2{font-size:var(--fs-sm);margin-top:7px}
+  .uf-sym{font-size:16px}
+  .uf-space-label{font-size:var(--fs-sm)}
+  .uf-note.hint{font-size:var(--fs-sm)}
+  .uf-controls.uf-status-row{align-items:flex-start}
+  .uf-segmented button{font-size:var(--fs-xs);padding:5px}
+}
+@media(max-width:380px){
+  .uf-controls .uf-toggle{margin-left:auto}
+  .uf-slider{min-width:150px}
+  .uf-stage{gap:18px}
+  .uf-sym{margin-left:2px}
+}
